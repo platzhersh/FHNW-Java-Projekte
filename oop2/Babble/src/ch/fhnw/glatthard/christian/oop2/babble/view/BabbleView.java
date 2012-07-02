@@ -70,7 +70,7 @@ public class BabbleView extends JFrame {
 		
 		txtAreaInput.setColumns(50);
 		txtAreaInput.setRows(6);
-		txtAreaInput.setEditable(false);
+		txtAreaInput.setEnabled(false);
 		txtAreaInput.setLineWrap(true);
 		txtAreaInput.setWrapStyleWord(true);
 		
@@ -79,7 +79,7 @@ public class BabbleView extends JFrame {
 		
 		txtAreaOutput.setColumns(50);
 		txtAreaOutput.setRows(6);
-		txtAreaOutput.setEditable(false);
+		//txtAreaOutput.setEnabled(false);
 		txtAreaOutput.setLineWrap(true);
 		txtAreaOutput.setWrapStyleWord(true);
 		

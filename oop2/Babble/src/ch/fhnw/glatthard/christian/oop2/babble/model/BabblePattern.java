@@ -33,7 +33,6 @@ public class BabblePattern {
 	}
 	
 	/***
-	 * not fully implemented yet
 	 * @return BabblePattern's ArrayList of possible following Patterns
 	 */
 	public ArrayList<Character> getPossibilities() {
