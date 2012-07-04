@@ -1,4 +1,4 @@
-package ch.fhnw.glatthard.christian.oop2.babble.model;
+package fhnw.oop2.babble.model;
 
 import java.util.ArrayList;
 import java.util.Random;

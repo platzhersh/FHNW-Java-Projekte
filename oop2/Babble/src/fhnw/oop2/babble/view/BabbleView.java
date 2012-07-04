@@ -1,11 +1,12 @@
-package ch.fhnw.glatthard.christian.oop2.babble.view;
+package fhnw.oop2.babble.view;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
 
 import javax.swing.*;
-import ch.fhnw.glatthard.christian.oop2.babble.model.*;
+
+import fhnw.oop2.babble.model.*;
 
 import java.awt.Toolkit;
 
