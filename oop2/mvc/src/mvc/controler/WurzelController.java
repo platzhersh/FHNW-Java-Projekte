@@ -57,7 +57,7 @@ public class WurzelController {
 
     /**
      * Hier wird dem View und dem Model gesagt ihre gespeicherten
-     * Werte zu lÃ¶schen.
+     * Werte zu löschen.
      */
     class ResetFormListener implements ActionListener{
         public void actionPerformed(ActionEvent e) {

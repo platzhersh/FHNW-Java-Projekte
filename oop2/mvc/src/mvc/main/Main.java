@@ -20,7 +20,7 @@ public class Main {
     static WurzelView view;
 
     /**
-     * Diese Klasse wird nur dazu benutzt alle nÃ¶tigen
+     * Diese Klasse wird nur dazu benutzt alle nötigen
      * Komponenten zu Initialisieren und die erste
      * View anzuzeigen
      */
