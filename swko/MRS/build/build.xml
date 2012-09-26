@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+
+<project name="Software Construction Lab" default="compile" basedir="..">
+    <property file="build/build.properties" />
+
+    <!-- The application's classpath -->
+    <path id="application.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+    
+    <!-- The build tools classpath -->
+    <path id="build.classpath">
+        <fileset dir="${build.lib.dir}">
+            <include name="*.jar" />
+        </fileset>
+        <path refid="application.classpath"/>
+    </path>
+
+    <!-- Define the additional ant tasks     -->
+    <taskdef resource="checkstyletask.properties" classpathref="build.classpath" />
+
+    <target name="prepare">
+        <mkdir dir="${bin.classes.dir}" />
+        <mkdir dir="${bin.jar.dir}" />
+        <mkdir dir="${log.report.dir}"/>
+    </target>
+
+    <target name="compile" depends="prepare" description="Compile the sources">
+        <javac includeantruntime="false" srcdir="${src.dir}" destdir="${bin.classes.dir}" classpathref="application.classpath" deprecation="on" debug="on"/>
+        <copy todir="${bin.classes.dir}">
+            <fileset dir="${res.dir}">
+                <include name="**/*.xml" />
+                <include name="**/*.properties" />
+                <include name="**/*.png" />
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="run" depends="jar" description="Run distributed application from jar file">
+        <java jar="${bin.jar.dir}/${name}-${version}.jar" fork="true" />
+    </target>
+
+    <target name="jar" depends="compile" description="Create jar distribution">
+        <jar jarfile="${bin.jar.dir}/${name}-${version}.jar" 
+            basedir="${bin.classes.dir}"
+            excludes="**/*Test*.class">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}" />
+                <attribute name="Class-Path" value=".
+                    ../../lib/dbunit-2.2.jar
+                    ../../lib/hsqldb.jar"/>
+            </manifest>
+        </jar>
+    </target>
+	
+</project>
