@@ -18,7 +18,7 @@ public class Stack<T> {
 	
 	public T pop() {
 		T last = this.content.getLast();
-		this.content.remove(this.content.size()-1);
+		this.content.remove(last);
 		return last;
 	}
 	
