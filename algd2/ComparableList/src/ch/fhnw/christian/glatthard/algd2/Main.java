@@ -1,5 +1,7 @@
 package ch.fhnw.christian.glatthard.algd2;
 
+import ch.fhnw.christian.glatthard.algd2.ComparableList.CListIterator;
+
 public class Main {
 
 	/**
@@ -13,8 +15,8 @@ public class Main {
 		list.addHead("Head");
 		list.addTail("Tail");
 		System.out.println(list.size());
-		list.removeHead();
-		list.removeHead();
+		System.out.println(list.getHead().compareTo(list.getTail()));
+		CListIterator<String> iterator = list.iterator();
 		
 		System.out.println(list.size());
 	}
