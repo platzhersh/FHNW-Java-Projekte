@@ -76,8 +76,12 @@ public class ComparableList<T extends Comparable<T>> {
 	
 	
 
-	@SuppressWarnings("hiding")
-	public class Element<T extends Comparable<T>> implements Comparable<T> {
+	/***
+	 * List Element of double linked list ComparableList
+	 * @author chregi
+	 * @param <T> expects a datatype that extends Comparable
+	 */
+	public static class Element<T extends Comparable<T>> implements Comparable<T> {
 		Element<T> next;
 		Element<T> prev;
 		T value;
@@ -106,36 +110,43 @@ public class ComparableList<T extends Comparable<T>> {
 		
 	}
 	
-	static class CListIterator<T extends Comparable<T>> implements ListIterator<T> {
-		private Element<T> current;
-		private ComparableList<T> itlist;
+	/***
+	 * Iterator to go through all the Elements of the double linked list ComparableList
+	 * @author chregi
+	 * 
+	 * @param <T> expects T which extends Comparable
+	 */
+	public static class CListIterator<T extends Comparable<T>> implements ListIterator<T> {
+		private Element<T> next, prev;
+		private ComparableList<T> list;
 		
-		public CListIterator(ComparableList<T> list) {
-			itlist = list;
-			current = (Element<T>)itlist.getHead();
+		public CListIterator(ComparableList<T> itlist) {
+			list = itlist;
+			next = (Element<T>)list.getHead();
+			prev = null;
 		}
-		
-		
+
 		@Override
 		public void add(T e) {
-			// TODO Auto-generated method stub
-			
+			this.list.addTail(e);
 		}
 
 		@Override
 		public boolean hasNext() {
-			return (this.current.next != null);
+			return (this.next != null);
 		}
 
 		@Override
 		public boolean hasPrevious() {
-			return (this.current.prev != null);
+			return (this.prev != null);
 		}
 
 		@Override
 		public T next() {
-			this.current = this.current.next;
-			return this.current.value;
+			T ret = this.next.value;
+			this.prev = this.next;
+			this.next = this.next.next;
+			return ret;
 		}
 
 		@Override
@@ -146,8 +157,10 @@ public class ComparableList<T extends Comparable<T>> {
 
 		@Override
 		public T previous() {
-			// TODO Auto-generated method stub
-			return null;
+			T ret = this.prev.value;
+			this.next =this.prev;
+			this.prev = this.prev.prev;
+			return ret;
 		}
 
 		@Override
