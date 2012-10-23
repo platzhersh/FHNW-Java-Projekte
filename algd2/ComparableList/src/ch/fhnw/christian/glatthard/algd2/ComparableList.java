@@ -38,7 +38,7 @@ public class ComparableList<T extends Comparable<T>> {
 			head.prev = newElement;
 			head = newElement;
 		}
-		size++;
+		this.size++;
 	}
 	
 	public void addTail(T value) {
@@ -50,7 +50,7 @@ public class ComparableList<T extends Comparable<T>> {
 			tail.next = newElement;
 			tail = newElement;
 		}
-		size++;
+		this.size++;
 	}
 	
 	public void removeHead() {
@@ -59,8 +59,9 @@ public class ComparableList<T extends Comparable<T>> {
 		} else {
 			head = head.next;
 			if (head != null) head.prev = null;
+			this.size--;
 		}
-		size--;
+		
 		
 	}
 	
@@ -70,8 +71,23 @@ public class ComparableList<T extends Comparable<T>> {
 		} else {
 			tail = tail.prev;
 			if (tail != null) tail.next = null;
+			this.size--;
 		}
-		size--;
+		
+	}
+	
+	public void remove(Element<T> e) {
+		// check if element is head or tail of the list
+		if (e == this.head) { this.removeHead(); }
+		else if (e == this.tail) { this.removeTail(); }
+
+		else if ((e.prev != null) && (e.next != null)) {
+			e.prev.next = e.next;
+			e.next.prev = e.prev;
+			System.out.println(e.value+" deleted");
+			this.size--;
+		}
+		e = null;		
 	}
 	
 	
@@ -171,13 +187,16 @@ public class ComparableList<T extends Comparable<T>> {
 
 		@Override
 		public void remove() {
-			// TODO Auto-generated method stub
+			Element<T> temp = this.next.next;
+			list.remove(this.next);
+			this.next = temp;
+			//return ret;
 			
 		}
 
 		@Override
 		public void set(T e) {
-			// TODO Auto-generated method stub
+			this.next.value = e;
 			
 		}
 		
