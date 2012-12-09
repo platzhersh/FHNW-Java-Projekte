@@ -1,0 +1,40 @@
+name = swc
+version = 2.0.0
+
+# directory settings (input)
+src.dir      = ${basedir}/src/prod
+test.dir     = ${basedir}/src/test
+srcall.dir  = ${basedir}/src
+res.dir      = ${basedir}/res
+lib.dir      = ${basedir}/lib
+build.dir    = ${basedir}/build
+
+#directory settings to external libs and tools needed for the build
+build.lib.dir = ${build.dir}/lib
+
+# directory settings (output)
+bin.dir   = ${basedir}/bin
+log.dir   = ${basedir}/log
+doc.dir   = ${basedir}/doc
+
+bin.classes.dir = ${bin.dir}/classes
+bin.jar.dir    = ${bin.dir}/jar
+log.report.dir = ${log.dir}/report
+log.report.test.dir = ${log.report.dir}/test
+log.report.cs.dir = ${log.report.dir}/checkstyle
+doc.api.dir   = ${doc.dir}/api
+
+# main class
+main.class = ch.fhnw.edu.rental.MovieRentalApplication
+
+# database settings used by the HSQL DatabaseManager Tool only
+database = mrs
+
+datasource.driver = org.hsqldb.jdbcDriver
+datasource.url = jdbc:hsqldb:mem:${database}
+#datasource.url = jdbc:hsqldb:mem:${database}
+#datasource.url = jdbc:hsqldb:file:build/${database}
+#datasource.url = jdbc:hsqldb:hsql://localhost/${database}
+
+datasource.userid = sa
+datasource.password = 

@@ -1,0 +1,179 @@
+package ch.fhnw.edu.rental.model;
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
+
+import static org.junit.Assert.fail;
+
+import java.sql.Date;
+import java.util.Calendar;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class RentalTestAge {
+
+    /** the release date used for the movies m1 and m2. */
+    private Date d = new Date(Calendar.getInstance().getTimeInMillis());
+
+    /** the price category used for the movies m1 and m2. */
+    private PriceCategory pc = RegularPriceCategory.getInstance();
+
+    /** movies to use in tests. */
+    private Movie m1, m2, m3;
+
+    /** rent span dummy. */
+    private int spanDummy = 1;
+
+    /**
+     * @throws java.lang.Exception should not be thrown
+     */
+    @Before
+    public void setUp() throws Exception {
+
+        m1 = new Movie("The Kid", d, pc, 0);
+        m2 = new Movie("Goldrush", d, pc, 10);
+        m3 = new Movie("GirlXXX", d, pc, 18);
+    }
+
+    /**
+     * @throws java.lang.Exception should not be thrown
+     */
+    @After
+    public void tearDown() throws Exception {
+        m1 = null;
+        m2 = null;
+        m3 = null;
+    }
+    
+    /**
+     * Tests precisely on one day.
+     */
+    @Test
+    public void testOnDays(){
+        Calendar c1 = this.getBirthday(10);
+        c1.add(Calendar.DAY_OF_MONTH, -1);
+        
+        Calendar c2 = this.getBirthday(10);
+        c2.add(Calendar.DAY_OF_MONTH, 1);
+        
+        IUser u1 = new User("is","10", c1); // is not of age
+        IUser u2 = new User("is","10a",c2); // is of age
+        
+        Rental r1 = null, r2 = null;
+        
+        try{
+            r1 = new Rental(u2, m2, spanDummy);
+            fail("user u1 is not of age");
+        }catch (MovieRentalException e){
+            assertNull(r1);
+        }
+        
+        try{
+            r2 = new Rental(u1, m2, spanDummy);
+            assertNotNull(r2);
+        }catch (MovieRentalException e){}
+        
+        System.out.println(c1.get(Calendar.MONTH)+" "+c1.get(Calendar.DAY_OF_MONTH));
+        System.out.println(Calendar.getInstance().get(Calendar.MONTH)+" "+Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
+    }
+    
+    /**
+     * u is able to rent movie m1 but not m2 & m3
+     */
+    @Test
+    public void testAgeIs2(){
+        IUser u = new User("is", "12", this.getBirthday(2));
+        Rental r1 = null, r2 = null, r3 = null;
+        try {
+            r1 = new Rental(u, m1, spanDummy);
+            assertNotNull(r1);
+        } catch (MovieRentalException e) {
+            fail(e.getMessage());
+        }
+        try {
+            r2 = new Rental(u, m2, spanDummy);
+            r3 = new Rental(u, m3, spanDummy);
+            fail("u isn't allowed to rent movie m3");
+        } catch (MovieRentalException e) {
+            assertNull(r2);
+            assertNull(r3);
+        }
+    }
+
+    /**
+     * u is able to rent movie m1 & m2 but not m3
+     */
+    @Test
+    public void testAgeIs16() {
+        IUser u = new User("is", "16", this.getBirthday(16));
+        Rental r1 = null, r2 = null, r3 = null;
+        try {
+            r1 = new Rental(u, m1, spanDummy);
+            r2 = new Rental(u, m2, spanDummy);
+            assertNotNull(r1);
+            assertNotNull(r2);
+        } catch (MovieRentalException e) {
+            fail(e.getMessage());
+        }
+        try {
+            r3 = new Rental(u, m3, spanDummy);
+            fail("u isn't allowed to rent movie m3");
+        } catch (MovieRentalException e) {
+            assertNull(r3);
+        }
+    }
+
+    /**
+     * User u should be able to rent all movies.
+     */
+    @Test
+    public void testAgeIs18() {
+        IUser u = new User("is", "18", this.getBirthday(18));
+        Rental r1, r2, r3;
+        try {
+            r1 = new Rental(u, m1, spanDummy);
+            r2 = new Rental(u, m2, spanDummy);
+            r3 = new Rental(u, m3, spanDummy);
+            assertNotNull(r1);
+            assertNotNull(r2);
+            assertNotNull(r3);
+        } catch (MovieRentalException e) {
+            fail(e.getMessage());
+        } finally {
+        }
+    }
+
+    /**
+     * User u should also be able to rent all movies.
+     */
+    @Test
+    public void testAgeIs24() {
+        IUser u = new User("is", "24", this.getBirthday(24));
+        Rental r1, r2, r3;
+        try {
+            r1 = new Rental(u, m1, spanDummy);
+            r2 = new Rental(u, m2, spanDummy);
+            r3 = new Rental(u, m3, spanDummy);
+            assertNotNull(r1);
+            assertNotNull(r2);
+            assertNotNull(r3);
+        } catch (MovieRentalException e) {
+            fail(e.getMessage());
+        } finally {
+        }
+    }
+
+    /**
+     * creates a Calendar with
+     * 
+     * @param age: age of the person: 7, 22, 89
+     * @return Calendar object with the birthday
+     */
+    private Calendar getBirthday(int age) {
+        Calendar bd = Calendar.getInstance();
+        bd.add(Calendar.YEAR, -age);
+        return bd;
+    }
+}
