@@ -12,9 +12,20 @@ public class StockTest {
 
     @Before
     public void setUp() {
-        // movie = createMock(IMovie.class); // 1
-        stock = createMock(Stock.class);
+        movie = createMock(IMovie.class);
+        stock = new Stock();
+        lowStockListener = createMock(LowStockListener.class);
         stock.addLowStockListener(lowStockListener);
+        
+        movie.start();
+        expect(movie.getTitle()).andReturn("The Big Lebowski.");
+        movie.replay();
+        
+        lowStockListener.start();
+        expect(lowStockListener.getThreshold()).andReturn(1);
+        expectLastCall(lowStockListener.stockLow(movie,2));
+        lowStockListener.replay();
+        
     }
 
 
