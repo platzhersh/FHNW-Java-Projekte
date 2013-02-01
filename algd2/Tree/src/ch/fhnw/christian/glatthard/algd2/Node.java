@@ -11,8 +11,8 @@ public class Node<T> {
 	 * Node Constructor
 	 * @param value value to store in the node
 	 */
-	public Node(T value) {
-		this.value = value;
+	public Node(T val) {
+		this.value = val;
 	}
 	
 	/***
