@@ -1,0 +1,1306 @@
+03. Feb. 13, 12:53:06 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:06 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:06 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:06 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:06 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:06 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:06 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:06 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:06 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:06 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:06 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:06 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:06 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:06 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:06 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:06 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:06 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:06 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:06 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:06 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:06 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:06 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:06 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:06 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:06 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:06 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:06 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:06 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:06 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:06 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:06 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:06 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:06 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:06 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:06 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:06 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:06 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:06 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:06 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:06 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:06 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:06 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:06 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:06 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:06 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:06 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:06 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:06 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:06 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:06 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:06 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:06 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:06 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:06 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:06 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:06 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:06 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:06 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:06 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:06 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:06 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:06 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:06 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:06 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:06 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:06 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:06 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:06 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:06 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:06 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:06 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:06 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:06 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:06 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:06 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:06 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:06 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:06 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:06 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:06 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:06 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:06 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:06 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:06 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:06 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:06 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:06 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:06 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Bla created
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:53:07 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:53:07 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:53:07 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Juno created
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:53:07 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:53:07 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Rambo created
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:53:07 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:53:07 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:53:07 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:53:07 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:53:07 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Eye created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:53:07 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Batman created
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to false
+03. Feb. 13, 12:53:07 DEBUG Set movie Lord of the Rings rented state to false
+03. Feb. 13, 12:53:07 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:07 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:07 DEBUG Movie object GirlXXX created
+03. Feb. 13, 12:53:07 DEBUG Set movie Goldrush rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:07 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:07 DEBUG Movie object GirlXXX created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Kid rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:07 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:07 DEBUG Movie object GirlXXX created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Kid rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Goldrush rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:07 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:07 DEBUG Movie object GirlXXX created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Kid rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Goldrush rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie GirlXXX rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:07 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:07 DEBUG Movie object GirlXXX created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Kid rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie Goldrush rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie GirlXXX rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object A created
+03. Feb. 13, 12:53:07 DEBUG Set movie A rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object B created
+03. Feb. 13, 12:53:07 DEBUG Set movie B rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object C created
+03. Feb. 13, 12:53:07 DEBUG Set movie C rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object name created
+03. Feb. 13, 12:53:07 DEBUG Movie object A created
+03. Feb. 13, 12:53:07 DEBUG Movie object B created
+03. Feb. 13, 12:53:07 DEBUG Movie object A created
+03. Feb. 13, 12:53:07 DEBUG Movie object A created
+03. Feb. 13, 12:53:07 DEBUG Set movie A rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object A created
+03. Feb. 13, 12:53:07 DEBUG Movie object B created
+03. Feb. 13, 12:53:07 DEBUG Movie object A created
+03. Feb. 13, 12:53:07 DEBUG Movie object A created
+03. Feb. 13, 12:53:07 DEBUG Set movie A id to 42
+03. Feb. 13, 12:53:07 DEBUG Set movie null id to 1
+03. Feb. 13, 12:53:07 DEBUG Set movie null id to 2
+03. Feb. 13, 12:53:07 WARN Tried to overwrite title of movie Hallo to null
+03. Feb. 13, 12:53:07 WARN Tried to overwrite release date of movie
+03. Feb. 13, 12:53:07 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:07 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Kid rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:07 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Kid rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:07 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Kid rented state to true
+03. Feb. 13, 12:53:07 DEBUG Set movie The Kid rented state to false
+03. Feb. 13, 12:53:07 DEBUG Set movie The Kid rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:07 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Kid rented state to true
+03. Feb. 13, 12:53:07 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:07 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:07 DEBUG Set movie The Kid rented state to true
+03. Feb. 13, 12:53:08 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:08 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:08 DEBUG Set movie Goldrush rented state to true
+03. Feb. 13, 12:53:08 DEBUG Movie object The Kid created
+03. Feb. 13, 12:53:08 DEBUG Movie object Goldrush created
+03. Feb. 13, 12:53:08 DEBUG Set movie The Kid rented state to true
+03. Feb. 13, 12:53:08 ERROR Connection is closed
+03. Feb. 13, 12:53:08 ERROR Connection is closed
+03. Feb. 13, 12:53:08 ERROR Connection is closed
+03. Feb. 13, 12:53:08 ERROR Connection is closed
+03. Feb. 13, 12:54:08 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:54:08 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:54:08 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object Matrix created
+03. Feb. 13, 12:54:08 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:54:08 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:54:08 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:54:08 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object Eragorn created
+03. Feb. 13, 12:54:08 DEBUG Set movie Eragorn id to 4
+03. Feb. 13, 12:54:08 DEBUG Set movie Eragorn rented state to false
+03. Feb. 13, 12:54:08 DEBUG Movie object Batman created
+03. Feb. 13, 12:54:08 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:54:08 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object Live Free or Die Hard created
+03. Feb. 13, 12:54:08 DEBUG Set movie Live Free or Die Hard id to 6
+03. Feb. 13, 12:54:08 DEBUG Set movie Live Free or Die Hard rented state to false
+03. Feb. 13, 12:54:08 DEBUG Movie object Cloverfield created
+03. Feb. 13, 12:54:08 DEBUG Set movie Cloverfield id to 7
+03. Feb. 13, 12:54:08 DEBUG Set movie Cloverfield rented state to false
+03. Feb. 13, 12:54:08 DEBUG Movie object Juno created
+03. Feb. 13, 12:54:08 DEBUG Set movie Juno id to 8
+03. Feb. 13, 12:54:08 DEBUG Set movie Juno rented state to false
+03. Feb. 13, 12:54:08 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:54:08 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:54:08 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:54:08 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:54:08 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object No Country for Old Men created
+03. Feb. 13, 12:54:08 DEBUG Set movie No Country for Old Men id to 11
+03. Feb. 13, 12:54:08 DEBUG Set movie No Country for Old Men rented state to false
+03. Feb. 13, 12:54:08 DEBUG Movie object Rambo created
+03. Feb. 13, 12:54:08 DEBUG Set movie Rambo id to 12
+03. Feb. 13, 12:54:08 DEBUG Set movie Rambo rented state to false
+03. Feb. 13, 12:54:08 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:54:08 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:54:08 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object 27 Dresses created
+03. Feb. 13, 12:54:08 DEBUG Set movie 27 Dresses id to 14
+03. Feb. 13, 12:54:08 DEBUG Set movie 27 Dresses rented state to false
+03. Feb. 13, 12:54:08 DEBUG Movie object Meet the Spartans created
+03. Feb. 13, 12:54:08 DEBUG Set movie Meet the Spartans id to 15
+03. Feb. 13, 12:54:08 DEBUG Set movie Meet the Spartans rented state to false
+03. Feb. 13, 12:54:08 DEBUG Movie object The Bucket List created
+03. Feb. 13, 12:54:08 DEBUG Set movie The Bucket List id to 16
+03. Feb. 13, 12:54:08 DEBUG Set movie The Bucket List rented state to false
+03. Feb. 13, 12:54:08 DEBUG Movie object Untraceable created
+03. Feb. 13, 12:54:08 DEBUG Set movie Untraceable id to 17
+03. Feb. 13, 12:54:08 DEBUG Set movie Untraceable rented state to false
+03. Feb. 13, 12:54:08 DEBUG Movie object The Eye created
+03. Feb. 13, 12:54:08 DEBUG Set movie The Eye id to 18
+03. Feb. 13, 12:54:08 DEBUG Set movie The Eye rented state to false
+03. Feb. 13, 12:54:08 DEBUG Movie object Lord of the Rings created
+03. Feb. 13, 12:54:08 DEBUG Set movie Lord of the Rings id to 1
+03. Feb. 13, 12:54:08 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:54:08 DEBUG Set movie Lord of the Rings rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object Batman created
+03. Feb. 13, 12:54:08 DEBUG Set movie Batman id to 5
+03. Feb. 13, 12:54:08 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:54:08 DEBUG Set movie Batman rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object Matrix created
+03. Feb. 13, 12:54:08 DEBUG Set movie Matrix id to 2
+03. Feb. 13, 12:54:08 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:54:08 DEBUG Set movie Matrix rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object Matrix Reloaded created
+03. Feb. 13, 12:54:08 DEBUG Set movie Matrix Reloaded id to 3
+03. Feb. 13, 12:54:08 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:54:08 DEBUG Set movie Matrix Reloaded rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object Brokeback Mountain created
+03. Feb. 13, 12:54:08 DEBUG Set movie Brokeback Mountain id to 13
+03. Feb. 13, 12:54:08 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:54:08 DEBUG Set movie Brokeback Mountain rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object Sweeney Todd: The Demon Barber of Fleet Street created
+03. Feb. 13, 12:54:08 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street id to 9
+03. Feb. 13, 12:54:08 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:54:08 DEBUG Set movie Sweeney Todd: The Demon Barber of Fleet Street rented state to true
+03. Feb. 13, 12:54:08 DEBUG Movie object There Will Be Blood created
+03. Feb. 13, 12:54:08 DEBUG Set movie There Will Be Blood id to 10
+03. Feb. 13, 12:54:08 DEBUG Set movie There Will Be Blood rented state to true
+03. Feb. 13, 12:54:08 DEBUG Set movie There Will Be Blood rented state to true

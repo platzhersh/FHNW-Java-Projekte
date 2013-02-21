@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<project name="bank" default="compile" basedir=".">
+
+	<property file="build.properties" />
+	
+	<path id="bank.class.path">
+<!--
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+-->
+		<dirset dir="${bin.dir}"/>
+	</path>
+
+
+	<target name="init">
+		<mkdir dir="${bin.dir}"/>
+	</target>
+
+	<target name="clean" description="erases contents of classes dir">
+		<delete dir="${bin.dir}"/>
+		<delete dir="${doc.dir}"/>
+	</target>
+
+	<target name="compile" depends="init" description="compiles all source code.">
+		<javac srcdir="${src.dir}" destdir="${bin.dir}"
+			classpathref="bank.class.path"
+			includeantruntime="false"
+		/>
+	</target>
+
+	<target name="run.dummy" depends="compile" description="launches dummy bank">
+		<java classname="bank.Client" fork="yes" dir=".">
+			<arg value="bank.dummy.Driver"/>
+			<classpath refid="bank.class.path"/>
+		</java>
+	</target>
+	
+	<target name="run.local" depends="compile" description="launches local bank">
+		<java classname="bank.Client" fork="yes" dir=".">
+			<arg value="bank.local.Driver"/>
+			<classpath refid="bank.class.path"/>
+		</java>
+	</target>
+	
+	<target name="run.sockets" depends="compile" description="launches sockets bank">
+		<java classname="bank.Client" fork="yes" dir=".">
+			<arg value="bank.sockets.Driver"/>
+			<arg value="localhost"/>
+			<arg value="1234"/>
+			<classpath refid="bank.class.path"/>
+		</java>
+	</target>
+	
+</project>
