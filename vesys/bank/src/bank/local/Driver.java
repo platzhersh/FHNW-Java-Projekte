@@ -1,17 +1,22 @@
 package bank.local;
 
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
+import java.util.UUID;
 
 import bank.InactiveException;
 import bank.OverdrawException;
 
 public class Driver implements bank.BankDriver {
 	private Bank bank = null;
+	
 
 	@Override
 	public void connect(String[] args) {
@@ -36,25 +41,38 @@ public class Driver implements bank.BankDriver {
 
 		@Override
 		public Set<String> getAccountNumbers() {
-
-			// TODO remove
-			Account acc = new Account("dini mueter");
-			accounts.put("123", acc);
-			accounts.entrySet();
 			
-			return accounts.keySet(); // FIXME has to be replaced
+			Set<String> activeAccounts = new HashSet<String>();
+			
+			for (Entry<String, Account> e : accounts.entrySet() ) {
+				if (e.getValue().isActive()) activeAccounts.add(e.getKey());
+			}
+			return activeAccounts;
 		}
 
 		@Override
 		public String createAccount(String owner) {
-			System.out.println("Bank.createAccount has to be implemented");
-			return null;
+			
+			
+			String number = "01-";
+			Integer size = accounts.size();
+			String number2 = size.toString();
+			
+			while (number.length()+number2.length() < 16) {
+				number += "0";
+			}
+			number += size;
+		
+			Account acc = new Account(owner, number);
+			accounts.put(number, acc);
+			return number;
 		}
 
 		@Override
 		public boolean closeAccount(String number) {
-			System.out.println("Bank.closeAccount has to be implemented");
-			return false;
+			Account acc = accounts.get(number);
+			if (acc.isActive() && acc.balance == 0) acc.deactivate();
+			return !acc.isActive();
 		}
 
 		@Override
@@ -65,7 +83,9 @@ public class Driver implements bank.BankDriver {
 		@Override
 		public void transfer(bank.Account from, bank.Account to, double amount)
 				throws IOException, InactiveException, OverdrawException {
-			System.out.println("Bank.transfer has to be implemented");
+			from.withdraw(amount);
+			to.deposit(amount);
+			
 		}
 
 	}
@@ -76,9 +96,9 @@ public class Driver implements bank.BankDriver {
 		private double balance;
 		private boolean active = true;
 
-		Account(String owner) {
+		Account(String owner, String number) {
 			this.owner = owner;
-			// FIXME number has to be set
+			this.number = number;
 		}
 
 		@Override
@@ -103,14 +123,28 @@ public class Driver implements bank.BankDriver {
 
 		@Override
 		public void deposit(double amount) throws InactiveException {
-			System.out.println("Account.deposit has to be implemented");
+			if (!this.isActive()) throw new InactiveException();
+			else if (amount < 0) throw new IllegalArgumentException();
+			else this.balance += amount;
 		}
 
 		@Override
 		public void withdraw(double amount) throws InactiveException, OverdrawException {
-			System.out.println("Account.withdraw has to be implemented");
+			if (!this.isActive()) throw new InactiveException();
+			else if (amount < 0) throw new IllegalArgumentException();
+			else {
+				if (this.getBalance() < amount) throw new OverdrawException();
+				else this.balance -= amount;
+			}
+		}
+		
+		public void activate() {
+			this.active = true;
 		}
 
+		public void deactivate() {
+			this.active = false;
+		}
 	}
 
 }
