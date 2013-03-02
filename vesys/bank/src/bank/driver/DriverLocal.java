@@ -1,4 +1,4 @@
-package bank.local;
+package bank.driver;
 
 import java.io.IOException;
 import java.security.MessageDigest;
@@ -14,7 +14,7 @@ import java.util.UUID;
 import bank.InactiveException;
 import bank.OverdrawException;
 
-public class Driver implements bank.BankDriver {
+public class DriverLocal implements bank.BankDriver {
 	private Bank bank = null;
 	
 

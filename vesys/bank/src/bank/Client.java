@@ -49,7 +49,7 @@ public final class Client {
 			Class<?> c = Class.forName(args[0]);
 			server = (BankDriver) c.newInstance();
 		} catch (ClassNotFoundException e) {
-			System.out.println("class " + args[0] + " coult not be found");
+			System.out.println("class " + args[0] + " could not be found");
 			System.exit(1);
 		} catch (InstantiationException e) {
 			System.out.println("class " + args[0]
