@@ -1,7 +1,12 @@
 package bank.driver;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.ObjectOutputStream;
+import java.io.OutputStream;
+import java.io.PrintWriter;
 import java.net.Inet4Address;
 import java.net.Socket;
 import java.util.HashMap;
@@ -20,7 +25,8 @@ public class DriverSocket implements BankDriver {
 	private SocketBank b;
 	private Inet4Address remote;
 	private Socket sock;
-	private ObjectOutputStream outObj;
+	private OutputStream out;
+	private InputStream in;
 	
 	
 	@Override
@@ -29,8 +35,10 @@ public class DriverSocket implements BankDriver {
 		else {
 			remote = (Inet4Address) Inet4Address.getByName(args[0]);
 			sock = new Socket(remote, Integer.parseInt(args[1]));
+			out = sock.getOutputStream();
+			in = sock.getInputStream();
 			System.out.println("Connected to "+remote.getHostName()+":"+args[1]);
-			b = new SocketBank();
+			b = new SocketBank(this);
 		}
 		
 	}
@@ -45,14 +53,36 @@ public class DriverSocket implements BankDriver {
 		return this.b;
 	}
 	
-	public void sendCommand(Command cmd) throws IOException {
-		this.outObj.writeObject(cmd);
+	public void sendCommand(String cmd, String params) throws IOException {
+		PrintWriter outP = new PrintWriter(out);
+		String msg = cmd +":"+params;
+		outP.println(msg);
+		outP.flush();
+		//out.write(msg.getBytes());
+	}
+	private String receiveResult() throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(this.sock.getInputStream()));
+		String input = br.readLine();
+		System.out.println("Client received: "+input);
+		return input;
+	}
+	public String receiveCommand() throws IOException {
+		int c;
+		BufferedReader inbuf = new BufferedReader(new InputStreamReader(in));
+		String response = inbuf.readLine();
+		System.out.println("Client received: "+response);
+		return response;
 	}
 	
 	static class SocketBank implements bank.Bank {
 
 		private Map<String, SocketAccount> accounts = new HashMap<String, SocketAccount>();
-
+		private DriverSocket driver;
+		
+		public SocketBank(DriverSocket d) {
+			this.driver = d;																											
+		}
+		
 		@Override
 		public Set<String> getAccountNumbers() {
 			
@@ -65,9 +95,10 @@ public class DriverSocket implements BankDriver {
 		}
 
 		@Override
-		public String createAccount(String owner) {
+		public String createAccount(String owner) throws IOException {
 			
 			
+			/*
 			String number = "01-";
 			Integer size = accounts.size();
 			String number2 = size.toString();
@@ -78,8 +109,12 @@ public class DriverSocket implements BankDriver {
 			number += size;
 		
 			SocketAccount acc = new SocketAccount(owner, number);
-			accounts.put(number, acc);
-			return number;
+			accounts.put(number, acc);*/
+			
+			
+			driver.sendCommand("createAccount", owner);
+			String response = driver.receiveResult();
+			return response;
 		}
 
 		@Override
@@ -159,7 +194,6 @@ public class DriverSocket implements BankDriver {
 				this.active = false;
 			}
 		}
-
 
 
 	
