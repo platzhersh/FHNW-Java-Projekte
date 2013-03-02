@@ -53,18 +53,6 @@ public class DriverSocket implements BankDriver {
 		return this.b;
 	}
 	
-	public void sendCommand(String cmd, String params) throws IOException {
-		PrintWriter outP = new PrintWriter(out);
-		String msg = cmd +":"+params;
-		outP.println(msg);
-		outP.flush();
-	}
-	private String receiveResult() throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(this.sock.getInputStream()));
-		String input = br.readLine();
-		System.out.println("Client received: "+input);
-		return input;
-	}
 
 	static class SocketBank implements bank.Bank {
 
@@ -88,25 +76,10 @@ public class DriverSocket implements BankDriver {
 
 		@Override
 		public String createAccount(String owner) throws IOException {
-			
-			
-			/*
-			String number = "01-";
-			Integer size = accounts.size();
-			String number2 = size.toString();
-			
-			while (number.length()+number2.length() < 16) {
-				number += "0";
-			}
-			number += size;
-		
-			SocketAccount acc = new SocketAccount(owner, number);
-			accounts.put(number, acc);*/
-			
-			
-			driver.sendCommand("createAccount", owner);
-			String response = driver.receiveResult();
-			return response;
+			Command.send("createAccount", owner, driver.sock);
+			String number = Command.parseCommand(Command.receive(driver.sock));
+			accounts.put(number, new SocketAccount(owner, number));
+			return number;
 		}
 
 		@Override

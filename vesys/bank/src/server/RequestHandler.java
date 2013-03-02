@@ -3,6 +3,8 @@ package server;
 import java.io.*;
 import java.net.Socket;
 
+import bank.driver.Command;
+
 public class RequestHandler implements Runnable {
 	
 	private Socket socket;
@@ -21,59 +23,26 @@ public class RequestHandler implements Runnable {
 	@Override
 	public void run() {
 		try {
-			this.executeCommand(this.receiveResult());
+			this.executeCommand(Command.receive(this.socket));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		/*
-		command = "";
-		try {
-			int c;
-			while ((c = this.in.read())!= (int)';') {
-				command += (char)c;	
-				}
-			System.out.println("Command received: " + command);
-			this.executeCommand(command);
-		}
-		catch (Exception e) {
-			System.err.println(e.toString());
-		}*/
 	}
 	
-	private String receiveResult() throws IOException {
-		BufferedReader b = new BufferedReader(new InputStreamReader(in));
-		String input = b.readLine();
-		System.out.println("Server received: "+input);
-		return input;
-	}
-	
-	public void sendCommand(String cmd, String params) throws IOException {
-		PrintWriter outP = new PrintWriter(out);
-		String msg = cmd +":"+params+"\n";
-		outP.println(msg);
-		outP.flush();
-	}
-
 	
 	private void executeCommand(String cmd) throws IOException {
-		switch (this.parseCommand(cmd)) {
+		switch (Command.parseCommand(cmd)) {
 			case "createAccount": 
-				System.out.println("create Account "+this.parseParams(cmd)[0]);
-				String number = this.bank.createAccount(this.parseParams(cmd)[0]);
-				this.sendCommand(number,"");
+				System.out.println("create Account "+Command.parseParams(cmd)[0]);
+				String number = this.bank.createAccount(Command.parseParams(cmd)[0]);
+				Command.send("success",number,this.socket);
 				break;
 			default: 
 				break;
 		}
 	}
-	private String parseCommand(String cmd) {
-		return cmd.substring(0, cmd.indexOf(":"));
-	}
-	private String[] parseParams(String cmd) {
-		String cmd2 = cmd.substring(cmd.indexOf(":")+1,cmd.length());
-		return cmd2.split(",");
-	}
+	
 
 }
 
