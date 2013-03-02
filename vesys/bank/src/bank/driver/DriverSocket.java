@@ -1,12 +1,8 @@
 package bank.driver;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.ObjectOutputStream;
 import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.net.Inet4Address;
 import java.net.Socket;
 import java.util.HashMap;
@@ -25,8 +21,6 @@ public class DriverSocket implements BankDriver {
 	private SocketBank b;
 	private Inet4Address remote;
 	private Socket sock;
-	private OutputStream out;
-	private InputStream in;
 	
 	
 	@Override
@@ -35,8 +29,6 @@ public class DriverSocket implements BankDriver {
 		else {
 			remote = (Inet4Address) Inet4Address.getByName(args[0]);
 			sock = new Socket(remote, Integer.parseInt(args[1]));
-			out = sock.getOutputStream();
-			in = sock.getInputStream();
 			System.out.println("Connected to "+remote.getHostName()+":"+args[1]);
 			b = new SocketBank(this);
 		}
@@ -77,7 +69,9 @@ public class DriverSocket implements BankDriver {
 		@Override
 		public String createAccount(String owner) throws IOException {
 			Command.send("createAccount", owner, driver.sock);
-			String number = Command.parseCommand(Command.receive(driver.sock));
+			String cmd = Command.receive(driver.sock);
+			System.out.println("Client received: "+cmd);
+			String number = Command.parseParams(cmd)[0];
 			accounts.put(number, new SocketAccount(owner, number));
 			return number;
 		}

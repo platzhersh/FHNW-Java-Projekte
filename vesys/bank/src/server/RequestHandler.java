@@ -23,7 +23,9 @@ public class RequestHandler implements Runnable {
 	@Override
 	public void run() {
 		try {
-			this.executeCommand(Command.receive(this.socket));
+			String cmd = Command.receive(this.socket);
+			System.out.println("Server received: "+cmd);
+			this.executeCommand(cmd);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
