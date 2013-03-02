@@ -21,7 +21,7 @@ public class RequestHandler implements Runnable {
 	@Override
 	public void run() {
 		try {
-			this.receiveResult();
+			this.executeCommand(this.receiveResult());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -41,16 +41,16 @@ public class RequestHandler implements Runnable {
 		}*/
 	}
 	
-	private void receiveResult() throws IOException {
+	private String receiveResult() throws IOException {
 		BufferedReader b = new BufferedReader(new InputStreamReader(in));
 		String input = b.readLine();
 		System.out.println("Server received: "+input);
-		
+		return input;
 	}
 	
 	public void sendCommand(String cmd, String params) throws IOException {
 		PrintWriter outP = new PrintWriter(out);
-		String msg = cmd +":"+params+";";
+		String msg = cmd +":"+params+"\n";
 		outP.println(msg);
 		outP.flush();
 	}

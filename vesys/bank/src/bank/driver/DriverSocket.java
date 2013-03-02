@@ -58,7 +58,6 @@ public class DriverSocket implements BankDriver {
 		String msg = cmd +":"+params;
 		outP.println(msg);
 		outP.flush();
-		//out.write(msg.getBytes());
 	}
 	private String receiveResult() throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(this.sock.getInputStream()));
@@ -66,14 +65,7 @@ public class DriverSocket implements BankDriver {
 		System.out.println("Client received: "+input);
 		return input;
 	}
-	public String receiveCommand() throws IOException {
-		int c;
-		BufferedReader inbuf = new BufferedReader(new InputStreamReader(in));
-		String response = inbuf.readLine();
-		System.out.println("Client received: "+response);
-		return response;
-	}
-	
+
 	static class SocketBank implements bank.Bank {
 
 		private Map<String, SocketAccount> accounts = new HashMap<String, SocketAccount>();
