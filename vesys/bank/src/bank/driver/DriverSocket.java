@@ -155,9 +155,18 @@ public class DriverSocket implements BankDriver {
 				Command.send("deposit", this.number+","+Double.toString(amount), driver.sock);
 				String cmd = Command.receive(driver.sock);
 				System.out.println("Client received: "+cmd);
-				if (!this.isActive()) throw new InactiveException();
-				else if (amount < 0) throw new IllegalArgumentException();
-				else this.balance += amount;
+				String command = Command.parseCommand(cmd);
+				String[] params = Command.parseParams(cmd);
+				
+				if (command.equals("FAILURE")) {
+					switch (params[0]) {
+					case "InactiveException":
+						throw new InactiveException();
+					case "IllegalArgumentExceptionn":
+						throw new IllegalArgumentException();
+					}
+				}
+				else this.balance = this.getBalance();
 			}
 
 			@Override
@@ -178,7 +187,7 @@ public class DriverSocket implements BankDriver {
 						throw new OverdrawException();
 					}
 				} else {
-					Command.send("getBalance", this.number, driver.sock);
+  					Command.send("getBalance", this.number, driver.sock);
 					this.balance = Double.parseDouble(Command.parseParams(Command.receive(driver.sock))[0]);
 					}
 			}
