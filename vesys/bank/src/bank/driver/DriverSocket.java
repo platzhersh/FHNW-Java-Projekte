@@ -49,8 +49,13 @@ public class DriverSocket implements BankDriver {
 		private Map<String, SocketAccount> accounts = new HashMap<String, SocketAccount>();
 		private DriverSocket driver;
 		
-		public SocketBank(DriverSocket d) {
-			this.driver = d;																											
+		public SocketBank(DriverSocket d) throws IOException {
+			this.driver = d;
+			Command.send("getAccountNumbers", "", driver.sock);
+			String[] accs = Command.parseParams(Command.receive(driver.sock));
+				for (String acc : accs) {
+					this.accounts.put(acc, new SocketAccount(acc, this.driver));
+				}
 		}
 		
 		@Override
@@ -64,9 +69,13 @@ public class DriverSocket implements BankDriver {
 				String[] params = Command.parseParams(cmd);
 				System.out.println("Accounts: "+params.length);
 				for (String param : params) {
-					if (!param.isEmpty() || !param.equals("")) activeAccounts.add(param);
+					if (!param.isEmpty() || !param.equals("")) {
+						activeAccounts.add(param);
+						//accounts.put(param, new SocketAccount(param,this.driver));
+						}
+					}
 				}
-			}
+			 
 			return activeAccounts;
 		}
 
@@ -76,7 +85,7 @@ public class DriverSocket implements BankDriver {
 			String cmd = Command.receive(driver.sock);
 			System.out.println("Client received: "+cmd);
 			String number = Command.parseParams(cmd)[0];
-			accounts.put(number, new SocketAccount(owner, number, this.driver));
+			accounts.put(number, new SocketAccount(number, this.driver));
 			return number;
 		}
 
@@ -93,7 +102,8 @@ public class DriverSocket implements BankDriver {
 
 		@Override
 		public bank.Account getAccount(String number) {
-			return (bank.Account) accounts.get(number);
+			
+			return accounts.get(number);
 		}
 
 		@Override
@@ -107,13 +117,11 @@ public class DriverSocket implements BankDriver {
 	
 	static class SocketAccount implements bank.Account {
 			private String number;
-			private String owner;
 			private double balance;
 			private boolean active = true;
 			DriverSocket driver;
 
-			SocketAccount(String owner, String number, DriverSocket s) {
-				this.owner = owner;
+			SocketAccount(String number, DriverSocket s) {
 				this.number = number;
 				this.driver = s;
 				
@@ -154,16 +162,28 @@ public class DriverSocket implements BankDriver {
 
 			@Override
 			public void withdraw(double amount) throws InactiveException, OverdrawException, IOException {
-				Command.send("deposit", this.number+","+Double.toString(amount), driver.sock);
+				Command.send("withdraw", this.number+","+Double.toString(amount), driver.sock);
 				String cmd = Command.receive(driver.sock);
 				System.out.println("Client received: "+cmd);
-				if (!this.isActive()) throw new InactiveException();
-				else if (amount < 0) throw new IllegalArgumentException();
-				else {
-					if (this.getBalance() < amount) throw new OverdrawException();
-					else this.balance -= amount;
-				}
+				String command = Command.parseCommand(cmd);
+				String[] params = Command.parseParams(cmd);
+				
+				if (command.equals("FAILURE")) {
+					switch (params[0]) {
+					case "InactiveException":
+						throw new InactiveException();
+					case "IllegalArgumentExceptionn":
+						throw new IllegalArgumentException();
+					case "OverdrawException":
+						throw new OverdrawException();
+					}
+				} else {
+					Command.send("getBalance", this.number, driver.sock);
+					this.balance = Double.parseDouble(Command.parseParams(Command.receive(driver.sock))[0]);
+					}
 			}
+			
+
 			
 			public void activate() {
 				this.active = true;
