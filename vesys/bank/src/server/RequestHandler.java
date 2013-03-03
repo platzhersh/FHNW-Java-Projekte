@@ -6,24 +6,35 @@ import java.net.Socket;
 import bank.InactiveException;
 import bank.OverdrawException;
 import bank.driver.Command;
-
+/***
+ * Used to parse and process received commands
+ * One RequestHandler per Socket
+ * RequestHandler stops listening as soon as socket connection is closed
+ * @author Christian Glatthard
+ *
+ */
 public class RequestHandler implements Runnable {
 	
 	private Socket socket;
-	private InputStream in;
-	private OutputStream out;
 	String command;
 	MyBank bank;
 	Boolean running;
 	
+	/**
+	 * Constructor
+	 * @param sock reference to client server socket connection
+	 * @param bank reference to server bank object
+	 * @throws IOException
+	 */
 	public RequestHandler(Socket sock, MyBank bank) throws IOException {
 		this.socket = sock;
-		this.in = socket.getInputStream();
-		this.out = socket.getOutputStream();
 		this.bank = bank;
 		this.running = true;
 	}
-
+	
+	/***
+	 * main function, waits for commands to process them
+	 */
 	@Override
 	public void run() {
 		while (this.running) {
@@ -40,7 +51,11 @@ public class RequestHandler implements Runnable {
 		}
 	}
 	
-	
+	/***
+	 * processes the commands and sends response back (FAILURE / SUCCESS)
+	 * @param cmd command string
+	 * @throws IOException
+	 */
 	private void executeCommand(String cmd) throws IOException {
 		String command = Command.parseCommand(cmd);
 		String[] params = Command.parseParams(cmd);
@@ -103,8 +118,16 @@ public class RequestHandler implements Runnable {
 				String accounts = new String();
 				for (String acc : this.bank.getAccountNumbers()) {
 					accounts += ","+acc;
-				}			
+				}
+				accounts =  (accounts.length() > 1) ?accounts.substring(1) : "";
 				Command.send("SUCCESS", accounts, cmd, this.socket);
+				break;
+			case "getAccount":
+				if (params[0].isEmpty()) Command.send("FAILURE", "",cmd, this.socket);
+				else {
+					String acc = this.bank.getAccount(params[0]).getNumber();
+					Command.send("SUCCESS", acc, cmd, this.socket);
+				}
 				break;
 			default: 
 				Command.send("FAILURE", "unknown command", cmd,this.socket);

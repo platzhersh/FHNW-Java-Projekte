@@ -4,9 +4,17 @@ import java.io.IOException;
 import java.net.Inet4Address;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.net.SocketException;
 import java.io.*;
 
+
+/***
+ * Class Client is used to manage the bank on the centralised server.
+ * Per default the server runs on port 4200, but you can specify whatever port you want to run it.
+ * 
+ * 
+ * @author Christian Glatthard
+ *
+ */
 public class Server {
 	boolean running = true;
 	int port;
@@ -18,7 +26,8 @@ public class Server {
 	RequestHandler r;
 		
 	public static void main(String args[]) throws IOException {
-		Server server = new Server(4200);
+		int port = args[0].isEmpty() ? 4200 : Integer.valueOf(args[0]);
+		Server server = new Server(port);
 		server.run();
 		server.stop();
 	}
@@ -52,6 +61,7 @@ public class Server {
 				}
 			}
 		}
+	
 	public void stop() {
 		try {
 			socket.close();

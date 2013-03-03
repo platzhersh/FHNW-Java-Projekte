@@ -6,6 +6,14 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+
+/***
+ * The Command class is a static helper class to communicate between Client and Server
+ * Commands have the following syntax:
+ * command:param1,param2,param3,..paramN	(additional Info)
+ * @author Christian Glatthard
+ *
+ */
 public class Command {
 	/***
 	 * Send a Command including its parameters to the other end of the socket connection

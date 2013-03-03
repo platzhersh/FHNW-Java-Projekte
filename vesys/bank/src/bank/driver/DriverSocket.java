@@ -53,7 +53,7 @@ public class DriverSocket implements BankDriver {
 			Command.send("getAccountNumbers", "", driver.sock);
 			String[] accs = Command.parseParams(Command.receive(driver.sock));
 				for (String acc : accs) {
-					this.accounts.put(acc, new SocketAccount(acc, this.driver));
+					if (!acc.isEmpty()) this.accounts.put(acc, new SocketAccount(acc, this.driver));
 				}
 		}
 		
@@ -97,10 +97,20 @@ public class DriverSocket implements BankDriver {
 		}
 
 		@Override
-		public bank.Account getAccount(String number) {
+		public bank.Account getAccount(String number) throws IOException {
+			
 			bank.Account r;
-			if (number.isEmpty()) r = null; 
-			else r = accounts.get(number);
+			
+			Command.send("getAccount", number, driver.sock);
+			String cmd = Command.receive(driver.sock);
+			System.out.println("Client received: "+cmd);
+			String command = Command.parseCommand(cmd);
+			
+			if (command.equals("FAILURE")) r = null;
+			else {
+				r = new SocketAccount(number, driver);
+			}
+			
 			return r;
 		}
 
