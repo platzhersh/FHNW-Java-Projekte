@@ -26,7 +26,7 @@ public class Server {
 	RequestHandler r;
 		
 	public static void main(String args[]) throws IOException {
-		int port = args[0].isEmpty() ? 4200 : Integer.valueOf(args[0]);
+		int port = args.length >= 1 ? Integer.valueOf(args[0]): 4200;
 		Server server = new Server(port);
 		server.run();
 		server.stop();
