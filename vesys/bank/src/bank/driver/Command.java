@@ -23,6 +23,17 @@ public class Command {
 		outP.println(msg);
 		outP.flush();
 	}
+	/***
+	 * 
+	 * @param cmd
+	 * @param params
+	 * @param info Provide additional info
+	 * @param s
+	 * @throws IOException
+	 */
+	public static void send(String cmd, String params, String info, Socket s) throws IOException {
+		Command.send(cmd, params+"\t("+info+")", s);
+	}
 	
 	/***
 	 * Fetch commands sent to your socket. Commands get read per line. 
@@ -41,8 +52,8 @@ public class Command {
 	 * @param cmdlet
 	 * @return
 	 */
-	public static String parseCommand(String cmdlet) {
-		return cmdlet.substring(0, cmdlet.indexOf(":"));
+	public static String parseCommand(String cmd) {
+		return cmd.substring(0, cmd.indexOf(":"));
 	}
 	/***
 	 * Returns an array of all the params
@@ -50,12 +61,22 @@ public class Command {
 	 * [0] = "S01-000001"
 	 * [1] = "S01-000002"
 	 * [2] = "200"
-	 * @param cmdlet
+	 * @param cmd
 	 * @return
 	 */
-	public static String[] parseParams(String cmdlet) {
-		String cmd2 = cmdlet.substring(cmdlet.indexOf(":")+1,cmdlet.length());
+	public static String[] parseParams(String cmd) {
+		String cmd2 = cmd.substring(cmd.indexOf(":")+1,cmd.length());
+		if (cmd2.contains("\t")) cmd2 = cmd2.substring(0,cmd2.indexOf("\t"));
 		return cmd2.split(",");
+	}
+	/***
+	 * Returns the additional info part of the received command
+	 * i.e. you receive "SUCCESS:S01-0000001	(createAccount:S01-0000001)", this function returns "createAccount:S01-0000001"
+	 * @param cmd
+	 * @return
+	 */
+	public static String parseInfo(String cmd) {
+		return cmd.substring(cmd.indexOf("\t")+1,cmd.length()-1);
 	}
 	
 	

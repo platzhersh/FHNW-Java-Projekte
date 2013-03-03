@@ -1,6 +1,7 @@
 package server;
 
 import java.io.IOException;
+import java.net.Inet4Address;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.SocketException;
@@ -25,7 +26,7 @@ public class Server {
 	public Server(int port) {
 		try {
 			
-			System.out.println("Warte auf Verbindung auf Port "+port);
+			System.out.println("Waiting for clients on "+Inet4Address.getLocalHost().getHostName()+":"+port);
 			bankd = new ServerSocket(port);
 		}
 		catch (IOException e) {
@@ -40,7 +41,7 @@ public class Server {
 		while (this.running == true) {
 			this.socket = bankd.accept();
 			try {
-				System.out.println("Verbindung hergestellt");		
+				System.out.println("Connection established: "+this.socket.toString());		
 				r = new RequestHandler(this.socket, this.bank);
 				Thread t = new Thread(r);
 				t.start();
@@ -55,7 +56,7 @@ public class Server {
 		try {
 			socket.close();
 			bankd.close(); 
-			System.out.println("Verbindung getrennt");
+			System.out.println("Connection closed");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

@@ -1,8 +1,6 @@
 package bank.driver;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.net.Inet4Address;
 import java.net.Socket;
 import java.util.HashMap;
@@ -56,12 +54,18 @@ public class DriverSocket implements BankDriver {
 		}
 		
 		@Override
-		public Set<String> getAccountNumbers() {
-			
+		public Set<String> getAccountNumbers() throws IOException {
+			Command.send("getAccountNumbers", "", driver.sock);
+			String cmd = Command.receive(driver.sock);
 			Set<String> activeAccounts = new HashSet<String>();
+			System.out.println("Client received: "+cmd);
 			
-			for (Entry<String, SocketAccount> e : accounts.entrySet() ) {
-				if (e.getValue().isActive()) activeAccounts.add(e.getKey());
+			if (Command.parseCommand(cmd).equals("SUCCESS")) {
+				String[] params = Command.parseParams(cmd);
+				System.out.println("Accounts: "+params.length);
+				for (String param : params) {
+					if (!param.isEmpty() || !param.equals("")) activeAccounts.add(param);
+				}
 			}
 			return activeAccounts;
 		}
@@ -72,15 +76,19 @@ public class DriverSocket implements BankDriver {
 			String cmd = Command.receive(driver.sock);
 			System.out.println("Client received: "+cmd);
 			String number = Command.parseParams(cmd)[0];
-			accounts.put(number, new SocketAccount(owner, number));
+			accounts.put(number, new SocketAccount(owner, number, this.driver));
 			return number;
 		}
 
 		@Override
-		public boolean closeAccount(String number) {
+		public boolean closeAccount(String number) throws IOException {
+			Command.send("closeAccount", number, driver.sock);
+			String cmd = Command.receive(driver.sock);
+			Boolean r = Command.parseParams(cmd)[0].equals("true");
+			System.out.println("Client received: "+cmd);
 			SocketAccount acc = accounts.get(number);
 			if (acc.isActive() && acc.getBalance() == 0) acc.deactivate();
-			return !acc.isActive();
+			return r;
 		}
 
 		@Override
@@ -102,20 +110,25 @@ public class DriverSocket implements BankDriver {
 			private String owner;
 			private double balance;
 			private boolean active = true;
+			DriverSocket driver;
 
-			SocketAccount(String owner, String number) {
+			SocketAccount(String owner, String number, DriverSocket s) {
 				this.owner = owner;
 				this.number = number;
+				this.driver = s;
+				
 			}
 
 			@Override
-			public double getBalance() {
-				return balance;
+			public double getBalance() throws IOException {
+				Command.send("getBalance", this.number, driver.sock);
+				return Double.parseDouble(Command.parseParams(Command.receive(driver.sock))[0]);
 			}
 
 			@Override
-			public String getOwner() {
-				return owner;
+			public String getOwner() throws IOException {
+				Command.send("getOwner", this.number, driver.sock);
+				return Command.parseParams(Command.receive(driver.sock))[0];
 			}
 
 			@Override
@@ -124,19 +137,26 @@ public class DriverSocket implements BankDriver {
 			}
 
 			@Override
-			public boolean isActive() {
-				return active;
+			public boolean isActive() throws IOException {
+				Command.send("isActive", this.number, driver.sock);
+				return Command.parseParams(Command.receive(driver.sock))[0].equals("true");
 			}
 
 			@Override
-			public void deposit(double amount) throws InactiveException {
+			public void deposit(double amount) throws InactiveException, IOException {
+				Command.send("deposit", this.number+","+Double.toString(amount), driver.sock);
+				String cmd = Command.receive(driver.sock);
+				System.out.println("Client received: "+cmd);
 				if (!this.isActive()) throw new InactiveException();
 				else if (amount < 0) throw new IllegalArgumentException();
 				else this.balance += amount;
 			}
 
 			@Override
-			public void withdraw(double amount) throws InactiveException, OverdrawException {
+			public void withdraw(double amount) throws InactiveException, OverdrawException, IOException {
+				Command.send("deposit", this.number+","+Double.toString(amount), driver.sock);
+				String cmd = Command.receive(driver.sock);
+				System.out.println("Client received: "+cmd);
 				if (!this.isActive()) throw new InactiveException();
 				else if (amount < 0) throw new IllegalArgumentException();
 				else {
