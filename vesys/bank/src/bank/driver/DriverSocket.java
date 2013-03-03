@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import java.util.Map.Entry;
 
 import bank.Bank;
 import bank.BankDriver;
@@ -95,20 +94,17 @@ public class DriverSocket implements BankDriver {
 			String cmd = Command.receive(driver.sock);
 			Boolean r = Command.parseParams(cmd)[0].equals("true");
 			System.out.println("Client received: "+cmd);
-			SocketAccount acc = accounts.get(number);
-			if (acc.isActive() && acc.getBalance() == 0) acc.deactivate();
 			return r;
 		}
 
 		@Override
 		public bank.Account getAccount(String number) {
-			
 			return accounts.get(number);
 		}
 
 		@Override
 		public void transfer(bank.Account from, bank.Account to, double amount)
-				throws IOException, InactiveException, OverdrawException {
+				throws IOException, InactiveException, OverdrawException, IllegalArgumentException {
 			from.withdraw(amount);
 			to.deposit(amount);
 			
@@ -117,8 +113,6 @@ public class DriverSocket implements BankDriver {
 	
 	static class SocketAccount implements bank.Account {
 			private String number;
-			private double balance;
-			private boolean active = true;
 			DriverSocket driver;
 
 			SocketAccount(String number, DriverSocket s) {
@@ -151,7 +145,7 @@ public class DriverSocket implements BankDriver {
 			}
 
 			@Override
-			public void deposit(double amount) throws InactiveException, IOException {
+			public void deposit(double amount) throws InactiveException, IOException, IllegalArgumentException {
 				Command.send("deposit", this.number+","+Double.toString(amount), driver.sock);
 				String cmd = Command.receive(driver.sock);
 				System.out.println("Client received: "+cmd);
@@ -162,15 +156,14 @@ public class DriverSocket implements BankDriver {
 					switch (params[0]) {
 					case "InactiveException":
 						throw new InactiveException();
-					case "IllegalArgumentExceptionn":
+					case "IllegalArgumentException":
 						throw new IllegalArgumentException();
 					}
 				}
-				else this.balance = this.getBalance();
-			}
+ 			}
 
 			@Override
-			public void withdraw(double amount) throws InactiveException, OverdrawException, IOException {
+			public void withdraw(double amount) throws InactiveException, OverdrawException, IOException, IllegalArgumentException {
 				Command.send("withdraw", this.number+","+Double.toString(amount), driver.sock);
 				String cmd = Command.receive(driver.sock);
 				System.out.println("Client received: "+cmd);
@@ -181,26 +174,15 @@ public class DriverSocket implements BankDriver {
 					switch (params[0]) {
 					case "InactiveException":
 						throw new InactiveException();
-					case "IllegalArgumentExceptionn":
+					case "IllegalArgumentException":
 						throw new IllegalArgumentException();
 					case "OverdrawException":
 						throw new OverdrawException();
 					}
-				} else {
-  					Command.send("getBalance", this.number, driver.sock);
-					this.balance = Double.parseDouble(Command.parseParams(Command.receive(driver.sock))[0]);
-					}
+				} 
 			}
 			
 
-			
-			public void activate() {
-				this.active = true;
-			}
-
-			public void deactivate() {
-				this.active = false;
-			}
 		}
 
 
