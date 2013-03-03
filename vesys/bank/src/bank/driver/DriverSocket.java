@@ -1,4 +1,4 @@
-package bank.driver;
+ package bank.driver;
 
 import java.io.IOException;
 import java.net.Inet4Address;
@@ -68,9 +68,8 @@ public class DriverSocket implements BankDriver {
 				String[] params = Command.parseParams(cmd);
 				System.out.println("Accounts: "+params.length);
 				for (String param : params) {
-					if (!param.isEmpty() || !param.equals("")) {
+					if (!param.isEmpty() && !param.equals("") && param != null) {
 						activeAccounts.add(param);
-						//accounts.put(param, new SocketAccount(param,this.driver));
 						}
 					}
 				}
@@ -99,7 +98,10 @@ public class DriverSocket implements BankDriver {
 
 		@Override
 		public bank.Account getAccount(String number) {
-			return accounts.get(number);
+			bank.Account r;
+			if (number.isEmpty()) r = null; 
+			else r = accounts.get(number);
+			return r;
 		}
 
 		@Override
