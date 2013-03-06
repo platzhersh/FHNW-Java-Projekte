@@ -5,6 +5,7 @@ public class OneBitCounter {
 	static int intSize = 32;
 	/***
 	 * takes ~8*32 operations to count
+	 * 2^(Bits of Datatype)*8 operations
 	 * @param x
 	 * @return
 	 */
@@ -18,6 +19,7 @@ public class OneBitCounter {
 	}
 	/***
 	 * takes ~8*32 operations to count
+	 * 2^(Bits of Datatype)*8 operations
 	 * @param x
 	 * @return
 	 */
@@ -31,6 +33,7 @@ public class OneBitCounter {
 	}
 	/***
 	 * takes 5*10 operations to count bits of Integer
+	 * log2(Bits of Datatype)*10 operations
 	 * @param x
 	 * @return
 	 */
