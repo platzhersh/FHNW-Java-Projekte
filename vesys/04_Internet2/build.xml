@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<project name="04_Internet2" default="compile" basedir=".">
+
+	<property name="src.dir" value="${basedir}/src"/>
+	<property name="res.dir" value="${basedir}/res"/>
+	<property name="lib.dir" value="${basedir}/lib"/>
+	<property name="classes.dir" value="${basedir}/bin"/>
+
+<!--
+	<property environment="env"/>
+	<property name="tomcat.home" value="${env.CATALINA_HOME}"/>
+-->
+	<property name="tomcat.home" value="C:\tomcat\apache-tomcat-7.0.37"/>
+		
+	<!-- Build classpath -->
+	<path id="classpath">
+		<pathelement location="${classes.dir}"/>
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+
+	<target name="prepare" >
+		<mkdir dir="${classes.dir}"/>
+	</target>
+
+	<target name="clean">
+		<delete dir="${classes.dir}"/>
+	</target>
+
+	<target name="compile" depends="prepare">
+		<javac srcdir="${src.dir}"
+					 destdir="${classes.dir}"
+					 debug="on"
+					 includeantruntime="false"
+					 deprecation="on"
+					 optimize="off">
+			<classpath refid="classpath"/>
+			<include name="**/*.java" />
+		</javac>
+	</target>
+
+	<target name="echo1.war" depends="compile">
+		<war warfile="${basedir}/echo1.war" webxml="${res.dir}/web.xml">
+			<classes dir="${classes.dir}" >
+				<include name="ch/fhnw/ds/servlet/echo1/*.class" />
+			</classes>
+		</war>
+	</target>
+
+	<target name="echo1.deploy" depends="echo1.war">
+		<copy file="${basedir}/echo1.war" todir="${tomcat.home}/webapps"/>
+	</target>
+
+	<target name="echo1.undeploy">
+		<delete file="${tomcat.home}/webapps/echo1.war"/>
+	</target>
+
+
+
+	<target name="echo2.war" depends="compile">
+		<war warfile="${basedir}/echo2.war" needxmlfile="false">
+			<classes dir="${classes.dir}" >
+				<include name="ch/fhnw/ds/servlet/echo*/*.class" />
+			</classes>
+		</war>
+	</target>
+
+	<target name="echo2.deploy" depends="echo2.war">
+		<copy file="${basedir}/echo2.war" todir="${tomcat.home}/webapps"/>
+	</target>
+
+	<target name="echo2.undeploy">
+		<delete file="${tomcat.home}/webapps/echo2.war"/>
+	</target>
+
+
+
+	<target name="currency.war" depends="compile">
+		<war warfile="${basedir}/currency.war" needxmlfile="false">
+			<classes dir="${classes.dir}" >
+				<include name="ch/fhnw/ds/servlet/currency/*.class" />
+			</classes>
+			<fileset dir="${basedir}/res/currency">
+				<include name="*.jsp"/>
+				<include name="*.html"/>
+			</fileset>
+		</war>
+	</target>
+
+	<target name="currency.deploy" depends="currency.war">
+		<copy file="${basedir}/currency.war" todir="${tomcat.home}/webapps"/>
+	</target>
+
+	<target name="currency.undeploy">
+		<delete file="${tomcat.home}/webapps/currency.war"/>
+	</target>
+
+</project>
+
