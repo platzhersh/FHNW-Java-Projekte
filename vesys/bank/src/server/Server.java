@@ -47,7 +47,7 @@ public class Server {
 	public void run() throws IOException {
 		bank = new MyBank();
 		
-		while (this.running == true) {
+		while (this.running) {
 			this.socket = bankd.accept();
 			try {
 				System.out.println("Connection established: "+this.socket.toString());		

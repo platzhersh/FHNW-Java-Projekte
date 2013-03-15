@@ -35,6 +35,7 @@ public class DriverSocket implements BankDriver {
 	@Override
 	public void disconnect() throws IOException {
 			sock.close();	
+			this.b = null;
 	}
 
 	@Override
@@ -45,16 +46,10 @@ public class DriverSocket implements BankDriver {
 
 	static class SocketBank implements bank.Bank {
 
-		private Map<String, SocketAccount> accounts = new HashMap<String, SocketAccount>();
 		private DriverSocket driver;
 		
 		public SocketBank(DriverSocket d) throws IOException {
 			this.driver = d;
-			Command.send("getAccountNumbers", "", driver.sock);
-			String[] accs = Command.parseParams(Command.receive(driver.sock));
-				for (String acc : accs) {
-					if (!acc.isEmpty()) this.accounts.put(acc, new SocketAccount(acc, this.driver));
-				}
 		}
 		
 		@Override
@@ -83,7 +78,6 @@ public class DriverSocket implements BankDriver {
 			String cmd = Command.receive(driver.sock);
 			System.out.println("Client received: "+cmd);
 			String number = Command.parseParams(cmd)[0];
-			accounts.put(number, new SocketAccount(number, this.driver));
 			return number;
 		}
 

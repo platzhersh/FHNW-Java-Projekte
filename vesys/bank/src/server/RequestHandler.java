@@ -18,7 +18,7 @@ public class RequestHandler implements Runnable {
 	private Socket socket;
 	String command;
 	MyBank bank;
-	Boolean running;
+	boolean running;
 	
 	/**
 	 * Constructor
