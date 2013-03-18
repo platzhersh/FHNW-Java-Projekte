@@ -2,6 +2,7 @@
 <project name="bank" default="compile" basedir=".">
 
 	<property file="build.properties" />
+	<property name="tomcat.home" value="C:\tomcat\apache-tomcat-7.0.37"/>
 	
 	<path id="bank.class.path">
 <!--
@@ -50,6 +51,27 @@
 			<arg value="1234"/>
 			<classpath refid="bank.class.path"/>
 		</java>
+	</target>
+	
+	
+	<target name="webclient.war" depends="compile">
+		<war warfile="${basedir}/webclient.war" needxmlfile="false">
+			<classes dir="${bin.dir}" >
+				<include name="bank/web/*.class" />
+			</classes>
+			<fileset dir="${res.dir}/web">
+				<include name="*.jsp"/>
+				<include name="*.html"/>
+			</fileset>
+		</war>
+	</target>
+
+	<target name="webclient.deploy" depends="webclient.war">
+		<copy file="${basedir}/webclient.war" todir="${tomcat.home}/webapps"/>
+	</target>
+
+	<target name="webclient.undeploy">
+		<delete file="${tomcat.home}/webapps/webclient.war"/>
 	</target>
 	
 </project>
