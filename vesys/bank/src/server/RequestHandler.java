@@ -41,7 +41,8 @@ public class RequestHandler implements Runnable {
 			try {
 				String cmd = Command.receive(this.socket);
 				System.out.println("Server received: "+cmd);
-				this.executeCommand(cmd);
+				if (cmd != null) this.executeCommand(cmd);
+				else Command.send("FAILURE","NullPointerException",cmd,this.socket);
 			} 
 			catch (IOException e) {
 				e.printStackTrace();

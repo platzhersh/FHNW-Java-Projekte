@@ -19,9 +19,8 @@ public class DriverSocket implements BankDriver {
 	private Inet4Address remote;
 	private Socket sock;
 	
-	
 	@Override
-	public void connect(String[] args) throws IOException {
+	public void connect(String args[]) throws IOException {
 		if (args.length < 2) { throw new IOException("provide Host and Port"); }
 		else {
 			remote = (Inet4Address) Inet4Address.getByName(args[0]);
