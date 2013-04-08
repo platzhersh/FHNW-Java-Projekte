@@ -1,15 +1,11 @@
 package jaxws.service;
 
-import java.util.Set;
-
-import javax.jws.WebMethod;
+import java.io.IOException;
 import javax.jws.WebService;
-
 import server.MyAccount;
 import server.MyBank;
-import server.Server;
-
-import bank.Account;
+import bank.InactiveException;
+import bank.OverdrawException;
 
 @WebService(endpointInterface = "jaxws.service.Webservices")
 public class WebservicesImpl implements Webservices{
@@ -21,57 +17,49 @@ public class WebservicesImpl implements Webservices{
 	}
 	
 	@Override
-	public String createAccount() {
-		return "blubb";
+	public String createAccount(String owner) {
+		return this.bank.createAccount(owner);
 	}
 
 	@Override
-	public boolean closeAccount() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean closeAccount(String number) {
+		return this.bank.closeAccount(number);
 	}
 
 	@Override
-	@WebMethod
-	public void deposit() {
-		// TODO Auto-generated method stub
-		
+	public void deposit(String number, double amount) throws IllegalArgumentException, IOException, InactiveException {
+		this.bank.getAccount(number).deposit(amount);
+
 	}
 
 	@Override
-	public void withdraw() {
-		// TODO Auto-generated method stub
-		
+	public void withdraw(String number, double amount) throws IllegalArgumentException, IOException, InactiveException, OverdrawException {
+		this.bank.getAccount(number).withdraw(amount);
 	}
 
 	@Override
-	public String getOwner() {
-		// TODO Auto-generated method stub
-		return null;
+	public String getOwner(String number) throws IOException {
+		return this.bank.getAccount(number).getOwner();
 	}
 
 	@Override
-	public double getBalance() {
-		// TODO Auto-generated method stub
-		return 0;
+	public double getBalance(String number) throws IOException {
+		return this.bank.getAccount(number).getBalance();
 	}
 
 	@Override
-	public boolean isActive() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean isActive(String number) throws IOException {
+		return this.bank.getAccount(number).isActive();
 	}
 
 	@Override
-	public MyAccount getAccount() {
-		// TODO Auto-generated method stub
-		return null;
+	public MyAccount getAccount(String number) throws IOException{
+		return (MyAccount) this.bank.getAccount(number);
 	}
 
 	@Override
 	public Object[] getAccountNumbers() {
-		// TODO Auto-generated method stub
-		return null;
+		return this.bank.getAccountNumbers().toArray();
 	}
 
 }
