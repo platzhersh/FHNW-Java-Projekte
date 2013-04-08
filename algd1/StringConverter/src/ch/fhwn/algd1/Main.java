@@ -9,6 +9,8 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		System.out.println(StringConverter.utfToLatin1("Hallo Welt! Wie gehts, du alte Sau? הצהü?$+~ג"));
+		System.out.println("\u0041\u10384\u0042\u03A9");
+		System.out.println(StringConverter.utfToLatin1("\u0041\u10384\u0042\u03A9"));
 
 	}
 

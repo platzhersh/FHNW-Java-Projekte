@@ -1,0 +1,6 @@
+<jaxws:bindings
+   wsdlLocation="http://www.webservicex.com/CurrencyConvertor.asmx?wsdl"
+   xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+>
+   <jaxws:enableWrapperStyle>false</jaxws:enableWrapperStyle>
+</jaxws:bindings>
