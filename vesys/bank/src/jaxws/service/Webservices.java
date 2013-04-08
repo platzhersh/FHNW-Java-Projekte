@@ -23,7 +23,7 @@ public interface Webservices {
 	@WebMethod String getOwner(String number) throws IOException;
 	@WebMethod double getBalance(String number) throws IOException;
 	@WebMethod boolean isActive(String number) throws IOException;
-	@WebMethod Object[] getAccountNumbers() throws IOException;
+	@WebMethod String[] getAccountNumbers() throws IOException;
 	@WebMethod MyAccount getAccount(String number) throws IOException;
 
 }

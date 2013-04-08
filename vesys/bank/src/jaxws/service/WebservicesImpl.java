@@ -58,8 +58,8 @@ public class WebservicesImpl implements Webservices{
 	}
 
 	@Override
-	public Object[] getAccountNumbers() {
-		return this.bank.getAccountNumbers().toArray();
+	public String[] getAccountNumbers() {
+		return this.bank.getAccountNumbers().toArray(new String[0]);
 	}
 
 }
