@@ -12,5 +12,6 @@ import javax.jws.soap.SOAPBinding.Style;
 public interface HelloWorld {
 	
 	@WebMethod String getHelloWorldAsString(String name);
+	
 
 }
