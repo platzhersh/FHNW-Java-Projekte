@@ -1,9 +1,6 @@
 package bank.driver;
 
 
-// TODO: ALL
-
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.Arrays;

@@ -8,6 +8,11 @@ public class StringConverter {
 	//Charset utf8charset = Charset.forName("UTF-8");
 	//Charset iso88591charset = Charset.forName("ISO-8859-1");
 	
+	/***
+	 * Converts UTF16 String to Latin1 
+	 * @param s String to convert
+	 * @return 
+	 */
 	static byte[] utfToLatin1(String s) {
 		byte[] array = new byte[s.length()];
 		int j = 0;
@@ -42,5 +47,31 @@ public class StringConverter {
 		}
 	}
 
-
+	/***
+	 * Converts UTF32 Character to UTF16 Character
+	 * @param c UTF32 Character to convert
+	 * @param array 
+	 * @param pos Position in Array where to put the UTF16 value
+	 * @return number of created Codepoints for convertion
+	 */
+	static int utf32to16(int c, char[] array, int pos){
+		System.out.println(Integer.toBinaryString(c));
+		System.out.println(Integer.toHexString(c));
+		System.out.println(Integer.toOctalString(c));
+		if (c > 0x10000) {
+			c -= 0x10000;
+			int char1 = 0xD8 + (c & 0xFFC00);
+			int char2 = 0xDC + (c & 0x003FF);
+			
+			array[pos] = (char) char1;
+			array[pos+1] = (char) char2;
+			
+			return 2;
+		} else {
+			
+			array[pos] = (char) c;
+			
+			return 1;
+		}
+	}
 }
