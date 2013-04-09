@@ -7,7 +7,13 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(new City(14).toString());
+		City c = new City(14);
+		
+		System.out.println(c.toString());
+		
+		int pos = 5;
+		
+		System.out.println("You can see " + c.countBuildingsNORTH(pos) + " buildings from pos "+pos+" in direction NORTH.");
 
 	}
 

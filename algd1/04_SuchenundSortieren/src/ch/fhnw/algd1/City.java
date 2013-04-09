@@ -18,6 +18,44 @@ public class City {
 		}
 	}
 	
+	public int countBuildingsNORTH (int pos) {
+		int count = 1;
+		int y = buildings.length-1;
+		if (pos < y){
+			int temp = buildings[pos][y];
+			while (temp < buildings.length && y >= 0) {
+				if (temp < buildings[pos][y--]) {
+					temp = buildings[pos][y];
+					count++;
+				}
+			}
+			
+		}
+		return count;
+	}
+	
+	public int countBuildingsSOUTH (int pos) {
+		int count = 1;
+		int y = 0;
+		if (pos > y){
+			int temp = buildings[pos][y];
+			while (temp < buildings.length && y >= 0) {
+				if (temp < buildings[pos][y--]) {
+					temp = buildings[pos][y];
+					count++;
+				}
+			}
+			
+		}
+		return count;
+	}
+	public int countBuildingsWEST (int pos) {
+		int count = 0;
+	}
+	public int countBuildingsEAST (int pos) {
+		int count = 0;
+	}
+	*/
 	@Override
 	public String toString() {
 	String ret = "";
