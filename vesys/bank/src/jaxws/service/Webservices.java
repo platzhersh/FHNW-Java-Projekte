@@ -18,12 +18,12 @@ public interface Webservices {
 
 	@WebMethod String createAccount(String owner);
 	@WebMethod boolean closeAccount(String number);
-	@WebMethod void deposit(String number, double ammount) throws IllegalArgumentException, IOException, InactiveException;
-	@WebMethod void withdraw(String number, double ammount) throws IllegalArgumentException, IOException, InactiveException, OverdrawException;
+	@WebMethod void deposit(String number, double amount) throws IllegalArgumentException, IOException, InactiveException;
+	@WebMethod void withdraw(String number, double amount) throws IllegalArgumentException, IOException, InactiveException, OverdrawException;
 	@WebMethod String getOwner(String number) throws IOException;
 	@WebMethod double getBalance(String number) throws IOException;
 	@WebMethod boolean isActive(String number) throws IOException;
 	@WebMethod String[] getAccountNumbers() throws IOException;
-	@WebMethod MyAccount getAccount(String number) throws IOException;
+	// @WebMethod MyAccount getAccount(String number) throws IOException;
 
 }

@@ -34,7 +34,7 @@ public class DriverJAXWS implements BankDriver {
 		
 		websvc = service.getPort(Webservices.class);
 		
-		System.out.println("connected...");
+		System.out.println("JAXWS Endpoint connected.");
 		
 		this.bank = new JAXWSBank(websvc);
 		
@@ -78,14 +78,18 @@ public class DriverJAXWS implements BankDriver {
 
 		@Override
 		public bank.Account getAccount(String number) throws IOException {
-			return service.getAccount(number);
+			bank.Account r;
+			if (service.getOwner(number) == null) r = null;
+			else r = new JAXWSAccount(number, service);
+			
+			return r;
 		}
 
 		@Override
 		public void transfer(bank.Account from, bank.Account to, double amount)
 				throws IOException, InactiveException, OverdrawException, IllegalArgumentException {
-			service.getAccount(to.getNumber()).deposit(amount);
-			service.getAccount(from.getNumber()).withdraw(amount);
+			service.deposit(from.getNumber(), amount);
+			service.withdraw(to.getNumber(), amount);
 		}
 	}
 	
