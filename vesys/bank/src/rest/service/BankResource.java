@@ -2,17 +2,22 @@ package rest.service;
 
 import java.util.Set;
 
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.HEAD;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.WebApplicationException;
 
 import server.MyAccount;
 import server.MyBank;
 
 import bank.InactiveException;
+import bank.OverdrawException;
 
 import com.sun.jersey.spi.resource.Singleton;
 
@@ -70,18 +75,42 @@ public class BankResource {
 		return Double.toString(acc.getBalance());
 	}
 
-	// PUT on /accounts/{id}
+
+	// POST on /accounts/{id}
 	// ===========
 
-	@GET
+	@POST
+	@Path("/accounts/{id}/{amount}")
+	@Produces("application/json")
+	public void postAccPlain( 
+			@PathParam("id") String number, 
+			@PathParam("amount") double amount 
+			) throws InactiveException, OverdrawException {
+		MyAccount acc = (MyAccount) bank.getAccount(number);
+		if (amount > 0) acc.deposit(amount);
+		else if (amount < 0) acc.withdraw(-amount);
+	}
+
+	// DELETE on /accounts/{id}
+	// ===========
+
+	@DELETE
 	@Path("/accounts/{id}")
 	@Produces("application/json")
-	public void putAccPlain( 
-			@PathParam("id") String number, 
-			@QueryParam("amount") double amount 
-			) throws InactiveException {
+	public void delAcc( @PathParam("id") String number)  {
 		MyAccount acc = (MyAccount) bank.getAccount(number);
-		acc.deposit(amount);
+		acc.deactivate();
+	}
+	
+	// HEAD on /accounts/{id}
+	// ===========
+
+	@HEAD
+	@Path("/accounts/{id}")
+	@Produces("application/json")
+	public void headAcc( @PathParam("id") String number)  {
+		MyAccount acc = (MyAccount) bank.getAccount(number);
+		if (!acc.isActive() && acc == null) throw new WebApplicationException();
 	}
 	
 }

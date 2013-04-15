@@ -15,7 +15,7 @@ public class MyAccount implements Account {
 		this.owner = owner;
 		this.number = number;
 	}
-
+	
 	@Override
 	public double getBalance() {
 		return balance;
