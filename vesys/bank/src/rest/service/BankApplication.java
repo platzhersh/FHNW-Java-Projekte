@@ -5,11 +5,14 @@ import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
+import server.MyBank;
+
 
 public class BankApplication extends Application {
 	
 	private Set<Object> singletons = new HashSet<Object>();
 	private Set<Class<?>> classes = new HashSet<Class<?>>();
+	
 	
 	public BankApplication() {
 		singletons.add(new BankResource());
