@@ -60,8 +60,15 @@ public class MyBank implements Bank {
 	@Override
 	public void transfer(bank.Account from, bank.Account to, double amount)
 			throws IOException, InactiveException, OverdrawException {
-		from.withdraw(amount);
-		to.deposit(amount);
+		
+		if (amount > from.getBalance()) throw new OverdrawException();
+		else if (amount < 0) throw new IllegalArgumentException();
+		else if (!from.isActive() || !to.isActive()) throw new InactiveException();
+		else if (from == null || to == null) throw new IllegalArgumentException();
+		else {		
+			from.withdraw(amount);
+			to.deposit(amount);
+		}
 		
 	}
 }

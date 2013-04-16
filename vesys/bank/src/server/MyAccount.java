@@ -53,6 +53,7 @@ public class MyAccount implements Account {
 		}
 	}
 	
+	
 	public void activate() {
 		this.active = true;
 	}

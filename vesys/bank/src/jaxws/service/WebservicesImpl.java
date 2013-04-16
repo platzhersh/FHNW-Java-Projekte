@@ -2,8 +2,10 @@ package jaxws.service;
 
 import java.io.IOException;
 import javax.jws.WebService;
+
 import server.MyAccount;
 import server.MyBank;
+import bank.IllegalBankArgumentException;
 import bank.InactiveException;
 import bank.OverdrawException;
 
@@ -29,42 +31,70 @@ public class WebservicesImpl implements Webservices{
 	}
 
 	@Override
-	public void deposit(String number, double amount) throws IllegalArgumentException, IOException, InactiveException {
+	public void deposit(String number, double amount) throws IOException, InactiveException, IllegalBankArgumentException {
 		System.out.println("Deposit "+amount+" to "+ number);
-		this.bank.getAccount(number).deposit(amount);
+		try {
+			this.bank.getAccount(number).deposit(amount);	
+		} catch (IllegalArgumentException e) {
+			throw new IllegalBankArgumentException();
+		}
 
 	}
 
 	@Override
-	public void withdraw(String number, double amount) throws IllegalArgumentException, IOException, InactiveException, OverdrawException {
+	public void withdraw(String number, double amount) throws IllegalBankArgumentException, IOException, InactiveException, OverdrawException {
 		System.out.println("Withdraw "+amount+" from "+ number);
-		this.bank.getAccount(number).withdraw(amount);
+		try {
+			this.bank.getAccount(number).withdraw(amount);
+		} catch (IllegalArgumentException e) {
+			throw new IllegalBankArgumentException();
+		}
+	}
+	
+	@Override
+	public void transfer(String from, String to, double amount) throws IllegalBankArgumentException, InactiveException, IOException, OverdrawException {
+		System.out.println("Transfer "+amount+" from "+ from + " to "+to);
+		try {
+			bank.transfer(bank.getAccount(from), bank.getAccount(to), amount);
+		} catch (IllegalArgumentException e) {
+			throw new IllegalBankArgumentException();
+		}
+			
 	}
 
+	@Override 
+	public String getAccount(String number) {
+		System.out.println("GetAccount "+number);
+		if (bank.getAccount(number) != null) return number;
+		else {
+			System.err.println("  Account "+number+" does not exist!");
+			return "";
+		}
+	}
+	
 	@Override
 	public String getOwner(String number) throws IOException {
 		System.out.println("Get owner "+ number);
-		return this.bank.getAccount(number).getOwner();
+		bank.Account acc = this.bank.getAccount(number);
+		if (acc != null) return acc.getOwner();
+		else return "";
 	}
 
 	@Override
-	public double getBalance(String number) throws IOException {
+	public double getBalance(String number) throws IOException, IllegalBankArgumentException {
 		System.out.println("Get balance "+ number);
+		if (this.bank.getAccount(number) == null) throw new IllegalBankArgumentException();
 		return this.bank.getAccount(number).getBalance();
 	}
 
 	@Override
-	public boolean isActive(String number) throws IOException {
+	public boolean isActive(String number) throws IOException, IllegalBankArgumentException {
 		System.out.println("Get isActive "+ number);
+		if (this.bank.getAccount(number) == null) throw new IllegalBankArgumentException();
 		return this.bank.getAccount(number).isActive();
 	}
 
-	/*
-	@Override
-	public MyAccount getAccount(String number) throws IOException{
-		return (MyAccount) this.bank.getAccount(number);
-	}
-	*/
+
 	
 	@Override
 	public String[] getAccountNumbers() {

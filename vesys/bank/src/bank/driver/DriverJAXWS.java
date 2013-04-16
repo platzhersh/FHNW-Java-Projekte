@@ -13,6 +13,7 @@ import javax.xml.ws.Service;
 import jaxws.service.Webservices;
 
 import bank.BankDriver;
+import bank.IllegalBankArgumentException;
 import bank.InactiveException;
 import bank.OverdrawException;
 
@@ -76,17 +77,22 @@ public class DriverJAXWS implements BankDriver {
 		@Override
 		public bank.Account getAccount(String number) throws IOException {
 			bank.Account r;
-			if (service.getOwner(number) == null) r = null;
+			if (service.getAccount(number).equals("")) {
+				System.err.println("  [Driver]: return NULL for getAccount("+number+")");
+				r = null;
+			}
 			else r = new JAXWSAccount(number, service);
-			
 			return r;
 		}
 
 		@Override
 		public void transfer(bank.Account from, bank.Account to, double amount)
 				throws IOException, InactiveException, OverdrawException, IllegalArgumentException {
-			service.deposit(from.getNumber(), amount);
-			service.withdraw(to.getNumber(), amount);
+			try {
+				service.transfer(from.getNumber(), to.getNumber(), amount);
+			} catch (IllegalBankArgumentException e) {
+				throw new IllegalArgumentException();
+			}
 		}
 	}
 	
@@ -102,11 +108,15 @@ public class DriverJAXWS implements BankDriver {
 
 			@Override
 			public double getBalance() throws IOException {
-				return service.getBalance(this.number);
+				try {
+					return service.getBalance(this.number);
+				} catch (IllegalBankArgumentException e) {
+					throw new IllegalArgumentException();
+				}
 			}
 
 			@Override
-			public String getOwner() throws IOException {
+			public String getOwner() throws IOException {			
 				return service.getOwner(this.number);
 			}
 
@@ -117,17 +127,29 @@ public class DriverJAXWS implements BankDriver {
 
 			@Override
 			public boolean isActive() throws IOException {
-				return service.isActive(this.number);
+				try {
+					return service.isActive(this.number);
+				} catch (IllegalBankArgumentException e) {
+					throw new IllegalArgumentException();
+				}
 			}
 
 			@Override
 			public void deposit(double amount) throws InactiveException, IOException, IllegalArgumentException {
-				service.deposit(this.number, amount);
+				try {
+					service.deposit(this.number, amount);
+				} catch (IllegalBankArgumentException e) {
+					throw new IllegalArgumentException();
+				}
  			}
 
 			@Override
 			public void withdraw(double amount) throws InactiveException, OverdrawException, IOException, IllegalArgumentException {
-				service.withdraw(this.number, amount);
+				try {
+					service.withdraw(this.number, amount);
+				} catch (IllegalBankArgumentException e) {
+					throw new IllegalArgumentException();
+				}
 			}
 			
 
