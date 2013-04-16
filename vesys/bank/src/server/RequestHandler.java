@@ -70,6 +70,19 @@ public class RequestHandler implements Runnable {
 				Boolean r = this.bank.closeAccount(params[0]);
 				Command.send("SUCCESS", r.toString(),cmd, this.socket);
 				break;
+			case "transfer":
+				try {
+					this.bank.transfer(this.bank.getAccount(params[0]), this.bank.getAccount(params[1]), Double.parseDouble(params[2]));
+					Command.send("SUCCESS","",cmd,this.socket);
+				}
+				catch (IllegalArgumentException e) {
+					Command.send("FAILURE","IllegalArgumentException",cmd,this.socket);
+				} catch (OverdrawException e) {
+					Command.send("FAILURE","OverdrawException",cmd,this.socket);
+				} catch (InactiveException e) {
+					Command.send("FAILURE","InactiveException",cmd,this.socket);
+				}
+				break;
 			case "deposit":
 				try {
 					this.bank.getAccount(params[0]).deposit(Double.parseDouble(params[1]));

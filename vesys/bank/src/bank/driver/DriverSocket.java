@@ -108,8 +108,23 @@ public class DriverSocket implements BankDriver {
 		@Override
 		public void transfer(bank.Account from, bank.Account to, double amount)
 				throws IOException, InactiveException, OverdrawException, IllegalArgumentException {
-			from.withdraw(amount);
-			to.deposit(amount);
+			Command.send("transfer", from.getNumber()+","+to.getNumber()+","+amount, driver.sock);
+			String cmd = Command.receive(driver.sock);
+			System.out.println("Client received: "+cmd);
+			String command = Command.parseCommand(cmd);
+			String[] params = Command.parseParams(cmd);
+			
+			if (command.equals("FAILURE")) {
+				switch (params[0]) {
+				case "InactiveException":
+					throw new InactiveException();
+				case "IllegalArgumentException":
+					throw new IllegalArgumentException();
+				case "OverdrawException":
+					throw new OverdrawException();
+				}
+				
+			}
 			
 		}
 	}
