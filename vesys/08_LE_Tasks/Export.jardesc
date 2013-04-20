@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="US-ASCII" standalone="no"?>
+<jardesc>
+    <jar path="/Users/dk/Desktop/08_LE_Tasks.zip"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/08_LE_Tasks/Export.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="true"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <selectedElements exportClassFiles="false" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=08_LE_Tasks/src&lt;le"/>
+        <file path="/08_LE_Tasks/.project"/>
+        <javaElement handleIdentifier="=08_LE_Tasks/src&lt;le.fj{Mandelbrot.java"/>
+        <javaElement handleIdentifier="=08_LE_Tasks/src&lt;le.fj{FJMergeSortSharedIntArray.java"/>
+        <javaElement handleIdentifier="=08_LE_Tasks/src&lt;le.fj{Sum.java"/>
+        <javaElement handleIdentifier="=08_LE_Tasks/src&lt;le.fj{MandelbrotFJ.java"/>
+        <javaElement handleIdentifier="=08_LE_Tasks/src&lt;le.fj{MS1.java"/>
+        <file path="/08_LE_Tasks/Export.jardesc"/>
+        <file path="/08_LE_Tasks/.classpath"/>
+    </selectedElements>
+</jardesc>

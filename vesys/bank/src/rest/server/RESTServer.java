@@ -16,7 +16,8 @@ public class RESTServer {
 			final String baseUri = "http://localhost:9998/";
 			ResourceConfig rc = new ApplicationAdapter(new BankApplication());
 			
-			System.out.println("Starting grizzly...");
+			System.out.println("Starting grizzly.");
+			System.out.println("Listening on "+baseUri+".");
 			HttpServer httpServer =	GrizzlyServerFactory.createHttpServer(baseUri, rc);
 			
 			System.in.read();
