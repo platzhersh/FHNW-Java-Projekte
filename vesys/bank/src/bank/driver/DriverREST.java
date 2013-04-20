@@ -27,12 +27,14 @@ public class DriverREST implements BankDriver {
 		this.address = "http://localhost:9998/bank/";
 		
 		this.bank = new RESTBank(client, address);
-		
+		System.out.println("DriverREST started...");
 	}
 
 	@Override
 	public void disconnect() throws IOException {
-
+		if (client != null)
+			client.destroy();
+			System.out.println("RestBankDriver DESTROYED...");
 	}
 
 	@Override
@@ -64,7 +66,7 @@ public class DriverREST implements BankDriver {
 
 		@Override
 		public String createAccount(String owner) throws IOException {
-			owner = owner.replace(" ", "+");
+			owner = java.net.URLEncoder.encode(owner,"UTF-8");
 			res = client.resource(address+"accounts?owner="+owner);
 			String response = res.post(String.class);
 			System.out.println("createAccount: received "+response);
@@ -74,18 +76,21 @@ public class DriverREST implements BankDriver {
 		@Override
 		public boolean closeAccount(String number) throws IOException {
 			res = client.resource(address+"accounts/"+number);
-			Boolean response = res.delete(Boolean.class);
+			String response = res.delete(String.class);
 			System.out.println("closeAccount: received "+response);
-			return response;
+			return response.equals("1") ? true : false;
 		}
 
 		@Override
 		public bank.Account getAccount(String number) throws IOException {
+			number = number.isEmpty() ? "null" : number;
 			res = client.resource(address+"accounts/"+number);
 			String response = res.get(String.class);
+			response = java.net.URLDecoder.decode(response, "UTF-8");
 			System.out.println("getAccount: received "+response);
+			
 			bank.Account r;
-			if (response.equals("[]")) {
+			if (response.equals("null")) {
 				System.err.println("  [Driver]: return NULL for getAccount("+number+")");
 				r = null;
 			}
@@ -128,7 +133,7 @@ public class DriverREST implements BankDriver {
 
 			@Override
 			public double getBalance() throws IOException {
-				res = client.resource(address+this.number+"/balance");
+				res = client.resource(address+"accounts/"+this.number+"/balance");
 				String response = res.get(String.class);
 				System.out.println("getBalance: received "+response);
 				double balance = Double.parseDouble(response);
@@ -137,8 +142,9 @@ public class DriverREST implements BankDriver {
 
 			@Override
 			public String getOwner() throws IOException {			
-				res = client.resource(address+this.number+"/owner");
+				res = client.resource(address+"accounts/"+this.number+"/owner");
 				String response = res.get(String.class);
+				response = java.net.URLDecoder.decode(response, "UTF-8");
 				System.out.println("getOwner: received "+response);
 				return response;
 			}
@@ -150,7 +156,7 @@ public class DriverREST implements BankDriver {
 
 			@Override
 			public boolean isActive() throws IOException {
-				res = client.resource(address+this.number+"/active");
+				res = client.resource(address+"accounts/"+this.number+"/active");
 				String response = res.get(String.class);
 				System.out.println("isActive: received "+response);
 				boolean act = response.equals("1") ? true : false;
@@ -159,16 +165,34 @@ public class DriverREST implements BankDriver {
 
 			@Override
 			public void deposit(double amount) throws InactiveException, IOException, IllegalArgumentException {
-				res = client.resource(address+this.number+"/"+amount);
+				System.out.println("deposit "+amount);
+				res = client.resource(address+"accounts/"+this.number+"/deposit/"+amount);
 				String response = res.post(String.class);
-				System.out.println("isActive: received "+response);
+				switch (response) {
+				case	"IOException":
+					throw new IOException();
+				case	"InactiveException":
+					throw new InactiveException();
+				case	"IllegalArgumentException":
+					throw new IllegalArgumentException();
+			}
  			}
 
 			@Override
 			public void withdraw(double amount) throws InactiveException, OverdrawException, IOException, IllegalArgumentException {
-				res = client.resource(address+this.number+"/"+amount);
+				System.out.println("withdraw "+amount);
+				res = client.resource(address+"accounts/"+this.number+"/withdraw/"+amount);
 				String response = res.post(String.class);
-				System.out.println("isActive: received "+response);
+				switch (response) {
+				case	"IOException":
+					throw new IOException();
+				case	"InactiveException":
+					throw new InactiveException();
+				case	"OverdrawException":
+					throw new OverdrawException();
+				case	"IllegalArgumentException":
+					throw new IllegalArgumentException();
+			}
 			}
 			
 

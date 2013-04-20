@@ -1,6 +1,7 @@
 package rest.service;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.Set;
 
 import javax.ws.rs.DELETE;
@@ -59,7 +60,8 @@ public class BankResource {
 	@POST
 	@Path("/accounts")
 	@Produces("text/plain")
-	public String postPlain( @QueryParam("owner") String owner ) {
+	public String postPlain( @QueryParam("owner") String owner ) throws UnsupportedEncodingException {
+		owner = java.net.URLDecoder.decode(owner, "UTF-8");
 		return bank.createAccount(this.parseWhitespaces(owner));
 	}
 	
@@ -71,7 +73,7 @@ public class BankResource {
 	@Produces("application/json")
 	public String getAccJson( @PathParam("id") String number ) {
 		MyAccount acc = (MyAccount) bank.getAccount(number);
-		return gson.toJson(acc);
+		return acc == null ? "null" : gson.toJson(acc);
 	}
 
 	// GET on /accounts/{id}/balance
@@ -94,30 +96,55 @@ public class BankResource {
 		return acc.getOwner();
 	}
 	
-	// POST on /accounts/{id}
+	// POST on /accounts/{id}/deposit/{amount}
 	// ===========
 
 	@POST
-	@Path("/accounts/{id}/{amount}")
-	@Produces("application/json")
-	public void postAccPlain( 
+	@Path("/accounts/{id}/deposit/{amount}")
+	@Produces("text/plain")
+	public String postDeposit( 
+			@PathParam("id") String number, 
+			@PathParam("amount") double amount 
+			) throws InactiveException {
+		MyAccount acc = (MyAccount) bank.getAccount(number);
+		try {
+			acc.deposit(amount);
+			return "OK";
+		} catch (InactiveException e) {
+			return "InactiveException";
+		}
+	}
+
+	// POST on /accounts/{id}/withdraw/{amount}
+	// ===========
+
+	@POST
+	@Path("/accounts/{id}/withdraw/{amount}")
+	@Produces("text/plain")
+	public String postWithdraw( 
 			@PathParam("id") String number, 
 			@PathParam("amount") double amount 
 			) throws InactiveException, OverdrawException {
 		MyAccount acc = (MyAccount) bank.getAccount(number);
-		if (amount > 0) acc.deposit(amount);
-		else if (amount < 0) acc.withdraw(-amount);
+		try {
+			acc.withdraw(amount);
+			return "OK";
+		} catch (InactiveException e) {
+			return "InactiveException";
+		} catch (OverdrawException e) {
+			return "OverdrawException";
+		}
 	}
-
+	
+	
 	// DELETE on /accounts/{id}
 	// ===========
 
 	@DELETE
 	@Path("/accounts/{id}")
 	@Produces("application/json")
-	public void delAcc( @PathParam("id") String number)  {
-		MyAccount acc = (MyAccount) bank.getAccount(number);
-		acc.deactivate();
+	public String delAcc( @PathParam("id") String number)  {
+		return bank.closeAccount(number) ? "1" : "0";
 	}
 	
 	// GET on /accounts/{id}/active

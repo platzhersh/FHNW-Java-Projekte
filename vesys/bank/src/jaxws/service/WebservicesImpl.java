@@ -3,7 +3,6 @@ package jaxws.service;
 import java.io.IOException;
 import javax.jws.WebService;
 
-import server.MyAccount;
 import server.MyBank;
 import bank.IllegalBankArgumentException;
 import bank.InactiveException;
