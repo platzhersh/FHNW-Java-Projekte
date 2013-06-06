@@ -25,7 +25,7 @@ public class RMIServer {
 
 			Bank b = new MyBank();					
 			
-			Naming.rebind("rmi://localhost:1099/CalculatorService", c);
+			// Naming.rebind("rmi://localhost:1099/CalculatorService", c);
 			System.out.println("Calculator server started...");
 		}
 	}

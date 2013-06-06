@@ -36,7 +36,7 @@ public class StringBuilders {
 		int pos1 = 1; // nächste Position wo 1 ausgegeben werden muss
 		int count = 1; // Anzahl bereits ausgegebener 1
 		for (int i = 1; i <= n; i++) {
-			if (pos1 == i) { P(1); count++; pos1 += count; }
+			if (pos1 == i) { P(1); pos1 += ++count; }
 			else P(0);
 		}
 	}

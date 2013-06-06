@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+<project name="12_WebSockets" default="compile" basedir=".">
+
+	<property name="src.dir" value="${basedir}/src"/>
+	<property name="res.dir" value="${basedir}/res"/>
+	<property name="lib.dir" value="${basedir}/lib"/>
+	<property name="classes.dir" value="${basedir}/bin"/>
+
+<!--
+	<property environment="env"/>
+	<property name="tomcat.home" value="${env.CATALINA_HOME}"/>
+-->
+	<property name="tomcat.home" value="D:\Programming\Java\apache-tomcat-7.0.37"/>
+		
+	<!-- Build classpath -->
+	<path id="classpath">
+		<pathelement location="${classes.dir}"/>
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+
+	<target name="prepare" >
+		<mkdir dir="${classes.dir}"/>
+	</target>
+
+	<target name="clean">
+		<delete dir="${classes.dir}"/>
+	</target>
+
+	<target name="compile" depends="prepare">
+		<javac srcdir="${src.dir}"
+					 destdir="${classes.dir}"
+					 debug="on"
+					 includeantruntime="false"
+					 deprecation="on"
+					 optimize="off">
+			<classpath refid="classpath"/>
+			<include name="**/*.java" />
+		</javac>
+	</target>
+
+	
+	<target name="ws.war" depends="compile">
+		<war warfile="${basedir}/ws.war" webxml="${res.dir}/web.xml">
+			<classes dir="${classes.dir}" >
+				<include name="ch/fhnw/ds/ws/tomcat/**/*.class" />
+			</classes>
+		</war>
+	</target>
+
+	<target name="ws.deploy" depends="ws.war">
+		<copy file="${basedir}/ws.war" todir="${tomcat.home}/webapps"/>
+	</target>
+
+	<target name="ws.undeploy">
+		<delete file="${tomcat.home}/webapps/ws.war"/>
+	</target>
+
+
+</project>
+
