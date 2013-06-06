@@ -1,4 +1,4 @@
-package rest.service;
+package server.rest.service;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -13,8 +13,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.WebApplicationException;
 
-import server.MyAccount;
-import server.MyBank;
+import server.socket.MyAccount;
+import server.socket.MyBank;
 
 import bank.InactiveException;
 import bank.OverdrawException;

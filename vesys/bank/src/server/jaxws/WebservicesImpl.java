@@ -1,9 +1,9 @@
-package jaxws.service;
+package server.jaxws;
 
 import java.io.IOException;
 import javax.jws.WebService;
 
-import server.MyBank;
+import server.socket.MyBank;
 import bank.IllegalBankArgumentException;
 import bank.InactiveException;
 import bank.OverdrawException;

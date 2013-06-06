@@ -1,11 +1,11 @@
-package rest.service;
+package server.rest.service;
 
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
-import server.MyBank;
+import server.socket.MyBank;
 
 
 public class BankApplication extends Application {

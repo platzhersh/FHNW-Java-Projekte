@@ -1,8 +1,8 @@
-package rest.server;
+package server.rest;
 
 import java.io.IOException;
 
-import rest.service.BankApplication;
+import server.rest.service.BankApplication;
 
 import org.glassfish.grizzly.http.server.HttpServer;
 import com.sun.jersey.api.container.grizzly2.GrizzlyServerFactory;

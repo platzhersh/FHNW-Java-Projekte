@@ -1,4 +1,4 @@
-package jaxws.service;
+package server.jaxws;
 
 import java.io.IOException;
 

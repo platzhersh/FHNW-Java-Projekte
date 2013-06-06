@@ -1,11 +1,11 @@
-package rmi;
+package server.rmi;
 
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
-import server.MyBank;
-import server.Server;
+import server.socket.MyBank;
+import server.socket.Server;
 
 import bank.Bank;
 

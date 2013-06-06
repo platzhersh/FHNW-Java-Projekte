@@ -1,4 +1,4 @@
-package jms;
+package server.jms;
 
 import java.util.Hashtable;
 import javax.naming.Context;

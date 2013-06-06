@@ -1,4 +1,4 @@
-package server;
+package server.socket;
 
 import java.io.IOException;
 import java.util.HashMap;

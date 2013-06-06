@@ -10,7 +10,8 @@ import java.util.Set;
 import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
-import jaxws.service.Webservices;
+import server.jaxws.Webservices;
+
 
 import bank.BankDriver;
 import bank.IllegalBankArgumentException;

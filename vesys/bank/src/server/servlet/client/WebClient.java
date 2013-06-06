@@ -1,4 +1,4 @@
-package bank.web;
+package server.servlet.client;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import server.MyBank;
+import server.socket.MyBank;
 
 @WebServlet(
 		name="webclient", 

@@ -1,8 +1,8 @@
-package jaxws.service;
+package server.jaxws;
 
 import javax.xml.ws.Endpoint;
 
-import server.MyBank;
+import server.socket.MyBank;
 
 public class WebservicesPublisher {
 
