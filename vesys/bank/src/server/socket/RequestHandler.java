@@ -1,11 +1,15 @@
 package server.socket;
 
+import helpers.Command;
+import helpers.CommandHandler;
+
 import java.io.*;
 import java.net.Socket;
 
+import server.MyBank;
+
 import bank.InactiveException;
 import bank.OverdrawException;
-import bank.driver.Command;
 /***
  * Used to parse and process received commands
  * One RequestHandler per Socket
@@ -16,6 +20,7 @@ import bank.driver.Command;
 public class RequestHandler implements Runnable {
 	
 	private Socket socket;
+	private CommandHandler cmdHandle;
 	String command;
 	MyBank bank;
 	boolean running;
@@ -26,8 +31,8 @@ public class RequestHandler implements Runnable {
 	 * @param bank reference to server bank object
 	 * @throws IOException
 	 */
-	public RequestHandler(Socket sock, MyBank bank) throws IOException {
-		this.socket = sock;
+	public RequestHandler(CommandHandler ch, MyBank bank) throws IOException {
+		this.cmdHandle = ch;
 		this.bank = bank;
 		this.running = true;
 	}
@@ -39,10 +44,10 @@ public class RequestHandler implements Runnable {
 	public void run() {
 		while (this.running) {
 			try {
-				String cmd = Command.receive(this.socket);
+				String cmd = cmdHandle.receive();
 				System.out.println("Server received: "+cmd);
 				if (cmd != null) this.executeCommand(cmd);
-				else Command.send("FAILURE","NullPointerException",cmd,this.socket);
+				else cmdHandle.send("FAILURE","NullPointerException",cmd);
 			} 
 			catch (IOException e) {
 				e.printStackTrace();
@@ -57,76 +62,76 @@ public class RequestHandler implements Runnable {
 	 * @param cmd command string
 	 * @throws IOException
 	 */
-	private void executeCommand(String cmd) throws IOException {
-		String command = Command.parseCommand(cmd);
-		String[] params = Command.parseParams(cmd);
+	public void executeCommand(String cmd) throws IOException {
+		String command = cmdHandle.parseCommand(cmd);
+		String[] params = cmdHandle.parseParams(cmd);
 		
 		switch (command) {
 			case "createAccount": 
 				String number = this.bank.createAccount(params[0]);
-				Command.send("SUCCESS",number,cmd,this.socket);
+				cmdHandle.send("SUCCESS",number,cmd);
 				break;
 			case "closeAccount":
 				Boolean r = this.bank.closeAccount(params[0]);
-				Command.send("SUCCESS", r.toString(),cmd, this.socket);
+				cmdHandle.send("SUCCESS", r.toString(),cmd);
 				break;
 			case "transfer":
 				try {
 					this.bank.transfer(this.bank.getAccount(params[0]), this.bank.getAccount(params[1]), Double.parseDouble(params[2]));
-					Command.send("SUCCESS","",cmd,this.socket);
+					cmdHandle.send("SUCCESS","",cmd);
 				}
 				catch (IllegalArgumentException e) {
-					Command.send("FAILURE","IllegalArgumentException",cmd,this.socket);
+					cmdHandle.send("FAILURE","IllegalArgumentException",cmd);
 				} catch (OverdrawException e) {
-					Command.send("FAILURE","OverdrawException",cmd,this.socket);
+					cmdHandle.send("FAILURE","OverdrawException",cmd);
 				} catch (InactiveException e) {
-					Command.send("FAILURE","InactiveException",cmd,this.socket);
+					cmdHandle.send("FAILURE","InactiveException",cmd);
 				}
 				break;
 			case "deposit":
 				try {
 					this.bank.getAccount(params[0]).deposit(Double.parseDouble(params[1]));
-					Command.send("SUCCESS","",cmd,this.socket);
+					cmdHandle.send("SUCCESS","",cmd);
 				} 
 				catch (NumberFormatException e) {
-					Command.send("FAILURE","NumberFormatException",cmd,this.socket);
+					cmdHandle.send("FAILURE","NumberFormatException",cmd);
 				}
 				catch (IllegalArgumentException e) {
-					Command.send("FAILURE","IllegalArgumentException",cmd,this.socket);
+					cmdHandle.send("FAILURE","IllegalArgumentException",cmd);
 				}
 				catch (InactiveException e ) {
-					Command.send("FAILURE","InactiveException",cmd,this.socket);
+					cmdHandle.send("FAILURE","InactiveException",cmd);
 				}
 				break;
 			case "withdraw":
 				try {
 					this.bank.getAccount(params[0]).withdraw(Double.parseDouble(params[1]));
-					Command.send("SUCCESS","",cmd,this.socket);
+					cmdHandle.send("SUCCESS","",cmd);
 				} 
 				catch (OverdrawException e) {
-					Command.send("FAILURE","OverdrawException",cmd,this.socket);
+					cmdHandle.send("FAILURE","OverdrawException",cmd);
 				}
 				catch (NumberFormatException e) {
-					Command.send("FAILURE","NumberFormatException",cmd,this.socket);
+					cmdHandle.send("FAILURE","NumberFormatException",cmd);
 				}
 				catch (IllegalArgumentException e) {
-					Command.send("FAILURE","IllegalArgumentException",cmd,this.socket);
+					cmdHandle.send("FAILURE","IllegalArgumentException",cmd);
 				}
 				catch (InactiveException e ) {
-					Command.send("FAILURE","InactiveException",cmd,this.socket);
+					cmdHandle.send("FAILURE","InactiveException",cmd);
 				}
 				break;
 			case "getOwner":
 				String owner = this.bank.getAccount(params[0]).getOwner();
-				Command.send("SUCCESS", owner, cmd, this.socket);
+				cmdHandle.send("SUCCESS", owner, cmd);
 				break;
 			case "getBalance":
 				String bal = Double.toString(this.bank.getAccount(params[0]).getBalance());
-				Command.send("SUCCESS", bal, cmd, this.socket);
+				cmdHandle.send("SUCCESS", bal, cmd);
 				break;
 			case "isActive":
 				String active = this.bank.getAccount(params[0]).isActive() ? "true" : "false";
-				Command.send("SUCCESS", active, cmd, this.socket);
+				cmdHandle.send("SUCCESS", active, cmd);
 				break;
 			case "getAccountNumbers":
 				String accounts = new String();
@@ -134,17 +139,17 @@ public class RequestHandler implements Runnable {
 					accounts += ","+acc;
 				}
 				accounts =  (accounts.length() > 1) ?accounts.substring(1) : "";
-				Command.send("SUCCESS", accounts, cmd, this.socket);
+				cmdHandle.send("SUCCESS", accounts, cmd);
 				break;
 			case "getAccount":
-				if (params[0].isEmpty()) Command.send("FAILURE", "",cmd, this.socket);
+				if (params[0].isEmpty()) cmdHandle.send("FAILURE", "",cmd);
 				else {
 					String acc = this.bank.getAccount(params[0]).getNumber();
-					Command.send("SUCCESS", acc, cmd, this.socket);
+					cmdHandle.send("SUCCESS", acc, cmd);
 				}
 				break;
 			default: 
-				Command.send("FAILURE", "unknown command", cmd,this.socket);
+				cmdHandle.send("FAILURE", "unknown command", cmd);
 				break;
 		}
 	}

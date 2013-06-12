@@ -4,7 +4,7 @@ import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 
-import server.socket.MyBank;
+import server.MyBank;
 import server.socket.Server;
 
 import bank.Bank;

@@ -1,11 +1,12 @@
 package server.servlet.client;
 
+import helpers.Command;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Set;
 
 import bank.Bank;
-import bank.driver.Command;
 import bank.driver.DriverSocket;
 
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import server.socket.MyBank;
+import server.MyBank;
 
 @WebServlet(
 		name="webclient", 

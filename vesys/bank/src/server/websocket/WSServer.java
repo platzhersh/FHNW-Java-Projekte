@@ -1,14 +1,26 @@
 package server.websocket;
 
+import helpers.CommandHandlerImplWebSocket;
+import helpers.SocketStreamPair;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
 
+import server.MyBank;
+import server.socket.RequestHandler;
+
 
 public class WSServer extends WebSocketServer {
-	
+
+	MyBank bank;
+	RequestHandler r;
+	SocketStreamPair ssp;
 	
 
 	public static void main (String[] args) throws UnknownHostException {
@@ -19,12 +31,13 @@ public class WSServer extends WebSocketServer {
 	
 	public WSServer() {
 		super(new InetSocketAddress("localhost",2222));
+		this. bank = new MyBank();
 		// TODO Auto-generated constructor stub
 	}
 
 	public WSServer(InetSocketAddress address, int decoders) {
 		super(address, decoders);
-		// TODO Auto-generated constructor stub
+		this. bank = new MyBank();
 	}
 
 
@@ -44,11 +57,24 @@ public class WSServer extends WebSocketServer {
 	public void onMessage(WebSocket arg0, String arg1) {
 		// TODO Auto-generated method stub
 		System.out.println("Message received: "+arg1);
+		arg0.send("blubb");
+		try {
+			this.r.executeCommand(arg1);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 
 	@Override
 	public void onOpen(WebSocket arg0, ClientHandshake arg1) {
-		// TODO Auto-generated method stub
+		try {
+			this.r = new RequestHandler(new CommandHandlerImplWebSocket(arg0), this.bank);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println("Client connected.");
 	}
 

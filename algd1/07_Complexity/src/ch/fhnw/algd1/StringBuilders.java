@@ -1,3 +1,4 @@
+package ch.fhnw.algd1;
 
 public class StringBuilders {
 

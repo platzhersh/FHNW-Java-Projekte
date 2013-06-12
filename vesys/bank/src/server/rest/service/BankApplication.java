@@ -5,7 +5,7 @@ import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
-import server.socket.MyBank;
+import server.MyBank;
 
 
 public class BankApplication extends Application {

@@ -1,10 +1,12 @@
  package bank.driver;
 
 import helpers.Command;
+import helpers.CommandHandler;
 
 import java.io.IOException;
 import java.net.Inet4Address;
 import java.net.Socket;
+import java.net.URI;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,11 +15,12 @@ import bank.BankDriver;
 import bank.InactiveException;
 import bank.OverdrawException;
 
-public class DriverSocket implements BankDriver {
+public class DriverWebSocket implements BankDriver {
 
 	private SocketBank b;
 	private Inet4Address remote;
 	private Socket sock;
+	private CommandHandler c;
 	
 	@Override
 	public void connect(String args[]) throws IOException {
@@ -45,15 +48,18 @@ public class DriverSocket implements BankDriver {
 
 	static class SocketBank implements bank.Bank {
 
-		private DriverSocket driver;
+		private DriverWebSocket driver;
+		String clientname = "tootallnate/websocket";
+
 		
-		public SocketBank(DriverSocket d) throws IOException {
+		public SocketBank(DriverWebSocket d) throws IOException {
 			this.driver = d;
 		}
 		
 		@Override
 		public Set<String> getAccountNumbers() throws IOException {
-			Command.send("getAccountNumbers", "", driver.sock);
+			driver.c.send("getAccountNumbers", "");
+			
 			String cmd = Command.receive(driver.sock);
 			Set<String> activeAccounts = new HashSet<String>();
 			System.out.println("Client received: "+cmd);
@@ -133,9 +139,9 @@ public class DriverSocket implements BankDriver {
 	
 	static class SocketAccount implements bank.Account {
 			private String number;
-			DriverSocket driver;
+			DriverWebSocket driver;
 
-			SocketAccount(String number, DriverSocket s) {
+			SocketAccount(String number, DriverWebSocket s) {
 				this.number = number;
 				this.driver = s;
 				

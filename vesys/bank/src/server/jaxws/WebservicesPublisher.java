@@ -2,7 +2,7 @@ package server.jaxws;
 
 import javax.xml.ws.Endpoint;
 
-import server.socket.MyBank;
+import server.MyBank;
 
 public class WebservicesPublisher {
 

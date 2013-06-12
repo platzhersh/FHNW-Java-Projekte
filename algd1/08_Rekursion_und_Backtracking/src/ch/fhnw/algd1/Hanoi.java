@@ -1,3 +1,4 @@
+package ch.fhnw.algd1;
 import java.util.List;
 import java.util.Stack;
 

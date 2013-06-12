@@ -13,8 +13,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.WebApplicationException;
 
-import server.socket.MyAccount;
-import server.socket.MyBank;
+import server.MyAccount;
+import server.MyBank;
 
 import bank.InactiveException;
 import bank.OverdrawException;

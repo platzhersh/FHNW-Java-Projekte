@@ -1,10 +1,15 @@
 package server.socket;
 
+import helpers.CommandHandler;
+import helpers.CommandHandlerImplSocket;
+
 import java.io.IOException;
 import java.net.Inet4Address;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.*;
+
+import server.MyBank;
 
 
 /***
@@ -24,6 +29,7 @@ public class Server {
 	InputStream in;
 	OutputStream out;
 	RequestHandler r;
+	CommandHandler c;
 		
 	public static void main(String args[]) throws IOException {
 		int port = args.length >= 1 ? Integer.valueOf(args[0]): 4200;
@@ -49,9 +55,10 @@ public class Server {
 		
 		while (this.running) {
 			this.socket = bankd.accept();
+			c = new CommandHandlerImplSocket(this.socket);
 			try {
 				System.out.println("Connection established: "+this.socket.toString());		
-				r = new RequestHandler(this.socket, this.bank);
+				r = new RequestHandler(c, this.bank);
 				Thread t = new Thread(r);
 				t.start();
 				}
