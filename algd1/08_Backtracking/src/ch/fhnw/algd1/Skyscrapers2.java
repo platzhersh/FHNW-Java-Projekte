@@ -4,7 +4,7 @@ public class Skyscrapers2 {
 	
 	int n;			// Grösse der n*n Matrix
 	int[][] map;	// (n+2)*(n+2) Matrix - Skyscrapers & Zähler
-	int stepCount;
+	int stepCount;	
 	
 	/**
 	 * @param args
