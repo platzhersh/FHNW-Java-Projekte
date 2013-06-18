@@ -1,19 +1,36 @@
-package ch.fhnw.algd1;
+package ch.fhnw.algd1.StockExchange;
 
 import java.util.Arrays;
 
+
 public class StockExchange {
 	float[] stock;
-
+	StockExchangeGUI view;
+	StockExchangeControl control;
+	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
+			
 		StockExchange se = new StockExchange();
-		se.generateStock(5, 1);
+		se.generateStock(100000, 250);
 
+		se.startGUI();
+		se.control = new StockExchangeControl(se.view, se);
+		
 		System.out.println(se.toString());
+		long startTime = System.nanoTime();
 		System.out.println(se.getBestPeriod().toString());
+		long stopTime = System.nanoTime();
+		long duration = stopTime-startTime;
+		System.out.println("Done after "+duration/1000000000.0+"s");
+		
+		
+	}
+	
+	public void startGUI() {
+		view = new StockExchangeGUI();
 	}
 	
 	public void generateStock(int size, float maxDiff) {
@@ -54,7 +71,7 @@ public class StockExchange {
 		return Arrays.toString(stock);
 	}
 	
-	private static class StockPeriod {
+	public static class StockPeriod {
 		int start;
 		int end;
 		float diff;	

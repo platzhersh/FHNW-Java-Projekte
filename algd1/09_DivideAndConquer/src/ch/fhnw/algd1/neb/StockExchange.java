@@ -118,7 +118,7 @@ public class StockExchange {
 	public static void main(String[] args) {
 		setLookAndFeel();
 		StockExchange stockExchange = new StockExchange();
-		stockExchange.generateStock(1000, 250);
+		stockExchange.generateStock(100000, 250);
 		//stockExchange.loadStock();
 		StockDifference maxStockDifference = stockExchange.getMaxStockDifference();
 		System.out.println(maxStockDifference.toString());
