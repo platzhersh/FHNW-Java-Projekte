@@ -14,18 +14,10 @@ public class StockExchange {
 	public static void main(String[] args) {
 			
 		StockExchange se = new StockExchange();
-		se.generateStock(100000, 250);
+		se.generateStock(100000, 100);
 
 		se.startGUI();
 		se.control = new StockExchangeControl(se.view, se);
-		
-		System.out.println(se.toString());
-		long startTime = System.nanoTime();
-		System.out.println(se.getBestPeriod().toString());
-		long stopTime = System.nanoTime();
-		long duration = stopTime-startTime;
-		System.out.println("Done after "+duration/1000000000.0+"s");
-		
 		
 	}
 	

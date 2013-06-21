@@ -13,7 +13,6 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class StockExchangeControl implements ActionListener, ChangeListener	{
 
@@ -97,7 +96,7 @@ public class StockExchangeControl implements ActionListener, ChangeListener	{
 			}
 		}
 		else if (event.getSource() == view.btnGenerate ) {
-			model.generateStock(10, 10);
+			model.generateStock(100000, 100);
 			updateOutputFields();
 		}
 		

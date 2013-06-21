@@ -64,7 +64,7 @@ public class QuickSort {
 	public static int[] sort(int[] a, int l, int r) {
 		
 		// Phase 1
-		int p = a[l + (r-l)/2];;
+		int p = a[l + (r-l)/2];
 		int i = l, j = r;
 		
 		do {

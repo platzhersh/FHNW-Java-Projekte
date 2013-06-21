@@ -2,8 +2,8 @@ package ch.fhnw.algd1;
 
 public class Skyscrapers2 {
 	
-	int n;			// Grösse der n*n Matrix
-	int[][] map;	// (n+2)*(n+2) Matrix - Skyscrapers & Zähler
+	int n;			// Grï¿½sse der n*n Matrix
+	int[][] map;	// (n+2)*(n+2) Matrix - Skyscrapers & Zï¿½hler
 	int stepCount;	
 	
 	/**
@@ -16,36 +16,36 @@ public class Skyscrapers2 {
 		System.out.println("\nNumber of solveField() calls: "+sky.getStepCount());
 	}
 	/***
-	 * Initialisiert ein 6*6 Array und schreibt die vorgegebenen Zähler in die erste und letzte Zeile / Spalte 
+	 * Initialisiert ein 6*6 Array und schreibt die vorgegebenen Zï¿½hler in die erste und letzte Zeile / Spalte 
 	 */
 	public Skyscrapers2() {
 		n = 6;
 		map = new int[n][n];
 		stepCount = 0;
 
-		/* Counters Top */
+		/* Counters Left */
 		map[0][1] = 1;
 		map[0][2] = 3;
 		map[0][3] = 2;
 		map[0][4] = 2;
 	
-		/* Counters Left */
+		/* Counters Top */
 		map[1][0] = 1;
 		map[2][0] = 3;
 		map[3][0] = 2;
 		map[4][0] = 2;
 		
 		/* Counters Bottom */
-		map[1][5] = 3;
-		map[2][5] = 1;
-		map[3][5] = 2;
-		map[4][5] = 2;
+		map[1][n-1] = 3;
+		map[2][n-1] = 1;
+		map[3][n-1] = 2;
+		map[4][n-1] = 2;
 		
 		/* Counters Right */
-		map[5][1] = 2;
-		map[5][2] = 2;
-		map[5][3] = 1;
-		map[5][4] = 3;
+		map[n-1][1] = 2;
+		map[n-1][2] = 2;
+		map[n-1][3] = 1;
+		map[n-1][4] = 3;
 		
 	}
 
@@ -53,7 +53,7 @@ public class Skyscrapers2 {
 		return this.stepCount;
 	}
 	/***
-	 * Überall wo nur 1 Skyscraper gesehen wird, muss gleich anliegend ein Skyscraper der maximalen Höhe stehen
+	 * ï¿½berall wo nur 1 Skyscraper gesehen wird, muss gleich anliegend ein Skyscraper der maximalen Hï¿½he stehen
 	 */
 	public void setOnes() {
 		int x = 0; int y = 0;
@@ -66,10 +66,10 @@ public class Skyscrapers2 {
 		y = 0;
 		
 		// Right Column
-		while (map[5][y] != 1 && y < (n - 1)) {
+		while (map[n-1][y] != 1 && y < (n - 1)) {
 			y++;
 		}
-		if (y < n-1) map[4][y] = n-2;
+		if (y < n-1) map[n-2][y] = n-2;
 		
 		// Top Column
 		while (map[x][0] != 1 && x < (n - 1)) {
@@ -79,10 +79,10 @@ public class Skyscrapers2 {
 		x = 0;
 		
 		// Bottom Column
-		while (map[x][5] != 1 && x < (n - 1)) {
+		while (map[x][n-1] != 1 && x < (n - 1)) {
 			x++;
 		}
-		if (x < n-1) map[x][4] = n-2;
+		if (x < n-1) map[x][n-2] = n-2;
 		
 		System.out.println(this.toString());
 	}
@@ -90,7 +90,7 @@ public class Skyscrapers2 {
 	
 	/**
 	 * Backtracking Hauptmethode
-	 * Löst die Matrix Feld umd Feld, Zeile um Zeile
+	 * Lï¿½st die Matrix Feld umd Feld, Zeile um Zeile
 	 */
 	public void solve () {
 		
@@ -102,11 +102,11 @@ public class Skyscrapers2 {
 	}
 
 	/**
-	 * Wird jeweils rekursiv für jede Spalte aufgerufen um die Zeile y zu lösen
-	 * Im Fehlerfalle springt der Compiler zurück in die Oberfunktion (vorheriges Feld)
+	 * Wird jeweils rekursiv fï¿½r jede Spalte aufgerufen um die Zeile y zu lï¿½sen
+	 * Im Fehlerfalle springt der Compiler zurï¿½ck in die Oberfunktion (vorheriges Feld)
 	 * @param x Spaltennummer des aktuellen Feldes
 	 * @param y Zeilennummer des aktuellen Feldes
-	 * @return gibt TRUE zurück wenn die Zeile korrekt ist
+	 * @return gibt TRUE zurï¿½ck wenn die Zeile korrekt ist
 	 */
 	public boolean solveRowField(int x, int y) {
 		int t = n;
@@ -134,8 +134,8 @@ public class Skyscrapers2 {
 	 * 
 	 * @param x Spaltennummer des aktuellen Feldes
 	 * @param y Zeilennummer des aktuellen Feldes
-	 * @param t maximaler Wert den es zu testen gibt, solveField probiert für alle Werte < t bis ein gültiger gefunden wird
-	 * @return gibt TRUE zurück wenn ein gültiger Wert gefunden wurde, FALSE wenn kein gültiger Wert gefunden werden konnte (t=0)
+	 * @param t maximaler Wert den es zu testen gibt, solveField probiert fï¿½r alle Werte < t bis ein gï¿½ltiger gefunden wird
+	 * @return gibt TRUE zurï¿½ck wenn ein gï¿½ltiger Wert gefunden wurde, FALSE wenn kein gï¿½ltiger Wert gefunden werden konnte (t=0)
 	 */
 	public boolean solveField(int x, int y, int t) {
 		this.stepCount++;
@@ -151,8 +151,8 @@ public class Skyscrapers2 {
 	
 	/**
 	 * Checkt ob der Feldwert in der Zeile eindeutig ist
-	 * @param x Spaltennummer des zu prüfenden Feldes
-	 * @param y Zeilennumer des zu prüfenden Feldes
+	 * @param x Spaltennummer des zu prï¿½fenden Feldes
+	 * @param y Zeilennumer des zu prï¿½fenden Feldes
 	 * @return
 	 */
 	public boolean validateRow(int x, int y) {
@@ -172,9 +172,9 @@ public class Skyscrapers2 {
 	public boolean countLeft(int row) {
 		int posX = 1;
 		int endX = n-2;
-		int highest = 0;		// speichert das höchste passierte Gebäude
+		int highest = 0;		// speichert das hï¿½chste passierte Gebï¿½ude
 		int count = 0;
-		int ref = map[0][row];	// Referenzwert. Wie viele Skyscraper müssen gesehen werden?
+		int ref = map[0][row];	// Referenzwert. Wie viele Skyscraper mï¿½ssen gesehen werden?
 		
 		while (posX <= endX) {
 			int cur = map[posX][row];
@@ -186,9 +186,9 @@ public class Skyscrapers2 {
 	public boolean countRight(int row) {
 		int posX = n-2;
 		int endX = 1;
-		int highest = 0;		// speichert das höchste passierte Gebäude
+		int highest = 0;		// speichert das hï¿½chste passierte Gebï¿½ude
 		int count = 0;
-		int ref = map[5][row];	// Referenzwert. Wie viele Skyscraper müssen gesehen werden?
+		int ref = map[n-1][row];	// Referenzwert. Wie viele Skyscraper mï¿½ssen gesehen werden?
 		
 		while (posX >= endX) {
 			int cur = map[posX][row];
@@ -200,8 +200,8 @@ public class Skyscrapers2 {
 	
 	/**
 	 * Checkt ob der Feldwert in der Spalte eindeutig ist
-	 * @param x Spaltennummer des zu prüfenden Feldes
-	 * @param y Zeilennumer des zu prüfenden Feldes
+	 * @param x Spaltennummer des zu prï¿½fenden Feldes
+	 * @param y Zeilennumer des zu prï¿½fenden Feldes
 	 * @return
 	 */
 	public boolean validateCol(int x, int y) {
@@ -221,9 +221,9 @@ public class Skyscrapers2 {
 	public boolean countTop(int col) {
 		int posY = 1;
 		int endY = n-2;
-		int highest = 0;		// speichert das höchste passierte Gebäude
+		int highest = 0;		// speichert das hï¿½chste passierte Gebï¿½ude
 		int count = 0;
-		int ref = map[col][0];	// Referenzwert. Wie viele Skyscraper müssen gesehen werden?
+		int ref = map[col][0];	// Referenzwert. Wie viele Skyscraper mï¿½ssen gesehen werden?
 		
 		while (posY <= endY) {
 			int cur = map[col][posY];
@@ -235,9 +235,9 @@ public class Skyscrapers2 {
 	public boolean countBottom(int col) {
 		int posY = n-2;
 		int endY = 1;
-		int highest = 0;		// speichert das höchste passierte Gebäude
+		int highest = 0;		// speichert das hï¿½chste passierte Gebï¿½ude
 		int count = 0;
-		int ref = map[col][5];	// Referenzwert. Wie viele Skyscraper müssen gesehen werden?
+		int ref = map[col][n-1];	// Referenzwert. Wie viele Skyscraper mï¿½ssen gesehen werden?
 		
 		while (posY >= endY) {
 			int cur = map[col][posY];
