@@ -50,5 +50,58 @@ toCurry2 f = \x y -> f (x,y)
 
 -}
 
-toTuple :: (a -> a -> a) -> (a,a) -> a
-toTuple f = \(x,y) -> f x y
+toTuple f = uncurry f
+
+toTuple2 :: (a -> a -> a) -> (a,a) -> a
+toTuple2 f = \(x,y) -> f x y
+
+{-
+	Aufgabe 1.5
+
+	Betrachten Sie zwei Funktionen minList1 und minList2. Beide haben den gleichen Typ und die gleiche Funktionalität, unterscheiden sich aber in ihrer Implementierung. Die Funktionen nehmen eine nicht-leere Liste von Werten als Eingabe, und liefern den kleinsten dieser Werte als Ausgabe.
+	
+	Idee der Implementierung von minList1: Das Minimum einer Liste mit mindestens einem Element ist gleich dem Minimum aus dem ersten Element der Liste und dem Minimum der restlichen Elmente der Liste.
+	
+	Idee der Implementierung von minList2: Das Minimum einer Liste mit mindestens zwei Elementen ist gleich dem Minimum der um das grössere der beiden ersten Elemente der Liste verkürzten Liste.
+
+-}
+
+minList1 :: Ord a => [a] -> a
+minList1 [x] = x
+minList1 (x:xs)
+  | x > head xs = minList1 xs
+  | otherwise = minList1 (x:(tail xs))
+
+  
+minList12 :: Ord a => [a] -> a
+minList12 [x] = x
+minList12 (x:xs) = minCur x (minList12 xs)
+  
+minList2 ::Ord a => [a] -> a
+minList2 [x] = x
+minList2 (x:y:xs)
+  | x > y = minList2 (y:xs)
+  | otherwise = minList2 (x:xs)
+  
+minList22 ::Ord a => [a] -> a
+minList22 [x] = x
+minList22 (x:y:xs) = minList22 ((minCur x y):xs)
+
+{-
+	Aufgabe 1.6
+
+	Besonders elegant wäre es natürlich, das kleinste Element einer Liste durch Anwendung unserer bekannten Funktionen foldl oder foldr zu bestimmen. Leider geht dies nicht unmittelbar, da die fold-Funktionen in der leeren Liste verankert sind, unsere Listen aber mindestens ein Element haben. Dieses Problem lässt sich aber leicht durch eine Funktion foldleft1 lösen, die wir wie folgt definieren
+
+-}
+
+foldleft1 :: (a -> a -> a) -> [a] -> a
+foldleft1 f (x : xs) = foldl f x xs
+
+minList3 xs = foldleft1 minCur xs
+
+{-
+	Aufgabe 1.7
+
+	
+
+-}

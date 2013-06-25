@@ -20,40 +20,22 @@ public class Skyscrapers2 {
 	 */
 	public Skyscrapers2() {
 		n = 6;
-		map = new int[n][n];
+		map = new int[][] {
+			{0, 1, 3, 2, 2, 0},
+			{1, 0, 0, 0, 0, 2},
+			{3, 0, 0, 0, 0, 2},
+			{2, 0, 0, 0, 0, 1},
+			{2, 0, 0, 0, 0, 3},
+			{0, 3, 1, 2, 2, 0}
+		};
 		stepCount = 0;
-
-		/* Counters Left */
-		map[0][1] = 1;
-		map[0][2] = 3;
-		map[0][3] = 2;
-		map[0][4] = 2;
-	
-		/* Counters Top */
-		map[1][0] = 1;
-		map[2][0] = 3;
-		map[3][0] = 2;
-		map[4][0] = 2;
-		
-		/* Counters Bottom */
-		map[1][n-1] = 3;
-		map[2][n-1] = 1;
-		map[3][n-1] = 2;
-		map[4][n-1] = 2;
-		
-		/* Counters Right */
-		map[n-1][1] = 2;
-		map[n-1][2] = 2;
-		map[n-1][3] = 1;
-		map[n-1][4] = 3;
-		
 	}
 
 	public int getStepCount() {
 		return this.stepCount;
 	}
 	/***
-	 * �berall wo nur 1 Skyscraper gesehen wird, muss gleich anliegend ein Skyscraper der maximalen H�he stehen
+	 * überall wo nur 1 Skyscraper gesehen wird, muss gleich anliegend ein Skyscraper der maximalen Höhe stehen
 	 */
 	public void setOnes() {
 		int x = 0; int y = 0;
