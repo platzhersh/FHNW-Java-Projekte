@@ -72,14 +72,14 @@ public class Skyscrapers2 {
 	
 	/**
 	 * Backtracking Hauptmethode
-	 * L�st die Matrix Feld umd Feld, Zeile um Zeile
+	 * Löst die Matrix Feld umd Feld, Zeile um Zeile
 	 */
 	public void solve () {
 		
 		this.setOnes();
 		
 		for (int posY = 1; posY < n-1; posY++) {
-			solveRowField(1,posY);
+			solveRowField2(1,posY);
 		}
 	}
 
@@ -90,7 +90,7 @@ public class Skyscrapers2 {
 	 * @param y Zeilennummer des aktuellen Feldes
 	 * @return gibt TRUE zur�ck wenn die Zeile korrekt ist
 	 */
-	public boolean solveRowField(int x, int y) {
+	public boolean solveRowField(int x, int y) {	
 		int t = n;
 		boolean nextField = false;
 		while (!nextField) {
@@ -99,24 +99,63 @@ public class Skyscrapers2 {
 				boolean topdown = true;
 				if (y == n-2) {
 					System.out.println("Test top-down / down-top");
-					topdown = (countLeft(y) && countRight(y));
+					topdown = (countTop(y) && countBottom(y));
 					}
 				if (x == n-2) {
 					if (!(countLeft(y) && countRight(y))) { 
 						map[x][y] = 0;
 						return false; 
-					} else return topdown;
-				} else { t--; nextField = solveRowField(x+1,y); }
+					} else { nextField = solveRowField(1,y+1); return topdown; }
+				} else { 
+					if (y == n-2) return topdown;
+					else {
+						t--; 
+						nextField = solveRowField(x+1,y); 
+						}
+					}
 			}
 		}
 		return true;
+	}
+	
+	public boolean solveRowField2(int x, int y) {
+		int t = n-2;
+		
+		boolean nextField = false;
+			
+		while (!nextField) {
+			t = solveField2(x,y,t--);
+			if (t > 0) {
+				x = x < n-2 ? x+1 : 1;
+				y = x < n-2 ? y : y+1;
+				nextField = solveRowField2(x, y);
+			} else {
+				t = n-2;
+				return false;
+			}	
+		}
+		
+		return true;
+	}
+	
+	public int solveField2(int x, int y, int max) {
+		map[x][y] = max;
+		
+		while (!validateCol(x, y) && max > 0) {
+			max--;
+			map[x][y] = max;
+		}
+		System.out.println("Row: "+y+", Col: "+x+", t="+max);
+		System.out.println(this.toString());
+		return max;
 	}
 	
 	/**
 	 * 
 	 * @param x Spaltennummer des aktuellen Feldes
 	 * @param y Zeilennummer des aktuellen Feldes
-	 * @param t maximaler Wert den es zu testen gibt, solveField probiert f�r alle Werte < t bis ein g�ltiger gefunden wird
+	 * @param t maximaler Wert den es zu testen gibt, solveField probiert für alle Werte < t 
+	 * bis ein gültiger gefunden wird
 	 * @return gibt TRUE zur�ck wenn ein g�ltiger Wert gefunden wurde, FALSE wenn kein g�ltiger Wert gefunden werden konnte (t=0)
 	 */
 	public boolean solveField(int x, int y, int t) {
