@@ -1,0 +1,90 @@
+div.header-left {
+	width: 70px;
+	height: 70px;
+	float: left;
+	border-bottom: solid 1px;
+}
+
+div.header-center {
+	width: 660px;
+	height: 70px;
+	float: left;
+	text-align: center;
+	padding-top: 15px;
+	font-size: xx-large;
+	height: 55px;
+	border-left: solid 1px;
+	border-right: solid 1px;
+	border-bottom: solid 1px;
+}
+
+div.header-right {
+	float: right;
+	width: 70px;
+	height: 70px;
+	margin-left: -70px;
+	padding-left: 5px;
+	border-bottom: solid 1px;
+}
+
+div.new {
+	padding-top: 3px;
+}
+
+input[type=text] {
+	width: 70%;
+}
+
+.mybutton {
+	border: 1px solid #BBBBBB;
+	color: #777777;
+	padding: 2px 7px;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: bold;
+	height: 24px;
+	vertical-align: text-bottom;
+}
+
+div.qa-block {
+	height: 6em;	
+}
+
+div.done {
+	font-weight: bold;
+	color: red;
+}
+
+div.qa-body {
+	height: 11em;
+}
+
+.infoblock {
+	padding-bottom: 20px;
+	width: 80%;
+	margin-left: 5px;
+	
+}
+
+.progressblock {
+	padding-left: 100px;
+	margin-top: -18px;
+}
+
+.progress {
+	padding-left: 530px;
+	margin-top: -40px;	
+}
+
+.progressbar {
+	padding-bottom: 20px;
+	height: 20px;
+}
+
+.dijitTextBox {
+	width: 70%;
+}
+
+.smalltable {
+	width: 80%;
+}

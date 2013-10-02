@@ -27,6 +27,8 @@
     <util:language label="Deubuilderh" locale="de"/>
     </span>
   <util:theme/>
+  
+  <span> | <a href="#">Login</a></span>
 
   <spring:url value="/resources/images/springsource-logo.png" var="logo"/>
   <spring:message code="global_sponsored" htmlEscape="false" var="sponsored"/>

@@ -17,4 +17,38 @@
 	<welcome-file-list>
 		<welcome-file>first</welcome-file>
 	</welcome-file-list>
+	
+	
+	<!-- Kontext Variablen -->
+	<context-param>
+		<param-name>DBUSER</param-name>
+		<param-value>webfr</param-value>
+	</context-param>
+	
+	<!-- Filter deklarieren -->
+	
+	<filter>
+		<filter-name>BasicFilter</filter-name>
+		<filter-class>ch.fhnw.edu.basic.filter.BasicFilter</filter-class>
+		<init-param>
+			<param-name></param-name>
+			<param-value></param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>BasicFilter</filter-name>
+		<servlet-name>BasicServlet</servlet-name>
+	</filter-mapping>
+
+	
+	<!--  Listeners deklarieren -->
+	
+	<listener>
+		<listener-class>ch.fhnw.edu.basic.listener.BasicListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>ch.fhnw.edu.basic.listener.ParameterListener</listener-class>
+	</listener>
+	
 </web-app>
