@@ -1,71 +1,72 @@
 package ch.fhnw.algd1;
-import java.util.List;
-import java.util.Stack;
 
-
+/**
+ * Write a description of class Hanoi here.
+ * 
+ * @author C. Stamm 
+ * @version 1
+ */
 public class Hanoi {
-
-	/**
-	 * @param args
-	 * @throws Exception 
-	 */
-	public static void main(String[] args) throws Exception {
-		Hanoi h = new Hanoi(4);
-		h.move(4,'a','b','c');
-
-	}
-	
-	Stack<Integer> a, b, c;
-	
-	/***
-	 * Sets up a Tower of Hanoi Game
-	 * @param n number of plates
-	 */
-	public Hanoi(int n) {
-		a = new Stack<Integer>();
-		b = new Stack<Integer>();
-		c = new Stack<Integer>();
-		while (n > 0) {
-			a.push(n--);
-		}
-	}
-	
-	public Stack<Integer> mapChar2Stack(char c) throws Exception {
-		switch (c) {
-			case 'a': return this.a; 
-			case 'b': return this.b;
-			case 'c': return this.c;
-			default: throw new Exception("Invalid Char.");
-		}
-	}
-	
-	public void printStacks() {
-		System.out.println("A: "+a.toString());
-		System.out.println("B: "+b.toString());
-		System.out.println("C: "+c.toString());
-		System.out.println("-----------------------------");
-	}
-	
-	public void move (int n, char from, char to, char via) throws Exception {
-		Stack<Integer> f = mapChar2Stack(from);
-		Stack<Integer> t = mapChar2Stack(to);
-		Stack<Integer> v = mapChar2Stack(via);
-	
-		printStacks();
-		
-		if (n < 2) {
-			t.push(f.pop()); printStacks();
-		} else if (n < 3) {
-			v.push(f.pop()); printStacks();
-			t.push(f.pop()); printStacks();
-			t.push(v.pop()); printStacks();
-		} else if (n == 3) {
-			move(2,from,via,to);
-			move(1,from,to,via);
-			move(2,via,to,from);
-		} else {
-			// TODO
-		}
-	}
-
+    private int m_anzahlScheiben;
+    
+    public Hanoi(int n) {
+        assert n > 0 : n;
+        m_anzahlScheiben = n;
+    }
+    
+    public void start() {
+        System.out.println("\n\nTürme von Hanoi\n");
+        System.out.println("Verschiebe Turm der Höhe " + m_anzahlScheiben + " von A nach B.");
+        System.out.println("Verschiebe dabei die Scheiben in folgender Reihenfolge:");
+        move(m_anzahlScheiben, 'A', 'B', 'C');
+        System.out.println();
+    }
+    
+    private void move(int anzahl, char from, char to, char via) {
+        assert anzahl > 0 : anzahl;
+        
+        if (anzahl == 1) {
+            //System.out.println("von " + from + " nach " + to);
+            print(from, to);
+        } else {
+            move(anzahl - 1, from, via, to);
+            move(1, from, to, via);
+            move(anzahl - 1, via, to, from);
+        }
+    }
+    
+    private void print(char from, char to) {
+        switch(from) {
+        case 'A': 
+            switch(to) {
+            case 'B': 
+                System.out.println("[A]----->[B]");
+                break;
+            case 'C': 
+                System.out.println("[A]-------------->[C]");
+                break;
+            }
+            break;
+        case 'B': 
+            switch(to) {
+            case 'A': 
+                System.out.println("[A]<-----[B]");
+                break;
+            case 'C': 
+                System.out.println("         [B]----->[C]");
+                break;
+            }
+            break;
+        case 'C': 
+            switch(to) {
+            case 'A': 
+                System.out.println("[A]<--------------[C]");
+                break;
+            case 'B': 
+                System.out.println("         [B]<-----[C]");
+                break;
+            }
+            break;
+        }
+    }
 }
