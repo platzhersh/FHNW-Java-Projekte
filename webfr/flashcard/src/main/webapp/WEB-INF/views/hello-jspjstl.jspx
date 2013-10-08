@@ -1,0 +1,6 @@
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:hello="urn:jsptagdir:/WEB-INF/tags/webfr" version="2.0">
+
+	<hello:sayhello to="${answer.to}" from="${answer.from}" language="${answer.language}"/>
+	<hr />
+	<hello:sayhello to="${answer.to}" from="${answer.from}" />
+</div>

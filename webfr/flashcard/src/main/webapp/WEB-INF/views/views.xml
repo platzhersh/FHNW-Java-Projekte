@@ -11,6 +11,10 @@
   <definition extends="default" name="hello">
     <put-attribute name="body" value="/WEB-INF/views/hello.jspx"/>
   </definition>
+  
+  <definition extends="default" name="jspjstl">
+    <put-attribute name="body" value="/WEB-INF/views/hello-jspjstl.jspx"/>
+  </definition>
 
   <definition extends="public" name="dataAccessFailure">
     <put-attribute name="body" value="/WEB-INF/views/dataAccessFailure.jspx"/>

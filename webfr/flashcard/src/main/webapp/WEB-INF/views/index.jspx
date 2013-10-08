@@ -1,6 +1,8 @@
 <div xmlns:spring="http://www.springframework.org/tags"
 	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
-	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:form="http://www.springframework.org/tags/form">
 	<jsp:directive.page contentType="text/html;charset=UTF-8" />
 	<jsp:output omit-xml-declaration="yes" />
 
@@ -15,16 +17,22 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>Lorem Ipsum</td>
-				<td>Lorem ipsum dolor sit amet.</td>
-				<td><img src="images/show.png" /></td>
-				<td><img src="images/update.png" /></td>
-				<td><img src="images/delete.png" /></td>
-			</tr>
+			<c:forEach var="q" items="${questionnaires}">
+				<tr>
+					<td>${q.subject}</td>
+					<td>${q.description}</td>
+					<td><a href="/flashcard/questionnaires/${q.id}"><img src="images/show.png" /></a></td>
+					<td><a href="/flashcard/questionnaires/${q.id}?form"><img src="images/update.png" /></a></td>
+					<td>
+						<form:form action="/flashcard/questionnaires/${q.id}" method="DELETE">
+						<input class="image" src="images/delete.png" type="image" onClick="return confirm('Wollen Sie Objekt wirklich löschen');" />
+						</form:form>
+					</td>
+				</tr>
+			</c:forEach>
 		</tbody>
 
 	</table>
-	<img src="images/create.png" />
+	<a href="/flashcard/questionnaires?form"><img src="images/create.png" /></a>
 
 </div>
