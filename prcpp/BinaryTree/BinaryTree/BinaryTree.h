@@ -142,7 +142,7 @@ public:
 
 	};
 
-
+	// TODO: implement
 	int show() 
 	{
 		return m_root->get_value();
@@ -153,7 +153,7 @@ public:
 		return m_root;
 	};
 
-	// print out Tree structure
+	// TODO: print out Tree structure
 	char* toString() {
 		BinaryTreeNode* currentNode = m_root;
 
