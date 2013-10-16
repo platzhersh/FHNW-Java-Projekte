@@ -3,5 +3,5 @@
     <jsp:output omit-xml-declaration="yes" />
 
     <spring:url var="back_img" value="/resources/images/back.png" />
-    <img src="${back_img}"/>
+    <a href="#" onClick="window.history.back();"><img src="${back_img}"/></a>
 </div>
