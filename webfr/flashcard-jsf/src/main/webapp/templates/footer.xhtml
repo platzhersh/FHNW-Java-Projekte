@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<ui:composition>
+    <div id="footer">
+        <h:form>
+            <span id="language"> 
+                <h:outputText value="#{messages.label_language}:" /> 
+                <h:commandLink id="switchToEnglish"
+                    action="#{localeBean.setSelectedLocale}">
+                    <f:param name="locale" value="en" />
+                    <h:graphicImage library="images"
+                        name="en.png" alt="Switch language to English" />
+                </h:commandLink> 
+                <h:commandLink id="switchToGerman"
+                    action="#{localeBean.setSelectedLocale}">
+                    <f:param name="locale" value="de" />
+                    <h:graphicImage library="images"
+                        name="de.png" alt="Switch language to German" />
+                </h:commandLink>
+            </span>
+        </h:form>
+    </div>
+</ui:composition>
+</html>

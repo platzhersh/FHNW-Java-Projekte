@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+<f:view locale="#{localeBean.locale}" contentType="text/html">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=8" />
+
+        <ui:insert name="load-scripts">
+            <ui:include src="load-scripts.xhtml" />
+        </ui:insert>
+
+        <title>#{applicationBean.appName}</title>
+    </h:head>
+
+    <h:body>
+    <ui:debug hotkey="k" />
+        <div id="wrapper">
+            <ui:insert name="header-left">
+                <ui:include src="logo.xhtml"/>
+            </ui:insert>
+            <ui:insert name="header-center" />
+            <ui:insert name="header-right" />
+            <div id="main">
+                <ui:insert name="content" />
+                <ui:insert name="footer">
+                    <ui:include src="footer.xhtml" />
+                </ui:insert>
+            </div>
+        </div>
+    </h:body>
+</f:view>
+</html>

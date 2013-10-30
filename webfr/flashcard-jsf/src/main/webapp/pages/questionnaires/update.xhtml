@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<ui:composition template="../../templates/layout.xhtml">
+    <ui:define name="header-center">
+        <ui:include src="header-update.xhtml" />
+    </ui:define>
+    
+    <ui:define name="header-right">
+        <ui:include src="../header-back.xhtml" />
+    </ui:define>    
+    
+    <ui:define name="content">
+		<h:form>
+             <div>
+                <h:outputLabel for="subject"><h:outputText value="#{messages.label_subject}" /> :</h:outputLabel>
+            </div>
+            <div class="textinput">
+                <h:inputText id="subject" value="#{questionnaireBean.questionnaire.subject}" label="theme" />
+                <br/>
+                <h:message for="subject" styleClass="errors"/>
+            </div>
+			<br/>
+            
+			<div>
+                <h:outputLabel for="description"><h:outputText value="#{messages.label_description}" /> :</h:outputLabel>
+            </div>
+			<div class="textinput">
+                <h:inputText id="description" value="#{questionnaireBean.questionnaire.description}" label="description" />
+                <br/>
+                <h:message for="description" styleClass="errors"/>
+            </div>
+		    <br/>
+            
+			<div class="submit">
+                <h:commandButton action="#{questionnaireBean.persist}" value="#{messages.label_save}"/>
+            </div>
+		</h:form>     
+    </ui:define>
+
+</ui:composition>
+</html>

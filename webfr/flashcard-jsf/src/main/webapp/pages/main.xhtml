@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<ui:composition template="../templates/layout.xhtml">
+    <ui:define name="header-center">
+        <ui:include src="header.xhtml" />
+    </ui:define>
+    
+    <ui:define name="header-right">
+        <ui:include src="header-right.xhtml" />
+    </ui:define>    
+    
+    <ui:define name="content">
+        <table>
+        <thead>
+            <th>Subject</th>
+            <th>Description</th>
+            <th/>
+            <th/>
+            <th/>
+        </thead>
+        <tbody>
+        <h:form>
+            <tr jsfc="ui:repeat" 
+            		value="#{questionnaireBean.questionnaires}" 
+            		var="q">
+            	
+                <td>#{q.subject}</td>
+                <td>#{q.description}</td>
+                <td class="utilbox">
+                	<h:commandLink action="#{questionnaireBean.show(q)}">
+                		<h:graphicImage library="images" name="show.png" />
+                	</h:commandLink>
+                </td>
+                <td class="utilbox">
+    				<h:commandLink action="#{questionnaireBean.update(q)}">
+	                	<h:graphicImage library="images" name="update.png" />
+	                </h:commandLink>
+                </td>
+                <td class="utilbox">
+                	<h:commandLink action="#{questionnaireBean.delete(q)}">
+	                   	<h:graphicImage library="images" name="delete.png" />
+	                </h:commandLink>
+                </td>                                
+            </tr>
+            </h:form>
+        </tbody>
+    </table>
+    <div class="new">
+    	<h:form>
+    	<h:commandLink action="#{questionnaireBean.create}">
+    		<h:graphicImage library="images" name="add.png" />
+    	</h:commandLink>
+    	</h:form>
+    </div>
+    </ui:define>
+
+</ui:composition>
+</html>
