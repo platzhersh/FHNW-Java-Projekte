@@ -1,0 +1,14 @@
+﻿Der Buildvorgang wurde am 04.11.2013 08:34:25 gestartet.
+     1>Projekt "D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\NativeFunctions\NativeFunctions\NativeFunctions.vcxproj" auf Knoten "2", Rebuild Ziel(e).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W1 /WX- /O2 /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc110.pdb" /Gd /TP /errorReport:prompt main.cpp
+         main.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\NativeFunctions\x64\Release\NativeFunctions.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\NativeFunctions\x64\Release\NativeFunctions.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\NativeFunctions\x64\Release\NativeFunctions.lib" /MACHINE:X64 x64\Release\main.obj
+            Bibliothek "D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\NativeFunctions\x64\Release\NativeFunctions.lib" und Objekt "D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\NativeFunctions\x64\Release\NativeFunctions.exp" werden erstellt.
+     1>LINK : fatal error LNK1561: Einstiegspunkt muss definiert werden.
+     1>Die Erstellung des Projekts "D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\NativeFunctions\NativeFunctions\NativeFunctions.vcxproj" ist abgeschlossen, Rebuild Ziel(e) -- FEHLER.
+
+Fehler beim Buildvorgang.
+
+Verstrichene Zeit 00:00:00.63
