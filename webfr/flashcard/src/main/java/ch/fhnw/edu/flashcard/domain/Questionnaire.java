@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -22,6 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class Questionnaire {
 
     @NotNull
+    @Size(min = 1, max = 50)
     private String subject;
 
     @NotNull

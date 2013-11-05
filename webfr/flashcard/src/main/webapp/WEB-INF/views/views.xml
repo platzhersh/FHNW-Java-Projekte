@@ -5,7 +5,8 @@
   <definition extends="default" name="index">
     <put-attribute name="header-center" value="/WEB-INF/views/welcome.jspx" />
     <put-attribute name="header-right" value="/WEB-INF/views/empty.jspx" />
-    <put-attribute name="body" value="/WEB-INF/views/index.jspx" />
+    <put-attribute name="body" value="/WEB-INF/views/index-with-auth.jspx" />
+    <put-attribute name="footer" value="/WEB-INF/views/footer-with-auth.jspx" />
   </definition>
   
   <definition extends="default" name="hello">
@@ -28,7 +29,7 @@
     <put-attribute name="body" value="/WEB-INF/views/uncaughtException.jspx"/>
   </definition>
 
-  <definition extends="public" name="login">
+  <definition extends="index" name="login">
     <put-attribute name="body" value="/WEB-INF/views/login.jspx"/>
   </definition>
   

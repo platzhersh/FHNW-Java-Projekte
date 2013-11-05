@@ -9,8 +9,10 @@
         <form-login login-processing-url="/resources/j_spring_security_check" login-page="/login" authentication-failure-url="/login?login_error=t" />
         <logout logout-url="/resources/j_spring_security_logout" />
         <!-- Configure these elements to secure URIs in your application -->
-        <intercept-url pattern="/choices/**" access="hasRole('ROLE_ADMIN')" />
-        <intercept-url pattern="/member/**" access="isAuthenticated()" />
+        <intercept-url pattern="/questionnaires/**" access="isAuthenticated()" method="GET" />
+        <intercept-url pattern="/**" access="isAuthenticated()" method="POST" />
+        <intercept-url pattern="/**" access="isAuthenticated()" method="DELETE" />
+        <intercept-url pattern="/**" access="isAuthenticated()" method="PUT" />
         <intercept-url pattern="/resources/**" access="permitAll" />
         <intercept-url pattern="/**" access="permitAll" />
     </http>

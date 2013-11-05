@@ -27,6 +27,7 @@ public class QuestionnaireController {
         uiModel.asMap().clear();
         questionnaire.persist();
         return "redirect:/questionnaires/" + encodeUrlPathSegment(questionnaire.getId().toString(), httpServletRequest);
+        // return "index";
     }
 
 	@RequestMapping(params = "form", produces = "text/html")
