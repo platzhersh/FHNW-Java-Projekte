@@ -1,0 +1,52 @@
+<div xmlns:spring="http://www.springframework.org/tags" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:form="http://www.springframework.org/tags/form" 
+    xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" xmlns:security="http://www.springframework.org/security/tags" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+  <jsp:directive.page contentType="text/html;charset=UTF-8" />
+  <jsp:output omit-xml-declaration="yes" />
+  <spring:message var="app_name" code="application_name" htmlEscape="false" />
+  <spring:message var="title" code="welcome_titlepane" arguments="${app_name}" htmlEscape="false" />
+    <table>
+        <thead>
+            <th>Subject</th>
+            <th>Description</th>
+            <security:authorize access="isAuthenticated()">
+                <th/>
+                <th/>
+                <th/>
+            </security:authorize>
+        </thead>
+        <tbody>
+            <c:forEach items="${questionnaires}" var="questionnaire">
+                <tr>
+                    <td>${questionnaire.subject}</td>
+                    <td>${questionnaire.description}</td>
+                    <security:authorize access="isAuthenticated()">
+                        <td class="utilbox">
+                            <spring:url var="url_show" value="/questionnaires/${questionnaire.id}" />
+                            <spring:url var="show" value="/resources/images/show.png" />
+                            <a href="${url_show}"><img src="${show}"/></a>
+                        </td>
+                        <td class="utilbox">
+                            <spring:url var="url_edit" value="/questionnaires/${questionnaire.id}?form" />
+                            <spring:url var="edit" value="/resources/images/update.png" />
+                            <a href="questionnaires/${questionnaire.id}?form"><img src="images/update.png"/></a>
+                        </td>
+                        <td class="utilbox">
+                            <spring:url var="url_delete" value="/questionnaires/${questionnaire.id}" />
+                            <spring:url var="delete" value="/resources/images/delete.png" />
+                            <form:form action="${url_delete}" method="DELETE">
+                                <input class="image" src="${delete}" type="image" onclick="return confirm('Wollen sie Objekt wirklich löschen');" />
+                             </form:form>
+                        </td> 
+                    </security:authorize>                               
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
+    <security:authorize access="isAuthenticated()">
+        <div class="new">
+            <spring:url var="url_add" value="/questionnaires?form" />
+            <spring:url var="add" value="/resources/images/add.png" />
+            <a href="${url_add}"><img src="${add}"/></a>        
+        </div>
+    </security:authorize> 
+</div>
