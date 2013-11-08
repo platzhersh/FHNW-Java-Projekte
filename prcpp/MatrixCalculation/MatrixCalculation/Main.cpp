@@ -53,7 +53,7 @@ JNIEXPORT void JNICALL Java_ch_fhnw_prcpp_Matrix_powerC
 
 				// cout << i << " copy pt to pr: ";
 				copy(pt,&pt[d*d],pr);				
-				cout << equal(pt,&pt[d*d],pr) << endl;
+				// cout << equal(pt,&pt[d*d],pr) << endl;
 
 				// clear pt
 				for (int j = 0; j < d*d; j++) {
