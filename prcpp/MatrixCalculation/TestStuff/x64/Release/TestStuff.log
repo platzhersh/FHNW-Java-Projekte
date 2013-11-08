@@ -1,5 +1,5 @@
-﻿Der Buildvorgang wurde am 07.11.2013 18:53:20 gestartet.
-     1>Projekt "D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\MatrixCalculation\TestStuff\TestStuff.vcxproj" auf Knoten "3", Build Ziel(e).
+﻿Der Buildvorgang wurde am 08.11.2013 15:55:07 gestartet.
+     1>Projekt "D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\MatrixCalculation\TestStuff\TestStuff.vcxproj" auf Knoten "3", Rebuild Ziel(e).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc110.pdb" /Gd /TP /errorReport:prompt Main.cpp
          Main.cpp
@@ -8,8 +8,8 @@
          Code wird generiert.
          Codegenerierung ist abgeschlossen.
          TestStuff.vcxproj -> D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\MatrixCalculation\x64\Release\TestStuff.exe
-     1>Die Erstellung des Projekts "D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\MatrixCalculation\TestStuff\TestStuff.vcxproj" ist abgeschlossen, Build Ziel(e).
+     1>Die Erstellung des Projekts "D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\MatrixCalculation\TestStuff\TestStuff.vcxproj" ist abgeschlossen, Rebuild Ziel(e).
 
 Build erfolgreich.
 
-Verstrichene Zeit 00:00:00.84
+Verstrichene Zeit 00:00:01.30

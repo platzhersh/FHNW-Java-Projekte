@@ -31,16 +31,21 @@ public class Matrix {
 		}
 	}
 	
+	public Matrix(int height, int width, double[] m) {
+		if (height * width != m.length) throw new IllegalArgumentException("Illegal Matrix Dimensions!");
+		this.height = height;
+		this.width = width;
+		this.matrix = m;
+	}
+	
 	public Matrix multiply(Matrix b) {
 		
 		if (width != b.height) throw new IllegalArgumentException("Can't multiply with this matrix!");
 		
-		double[] result = multiplyJ(matrix, b.matrix, height, width, b.width);
+		double[] r = new double[height*b.width];
+		r = multiplyJ(matrix, b.matrix, r, height, width, b.width);
 
-		Matrix r = new Matrix(height, b.width);
-		r.matrix = result;
-		
-		return r;
+		return new Matrix(height,b.width, r);
 	}
 	
 	public Matrix power(int k) {
@@ -48,16 +53,16 @@ public class Matrix {
 		if (k < 1) throw new IllegalArgumentException("Can't power with this exponent!");
 		if (k == 1) return this;
 		else {
-			Matrix r = this;
+			double[] tmp = this.matrix;
+			double[] empty = (new Matrix(height, width, 0)).matrix;
 			for (int i=1; i < k; i++) {
-				r = r.multiply(this);
+				multiplyJ(tmp, this.matrix, empty, height, width, width);
 			}
-		return r;
+		return new Matrix(height, width, tmp);
 		}
 	}
 	
-	private double[] multiplyJ(double[] a, double[] b, int ah, int aw, int bw) {
-		double[] r = new double[ah*bw];
+	private double[] multiplyJ(double[] a, double[] b, double[] r, int ah, int aw, int bw) {
 		for (int in = 0; in < ah; in++) {
 			for (int il = 0; il < bw; il++) {
 				

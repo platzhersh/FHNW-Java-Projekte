@@ -6,13 +6,17 @@ jdouble* multiply(jdouble* pa, jdouble* pb, jdouble* pr, jint ah, jint aw, jint 
 
 	// Multiply
 	// i = row, j = column, field index = row + column
+
+	double sum;
 	for (int in = 0; in < ah; in++) {
 		for (int il = 0; il < bw; il++) {
 				
 			int iR = in * bw + il; // Index of the result matrix
+			sum = 0;
 			for (int im = 0; im < aw; im++)
-				pr[iR] += pa[in * aw + im] * pb[im * bw + il];
-
+				sum += pa[in * aw + im] * pb[im * bw + il];
+				//*(pr+iR) += *(pa+(in * aw + im)) * *(pb+(im * bw + il));
+			pr[iR] = sum;
 		}				
 	}
 	return pr;
@@ -51,14 +55,13 @@ JNIEXPORT void JNICALL Java_ch_fhnw_prcpp_Matrix_powerC
 			for (jint i=1; i < k; i++) {
 				multiply(pr, pa, pt, d, d, d);
 
-				// cout << i << " copy pt to pr: ";
-				copy(pt,&pt[d*d],pr);				
-				// cout << equal(pt,&pt[d*d],pr) << endl;
+				int size = d*d;
+				copy(pt,pt+size,pr);				
 
 				// clear pt
-				for (int j = 0; j < d*d; j++) {
-					pt[j] = 0;
-				}
+				//for (int j = 0; j < d*d; j++) {
+				//	pt[j] = 0;
+				//}
 
 			}
 

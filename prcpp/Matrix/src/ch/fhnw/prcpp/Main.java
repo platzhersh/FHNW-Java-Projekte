@@ -4,8 +4,20 @@ public class Main {
 	
 	public static void main(String[] args0) {
 		
-		// Test Multiply
+		Matrix x1 = new Matrix(2,2,2);
+		Matrix x2 = new Matrix(2,2,2);
 		
+		System.out.println("Java: ");
+		System.out.println(x1.multiply(x2).toString());
+		System.out.println("C++:");
+		System.out.println(x1.multiplyNative(x2).toString());
+		
+		
+		System.out.println("");
+		System.out.println("---------------------");
+		System.out.println("");
+		
+		// Test Multiply				
 		Matrix a1 = new Matrix(400,6000);
 		Matrix b1 = new Matrix(6000,300);
 
