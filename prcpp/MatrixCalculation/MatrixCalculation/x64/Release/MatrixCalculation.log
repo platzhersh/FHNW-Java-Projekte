@@ -1,4 +1,4 @@
-﻿Der Buildvorgang wurde am 08.11.2013 16:07:38 gestartet.
+﻿Der Buildvorgang wurde am 08.11.2013 17:38:17 gestartet.
      1>Projekt "D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\prcpp\MatrixCalculation\MatrixCalculation\MatrixCalculation.vcxproj" auf Knoten "2", Build Ziel(e).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _WINDLL /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc110.pdb" /Gd /TP /errorReport:prompt Main.cpp
@@ -13,4 +13,4 @@
 
 Build erfolgreich.
 
-Verstrichene Zeit 00:00:00.87
+Verstrichene Zeit 00:00:01.27

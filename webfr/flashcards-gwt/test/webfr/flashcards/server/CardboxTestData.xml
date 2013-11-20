@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+	<CARDBOXES Id="1" Title="Englisch" Description="Wörter aus dem Haushalt" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="5" Title="Geographie" Description="Haupstädte" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="6" Title="Orte" Description="Wo ist das?" Version="2013-11-01 04:58:00"/>
+	
+		<CARDS Id="2" CardboxId="5" Question="Gabel" Answer="fork" />
+		<CARDS Id="3" CardboxId="5" Question="Messer" Answer="knife" />
+</dataset>

@@ -1,0 +1,2 @@
+serviceClass: webfr.gwt.first.client.GreetingService
+path: 478460D2D5E93F10D0A02C30B51494F0.gwt.rpc

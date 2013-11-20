@@ -63,13 +63,16 @@ public class Matrix {
 	}
 	
 	private double[] multiplyJ(double[] a, double[] b, double[] r, int ah, int aw, int bw) {
+		double sum;
 		for (int in = 0; in < ah; in++) {
 			for (int il = 0; il < bw; il++) {
 				
 				int iR = in * bw + il; // Index of the result matrix
-				for (int im = 0; im < aw; im++)
-					r[iR] += a[in * aw + im] * b[im * bw + il];
-
+				sum = 0.0;
+				for (int im = 0; im < aw; im++) {
+					sum += a[in * aw + im] * b[im * bw + il];
+				}
+				r[iR] = sum;
 			}				
 		}
 		return r;

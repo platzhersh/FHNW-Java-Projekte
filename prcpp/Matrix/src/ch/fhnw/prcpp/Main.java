@@ -4,13 +4,18 @@ public class Main {
 	
 	public static void main(String[] args0) {
 		
-		Matrix x1 = new Matrix(2,2,2);
-		Matrix x2 = new Matrix(2,2,2);
+		Matrix x1 = new Matrix(2,3,2);
+		Matrix x2 = new Matrix(3,2,2);
+		
 		
 		System.out.println("Java: ");
+		Matrix x3 = x1.multiply(x2);
 		System.out.println(x1.multiply(x2).toString());
 		System.out.println("C++:");
-		System.out.println(x1.multiplyNative(x2).toString());
+		Matrix x4 = x1.multiplyNative(x2);
+		System.out.println(x4);
+		
+		System.out.println("Equals: "+x3.equals(x4));
 		
 		
 		System.out.println("");
@@ -44,9 +49,9 @@ public class Main {
 		Matrix a2 = new Matrix(200,200);
 
 		start = System.currentTimeMillis();
-		Matrix r3 = a2.power(51);
+		Matrix r3 = a2.power(1000);
 		stop1 = System.currentTimeMillis();
-		Matrix r4 = a2.powerNative(51);
+		Matrix r4 = a2.powerNative(1000);
 		stop2 = System.currentTimeMillis();
 		
 		System.out.println("");

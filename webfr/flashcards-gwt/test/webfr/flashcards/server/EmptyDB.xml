@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <table name="CARDBOXES">
+        <column>Id</column>
+        <column>Title</column>
+        <column>Description</column>
+        <column>Version</column>
+    </table>
+    
+    <table name="CARDS">
+        <column>Id</column>
+        <column>CardboxId</column>
+        <column>Question</column>
+        <column>Answer</column>
+    </table> 
+</dataset>

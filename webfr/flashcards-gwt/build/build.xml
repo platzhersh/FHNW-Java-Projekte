@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<project name="Web Frameworks Lab" default="compile" basedir="..">
+	<property file="build/build.properties" />
+
+	<!-- The application's classpath -->
+	<path id="application.classpath">
+		<fileset dir="${lib.dir}">
+			<include name="**/*.jar"/>
+		</fileset>
+		<pathelement path="${bin.classes.dir}"/>
+	</path>
+
+	<!-- The build tools classpath -->
+	<path id="build.classpath">
+		<fileset dir="${build.lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<path refid="application.classpath"/>
+	</path>
+
+	<target name="prepare">
+		<mkdir dir="${bin.classes.dir}" />
+		<mkdir dir="${log.report.dir}"/>
+		<mkdir dir="${log.report.test.dir}"/>
+		<mkdir dir="${log.report.checkstyle.dir}"/>
+	</target>
+
+	<target name="compile" depends="prepare" description="Compile the sources">
+		<javac includeantruntime="false" srcdir="${src.dir}" destdir="${bin.classes.dir}" classpathref="application.classpath" deprecation="on" debug="on"/>
+		<copy todir="${bin.classes.dir}">
+			<fileset dir="${res.dir}">
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+				<include name="**/*.png" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="compile-tests" depends="compile" description="Compile the test code">
+		<javac includeAntRuntime="false" srcdir="${test.dir}" destdir="${bin.classes.dir}" 
+        	classpathref="build.classpath" deprecation="on" optimize="off">
+			<compilerarg value="-g"/>
+		</javac>
+		<copy todir="${bin.classes.dir}">
+			<fileset dir="${test.dir}">
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+				<include name="**/*.png" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="clean" description="Clean generated stuff">
+		<delete dir="${doc.api.dir}" />
+		<delete dir="${bin.dir}" />
+		<delete dir="${log.dir}" />
+		<delete file="${res.dir}/version.properties" />
+	</target>
+
+	<target name="junit" depends="compile-tests" description="Run JUnit tests">
+		<junit>
+			<classpath>
+				<path refid="build.classpath"/>
+				<pathelement location="${bin.classes.dir}"/>
+			</classpath>
+			<batchtest todir="${log.report.test.dir}" fork="false">
+				<fileset dir="${test.dir}">
+					<include name="**/*Test*.java"/>
+				</fileset>
+			</batchtest>
+			<formatter type="xml"/>
+		</junit>
+	</target>
+
+	<target name="javadoc" depends="prepare" description="Generate Javadoc documentation">
+		<javadoc sourcepath="${src.dir}" destdir="${doc.api.dir}">
+			<link href="http://java.sun.com/javase/7/docs/api/" offline="true" packagelistLoc="${build.dir}"/>
+			<doctitle>
+				<![CDATA[<h1>Flashcards - Web Frameworks Lab</h1>]]>
+			</doctitle>
+			<bottom>
+				<![CDATA[<i>Copyright &#169; 2013 Christoph Denzler - IMVS, FHNW</i>]]>
+			</bottom>
+			<classpath>
+				<path refid="build.classpath" />
+			</classpath>
+		</javadoc>
+	</target>
+
+<!-- =========================================================== -->
+<!-- Do Code Analysis with Checkstyle -->
+<!-- =========================================================== -->
+<target name="checkstyle" depends="compile"
+              description="Generates a report of code convention violations.">
+    <taskdef resource="checkstyletask.properties" classpathref="build.classpath" />
+
+    <checkstyle classpathref="application.classpath" config="${build.dir}/swc_checks.xml"
+                          failureProperty="checkstyle.failure">
+    	<!-- this propery is needed to work work with eclipse checkstyle plugin -->
+        <property key="config_loc" value="./" />
+    	<formatter type="plain"/>
+    	<formatter type="plain" tofile="${log.report.checkstyle.dir}/checkstyle_report.txt"/>
+    	<formatter type="xml" tofile="${log.report.checkstyle.dir}/checkstyle_report.xml"/>
+    	<fileset dir="${src.dir}" />
+    </checkstyle>
+
+</target>
+
+<target name="all" depends="javadoc, checkstyle"/>
+
+</project>

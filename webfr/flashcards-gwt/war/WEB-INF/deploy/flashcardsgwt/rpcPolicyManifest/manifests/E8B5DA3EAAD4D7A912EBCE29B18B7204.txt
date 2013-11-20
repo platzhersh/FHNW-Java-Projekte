@@ -1,0 +1,2 @@
+serviceClass: webfr.flashcards.client.GreetingService
+path: 9891EF3E0FBAE0963B815BB76EA6382E.gwt.rpc
