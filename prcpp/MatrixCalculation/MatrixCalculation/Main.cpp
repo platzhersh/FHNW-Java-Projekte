@@ -79,14 +79,17 @@ JNIEXPORT void JNICALL Java_ch_fhnw_prcpp_Matrix_powerC
 		jdouble *pa = jnienv->GetDoubleArrayElements(a,&isCopy);
 		jdouble *pr = jnienv->GetDoubleArrayElements(r,&isCopy);
 		jdouble *pt = new jdouble[d*d];		// temporary result
+		jdouble *prref = pr;
 
-			for (jint i=1; i < k; i++) {
-				multiply(pr, pa, pt, d, d, d);
+		for (jint i=1; i < k; i++) {
+			multiply(pr, pa, pt, d, d, d);
 
-				int size = d*d;
-				copy(pt,pt+size,pr);				
+			swap(pr,pt);
 
-			}
+		}
+
+		if (pr != prref) swap (pr, pt);
+		delete pt;
 
 		jnienv->ReleaseDoubleArrayElements(a,pa,JNI_ABORT);
 		jnienv->ReleaseDoubleArrayElements(r,pr,0);

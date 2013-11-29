@@ -49,9 +49,9 @@ public class Main {
 		Matrix a2 = new Matrix(200,200);
 
 		start = System.currentTimeMillis();
-		Matrix r3 = a2.power(1000);
+		Matrix r3 = a2.power(51);
 		stop1 = System.currentTimeMillis();
-		Matrix r4 = a2.powerNative(1000);
+		Matrix r4 = a2.powerNative(51);
 		stop2 = System.currentTimeMillis();
 		
 		System.out.println("");
