@@ -1,0 +1,2 @@
+serviceClass: ch.fhnw.webfr.sayt.client.SaytService
+path: 35D7B4042527F7A0FC63BB3D7ABE0339.gwt.rpc

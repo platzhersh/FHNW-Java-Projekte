@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<table>
+			<tr>
+				<td>Guten Tag, wie heissen Sie?</td>
+			</tr>
+			<tr>
+				<td><g:TextBox ui:field="textBox" alignment="LEFT" textAlignment="ALIGN_LEFT"/></td>
+			</tr>
+			<tr>
+				<td><g:Button styleName="{style.important}" ui:field="button" text="Anmelden" /></td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

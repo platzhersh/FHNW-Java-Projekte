@@ -1,0 +1,2 @@
+serviceClass: webfr.flashcards.client.FlashcardsService
+path: 6C9106C974B77CD494C50A245114DAF3.gwt.rpc

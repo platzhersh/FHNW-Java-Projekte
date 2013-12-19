@@ -1,0 +1,17 @@
+/** Add css rules here for your application. */
+
+
+/** Example rules used by the template application (remove for your app) */
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 5px;
+  text-align: center;
+}
+
+h3 {
+	font-size: 1em;
+	font-style: italic;
+	text-align: center;
+}

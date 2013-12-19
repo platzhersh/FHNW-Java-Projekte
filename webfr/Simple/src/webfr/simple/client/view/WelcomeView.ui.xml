@@ -8,6 +8,5 @@
 	</ui:style>
 	<g:HTMLPanel>
 		<g:Button styleName="{style.important}" ui:field="one" />
-		<g:Button styleName="{style.important}" ui:field="two" />
 	</g:HTMLPanel>
 </ui:UiBinder> 

@@ -22,11 +22,11 @@ template <typename T> struct  Minus {
 	}
 };
 
-/*template <Array<T> Left, typename T> struct  Mul {
+template <Array<T> Left, typename T> struct  Mul {
 	static T apply(T left, T right) {
 		return left * right;
 	}
-};*/
+};
 
 template <typename T>
 struct Array {
@@ -63,3 +63,6 @@ template <typename Left, typename T> Expr<Left, Minus<T>, Array<T>, T> operator-
 	return Expr<Left, Minus<T>, Array<T>, T>(a,b);
 };
 
+template <typename Left, typename T> Left operator*(Left a, Array<T> b) {
+	return Expr<Left, Minus<T>, Array<T>, T>(a,b);
+};

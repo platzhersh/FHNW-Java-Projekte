@@ -19,23 +19,15 @@ public class WelcomeView extends Composite implements WelcomeDisplay {
 	public WelcomeView() {
 		initWidget(uiBinder.createAndBindUi(this));
 		one.setText("1");
-		two.setText("2");
 	}
 
 	@UiField
 	Button one;
-	@UiField
-	Button two;
 	
 	@Override
 	public void setOneButtonHandler(ClickHandler handler) {
 		one.addClickHandler(handler);
 	}
 
-	@Override
-	public void setTwoButtonHandler(ClickHandler handler) {
-		two.addClickHandler(handler);
-		
-	}
 
 }

@@ -1,0 +1,22 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:AbsolutePanel width="100%" height="100%">
+			<g:at left="10" top="10">
+				<g:Label text="Frage:" styleName="h1" horizontalAlignment="ALIGN_RIGHT"/>
+			</g:at>
+			<g:at left="20" top="34">
+				<g:Label text="Was ist die Frage?" horizontalAlignment="ALIGN_LEFT" width="400px" height="90px" ui:field="questionLabel"/>
+			</g:at>
+			<g:at left="178" top="245">
+				<g:Button ui:field="showAnswerButton">Antwort zeigen</g:Button>
+			</g:at>
+		</g:AbsolutePanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel>
+			<g:Label text="Titel" styleName="h1" ui:field="title"/>
+			<g:HorizontalPanel>
+				<g:Label text="Description:" styleName="gwt-Label-bold"/>
+				<g:Label text="New Label" ui:field="description"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:Label text="Last learned: " styleName="gwt-Label-bold"/>
+				<g:DateLabel ui:field="lastupdate"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:Label text="Number of Cards:" styleName="gwt-Label-bold"/>
+				<g:NumberLabel predefinedFormat="DECIMAL" ui:field="nofcards"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:Label text="Progress: " styleName="gwt-Label-bold"/>
+				<g:NumberLabel predefinedFormat="PERCENT" ui:field="progress"/>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel>
+				<g:Button ui:field="reset" text="Reset"/>
+				<g:Button text="Learn" ui:field="learn"/>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

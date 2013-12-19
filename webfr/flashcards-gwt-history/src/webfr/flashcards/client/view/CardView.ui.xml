@@ -1,0 +1,21 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<g:VerticalPanel borderWidth="1" horizontalAlignment="ALIGN_LEFT" spacing="2" width="100 em" height="">
+			<g:Label text="Kärtchen" horizontalAlignment="ALIGN_CENTER" styleName="h1"/>
+			<g:Label text="Frage:" styleName="gwt-Label-bold" width=""/>
+			<g:Label text="Frage?" styleName="gwt-text-Label" ui:field="questionText"/>
+			<g:Label text="Antwort:" ui:field="answerLabel" styleName="gwt-Label-bold"/>
+			<g:Label text="Antwort!" ui:field="answerText" styleName="gwt-text-Label"/>
+			<g:HorizontalPanel>
+				<g:Button ui:field="correctButton" text="Richtig"/>
+				<g:Button ui:field="showAnswerButton" text="Antwort zeigen"/>
+				<g:Button text="Falsch" ui:field="wrongButton"/>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

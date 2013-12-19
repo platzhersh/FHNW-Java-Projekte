@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+	<CARDBOXES Id="1" Title="Englisch" Description="Wörter aus dem Haushalt" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="2" Title="Englisch Wortschatz" Description="Erste Schritte" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="3" Title="Englisch" Description="Fragen im Englischen" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="4" Title="Französisch Wortschatz" Description="Erste Schritte" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="5" Title="Geographie" Description="Haupstädte" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="6" Title="Orte" Description="Wo ist das?" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="7" Title="Redewendungen Englisch" Description="Wichtige Redewendungen" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="8" Title="Städte" Description="Vier Städtefragen" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="9" Title="Englisch Zahlen" Description="Englisch Zahlen" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="10" Title="Allgemeine Quizfragen" Description="Allgemeine Quizfragen" Version="2013-11-01 04:58:00"/>
+	<CARDBOXES Id="11" Title="Französisch Zahlen" Description="Französisch Zahlen" Version="2013-11-01 04:58:00"/>
+
+	<CARDS Id="1" CardboxId="1" Question="Löffel" Answer="spoon" />
+	<CARDS Id="2" CardboxId="1" Question="Gabel" Answer="fork" />
+	<CARDS Id="3" CardboxId="1" Question="Teller" Answer="plate" />
+	<CARDS Id="4" CardboxId="1" Question="Messer" Answer="knife" />
+	<CARDS Id="5" CardboxId="1" Question="Tisch" Answer="table" />
+	<CARDS Id="6" CardboxId="1" Question="Stuhl" Answer="chair" />
+	<CARDS Id="7" CardboxId="1" Question="Sessel" Answer="armchair" />
+	<CARDS Id="8" CardboxId="1" Question="Bank" Answer="bench" />
+	<CARDS Id="9" CardboxId="1" Question="Lampe" Answer="lamp" />
+	<CARDS Id="10" CardboxId="1" Question="Unterteller" Answer="bottom plate" />
+	<CARDS Id="11" CardboxId="1" Question="Serviette" Answer="napkin" />
+	<CARDS Id="12" CardboxId="1" Question="Kerze" Answer="candle" />
+	
+	<CARDS Id="20" CardboxId="2"  Question="Schiff" Answer="ship" />
+	<CARDS Id="21" CardboxId="2"  Question="Stadt" Answer="town" />
+	<CARDS Id="22" CardboxId="2"  Question="Meer" Answer="sea" />
+	<CARDS Id="23" CardboxId="2"  Question="Berg" Answer="mountain" />
+	<CARDS Id="24" CardboxId="2"  Question="Baum" Answer="tree" />
+	<CARDS Id="25" CardboxId="2"  Question="Tunnel" Answer="tunnel" />
+	<CARDS Id="26" CardboxId="2"  Question="Fenster" Answer="window" />
+	<CARDS Id="27" CardboxId="2"  Question="Tisch" Answer="table" />
+	<CARDS Id="28" CardboxId="2"  Question="Zauberer" Answer="wizard" />
+	<CARDS Id="29" CardboxId="2"  Question="Zug" Answer="train" />
+	<CARDS Id="30" CardboxId="2"  Question="Milch" Answer="milk" />
+	<CARDS Id="31" CardboxId="2"  Question="Kuh" Answer="cow" />
+	<CARDS Id="32" CardboxId="2"  Question="Tomate" Answer="tomato" />
+	<CARDS Id="33" CardboxId="2"  Question="Gurke" Answer="cucumber" />
+	
+	<CARDS Id="40" CardboxId="3" Question="Wer bist du?" Answer="Who are you?" />
+	<CARDS Id="41" CardboxId="3" Question="Wann stehst du auf?" Answer="When do you get up?" />
+	<CARDS Id="42" CardboxId="3" Question="Was machst du?" Answer="What are you doing?" />
+	<CARDS Id="43" CardboxId="3" Question="Warum rauchst du?" Answer="Why do you smoke?" />
+	<CARDS Id="44" CardboxId="3" Question="Wessen Buch ist das?" Answer="Whose book is this?" />
+	<CARDS Id="45" CardboxId="3" Question="Welchen Bus nimmst du zur Schule?" Answer="Which bus do you take to school?" />
+	<CARDS Id="46" CardboxId="3" Question="Wie alt bist du?" Answer="How old are you?" />
+	<CARDS Id="47" CardboxId="3" Question="Wo lebst du?" Answer="Where do you live?" />
+	
+	<CARDS Id="50" CardboxId="4" Question="Sonne" Answer="soleil" />
+	<CARDS Id="51" CardboxId="4" Question="Mond" Answer="lune" />
+	<CARDS Id="52" CardboxId="4" Question="Dorf" Answer="village" />
+	<CARDS Id="53" CardboxId="4" Question="Strasse" Answer="rue" />
+	<CARDS Id="54" CardboxId="4" Question="Berg" Answer="montagne" />
+	<CARDS Id="55" CardboxId="4" Question="Wald" Answer="forest" />
+	<CARDS Id="56" CardboxId="4" Question="Tisch" Answer="table" />
+	<CARDS Id="57" CardboxId="4" Question="Wurzel" Answer="racine" />
+	<CARDS Id="58" CardboxId="4" Question="Finger" Answer="doigt" />
+	<CARDS Id="59" CardboxId="4" Question="Hand" Answer="main" />
+	<CARDS Id="60" CardboxId="4" Question="Mutter" Answer="mère" />
+	
+	<CARDS Id="61" CardboxId="5" Question="Hauptstadt von Frankreich" Answer="Paris" />
+	<CARDS Id="62" CardboxId="5" Question="Hauptstadt von England" Answer="London" />
+	<CARDS Id="63" CardboxId="5" Question="Hauptstadt von Deutschland" Answer="Berlin" />
+	<CARDS Id="64" CardboxId="5" Question="Hauptstadt von Dänemark" Answer="Kopenhagen" />
+	<CARDS Id="65" CardboxId="5" Question="Hauptstadt von Schweden" Answer="Stockholm" />
+	<CARDS Id="66" CardboxId="5" Question="Hauptstadt von Polen" Answer="Warschau" />
+	<CARDS Id="67" CardboxId="5" Question="Hauptstadt von Italien" Answer="Rom" />
+	<CARDS Id="68" CardboxId="5" Question="Hauptstadt von Spanien" Answer="Madrid" />
+	<CARDS Id="69" CardboxId="5" Question="Hauptstadt von Portugal" Answer="Lissabon" />
+	<CARDS Id="70" CardboxId="5" Question="Hauptstadt von Irland" Answer="Dublin" />
+	<CARDS Id="71" CardboxId="5" Question="Hauptstadt von Belgien" Answer="Brüssel" />
+	<CARDS Id="72" CardboxId="5" Question="Hauptstadt von Niederlande" Answer="Den Haag" />
+	<CARDS Id="73" CardboxId="5" Question="Hauptstadt von Schweiz" Answer="Bern" />
+	<CARDS Id="74" CardboxId="5" Question="Hauptstadt von Norwegen" Answer="Oslo" />
+	<CARDS Id="75" CardboxId="5" Question="Hauptstadt von Finnland" Answer="Helsinki" />
+	<CARDS Id="76" CardboxId="5" Question="Hauptstadt von Lichtenstein" Answer="Vaduz" />
+	<CARDS Id="77" CardboxId="5" Question="Hauptstadt von Tschechien" Answer="Parg" />
+	<CARDS Id="78" CardboxId="5" Question="Hauptstadt von Österreich" Answer="Wien" />
+	
+</dataset>

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vector", "Vector\Vector.vcxproj", "{0119BC7D-6587-47E5-B093-67F58DEFA136}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VectorTest", "VectorTest\VectorTest.vcxproj", "{3385DC37-B20F-4EA5-B82C-FC43D2DA6B62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -13,8 +15,15 @@ Global
 		{0119BC7D-6587-47E5-B093-67F58DEFA136}.Debug|Win32.Build.0 = Debug|Win32
 		{0119BC7D-6587-47E5-B093-67F58DEFA136}.Release|Win32.ActiveCfg = Release|Win32
 		{0119BC7D-6587-47E5-B093-67F58DEFA136}.Release|Win32.Build.0 = Release|Win32
+		{3385DC37-B20F-4EA5-B82C-FC43D2DA6B62}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3385DC37-B20F-4EA5-B82C-FC43D2DA6B62}.Debug|Win32.Build.0 = Debug|Win32
+		{3385DC37-B20F-4EA5-B82C-FC43D2DA6B62}.Release|Win32.ActiveCfg = Release|Win32
+		{3385DC37-B20F-4EA5-B82C-FC43D2DA6B62}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(Performance) = preSolution
+		HasPerformanceSessions = true
 	EndGlobalSection
 EndGlobal

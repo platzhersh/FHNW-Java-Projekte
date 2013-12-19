@@ -1,0 +1,3777 @@
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2719 units from cache.
+Compiling...
+   40% complete (ETR: 5 seconds)
+   40% complete (ETR: 5 seconds)
+   40% complete (ETR: 5 seconds)
+   40% complete (ETR: 5 seconds)
+   40% complete (ETR: 5 seconds)
+   50% complete (ETR: 5 seconds)
+   60% complete (ETR: 4 seconds)
+   70% complete (ETR: 3 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 11.70 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2719 cached/archived units.  Used 2719 / 2719 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2719 cached/archived units.  Used 2719 / 2719 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2719 units from cache.
+Compiling...
+   50% complete (ETR: 4 seconds)
+   50% complete (ETR: 4 seconds)
+   50% complete (ETR: 4 seconds)
+   50% complete (ETR: 4 seconds)
+   50% complete (ETR: 4 seconds)
+   50% complete (ETR: 4 seconds)
+   60% complete (ETR: 4 seconds)
+   70% complete (ETR: 2 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 11.58 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2719 cached/archived units.  Used 2719 / 2719 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 2719 cached/archived units.  Used 2719 / 2719 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2726 units from cache.
+Compiling...
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 8.09 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.LoginView.LoginFormUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317575850.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317575850.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317575850_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.LoginView.LoginFormUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317578105.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317578105.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317578105_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.LoginView.LoginFormUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317607368.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317607368.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317607368_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.LoginView.LoginFormUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317609381.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317609381.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317609381_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.LoginView.LoginFormUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317617015.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317617015.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317617015_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.LoginView.LoginFormUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317648728.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317648728.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317648728_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.LoginView.LoginFormUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317648831.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317648831.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.LoginForm_LoginFormUiBinderImpl_designTime1385317648831_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2731 units from cache.
+Compiling...
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 8.10 seconds
+Validating units:
+   [ERROR] Errors in 'file:/C:/Users/Christoph/Documents/FHNW/Semester/HS2013/webfr/workspace/flashcards-gwt/src/webfr/flashcards/client/view/QuestionView.java'
+      [ERROR] Line 3: The import ch cannot be resolved
+      [ERROR] Line 4: The import ch cannot be resolved
+      [ERROR] Line 16: QuestionPresenter cannot be resolved to a type
+      [ERROR] Line 32: The method setBackCallback(BackEventHandler) of type QuestionView must override or implement a supertype method
+      [ERROR] Line 32: BackEventHandler cannot be resolved to a type
+      [ERROR] Line 37: The method setQuestion(String) of type QuestionView must override or implement a supertype method
+      [ERROR] Line 42: The method setImage(String) of type QuestionView must override or implement a supertype method
+      [ERROR] Line 47: The method setShowAnswerCallback(ClickHandler) of type QuestionView must override or implement a supertype method
+   [ERROR] Errors in 'file:/C:/Users/Christoph/Documents/FHNW/Semester/HS2013/webfr/workspace/flashcards-gwt/src/webfr/flashcards/client/view/WelcomeView.java'
+      [ERROR] Line 6: The import ch cannot be resolved
+      [ERROR] Line 7: The import ch cannot be resolved
+      [ERROR] Line 8: The import ch cannot be resolved
+      [ERROR] Line 26: WelcomePresenter cannot be resolved to a type
+      [ERROR] Line 34: The type WelcomeView.CardBoxOverviewCell must implement the inherited abstract method AbstractCell<CardBoxDTO>.render(Cell.Context, CardBoxDTO, SafeHtmlBuilder)
+      [ERROR] Line 34: CardBoxDTO cannot be resolved to a type
+      [ERROR] Line 40: The method render(Cell.Context, CardBoxDTO, SafeHtmlBuilder) of type WelcomeView.CardBoxOverviewCell must override or implement a supertype method
+      [ERROR] Line 40: CardBoxDTO cannot be resolved to a type
+      [ERROR] Line 65: CardBoxDTO cannot be resolved to a type
+      [ERROR] Line 65: The constructor CellList<CardBoxDTO>(Cell<CardBoxDTO>) refers to the missing type CardBoxDTO
+      [ERROR] Line 65: CardBoxDTO cannot be resolved to a type
+      [ERROR] Line 75: Missing code implementation in the compiler
+      [ERROR] Line 81: The method setCardBoxes(List<CardBoxDTO>) of type WelcomeView must override or implement a supertype method
+      [ERROR] Line 81: CardBoxDTO cannot be resolved to a type
+      [ERROR] Line 82: Missing code implementation in the compiler
+      [ERROR] Line 86: CardBoxDTO cannot be resolved to a type
+      [ERROR] Line 86: The method getSelectedCardBoxes() of type WelcomeView must override or implement a supertype method
+      [ERROR] Line 88: CardBoxDTO cannot be resolved to a type
+      [ERROR] Line 88: CardBoxDTO cannot be resolved to a type
+      [ERROR] Line 88: Missing code implementation in the compiler
+      [ERROR] Line 93: The method setLearnButtonHandler(ClickHandler) of type WelcomeView must override or implement a supertype method
+      [ERROR] Line 98: The method setChangeButtonHandler(ClickHandler) of type WelcomeView must override or implement a supertype method
+      [ERROR] Line 103: The method setNewButtonHandler(ClickHandler) of type WelcomeView must override or implement a supertype method
+      [ERROR] Line 129: The method setBackCallback(BackEventHandler) of type WelcomeView must override or implement a supertype method
+      [ERROR] Line 129: BackEventHandler cannot be resolved to a type
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385468793882.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385468793882.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385468793882_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385468795589.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385468795589.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385468795589_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2737 units from cache.
+Compiling...
+   40% complete (ETR: 7 seconds)
+   40% complete (ETR: 7 seconds)
+   40% complete (ETR: 7 seconds)
+   40% complete (ETR: 7 seconds)
+   40% complete (ETR: 7 seconds)
+   50% complete (ETR: 5 seconds)
+   60% complete (ETR: 4 seconds)
+   70% complete (ETR: 3 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 11.74 seconds
+Validating units:
+   [ERROR] Errors in 'file:/C:/Users/Christoph/Documents/FHNW/Semester/HS2013/webfr/workspace/flashcards-gwt/src/webfr/flashcards/shared/Cardbox.java'
+      [ERROR] Line 49: Syntax error on token "<", ? expected after this token
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder
+   Checking rule <generate-with class='com.google.gwt.user.rebind.rpc.ServiceInterfaceProxyGenerator'/>
+      [ERROR] Errors in 'file:/C:/Users/Christoph/Documents/FHNW/Semester/HS2013/webfr/workspace/flashcards-gwt/src/webfr/flashcards/shared/Cardbox.java'
+         [ERROR] Line 49: Syntax error on token "<", ? expected after this token
+      [ERROR] Unable to find type 'webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder'
+         [ERROR] Hint: Previous compiler errors may have made this type unavailable
+         [ERROR] Hint: Check the inheritance chain from your module; it may not be inheriting a required module or a module may not be adding its source path entries properly
+[ERROR] Deferred binding failed for 'webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder'; expect subsequent failures
+Public resources found in...
+Translatable source found in...
+Found 2737 cached/archived units.  Used 2737 / 2737 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Validating units:
+   [ERROR] Errors in 'file:/C:/Users/Christoph/Documents/FHNW/Semester/HS2013/webfr/workspace/flashcards-gwt/src/webfr/flashcards/shared/Cardbox.java'
+      [ERROR] Line 49: Syntax error on token "<", ? expected after this token
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder
+   Checking rule <generate-with class='com.google.gwt.user.rebind.rpc.ServiceInterfaceProxyGenerator'/>
+      [ERROR] Errors in 'file:/C:/Users/Christoph/Documents/FHNW/Semester/HS2013/webfr/workspace/flashcards-gwt/src/webfr/flashcards/shared/Cardbox.java'
+         [ERROR] Line 49: Syntax error on token "<", ? expected after this token
+      [ERROR] Unable to find type 'webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder'
+         [ERROR] Hint: Previous compiler errors may have made this type unavailable
+         [ERROR] Hint: Check the inheritance chain from your module; it may not be inheriting a required module or a module may not be adding its source path entries properly
+[ERROR] Deferred binding failed for 'webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder'; expect subsequent failures
+Public resources found in...
+Translatable source found in...
+Found 2736 cached/archived units.  Used 2736 / 2737 units from cache.
+Compiling...
+   Compilation completed in 0.02 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471823740.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471823740.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471823740_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellList.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.cellview.client.CellList.Template
+         Generating method body for div()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellList.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method cellListSelectedBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellList.Resources.cellListSelectedBackground'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471826352.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471826352.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471826352_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2737 cached/archived units.  Used 2737 / 2737 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471900752.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471900752.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471900752_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellList.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.cellview.client.CellList.Template
+         Generating method body for div()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellList.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method cellListSelectedBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellList.Resources.cellListSelectedBackground'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471901626.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471901626.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385471901626_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2737 cached/archived units.  Used 2737 / 2737 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.QuestionViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.QuestionView_QuestionViewUiBinderImpl_designTime1385472143058.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.QuestionView_QuestionViewUiBinderImpl_designTime1385472143058.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.QuestionView_QuestionViewUiBinderImpl_designTime1385472143058_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.QuestionViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.QuestionView_QuestionViewUiBinderImpl_designTime1385472143613.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.QuestionView_QuestionViewUiBinderImpl_designTime1385472143613.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.QuestionView_QuestionViewUiBinderImpl_designTime1385472143613_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.QuestionViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.QuestionView_QuestionViewUiBinderImpl_designTime1385472154551.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.QuestionView_QuestionViewUiBinderImpl_designTime1385472154551.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.QuestionView_QuestionViewUiBinderImpl_designTime1385472154551_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2734 units from cache.
+Compiling...
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 7.76 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385557026974.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385557026974.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385557026974_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellList.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface com.google.gwt.user.cellview.client.CellList.Template
+         Generating method body for div()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.user.cellview.client.CellList.Resources
+   Invoking generator com.google.gwt.resources.rebind.context.InlineClientBundleGenerator
+      Preparing method cellListSelectedBackground
+         Adding image 'com.google.gwt.user.cellview.client.CellList.Resources.cellListSelectedBackground'
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView.WelcomeViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385557030760.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385557030760.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.WelcomeView_WelcomeViewUiBinderImpl_designTime1385557030760_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2738 units from cache.
+Compiling...
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   60% complete (ETR: 2 seconds)
+   70% complete (ETR: 2 seconds)
+   80% complete (ETR: 2 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 9.47 seconds
+Validating units:
+   [ERROR] Errors in 'file:/C:/Users/Christoph/Documents/FHNW/Semester/HS2013/webfr/workspace/flashcards-gwt/src/webfr/flashcards/client/AppController.java'
+      [ERROR] Line 32: The method show(String, Bookmark) in the type AppController is not applicable for the arguments (String)
+      [ERROR] Line 56: BookmarkView cannot be resolved to a type
+      [ERROR] Line 58: CardView cannot be resolved to a type
+   [ERROR] Errors in 'file:/C:/Users/Christoph/Documents/FHNW/Semester/HS2013/webfr/workspace/flashcards-gwt/src/webfr/flashcards/shared/Bookmark.java'
+      [ERROR] Line 22: The method clone() is undefined for the type LinkedList<Card>
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570497542.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570497542.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570497542_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570497853.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570497853.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570497853_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570519486.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570519486.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570519486_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570531308.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570531308.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570531308_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570537216.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570537216.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570537216_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570544016.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570544016.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570544016_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570559878.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570559878.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570559878_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570569994.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570569994.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570569994_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570570104.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570570104.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570570104_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570576610.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570576610.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570576610_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570577800.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570577800.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570577800_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570584578.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570584578.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570584578_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570600109.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570600109.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570600109_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570608727.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570608727.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570608727_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570616188.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570616188.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570616188_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570634826.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570634826.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570634826_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570650695.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570650695.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570650695_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 2738 cached/archived units.  Used 2738 / 2738 units from cache.
+Compiling...
+   Compilation completed in 0.00 seconds
+Validating units:
+   [ERROR] Errors in 'file:/C:/Users/Christoph/Documents/FHNW/Semester/HS2013/webfr/workspace/flashcards-gwt/src/webfr/flashcards/client/AppController.java'
+      [ERROR] Line 32: The method show(String, Bookmark) in the type AppController is not applicable for the arguments (String)
+      [ERROR] Line 56: BookmarkView cannot be resolved to a type
+      [ERROR] Line 58: CardView cannot be resolved to a type
+   [ERROR] Errors in 'file:/C:/Users/Christoph/Documents/FHNW/Semester/HS2013/webfr/workspace/flashcards-gwt/src/webfr/flashcards/shared/Bookmark.java'
+      [ERROR] Line 22: The method clone() is undefined for the type LinkedList<Card>
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570662589.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570662589.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570662589_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570663098.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570663098.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570663098_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570715293.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570715293.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570715293_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570772627.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570772627.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570772627_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570784556.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570784556.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570784556_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570787512.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570787512.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570787512_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570812089.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570812089.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570812089_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570815875.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570815875.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570815875_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570817817.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570817817.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570817817_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570821292.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570821292.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570821292_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570834313.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570834313.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570834313_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570839222.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570839222.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570839222_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570844543.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570844543.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570844543_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570853292.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570853292.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570853292_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570861725.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570861725.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570861725_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570866927.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570866927.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570866927_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570876854.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570876854.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570876854_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570886984.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570886984.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570886984_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570896522.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570896522.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570896522_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570902483.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570902483.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570902483_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570917241.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570917241.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570917241_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding com.google.gwt.i18n.client.CurrencyList
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.05 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570936235.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570936235.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570936235_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570942469.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570942469.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385570942469_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571045927.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571045927.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571045927_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571049246.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571049246.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571049246_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571053391.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571053391.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571053391_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571058127.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571058127.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571058127_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571065635.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571065635.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571065635_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571069507.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571069507.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571069507_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571083528.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571083528.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571083528_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571189972.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571189972.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571189972_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571194986.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571194986.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571194986_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571202497.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571202497.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571202497_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571209423.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571209423.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571209423_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571214991.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571214991.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571214991_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571416611.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571416611.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571416611_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571421017.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571421017.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571421017_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571423288.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571423288.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571423288_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571431097.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571431097.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571431097_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571437280.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571437280.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571437280_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571447743.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571447743.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571447743_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571451873.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571451873.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571451873_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571457509.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571457509.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571457509_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView.BookmarkViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571465026.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571465026.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.BookmarkView_BookmarkViewUiBinderImpl_designTime1385571465026_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2739 units from cache.
+Compiling...
+   30% complete (ETR: 12 seconds)
+   30% complete (ETR: 12 seconds)
+   30% complete (ETR: 12 seconds)
+   30% complete (ETR: 12 seconds)
+   40% complete (ETR: 8 seconds)
+   50% complete (ETR: 7 seconds)
+   60% complete (ETR: 6 seconds)
+   70% complete (ETR: 4 seconds)
+   80% complete (ETR: 3 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 21.62 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.06 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630447085.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630447085.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630447085_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.11 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630448076.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630448076.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630448076_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630571354.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630571354.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630571354_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630577545.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630577545.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630577545_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630593445_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630593478_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630596467_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630596496_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630596558.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630596558.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630596558_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630601033.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630601033.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630601033_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630608495.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630608495.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630608495_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630616472.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630616472.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630616472_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630621592.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630621592.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630621592_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630630746.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630630746.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630630746_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.07 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630642048_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630642145_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630646157_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630646182_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630646238.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630646238.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630646238_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630658647.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630658647.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630658647_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630660630_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 1.27 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630660656_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630666102.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630666102.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630666102_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630678281_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630678314.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630678314.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630678314_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630681825_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '2' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630681852.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630681852.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630681852_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630681928.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630681928.Template
+         Generating method body for html1()
+         Generating method body for html2()
+         Generating method body for html3()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630681928_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630687948.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630687948.Template
+         Generating method body for html1()
+         Generating method body for html2()
+         Generating method body for html3()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630687948_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630694294.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630694294.Template
+         Generating method body for html1()
+         Generating method body for html2()
+         Generating method body for html3()
+         Generating method body for html4()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630694294_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630697205.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630697205.Template
+         Generating method body for html1()
+         Generating method body for html2()
+         Generating method body for html3()
+         Generating method body for html4()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630697205_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630707488.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630707488.Template
+         Generating method body for html1()
+         Generating method body for html2()
+         Generating method body for html3()
+         Generating method body for html4()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630707488_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.05 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630718624.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630718624.Template
+         Generating method body for html1()
+         Generating method body for html2()
+         Generating method body for html3()
+         Generating method body for html4()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630718624_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.11 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630732224.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630732224.Template
+         Generating method body for html1()
+         Generating method body for html2()
+         Generating method body for html3()
+         Generating method body for html4()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.06 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630732224_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.11 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630742477.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630742477.Template
+         Generating method body for html1()
+         Generating method body for html2()
+         Generating method body for html3()
+         Generating method body for html4()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385630742477_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Public resources found in...
+Translatable source found in...
+Found 0 cached/archived units.  Used 0 / 2739 units from cache.
+Compiling...
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   70% complete (ETR: 1 seconds)
+   80% complete (ETR: 1 seconds)
+   90% complete (ETR: 1 seconds)
+   100% complete (ETR: 0 seconds)
+   Compilation completed in 7.72 seconds
+Removing invalidated units
+Finding entry point classes
+Rebinding com.google.gwt.i18n.client.impl.LocaleInfoImpl
+   Invoking generator com.google.gwt.i18n.rebind.LocaleInfoGenerator
+      Processing interface com.google.gwt.i18n.client.constants.NumberConstantsImpl
+         Generating method body for notANumber()
+         Generating method body for currencyPattern()
+         Generating method body for decimalPattern()
+         Generating method body for decimalSeparator()
+         Generating method body for defCurrencyCode()
+         Generating method body for exponentialSymbol()
+         Generating method body for globalCurrencyPattern()
+         Generating method body for groupingSeparator()
+         Generating method body for infinity()
+         Generating method body for minusSign()
+         Generating method body for monetaryGroupingSeparator()
+         Generating method body for monetarySeparator()
+         Generating method body for percent()
+         Generating method body for percentPattern()
+         Generating method body for perMill()
+         Generating method body for plusSign()
+         Generating method body for scientificPattern()
+         Generating method body for simpleCurrencyPattern()
+         Generating method body for zeroDigit()
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.03 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643496923.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643496923.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643496923_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643497884.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643497884.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643497884_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643515079.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643515079.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643515079_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643519245.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643519245.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643519245_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643547137.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643547137.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643547137_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643569829.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643569829.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643569829_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643926369.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643926369.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385643926369_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.04 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645195422.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645195422.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645195422_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645197976.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645197976.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645197976_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645212587.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645212587.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645212587_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645280474.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645280474.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645280474_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645294477.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645294477.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645294477_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645310778.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645310778.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645310778_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645314876.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645314876.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645314876_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645322709.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645322709.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645322709_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645327312.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645327312.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645327312_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645333520.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645333520.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645333520_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645339054.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645339054.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645339054_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645356866.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645356866.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645356866_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645362967.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645362967.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645362967_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645669043.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645669043.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645669043_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645696796.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645696796.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645696796_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645698649.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645698649.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645698649_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645801955.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645801955.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645801955_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645811298.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645811298.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645811298_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645815750.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645815750.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645815750_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645819089.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645819089.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645819089_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645823883.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645823883.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645823883_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645839494.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645839494.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645839494_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645848195.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645848195.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645848195_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645853306.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645853306.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645853306_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645860201.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645860201.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645860201_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645874295.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645874295.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645874295_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645896590.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645896590.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645896590_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645910056.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645910056.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645910056_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645917605.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645917605.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645917605_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645940870.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645940870.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645940870_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645947377.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645947377.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645947377_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645952601.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645952601.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645952601_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645955372.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645955372.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645955372_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645966502.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645966502.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645966502_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645977149.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645977149.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645977149_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645980231.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645980231.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645980231_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645985408.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645985408.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645985408_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645991812.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645991812.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645991812_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645994048.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645994048.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385645994048_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646003137.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646003137.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646003137_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646008319.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646008319.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646008319_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646021087.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646021087.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646021087_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646035096.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646035096.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646035096_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646057567.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646057567.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646057567_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646061516.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646061516.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646061516_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646070116.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646070116.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646070116_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646078374.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646078374.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646078374_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646086792.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646086792.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646086792_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646088626.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646088626.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646088626_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646096002.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646096002.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646096002_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646121193.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646121193.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646121193_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646129020.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646129020.Template
+         Generating method body for html1()
+         Generating method body for html2()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646129020_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646135340.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646135340.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646135340_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646144065.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646144065.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.00 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646144065_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView.CardViewUiBinder
+   Adding '3' new generated units
+      Compiling...
+         Compilation completed in 0.02 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646148846.Template
+   Invoking generator com.google.gwt.safehtml.rebind.SafeHtmlTemplatesGenerator
+      Constructing interface webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646148846.Template
+         Generating method body for html1()
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
+Rebinding webfr.flashcards.client.view.CardView_CardViewUiBinderImpl_designTime1385646148846_GenBundle
+   Adding '1' new generated units
+      Compiling...
+         Compilation completed in 0.01 seconds
+      Removing invalidated units
