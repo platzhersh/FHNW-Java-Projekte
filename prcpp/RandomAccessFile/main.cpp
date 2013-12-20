@@ -26,5 +26,19 @@ int main() {
 	else {
 		cout << pv[0] << " ";
 		cout << pv[1] << endl;
+
+		PersistentVector<int>::iterator it = pv.begin();
+		PersistentVector<int>::iterator end = pv.end();
+
+		int t = it[2];
+
+		PersistentVector<int>::iterator::difference_type delta = end - it;
+		PersistentVector<int>::iterator it2 = it + 1;
+
+
+		while (it != end) {
+			//*it = 5;
+			cout << *it++;
+		}
 	}
 }

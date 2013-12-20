@@ -32,5 +32,8 @@
     <ClInclude Include="PersistentVector.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="VectorIterator.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

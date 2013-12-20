@@ -1,6 +1,7 @@
 #pragma once
 
 #include "RandomAccessFile.h"
+#include "VectorIterator.hpp"
 
 template<class T> class PersistentVector {
 
@@ -8,6 +9,11 @@ template<class T> class PersistentVector {
 	size_t m_size; // number of vector elements
 
 public:
+	typedef T value_type;
+	typedef T& reference;
+	typedef const T& const_reference;
+	typedef VectorIterator<T> iterator;
+
 	PersistentVector(const char* fname) 
 		: m_file(fname)
 		, m_size(capacity())
@@ -23,12 +29,24 @@ public:
 		return (size_t)(const_cast<RandomAccessFile&>(m_file).length()/sizeof(T));
 	}
 
+	iterator begin() {
+		return VectorIterator<T>(*this, 0);
+	}
+	iterator end() {
+		return VectorIterator<T>(*this, m_size);
+	}
+
 	void push_back(const T& val) {
 		write(m_size++, val);
 	}
 
-	T operator[](size_t index) const {
+	T operator[](int index) const {
 		return read(index);
+	}
+	
+	T& operator[](int index) {
+		T dummy;
+		return dummy;
 	}
 
 	bool isEmpty() {
