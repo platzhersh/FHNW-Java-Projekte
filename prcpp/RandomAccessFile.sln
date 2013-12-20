@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RandomAccessFile", "RandomAccessFile\RandomAccessFile.vcxproj", "{BCF343BD-A9F7-404F-B127-A5AEA6A3BC2E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "UnitTest\UnitTest.vcxproj", "{F3274975-80CB-4AF4-A3B0-817D78C34B36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{BCF343BD-A9F7-404F-B127-A5AEA6A3BC2E}.Debug|Win32.Build.0 = Debug|Win32
 		{BCF343BD-A9F7-404F-B127-A5AEA6A3BC2E}.Release|Win32.ActiveCfg = Release|Win32
 		{BCF343BD-A9F7-404F-B127-A5AEA6A3BC2E}.Release|Win32.Build.0 = Release|Win32
+		{F3274975-80CB-4AF4-A3B0-817D78C34B36}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F3274975-80CB-4AF4-A3B0-817D78C34B36}.Debug|Win32.Build.0 = Debug|Win32
+		{F3274975-80CB-4AF4-A3B0-817D78C34B36}.Release|Win32.ActiveCfg = Release|Win32
+		{F3274975-80CB-4AF4-A3B0-817D78C34B36}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

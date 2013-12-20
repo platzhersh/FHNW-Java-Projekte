@@ -2,8 +2,11 @@
 
 #include "RandomAccessFile.h"
 #include "VectorIterator.hpp"
+#include "VectorAccessor.hpp"
 
 template<class T> class PersistentVector {
+
+	friend class VectorAccessor<T>;
 
 	RandomAccessFile m_file;
 	size_t m_size; // number of vector elements
@@ -40,13 +43,10 @@ public:
 		write(m_size++, val);
 	}
 
-	T operator[](int index) const {
-		return read(index);
-	}
-	
-	T& operator[](int index) {
-		T dummy;
-		return dummy;
+
+	VectorAccessor<T> operator[](int index) {
+		VectorAccessor<T> v(*this, index);
+		return v;
 	}
 
 	bool isEmpty() {

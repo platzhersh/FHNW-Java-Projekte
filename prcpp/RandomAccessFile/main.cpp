@@ -30,15 +30,21 @@ int main() {
 		PersistentVector<int>::iterator it = pv.begin();
 		PersistentVector<int>::iterator end = pv.end();
 
-		int t = it[2];
+		//int t = it[2];
+		it[2] = 5;
+
+		// todo: something wrong here, check implementation
+		cout << it[2] << endl;
+
+
 
 		PersistentVector<int>::iterator::difference_type delta = end - it;
 		PersistentVector<int>::iterator it2 = it + 1;
 
-
-		while (it != end) {
-			//*it = 5;
+		//todo fix iterator
+		/*while (it != end) {
+			
 			cout << *it++;
-		}
+		}*/
 	}
 }

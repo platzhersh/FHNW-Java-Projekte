@@ -79,6 +79,7 @@
     <ClInclude Include="PersistentVector.h" />
     <ClInclude Include="RandomAccessFile.h" />
     <ClInclude Include="RandomAccessFile.hpp" />
+    <ClInclude Include="VectorAccessor.hpp" />
     <ClInclude Include="VectorIterator.hpp" />
   </ItemGroup>
   <ItemGroup>

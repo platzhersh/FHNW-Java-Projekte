@@ -53,9 +53,11 @@ public:
 		return *this;
 	}
 	// postfix
+	// todo: check if returns correct value
 	VectorIterator& operator++(int) {
 		return VectorIterator(m_vector, m_pos++);
 	}
+	// todo: check if returns correct value
 	VectorIterator& operator--(int) {
 		return VectorIterator(m_vector, m_pos--);
 	}
@@ -76,6 +78,7 @@ public:
 		m_pos-s;
 		return *this;
 	}
+	// todo: check if returns correct value
 	VectorIterator& operator+(difference_type dist) {
 		return VectorIterator(m_vector, m_pos+dist);
 	}
@@ -93,13 +96,14 @@ public:
 	}
 	// c++ style
 	// read access
+	// todo: check if returns correct value
 	const_reference operator*() const {
 		return m_vector[m_pos];
 	}
 
 	// write access
 	reference operator[](size_t pos){
-		return m_vector[m_pos + pos];	// problem
+		return (reference)m_vector[m_pos + pos];	// problem
 	}
 	
 	// operator->() // not implemented
