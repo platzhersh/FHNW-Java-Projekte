@@ -11,7 +11,6 @@ template<class T> T RandomAccessFile::read(streampos pos /*= -1*/) {
 	m_file.read((char *)&data, sizeof(T));
 	if (!m_file) throw RandomAccessFile::IOException("read error");
 
-
 	return data;
 }
 template<class T> void RandomAccessFile::write(const T& data, streampos pos /*= -1*/) {

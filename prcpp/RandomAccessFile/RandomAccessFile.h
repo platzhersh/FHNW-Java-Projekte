@@ -13,6 +13,7 @@ public:
 	};
 
 	RandomAccessFile(const string& fileName);
+	RandomAccessFile() {}
 	virtual ~RandomAccessFile() { m_file.close(); }
 
 	streamsize length();

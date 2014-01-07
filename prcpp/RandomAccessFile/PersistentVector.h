@@ -45,13 +45,13 @@ public:
 
 
 	VectorAccessor<T> operator[](int index) {
-		VectorAccessor<T> v(*this, index);
-		return v;
+		return VectorAccessor<T>(*this, index);
 	}
 
 	bool isEmpty() {
 		return m_size == 0;
 	}
+
 
 private:
 	void write(size_t index, const T& val) {

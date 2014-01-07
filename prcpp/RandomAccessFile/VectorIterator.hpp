@@ -24,72 +24,79 @@ public:
 	typedef T* pointer;
 	typedef int _w64 difference_type;
 
-	VectorIterator& operator=(const VectorIterator& it) {
+	VectorIterator<T>& operator=(const VectorIterator<T>& it) {
 		m_vector = it.m_vector;
 		m_pos = it.m_pos;
 		return *this;
 	}
 
 	// relational operators
-	bool operator==(const VectorIterator& it) {
+	bool operator==(const VectorIterator<T>& it) {
 		return &m_vector == &it.m_vector && m_pos == it.m_pos;
 	}
-	bool operator!=(const VectorIterator& it) {
+	bool operator!=(const VectorIterator<T>& it) {
 		return !(*this == it);
 	}
 
-	bool operator<(const VectorIterator& it) {
+	bool operator<(const VectorIterator<T>& it) {
 		return &m_vector == &it.m_vector && m_pos < it.m_pos;
+	}
+
+	bool operator>(const VectorIterator<T>& it) {
+		return &m_vector == &it.m_vector && m_pos > it.m_pos;
 	}
 
 	// incremente and decrement operators
 	// prefix
-	VectorIterator& operator++() {
+	VectorIterator<T>& operator++() {
 		m_pos++;
 		return *this;
 	}
-	VectorIterator& operator--() {
+	VectorIterator<T>& operator--() {
 		m_pos--;
 		return *this;
 	}
 	// postfix
 	// todo: check if returns correct value
-	VectorIterator& operator++(int) {
-		return VectorIterator(m_vector, m_pos++);
+	VectorIterator<T>& operator++(int) {
+		m_pos++;
+		return *this-1;
 	}
 	// todo: check if returns correct value
-	VectorIterator& operator--(int) {
-		return VectorIterator(m_vector, m_pos--);
+	VectorIterator<T>& operator--(int) {
+		return VectorIterator<T>(m_vector, m_pos--);
 	}
 	
-	// arithmetic operator
-	difference_type operator-(VectorIterator& it) {
+	// arithmetic operator 2 Iterators
+	difference_type operator-(VectorIterator<T>& it) {
 		return m_pos - it.m_pos;
 	}
-	difference_type operator+(VectorIterator& it) {
+	difference_type operator+(VectorIterator<T>& it) {
 		return m_pos + it.m_pos;
 	}
 
-	VectorIterator& operator+=(difference_type dist) {
-		m_pos+s;
+	// arithmetic operator Iterator and difference_type
+	VectorIterator<T>& operator+(difference_type dist) {
+		return VectorIterator<T>(m_vector, m_pos + dist);
+	}
+	VectorIterator<T>& operator-(difference_type dist) {
+		return VectorIterator<T>(m_vector, m_pos - dist);
+	}
+
+	VectorIterator<T>& operator+=(difference_type dist) {
+		m_pos += dist;
 		return *this;
 	}
-	VectorIterator& operator-=(difference_type dist) {
-		m_pos-s;
+	VectorIterator<T>& operator-=(difference_type dist) {
+		m_pos -= dist;
 		return *this;
 	}
-	// todo: check if returns correct value
-	VectorIterator& operator+(difference_type dist) {
-		return VectorIterator(m_vector, m_pos+dist);
-	}
-	VectorIterator& operator-(difference_type dist) {
-		return VectorIterator(m_vector, m_pos - dist);
-	}
+
 
 	// access operators
 	// java style
 	T get() {
-		return m_vector[m_pos];
+		return (T) m_vector[m_pos];
 	}
 	void set(const_reference val) {
 		m_vector[m_pos] = val;
@@ -102,9 +109,11 @@ public:
 	}
 
 	// write access
+	/*
 	reference operator[](size_t pos){
+		return VectorAccessor<T>(*this, index);
 		return (reference)m_vector[m_pos + pos];	// problem
-	}
+	}*/
 	
 	// operator->() // not implemented
 	

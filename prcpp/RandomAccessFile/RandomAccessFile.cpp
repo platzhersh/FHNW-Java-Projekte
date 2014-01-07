@@ -18,6 +18,7 @@ RandomAccessFile::RandomAccessFile(const string& fileName)
 	}
 }
 
+
 streamsize RandomAccessFile::length() {
 	streampos pos = m_file.tellg();
 

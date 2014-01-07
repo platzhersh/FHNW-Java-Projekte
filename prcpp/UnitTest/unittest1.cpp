@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
+#include "RandomAccessFile.hpp"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
@@ -9,9 +10,16 @@ namespace UnitTest
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(WriteReadTestInt)
 		{
-			// TODO: Your test code here
+			RandomAccessFile file("test.bin");
+
+			file.write(100);
+			file.write(77);
+
+			Assert::AreEqual("100", file.read(0));
+			Assert::AreEqual("77", file.read(sizeof(int)));
+
 		}
 
 	};

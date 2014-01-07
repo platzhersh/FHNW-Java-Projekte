@@ -11,40 +11,45 @@ int main() {
 	cout << file.read<int>(0) << " "
 		<< file.read<int>(sizeof(int)) << endl;
 
-	file.write((char)'c',2*sizeof(int));
+	file.write((char)'c', 2 * sizeof(int));
 	file.write((char)'h');
 
-	cout << file.read<char>(2*sizeof(int)) << " "
-		<< file.read<char>(2*sizeof(int)+sizeof(char)) << endl;
+	cout << file.read<char>(2 * sizeof(int)) << " "
+		<< file.read<char>(2 * sizeof(int)+sizeof(char)) << endl;
 
-
-	PersistentVector<int> pv("test2.bin");
-	if(pv.isEmpty()) {
+	remove("test3.bin");
+	PersistentVector<int> pv("test3.bin");
 		pv.push_back(99);
 		pv.push_back(77);
-	}
-	else {
-		cout << pv[0] << " ";
-		cout << pv[1] << endl;
+		pv[0] = 100;
+		pv.push_back(55);
+
+		cout << "-------------------------------" << endl;
 
 		PersistentVector<int>::iterator it = pv.begin();
 		PersistentVector<int>::iterator end = pv.end();
 
-		//int t = it[2];
-		it[2] = 5;
-
-		// todo: something wrong here, check implementation
-		cout << it[2] << endl;
-
-
-
-		PersistentVector<int>::iterator::difference_type delta = end - it;
-		PersistentVector<int>::iterator it2 = it + 1;
-
+		
 		//todo fix iterator
-		/*while (it != end) {
+		while (it != end) {
+			cout << it++.get() << endl;
 			
-			cout << *it++;
-		}*/
-	}
+			}
+
+		remove("test.bin");
+		PersistentVector<int> pv2("test.bin");
+		pv2.push_back(55);
+		pv2.push_back(99);
+		pv2.push_back(77);
+
+		PersistentVector<int>::iterator a = pv2.begin();
+		PersistentVector<int>::iterator z = pv2.end();
+		cout << "-------------------------------" << endl;
+		//sort(a, z);
+		//todo fix iterator
+		while (a != z) {
+			cout << a++.get() << endl;
+
+		}
+
 }
