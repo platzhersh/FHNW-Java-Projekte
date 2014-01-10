@@ -1,46 +1,111 @@
 #pragma once
 
-
 template<class T> class PersistentVector;
+template<class T> class VectorAccessor;
 
+/**
+
+	Random Access Iterator corresponding the C++11 standard
+	
+	http://www.cplusplus.com/reference/iterator/
+
+	more information: http://stackoverflow.com/questions/8054273/how-to-implement-an-stl-style-iterator-and-avoid-common-pitfalls
+
+	author: Christian Glatthard
+	email:	chregi.glatthard@gmail.com
+
+**/
 template<class T> class VectorIterator {
+	
+	/* 
+		Friends
+	*/
 	friend class PersistentVector<T>;
+	friend class VectorAccessor<T>;
 
-	// attributes
-	size_t m_pos;	// current iterator position
-	PersistentVector<T>& m_vector;
+	/*
+		Member Attributes
+	*/
+	PersistentVector<T>& m_vector;	// PersistentVector to iterate on
+	size_t m_pos;					// current position on PersistentVector
 
-	// ctor
+	/*
+		Constructors
+	*/
+
+	VectorIterator() {}
+	VectorIterator(PersistentVector<T>& pv)
+		: m_pos(0)
+		, m_vector(pv)
+	{}
 	VectorIterator(PersistentVector<T>& pv, size_t pos)
 		: m_pos(pos)
 		, m_vector(pv)
 	{}
 
 public:
-	typedef random_access_iterator_tag iterator_category;
+
+	/*
+		Typedefs
+	*/
+	typedef int _w64 difference_type;
 	typedef T value_type;
 	typedef T& reference;
 	typedef const T& const_reference;
 	typedef T* pointer;
-	typedef int _w64 difference_type;
+	typedef random_access_iterator_tag iterator_category;
 
+	/*
+		Forward Iterator
+		- can be incremented
+	*/
+	
+	// prefix increment
+	VectorIterator<T>& operator++() {
+		m_pos++;
+		return *this;
+	}
+	//postfix increment
+	VectorIterator<T>& operator++(int) {
+		m_pos++;
+		return *this - 1;
+	}
+
+	/*
+		Bidirectional Iterator
+		- Supports equality/inequality comparisons
+		- Can be dereferenced as an rvalue
+		- Can be dereferenced as an lvalue 
+		- default-constructible
+		- Multi-pass: neither dereferencing nor incrementing affects dereferenceability
+		- Can be decremented
+	*/
+	
+	// equality
+	bool operator==(const VectorIterator<T>& it) const {
+		return &m_vector == &it.m_vector && m_pos == it.m_pos;
+	}
+
+	// inequality
+	bool operator!=(const VectorIterator<T>& it) const {
+		return !(*this == it);
+	}
+
+	/* 
+		Random Access Iterator
+		- Supports arithmetic operators + and -
+		- Supports inequality comparisons (<, >, <= and >=) between iterators
+		- Supports compound assignment operations += and -=
+		- Supports offset dereference operator ([])
+	*/
 	VectorIterator<T>& operator=(const VectorIterator<T>& it) {
-		m_vector = it.m_vector;
 		m_pos = it.m_pos;
 		return *this;
 	}
 
 	void operator=(const T& val) { 
 		m_vector.write(val, m_pos); 
-	}
-
-	// relational operators
-	bool operator==(const VectorIterator<T>& it) {
-		return &m_vector == &it.m_vector && m_pos == it.m_pos;
-	}
-	bool operator!=(const VectorIterator<T>& it) {
-		return !(*this == it);
-	}
+	}	
 
 	bool operator<(const VectorIterator<T>& it) {
 		return &m_vector == &it.m_vector && m_pos < it.m_pos;
@@ -51,21 +116,12 @@ public:
 	}
 
 	// incremente and decrement operators
-	// prefix
-	VectorIterator<T>& operator++() {
-		m_pos++;
-		return *this;
-	}
+
 	VectorIterator<T>& operator--() {
 		m_pos--;
 		return *this;
 	}
 	// postfix
-	// todo: check if returns correct value
-	VectorIterator<T>& operator++(int) {
-		m_pos++;
-		return *this-1;
-	}
 	// todo: check if returns correct value
 	VectorIterator<T>& operator--(int) {
 		m_pos--;
@@ -106,10 +162,13 @@ public:
 	void set(const_reference val) {
 		m_vector[m_pos] = val;
 	}
+
 	// c++ style
-	// read access
-	// todo: check if returns correct value
-	const_reference operator*() const {
+	// read & write access
+	VectorAccessor<T> operator*() {
 		return m_vector[m_pos];
-	}	
+	}
+
+	
+	
 };

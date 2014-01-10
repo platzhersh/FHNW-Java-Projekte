@@ -46,8 +46,9 @@ public:
 
 
 	VectorAccessor<T> operator[](int index) {
-		return VectorAccessor<T>(*this, index);
+		return VectorAccessor<T>(this, index);
 	}
+
 
 	bool isEmpty() {
 		return m_size == 0;

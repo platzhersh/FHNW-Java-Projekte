@@ -81,7 +81,9 @@
     <ClInclude Include="RandomAccessFile.h" />
     <ClInclude Include="RandomAccessFile.hpp" />
     <ClInclude Include="VectorAccessor.hpp" />
+    <ClInclude Include="VectorAccessor.hpp_old" />
     <ClInclude Include="VectorIterator.hpp" />
+    <ClInclude Include="VectorIteratorAccessor.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

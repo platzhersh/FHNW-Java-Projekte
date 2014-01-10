@@ -35,6 +35,12 @@
     <ClInclude Include="VectorIterator.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="VectorIteratorAccessor.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="VectorAccessor.hpp_old">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
     <ClInclude Include="VectorAccessor.hpp">
       <Filter>Headerdateien</Filter>
     </ClInclude>
