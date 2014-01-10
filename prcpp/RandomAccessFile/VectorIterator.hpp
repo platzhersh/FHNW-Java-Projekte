@@ -30,6 +30,10 @@ public:
 		return *this;
 	}
 
+	void operator=(const T& val) { 
+		m_vector.write(val, m_pos); 
+	}
+
 	// relational operators
 	bool operator==(const VectorIterator<T>& it) {
 		return &m_vector == &it.m_vector && m_pos == it.m_pos;
@@ -64,7 +68,8 @@ public:
 	}
 	// todo: check if returns correct value
 	VectorIterator<T>& operator--(int) {
-		return VectorIterator<T>(m_vector, m_pos--);
+		m_pos--;
+		return *this+1;
 	}
 	
 	// arithmetic operator 2 Iterators
@@ -106,15 +111,5 @@ public:
 	// todo: check if returns correct value
 	const_reference operator*() const {
 		return m_vector[m_pos];
-	}
-
-	// write access
-	/*
-	reference operator[](size_t pos){
-		return VectorAccessor<T>(*this, index);
-		return (reference)m_vector[m_pos + pos];	// problem
-	}*/
-	
-	// operator->() // not implemented
-	
+	}	
 };

@@ -7,6 +7,7 @@
 template<class T> class PersistentVector {
 
 	friend class VectorAccessor<T>;
+	friend class VectorIterator<T>;
 
 	RandomAccessFile m_file;
 	size_t m_size; // number of vector elements

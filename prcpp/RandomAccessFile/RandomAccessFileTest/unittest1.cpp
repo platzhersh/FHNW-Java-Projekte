@@ -103,7 +103,10 @@ namespace RandomAccessFileTest
 			Assert::IsFalse(it != it);
 			Assert::IsTrue(it == end);
 
-			Assert::AreEqual(it.get(), it++.get());
+			Assert::AreEqual(it++.get(), it.get());
+			
+			//it = end;
+			
 			Assert::IsFalse(it == end);
 			Assert::IsTrue(it > end);
 			Assert::IsFalse(it < end);

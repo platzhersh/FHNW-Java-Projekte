@@ -3,20 +3,7 @@
 #include <iostream>
 
 int main() {
-	RandomAccessFile file("test.bin");
-
-	file.write(100);
-	file.write(77);
-
-	cout << file.read<int>(0) << " "
-		<< file.read<int>(sizeof(int)) << endl;
-
-	file.write((char)'c', 2 * sizeof(int));
-	file.write((char)'h');
-
-	cout << file.read<char>(2 * sizeof(int)) << " "
-		<< file.read<char>(2 * sizeof(int)+sizeof(char)) << endl;
-
+	
 	remove("test3.bin");
 	PersistentVector<int> pv("test3.bin");
 		pv.push_back(99);
@@ -44,12 +31,20 @@ int main() {
 
 		PersistentVector<int>::iterator a = pv2.begin();
 		PersistentVector<int>::iterator z = pv2.end();
+		PersistentVector<int>::iterator b = a+1;
+
+		a = 10;
+		b = 10;
+
 		cout << "-------------------------------" << endl;
-		//sort(a, z);
-		//todo fix iterator
+
+		/* TODO: fix this
+
+		sort(a, z);
+		
+		*/
+		
 		while (a != z) {
-			cout << a++.get() << endl;
-
+			cout << "a++: " << a++.get() << endl;
 		}
-
 }

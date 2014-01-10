@@ -1,0 +1,12 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+	<g:HTMLPanel>
+		<g:VerticalPanel>
+			<g:Label text="Bitte Suchtext eingeben:"/>
+			<g:TextBox alignment="LEFT" visibleLength="50" ui:field="textBox"/>
+			<g:Label text="Resultate:"/>
+			<p1:CellList ui:field="addressList"/>
+		</g:VerticalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 
