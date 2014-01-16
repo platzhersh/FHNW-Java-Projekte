@@ -23,7 +23,7 @@ int main() {
 
 
 		while (a != z) {
-			cout << "a++: " << a++.get() << endl;
+			cout << "a++: " << *a++ << endl;
 		}
 
 		a = pv2.begin();
@@ -37,7 +37,7 @@ int main() {
 		cout << "-------------------------------" << endl;
 
 		while (a != z) {
-			cout << "a++: " << a++.get() << endl;
+			cout << "a++: " << *a++ << endl;
 		}
 
 }

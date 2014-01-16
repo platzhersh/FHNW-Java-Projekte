@@ -66,9 +66,8 @@ public:
 		return *this;
 	}
 	//postfix increment
-	VectorIterator<T>& operator++(int) {
-		m_pos++;
-		return *this - 1;
+	VectorIterator<T> operator++(int) {
+		return VectorIterator<T>(m_vector,m_pos++);
 	}
 
 	/*
@@ -123,9 +122,8 @@ public:
 	}
 	// postfix
 	// todo: check if returns correct value
-	VectorIterator<T>& operator--(int) {
-		m_pos--;
-		return *this+1;
+	VectorIterator<T> operator--(int) {
+		return VectorIterator<T>(m_vector, m_pos--);
 	}
 	
 	// arithmetic operator 2 Iterators
@@ -137,10 +135,10 @@ public:
 	}
 
 	// arithmetic operator Iterator and difference_type
-	VectorIterator<T>& operator+(difference_type dist) {
+	VectorIterator<T> operator+(difference_type dist) {
 		return VectorIterator<T>(m_vector, m_pos + dist);
 	}
-	VectorIterator<T>& operator-(difference_type dist) {
+	VectorIterator<T> operator-(difference_type dist) {
 		return VectorIterator<T>(m_vector, m_pos - dist);
 	}
 
