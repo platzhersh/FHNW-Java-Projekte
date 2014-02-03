@@ -1,0 +1,2 @@
+serviceClass: ch.fhnw.webfr.client.GreetingService
+path: 041E1A3EBE9CE95F946485AEF56393C0.gwt.rpc

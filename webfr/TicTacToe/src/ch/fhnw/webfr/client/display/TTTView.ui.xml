@@ -1,0 +1,54 @@
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" 
+			 xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+<g:HTMLPanel>
+
+	<g:Grid>
+	
+		<g:row>
+		
+			<g:customCell>
+				<g:Button ui:field="B1"></g:Button>
+			</g:customCell>
+			<g:customCell>
+				<g:Button ui:field="B2"></g:Button>
+			</g:customCell>
+			<g:customCell>
+				<g:Button ui:field="B3"></g:Button>
+			</g:customCell>
+		
+		</g:row>
+		<g:row>
+		
+			<g:customCell>
+				<g:Button ui:field="B4"></g:Button>
+			</g:customCell>
+			<g:customCell>
+				<g:Button ui:field="B5"></g:Button>
+			</g:customCell>
+			<g:customCell>
+				<g:Button ui:field="B6"></g:Button>
+			</g:customCell>
+		
+		</g:row>
+		<g:row>
+		
+			<g:customCell>
+				<g:Button ui:field="B7"></g:Button>
+			</g:customCell>
+			<g:customCell>
+				<g:Button ui:field="B8"></g:Button>
+			</g:customCell>
+			<g:customCell>
+				<g:Button ui:field="B9"></g:Button>
+			</g:customCell>
+		
+		</g:row>
+	
+	</g:Grid>
+
+	<g:Label ui:field="label" />
+</g:HTMLPanel>
+
+
+</ui:UiBinder>
