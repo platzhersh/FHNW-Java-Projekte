@@ -1,0 +1,5 @@
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\Le02-AB-Essentials\Le02-AB-Essentials\bin\Debug\Le02-AB-Essentials.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\Le02-AB-Essentials\Le02-AB-Essentials\obj\Debug\Le02-AB-Essentials.csprojResolveAssemblyReference.cache
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\Le02-AB-Essentials\Le02-AB-Essentials\obj\Debug\Le02-AB-Essentials.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\Le02-AB-Essentials\Le02-AB-Essentials\bin\Debug\Le02-AB-Essentials.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\Le02-AB-Essentials\Le02-AB-Essentials\obj\Debug\Le02-AB-Essentials.exe

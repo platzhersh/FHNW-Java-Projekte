@@ -1,0 +1,5 @@
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\PersonAdminSystem\PersonAdminSystem\PersonAdminLib\bin\Debug\PersonAdminLib.dll
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\PersonAdminSystem\PersonAdminSystem\PersonAdminLib\bin\Debug\PersonAdminLib.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\PersonAdminSystem\PersonAdminSystem\PersonAdminLib\obj\Debug\PersonAdminLib.dll
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\PersonAdminSystem\PersonAdminSystem\PersonAdminLib\obj\Debug\PersonAdminLib.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\PersonAdminSystem\PersonAdminSystem\PersonAdminLib\obj\Debug\PersonAdminLib.csprojResolveAssemblyReference.cache
