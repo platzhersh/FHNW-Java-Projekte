@@ -5,12 +5,9 @@
     /// </summary>
     public class Person
     {
-        private string firstname;
-        public string Firstname { get { return firstname; } set { firstname = value;  } }
-        
-        public string surname { get; set; }
+        public string Firstname { get; set; }
 
-        public string Surname { get { return surname; } set { surname = value; } }
+        public string Surname { get; set; }
 
         /// <summary>
         /// 
@@ -19,8 +16,8 @@
         /// <param name="surname"></param>
         public Person(string firstname, string surname)
         {
-            this.firstname = firstname;
-            this.surname = surname;
+            Firstname = firstname;
+            Surname = surname;
         }
 
     }
