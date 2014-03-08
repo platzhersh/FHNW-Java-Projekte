@@ -6,6 +6,13 @@ namespace PersonAdmin
 {
     class Program
     {
+        private static void PrintPersons(PersonRegister personRegister)
+        {
+            foreach (Person p in personRegister.Persons)
+            {
+                System.Console.WriteLine("{0} {1}", p.Surname, p.Firstname);
+            }
+        }
         static void Main()
         {
             Console.WriteLine("My First C# Program: {0}",
@@ -23,11 +30,15 @@ namespace PersonAdmin
                 p1.Firstname, p1.Surname);
             Console.WriteLine("Press any key to quit");
 
-            for (int i = 0; i < pr.Count; i++)
-            {
-                Console.WriteLine("Firstname: {0}\nSurname: {1}",
-                pr[i].Firstname, pr[i].Surname);
-            }
+            Console.WriteLine("--- Print Persons: ---");
+            PrintPersons(pr);
+            Console.WriteLine("--- Sort by Firstname: ---");
+            pr.Sort(pr.sortByFirstName);
+            PrintPersons(pr);
+            Console.WriteLine("--- Sort by Surname: ---");
+            pr.Sort(pr.sortBySurName);
+            PrintPersons(pr);
+
             Console.ReadKey();
         }
     }

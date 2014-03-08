@@ -20,11 +20,6 @@
             Surname = surname;
         }
 
+        
     }
-}
-
-namespace MyNamespace
-{
-
-
 }

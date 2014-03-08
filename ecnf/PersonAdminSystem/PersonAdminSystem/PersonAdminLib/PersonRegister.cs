@@ -12,6 +12,20 @@ namespace PersonAdminLib
     {
         private List<Person> personList;
 
+        public Comparison<Person> sortByFirstName = delegate(Person p1, Person p2)
+        {
+            return p1.Firstname.CompareTo(p2.Firstname);
+        };
+
+        public Comparison<Person> sortBySurName = delegate(Person p1, Person p2)
+        {
+            return p1.Surname.CompareTo(p2.Surname);
+        };
+
+        public List<Person> Persons
+        {
+            get { return personList; }
+        }
         public PersonRegister()
         {
             personList = new List<Person>();
@@ -44,6 +58,16 @@ namespace PersonAdminLib
                 Add(new Person(fname,sname));
             }
             return lines.Length;
+        }
+
+        void SayHello(string sender)
+        { // just provide same interface
+            Console.WriteLine("Hello from " + sender);
+        }
+
+        public void Sort(Comparison<Person> p)
+        {
+            personList.Sort(p);
         }
     }
 }
