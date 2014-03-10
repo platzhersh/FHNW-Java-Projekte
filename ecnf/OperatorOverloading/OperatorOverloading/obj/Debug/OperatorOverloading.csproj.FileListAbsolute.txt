@@ -1,0 +1,5 @@
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\OperatorOverloading\OperatorOverloading\obj\Debug\OperatorOverloading.csprojResolveAssemblyReference.cache
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\OperatorOverloading\OperatorOverloading\bin\Debug\OperatorOverloading.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\OperatorOverloading\OperatorOverloading\obj\Debug\OperatorOverloading.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\OperatorOverloading\OperatorOverloading\bin\Debug\OperatorOverloading.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\OperatorOverloading\OperatorOverloading\obj\Debug\OperatorOverloading.exe

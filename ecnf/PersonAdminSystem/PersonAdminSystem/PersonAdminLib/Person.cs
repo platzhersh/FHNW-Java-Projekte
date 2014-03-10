@@ -20,6 +20,9 @@
             Surname = surname;
         }
 
-        
+        public override string ToString()
+        {
+            return Firstname + " " + Surname;
+        }
     }
 }

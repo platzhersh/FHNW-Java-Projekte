@@ -69,5 +69,19 @@ namespace PersonAdminLib
         {
             personList.Sort(p);
         }
+
+        int AddPerson(Person newPerson)
+        {
+            personList.Add(newPerson);
+            return personList.Count;
+        }
+
+        delegate void PersonAddedHandler(Person newPerson);
+
+        public IEnumerable<string> GetPersons()
+        {
+            return personList.GetListItemsAsStrings();
+        }
+
     }
 }

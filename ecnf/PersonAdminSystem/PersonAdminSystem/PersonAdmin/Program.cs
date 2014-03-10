@@ -38,6 +38,8 @@ namespace PersonAdmin
             Console.WriteLine("--- Sort by Surname: ---");
             pr.Sort(pr.sortBySurName);
             PrintPersons(pr);
+            Console.WriteLine("--- GetPersons: ---");
+            Console.WriteLine(pr.GetPersons()[0]);
 
             Console.ReadKey();
         }
