@@ -60,9 +60,8 @@ public class ButtonApp2 extends Frame implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println(e.toString());
 		Button b = (Button) e.getSource();
-		System.out.println(b.getLabel());
+		System.out.println(b.getLabel()+" pressed");
 		switch (b.getLabel()) {
 		case "Clear":
 			setValue(0);
