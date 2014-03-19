@@ -1,0 +1,7 @@
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\AssemblyAnalyzer\AssemblyAnalyzer\bin\Debug\AssemblyAnalyzer.exe.config
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\AssemblyAnalyzer\AssemblyAnalyzer\bin\Debug\PersonAdminLib.dll
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\AssemblyAnalyzer\AssemblyAnalyzer\bin\Debug\AssemblyAnalyzer.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\AssemblyAnalyzer\AssemblyAnalyzer\bin\Debug\AssemblyAnalyzer.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\AssemblyAnalyzer\AssemblyAnalyzer\obj\Debug\AssemblyAnalyzer.csprojResolveAssemblyReference.cache
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\AssemblyAnalyzer\AssemblyAnalyzer\obj\Debug\AssemblyAnalyzer.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\AssemblyAnalyzer\AssemblyAnalyzer\obj\Debug\AssemblyAnalyzer.pdb

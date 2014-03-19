@@ -1,0 +1,8 @@
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\DynamicInvocation\DynamicInvocation\bin\Debug\DynamicInvocation.exe.config
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\DynamicInvocation\DynamicInvocation\bin\Debug\SimpleCalculator.dll
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\DynamicInvocation\DynamicInvocation\bin\Debug\DynamicInvocation.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\DynamicInvocation\DynamicInvocation\bin\Debug\DynamicInvocation.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\DynamicInvocation\DynamicInvocation\obj\Debug\DynamicInvocation.csprojResolveAssemblyReference.cache
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\DynamicInvocation\DynamicInvocation\obj\Debug\DynamicInvocation.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\DynamicInvocation\DynamicInvocation\obj\Debug\DynamicInvocation.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\DynamicInvocation\DynamicInvocation\bin\Debug\CalculatorInterface.dll
