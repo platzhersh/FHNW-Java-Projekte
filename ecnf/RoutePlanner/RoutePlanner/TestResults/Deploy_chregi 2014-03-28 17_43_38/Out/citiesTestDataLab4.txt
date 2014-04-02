@@ -1,0 +1,11 @@
+﻿Zürich	Switzerland	348059	47.38	8.54
+winterThur	Switzerland	91588	47.51	8.72
+Genève	Switzerland	178909	46.21	6.14
+Lyon	France	443859	45.76	4.83
+Basel	Switzerland	162816	47.57	7.58
+Liestal	Switzerland	12831	47.49	7.73
+Aarau	Switzerland	15447	47.40	8.04
+Bern	Switzerland	122740	46.95	7.44
+Thun	Switzerland	40672	46.77	7.62
+Lausanne	Switzerland	117371	46.52	6.62
+Frauenfeld	Switzerland	22044	47.56	8.89

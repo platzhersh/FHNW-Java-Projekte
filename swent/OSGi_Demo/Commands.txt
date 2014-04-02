@@ -1,0 +1,22 @@
+javac -cp .;org.eclipse.osgi.jar ch/fhnw/swent/osgi/helloworld/Activator.java
+jar cfm HelloWorld.jar ch/fhnw/swent/osgi/helloworld/HelloWorldMF.txt ch/fhnw/swent/osgi/helloworld/Activator.class
+
+java -jar org.eclipse.osgi.jar -console
+install file:HelloWorld.jar
+start ch.fhnw.swent.osgi.helloworld
+stop ch.fhnw.swent.osgi.helloworld
+close
+
+javac -cp .;org.eclipse.osgi.jar ch/fhnw/swent/osgi/logger/api/Logger.java
+jar cfm Logger.jar ch/fhnw/swent/osgi/logger/LoggerMF.txt ch/fhnw/swent/osgi/logger/*.class ch/fhnw/swent/osgi/logger/api/*.class
+
+javac -cp .;org.eclipse.osgi.jar ch/fhnw/swent/osgi/buttons/Activator.java
+jar cfm Buttons.jar ch/fhnw/swent/osgi/buttons/ButtonsMF.txt ch/fhnw/swent/osgi/buttons/*.class
+
+java -jar org.eclipse.osgi.jar -console -clean
+install file:Logger.jar
+install file:Buttons.jar
+start ch.fhnw.swent.osgi.buttons
+
+start ch.fhnw.swent.osgi.logger
+stop ch.fhnw.swent.osgi.logger

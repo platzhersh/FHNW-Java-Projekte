@@ -1,0 +1,6 @@
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\IEnumerableExtension\IEnumerableExtension\bin\Debug\IEnumerableExtension.exe.config
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\IEnumerableExtension\IEnumerableExtension\bin\Debug\IEnumerableExtension.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\IEnumerableExtension\IEnumerableExtension\bin\Debug\IEnumerableExtension.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\IEnumerableExtension\IEnumerableExtension\obj\Debug\IEnumerableExtension.csprojResolveAssemblyReference.cache
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\IEnumerableExtension\IEnumerableExtension\obj\Debug\IEnumerableExtension.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\IEnumerableExtension\IEnumerableExtension\obj\Debug\IEnumerableExtension.pdb

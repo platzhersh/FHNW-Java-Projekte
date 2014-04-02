@@ -24,7 +24,7 @@ public class CamSys {
 		V = Tinv.times(V);
 	}
 	
-	Matrix getViewMatrix() { return new Matrix(); }
+	Matrix getViewMatrix() { return V; }
 	
 	double[] getViewMatrixLinear() { 
 		double[] a = new double[16];

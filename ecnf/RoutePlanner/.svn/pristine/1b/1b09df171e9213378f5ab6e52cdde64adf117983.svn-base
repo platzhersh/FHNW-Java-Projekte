@@ -1,0 +1,123 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Fhnw.Ecnf.RoutePlanner.RoutePlannerLib;
+
+namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerTest
+{
+    [TestClass]
+    [DeploymentItem("data/citiesTestDataLab3.txt")]
+    [DeploymentItem("data/linksTestDataLab3.txt")]
+    public class Lab3Test
+    {
+        private const string CitiesTestFile = "citiesTestDataLab3.txt";
+        private const string LinksTestFile = "linksTestDataLab3.txt";
+
+        [TestMethod]
+        public void TestLinkTransportMode()
+        {
+            City mumbai = new City("Mumbai", "India", 12383146, 18.96, 72.82);
+            City buenosAires = new City("Buenos Aires", "Argentina", 12116379, -34.61, -58.37);
+
+            Link link = new Link(mumbai, buenosAires, 10);
+            // verify default transport
+            Assert.AreEqual(TransportModes.Car, link.TransportMode);
+
+            link = new Link(mumbai, buenosAires, 10, TransportModes.Ship);
+            Assert.AreEqual(TransportModes.Ship, link.TransportMode);
+        }
+
+        [TestMethod]
+        public void TestTask1FindCityInCities()
+        {
+            string expectedCity = "Zürich";
+            Cities cities = new Cities();
+            cities.ReadCities(CitiesTestFile);
+
+            City notFound = cities.FindCity("noCity");
+            Assert.IsNull(notFound);
+            City found = cities.FindCity(expectedCity);
+            Assert.AreEqual(expectedCity, found.Name);
+
+            // should work case insensitive
+            found = cities.FindCity("züRicH");
+            Assert.AreEqual(expectedCity, found.Name);
+        }
+
+        [TestMethod]
+        public void TestRoutesReadLinks()
+        {
+            Cities cities = new Cities();
+            cities.ReadCities(CitiesTestFile);
+
+            Routes routes = new Routes(cities);
+
+            int count = routes.ReadRoutes(LinksTestFile);
+            Assert.AreEqual(7, count);
+        }
+
+
+        [TestMethod]
+        public void TestTask2FiredEvents()
+        {
+            Cities cities = new Cities();
+            cities.ReadCities(CitiesTestFile);
+
+            Routes routes = new Routes(cities);
+
+            // test available cities
+            routes.RouteRequestEvent += TestForCorrectEventArgsWithFoundCities;
+            routes.FindShortestRouteBetween("Bern", "Zürich", TransportModes.Rail);
+
+            // test not existing cities
+            routes.RouteRequestEvent -= TestForCorrectEventArgsWithFoundCities;
+            routes.RouteRequestEvent += TestForCorrectEventArgsWithNotFoundCities;
+            routes.FindShortestRouteBetween("doesNotExist", "either", TransportModes.Rail);
+        }
+
+        public void TestForCorrectEventArgsWithFoundCities(object sender, RouteRequestEventArgs e)
+        {
+
+            Assert.AreEqual("Bern", e.FromCity.Name);
+            Assert.AreEqual("Zürich", e.ToCity.Name);
+        }
+
+        public void TestForCorrectEventArgsWithNotFoundCities(object sender, RouteRequestEventArgs e)
+        {
+
+            Assert.AreEqual("doesNotExist", e.FromCity.Name);
+            Assert.AreEqual("either", e.ToCity.Name);
+        }
+
+        [TestMethod]
+        public void TestTask2EventWithNoObserver()
+        {
+            Cities cities = new Cities();
+            cities.ReadCities(CitiesTestFile);
+
+            Routes routes = new Routes(cities);
+
+            // must run without exception
+            routes.FindShortestRouteBetween("Bern", "Zürich", TransportModes.Rail);
+        }
+
+        [TestMethod]
+        public void TestRequestWatcher()
+        {
+            RouteRequestWatcher reqWatch = new RouteRequestWatcher();
+
+            Cities cities = new Cities();
+            cities.ReadCities(CitiesTestFile);
+
+            Routes routes = new Routes(cities);
+
+            routes.RouteRequestEvent += reqWatch.LogRouteRequests;
+
+            routes.FindShortestRouteBetween("Bern", "Zürich", TransportModes.Rail);
+            routes.FindShortestRouteBetween("Bern", "Zürich", TransportModes.Rail);
+            routes.FindShortestRouteBetween("Basel", "Bern", TransportModes.Rail);
+
+            Assert.AreEqual(reqWatch.GetCityRequests("Zürich"), 2);
+            Assert.AreEqual(reqWatch.GetCityRequests("Bern"), 1);
+            Assert.AreEqual(reqWatch.GetCityRequests("Basel"), 0);
+        }
+    }
+}

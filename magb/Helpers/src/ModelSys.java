@@ -20,7 +20,7 @@ public class ModelSys {
 		U = U.times(T);
 	}
 	
-	Matrix getModelMatrix() { return new Matrix(); }
+	Matrix getModelMatrix() { return U; }
 		
 	double[] getModelMatrixLinear() { 
 		double[] a = new double[16];

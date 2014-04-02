@@ -1,0 +1,12 @@
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\obj\Debug\RoutePlannerTest.csprojResolveAssemblyReference.cache
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\bin\Debug\data\citiesTestDataLab2.txt
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\bin\Debug\data\citiesTestDataLab3.txt
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\bin\Debug\data\citiesTestDataLab4.txt
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\bin\Debug\data\linksTestDataLab3.txt
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\bin\Debug\data\linksTestDataLab4.txt
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerTest.dll
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerTest.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerLib.dll
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\bin\Debug\RoutePlannerLib.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\obj\Debug\RoutePlannerTest.dll
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerTest\obj\Debug\RoutePlannerTest.pdb

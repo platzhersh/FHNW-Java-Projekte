@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
+{
+    public class RoutesFactory
+    {
+        public static IRoutes Create(Cities cities)
+        {
+            // HERE COMES THE IMPLEMENTATION 
+            return new Routes(new Cities());
+        }
+
+    }
+}

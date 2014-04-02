@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SWENT-Buttons
+Bundle-SymbolicName: ch.fhnw.swent.osgi.buttons
+Bundle-Version: 1.0.0
+Bundle-Activator: ch.fhnw.swent.osgi.buttons.Activator
+Bundle-Vendor: Wolfgang Weck
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.osgi.framework;version="1.3.0"
+Require-Bundle: ch.fhnw.swent.osgi.logger;bundle-version="1.0.0"
