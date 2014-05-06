@@ -21,6 +21,7 @@ public class EulerAngles implements WindowListener, GLEventListener,
     double bottom, top;
     double near=-100, far=100;
     GLU glu = new GLU();                                  // Objekt fuer Utility-Library
+    GLUT glut = new GLUT();                                  // Objekt fuer Utility-Library
     GLCanvas canvas;                                      // OpenGL-Window
 
 
@@ -100,6 +101,18 @@ public class EulerAngles implements WindowListener, GLEventListener,
         GL2 gl = gl0.getGL2();
         gl.glClearColor(0.0f, 0.0f, 1.0f, 1.0f);                  // erasing color (RGBA)
         gl.glEnable(gl.GL_DEPTH_TEST);                            // Sichtbarkeitstest (z-Buffer)
+        gl.glEnable(gl.GL_LIGHTING);
+        
+        gl.glEnable(gl.GL_NORMALIZE);
+        
+        // Umgebungslicht 
+        float[] amb = { 0.4f, 0.4f, 0.4f, 1.0f }; // RGBA Werte
+        gl.glLightModelfv(gl.GL_LIGHT_MODEL_AMBIENT, amb, 0);
+        
+        // Lichtquelle 1
+        gl.glEnable(gl.GL_LIGHT0);
+        float[] lightPos = {1, 1 , 1, 1};
+        gl.glLightfv(gl.GL_LIGHT0, gl.GL_POSITION, lightPos, 0);
      }
 
 
@@ -128,6 +141,8 @@ public class EulerAngles implements WindowListener, GLEventListener,
         gl.glMultMatrixd(modelSys.getModelMatrixLinear(), 0);
         
         zeichneAchsen(gl,2);
+        
+        glut.glutSolidTeapot(0.5);
      }
 
 
@@ -142,6 +157,7 @@ public class EulerAngles implements WindowListener, GLEventListener,
         top=aspect*right;
         gl.glMatrixMode(gl.GL_PROJECTION);
         gl.glLoadIdentity();                                     // Rueckstellung (Einheitsmatrix)
+        //gl.glFrustum(left,right,bottom,top,near,far);              // ViewingVolume fuer Zentralprojektion
         gl.glOrtho(left,right,bottom,top,near,far);              // ViewingVolume fuer Orthogonalprojektion
      }
 

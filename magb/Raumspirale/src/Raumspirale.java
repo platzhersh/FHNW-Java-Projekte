@@ -91,7 +91,7 @@ public class Raumspirale implements WindowListener, GLEventListener, KeyListener
     	 
     	 glu.gluLookAt(x, y, z,                         // Kamera-System positionieren
                  0, 0, 0,
-                 0, 1, 0);
+                 upX, upY, upZ);
      }
 
 
@@ -155,19 +155,27 @@ public class Raumspirale implements WindowListener, GLEventListener, KeyListener
 		int v = e.getKeyCode();
 		switch (v) {
 			case KeyEvent.VK_UP : 
-				beta+=10;
+				beta+= 5;
+				beta = beta % 360;
+				if (beta/90 > 1 && beta/270 <= 1) upY=-1;
+				else upY=1;
+				
+				System.out.println(beta);
 				canvas.repaint();
 				break;
-			case KeyEvent.VK_DOWN : 
-				beta-=10;
+			case KeyEvent.VK_DOWN :
+				beta -= 5;
+				if (-beta/90 > 1 && beta/270 <= 1) upY=-1;
+				else upY=1;
+				System.out.println(beta);
 				canvas.repaint();
 				break;
 			case KeyEvent.VK_LEFT : 
-				alpha-=10;
+				alpha-= 5;
 				canvas.repaint();
 				break;
 			case KeyEvent.VK_RIGHT : 
-				alpha+=10;
+				alpha+= 5;
 				canvas.repaint();
 				break;
 		}

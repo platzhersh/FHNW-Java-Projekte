@@ -1,6 +1,7 @@
 D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerLib\bin\Debug\RoutePlannerLib.dll
 D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerLib\bin\Debug\RoutePlannerLib.pdb
-D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerLib\obj\Debug\RoutePlannerLib.csprojResolveAssemblyReference.cache
 D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerLib\obj\Debug\RoutePlannerLib.dll
 D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerLib\obj\Debug\RoutePlannerLib.pdb
 D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerLib\bin\Debug\RoutePlannerLib.dll.config
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerLib\obj\Debug\RoutePlannerLib.csproj.ResolveComReference.cache
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\RoutePlanner\RoutePlanner\RoutePlannerLib\obj\Debug\RoutePlannerLib.csprojResolveAssemblyReference.cache

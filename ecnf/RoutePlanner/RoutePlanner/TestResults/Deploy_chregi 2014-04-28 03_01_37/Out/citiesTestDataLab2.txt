@@ -1,0 +1,10 @@
+Mumbai	India	12383146	18.96	72.82
+Buenos Aires	Argentina	12116379	-34.61	-58.37
+Karachi	Pakistan	10537226	24.86	67.01
+Dhaka	Bangladesh	8942250	23.70	90.39
+Manila	Philippines	10232924	14.62	120.97
+Dilli	India	10203687	28.67	77.21
+São Paulo	Brazil	10194978	-23.53	-46.63
+Istanbul	Turkey	9418987	41.01	28.96
+Shanghai	China	9005576	31.23	121.47
+Jakarta	Indonesia	8827879	-6.18	106.83

@@ -24,8 +24,8 @@ public class Pyramide implements WindowListener, GLEventListener, KeyListener
     GLCanvas canvas;
     
     // Pyramidenmasse
-    double l = 1;
-    double h = l / 2;
+    double l = 3;
+    double h = 2*l / 3;
 
     GLU glu = new GLU();                                  // Objekt fuer Utility-Library
 
@@ -43,7 +43,19 @@ public class Pyramide implements WindowListener, GLEventListener, KeyListener
         gl.glEnd();
      }
      private void doLighting( GL2 gl ) {
-    	 // do something
+    	 gl.glEnable(gl.GL_LIGHTING);
+    	 gl.glEnable(gl.GL_LIGHT0);
+    	 gl.glEnable(gl.GL_NORMALIZE ); // Normalenvektoren automatisch normieren
+    	 float[ ] amb = { 0.4f, 0.4f, 0.4f, 1.0f } ; // S treulicht (RGBA-Werte)
+    	 gl.glLightModelfv(gl.GL_LIGHT_MODEL_AMBIENT, amb, 0);
+         float[] lightPos = { 5, 5, 5 , 1 } ; // Koordinaten der Lichtquelle (homogene Koord.)
+     	 gl.glLightfv(gl.GL_LIGHT0, gl.GL_POSITION, lightPos, 0);
+     	 
+     	// zeichne Lichtstrahl
+     	 gl.glBegin(gl.GL_LINE);
+     	 gl.glVertex3d(0,0,0);
+     	 gl.glVertex3d(10,10,10);
+     	 gl.glEnd();
      }
 
      void zeichneDreieck(GL2 gl)
@@ -52,13 +64,17 @@ public class Pyramide implements WindowListener, GLEventListener, KeyListener
         
         // Grundfläche
         gl.glVertex3d(0,0,0);
-        gl.glVertex3d(l,0,0);
-        gl.glVertex3d(l,0,l);
-        gl.glVertex3d(0,0,l);
-        gl.glVertex3d(l/2,h,l/2);
-        gl.glVertex3d(l,0,l);
-        gl.glVertex3d(l,0,0);
-        gl.glVertex3d(l/2,h,l/2);
+        gl.glVertex3d(3,0,0);
+        gl.glVertex3d(3,0,3);
+        gl.glVertex3d(0,0,3);
+        gl.glVertex3d(3/2,h,3/2);
+        gl.glVertex3d(3,0,3);
+        gl.glVertex3d(3,0,0);
+        gl.glVertex3d(3/2,h,3/2);
+        
+        double[] n1 = {-1, 0, 1};
+        gl.glNormal3dv(n1,0);
+        
         //gl.glVertex3d(a/2,a/2,a);
         gl.glEnd();
      }
@@ -126,6 +142,7 @@ public class Pyramide implements WindowListener, GLEventListener, KeyListener
         zeichneDreieck(gl);
         gl.glColor3d(255,255,255);
         zeichneAchsen(gl,2);
+        
         doLighting(gl);
      }
 

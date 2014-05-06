@@ -1,0 +1,6 @@
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\GarbageCollector\GarbageCollector\bin\Debug\GarbageCollector.exe.config
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.csprojResolveAssemblyReference.cache
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\GarbageCollector\GarbageCollector\bin\Debug\GarbageCollector.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\GarbageCollector\GarbageCollector\bin\Debug\GarbageCollector.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\GarbageCollector\GarbageCollector\obj\Debug\GarbageCollector.pdb

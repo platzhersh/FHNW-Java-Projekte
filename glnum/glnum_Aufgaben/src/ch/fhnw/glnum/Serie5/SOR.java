@@ -35,12 +35,12 @@ public class SOR {
     double[] b   =   {  6 , 25 , -11 , -11 };
 
     */
-    int n = 4;
-      double[][] A = { {  2 , 1 , -1 , 1 },
-                     {  1 ,-2 ,  1 ,-2 },
-                     {  2 , 2 ,  5 ,-1 },
-                     {  1 ,-1 ,  1 , 4 }};
-    double[] b   =   {  4 , 5 ,  6 , 7 };
+//    int n = 4;
+//      double[][] A = { {  2 , 1 , -1 , 1 },
+//                     {  1 ,-2 ,  1 ,-2 },
+//                     {  2 , 2 ,  5 ,-1 },
+//                     {  1 ,-1 ,  1 , 4 }};
+//    double[] b   =   {  4 , 5 ,  6 , 7 };
     /*
     int n = 6;
     double[][] A = { { 4 , -1 , 0 , -1 , 0 , 0 },
@@ -51,6 +51,15 @@ public class SOR {
                      { 0 ,  0 , -1,  0 ,-1 , 4 }};
     double[] b   =   { 0 ,  5 , 0 ,  6 ,-2 , 6 };
           */
+	  
+	int n = 4;
+    double[][] A = { { 4,2,0,0 },
+                     { 3,5,-2,0 },
+                     { 0,-1,4,2},
+                     { 0,0,-3,8 }
+                     };
+    double[] b   =   { 6, -5, 15, -1 };
+          
 
     double[][] T = new double [n][n];
     double[] xOld= new double [n];
@@ -60,7 +69,8 @@ public class SOR {
       for (int k = 0; k < n ; k++)  T[i][k] = (-1.0)*A[i][k]/A[i][i];
       T[i][i]=0.0;
       b[i]=b[i]/A[i][i];
-      x[i]=b[i];
+      //x[i]=b[i];
+      x[i]=0;
     }
     
     int count=0;

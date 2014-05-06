@@ -1,0 +1,6 @@
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WindowsAsync\bin\Debug\WindowsAsync.exe.config
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WindowsAsync\bin\Debug\WindowsAsync.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WindowsAsync\bin\Debug\WindowsAsync.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WindowsAsync\obj\Debug\WindowsAsync.csprojResolveAssemblyReference.cache
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WindowsAsync\obj\Debug\WindowsAsync.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WindowsAsync\obj\Debug\WindowsAsync.pdb

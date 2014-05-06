@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using Excel = Microsoft.Office.Interop.Excel;
+
+namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib.Export
+{
+    public class ExcelExchange
+    {
+        public void WriteToFile(String fileName, City from, City to, List<Link> links)
+        {
+            var excel = new Excel.Application();
+            excel.Workbooks.Add();
+            excel.Range["A1"].Value = "ID";
+            excel.Range["B1"].Value = "Balance";
+            excel.Range["A2"].Select();
+            Excel._Workbook doc = excel.ActiveWorkbook;
+            excel.Selection.Text = "Test";
+            excel.Selection.Paste();
+            doc.SaveAs("Test.xlsx");
+            doc.Close();
+        }
+    }
+}

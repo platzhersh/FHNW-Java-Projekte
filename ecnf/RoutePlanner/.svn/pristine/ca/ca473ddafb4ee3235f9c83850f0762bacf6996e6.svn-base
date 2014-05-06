@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using Fhnw.Ecnf.RoutePlanner.RoutePlannerLib;
+using Fhnw.Ecnf.RoutePlanner.RoutePlannerLib.Export;
+
+
+namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerConsole
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var assembly = Assembly.GetExecutingAssembly().FullName;
+            var version = assembly.Split(',')[1].Split('=')[1];
+            Console.Out.WriteLine("Welcome to RoutePlanner (Version {0})", arg0: version);
+
+            var wayPoint = new WayPoint("Windisch", 47.479319847061966, 8.212966918945312); 
+            Console.WriteLine("{0}: {1}/{2}", wayPoint.Name, wayPoint.Latitude, wayPoint.Longitude);
+            Console.Out.WriteLine("--------------");
+            Console.Out.WriteLine(wayPoint);
+
+            RoutesFactory.Create(new Cities());
+
+            string excelFileName = Directory.GetCurrentDirectory() + @"\ExportTest.xlsx";
+            ExcelExchange excel = new ExcelExchange();
+            Console.WriteLine("Export Path is: {0}", excelFileName);
+            City bern = new City("Bern", "Switzerland", 5000, 46.95, 7.44);
+            City zuerich = new City("Zürich", "Switzerland", 100000, 32.876174, 13.187507);
+            City aarau = new City("Aarau", "Switzerland", 10000, 35.876174, 12.187507);
+            Link link1 = new Link(bern, aarau, 15, TransportModes.Ship);
+            Link link2 = new Link(aarau, zuerich, 20, TransportModes.Ship);
+            List<Link> links = new List<Link>();
+            links.Add(link1);
+            links.Add(link2);
+            excel.WriteToFile(excelFileName, bern, zuerich, links);
+        }
+       
+    }
+}
