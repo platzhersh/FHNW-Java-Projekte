@@ -1,0 +1,118 @@
+Zürich	Winterthur
+Genève	Lyon
+Basel	Liestal
+Liestal	Aarau
+Bern	Thun
+Lausanne	Genève
+Winterthur	Frauenfeld
+Sankt Gallen	 Dornbirn
+Luzern	Bern
+Biel	Solothurn
+Biel	Bern
+Solothurn	Bern
+Bern	Neuchâtel
+Aarau	Bern
+Köniz	Bern
+La Chaux-de-Fonds	Neuchâtel
+Schaffhausen	Zürich
+Schaffhausen	Basel
+Fribourg	Bern
+Lausanne	Fribourg
+Neuchâtel	Biel
+Chur	Zürich
+Thun	Milano
+Uster	Zürich
+Sion	Lausanne
+Zug	Luzern
+Frauenfeld	Sankt Gallen
+Bellinzona	Altdorf
+Aarau	Zürich
+Herisau	Sankt Gallen
+Solothurn	Aarau
+Schwyz	Luzern
+Schwyz	Zug
+Delémont	Basel
+Biel	Delémont
+Sarnen	Luzern
+Altdorf	Schwyz
+Stans	Luzern
+Glarus	Zürich
+Appenzell	Sankt Gallen
+Sion	Milano
+Zug	Zürich
+Basel	Mulhouse
+Bellinzona	Milano
+Roma	Firenze
+Milano	Torino
+Napoli	Roma
+Napoli	Salerno
+Torino	Genova
+Palermo	 Messina
+Genova	 Nice
+Bologna	Firenze
+Bologna	Milano
+Milano	Genova
+Firenze	Genova
+Bari	Foggia
+Catania	Messina
+Venezia	Padova
+Verona	Milano
+Verona	Padova
+Messina	Reggio di Calabria
+Trieste	Venezia
+Taranto	Bari
+Reggio di Calabria	Salerno
+Ancona	Pescara
+Rimini	Ancona
+Rimini	Bologna
+Siracusa	Catania
+Pescara	Foggia
+Feldkirch	 Dornbirn
+Bregenz	Dornbirn
+Bregenz	Augsburg
+Bregenz	Ulm
+Innsbruck	 Feldkirch
+Salzburg	Innsbruck
+Salzburg	München
+Innsbruck	Augsburg
+Linz	Salzburg
+Wien	Graz
+Linz	Sankt Pölten
+Sankt Pölten	Wien
+Wiener Neustadt	 Wien
+Berlin	Dresden
+Hamburg	Berlin
+München	Nürnberg
+München	Augsburg
+Augsburg	Ulm
+Ulm	Stuttgart
+Köln	Frankfurt
+Frankfurt	Mannheim
+Frankfurt	Hannover
+Hannover	Berlin
+Karlsruhe	Mannheim
+Stuttgart	Mannheim
+Hannover	Hamburg
+Würzburg	Frankfurt
+Nürnberg	Würzburg
+Würzburg	Hannover
+Leipzig	Nürnberg
+Leipzig	Berlin
+Dresden	Frankfurt
+Karlsruhe	Freiburg
+Freiburg	Basel
+Paris	Lille
+Paris	Le Havre
+Besançon	Belfort
+Besançon	Dijon
+Colmar	Strasbourg
+Mulhouse	Colmar
+Belfort	Mulhouse
+Nancy	Paris
+Strasbourg	Nancy
+Marseille	Avignon
+Avignon	Lyon
+Marseille	Nice
+Lyon	Mâcon
+Mâcon	Dijon
+Dijon	Paris

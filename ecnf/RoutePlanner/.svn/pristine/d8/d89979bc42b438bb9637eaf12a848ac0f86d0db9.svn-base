@@ -1,0 +1,278 @@
+using System.Diagnostics;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Threading.Tasks;
+
+namespace Fhnw.Ecnf.RoutePlanner.RoutePlannerLib
+{
+    public class Routes : IRoutes
+    {
+        List<Link> routes = new List<Link>();
+        Cities cities;
+
+        private static TraceSource routesTrace = new TraceSource("RoutesTrace");
+
+        public delegate void RouteRequestHandler(object sender, RouteRequestEventArgs e);
+
+        public RouteRequestHandler RouteRequestEvent;
+
+        public int Count
+        {
+            get { return routes.Count; }
+        }
+
+        public Routes(Cities cities)
+        {
+            this.cities = cities;
+        }
+
+
+        public int ReadRoutes(string filename)
+        {
+            routesTrace.TraceInformation("ReadRoutes started");
+            try
+            {
+                using (TextReader reader = new StreamReader(filename))
+                {
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        var linkAsString = line.Split('\t');
+                        City city1 = cities.FindCity(linkAsString[0]);
+                        City city2 = cities.FindCity(linkAsString[1]);
+
+                        // only add links, where the cities are found 
+                        if ((city1 != null) && (city2 != null))
+                        {
+                            routes.Add(new Link(city1, city2, city1.Location.Distance(city2.Location),
+                                TransportModes.Rail));
+                        }
+                    }
+                }
+            }
+            catch (FileNotFoundException e)
+            {
+                SourceLevels oldLevel = routesTrace.Switch.Level;
+                routesTrace.Switch.Level = SourceLevels.Critical;
+                routesTrace.TraceEvent(TraceEventType.Critical, 1, e.StackTrace);
+                routesTrace.Switch.Level = oldLevel;
+            }
+
+            routesTrace.TraceInformation("ReadRoutes ended");
+            routesTrace.Close();
+
+            return Count;
+        }
+
+ 
+
+        public List<Link> FindShortestRouteBetween(string fromCity, string toCity, TransportModes mode)
+        {
+            if (RouteRequestEvent != null)
+            {
+                RouteRequestEvent(this,
+                    new RouteRequestEventArgs(new City(fromCity, "", 0, 0, 0),
+                                              new City(toCity, "", 0, 0, 0), mode));
+            }
+
+            List<City> citiesBetween = FindCitiesBetween(fromCity, toCity);
+            if (citiesBetween == null || citiesBetween.Count < 1 ||
+               routes == null || routes.Count < 1)
+                return null;
+
+            City source = citiesBetween[0];
+            City target = citiesBetween[citiesBetween.Count - 1];
+
+            Dictionary<City, double> dist;
+            Dictionary<City, City> previous;
+            List<City> cityNodes = FillListOfNodes(citiesBetween, out dist, out previous);
+            dist[source] = 0.0;
+
+            // the actual algorithm
+            previous = SearchShortestPath(mode, cityNodes, dist, previous);
+
+            // create a list with all cities on the route
+            List<City> citiesOnRoute = GetCitiesOnRoute(source, target, previous);
+
+            // prepare final list if links
+            List<Link> itinerary = FindPath(citiesOnRoute, mode);
+
+
+            return itinerary;
+        }
+
+        private Dictionary<City, City> SearchShortestPath(TransportModes mode,
+                         List<City> cityNodesList, Dictionary<City, double> dist, Dictionary<City, City> previous)
+        {
+            while (cityNodesList.Count > 0)
+            {
+                City u = null;
+                double minDist = double.MaxValue;
+                // find city u with smallest dist
+                foreach (City c in cityNodesList)
+                {
+                    if (dist[c] < minDist)
+                    {
+                        u = c;
+                        minDist = dist[c];
+                    }
+                }
+                if (u != null)
+                {
+                    cityNodesList.Remove(u);
+                    foreach (City n in FindNeighbours(u, mode))
+                    {
+                        Link l = FindLink(u, n, mode);
+                        double d = dist[u];
+                        if (l != null)
+                        {
+                            d += l.Distance;
+                        }
+                        else
+                        {
+                            d += double.MaxValue;
+                        }
+                        if (dist.ContainsKey(n) && d < dist[n])
+                        {
+                            dist[n] = d;
+                            previous[n] = u;
+                        }
+                    }
+                }
+                else
+                {
+                    break;
+                }
+
+            }
+
+            return previous;
+        }
+
+        /// <summary>
+        /// Find all cities between 2 cities 
+        /// </summary>
+        /// <param name="fromName">source city</param>
+        /// <param name="toName">target city</param>
+        /// <returns>list of cities</returns>
+        public List<City> FindCitiesBetween(string fromName, string toName)
+        {
+            City from = cities.FindCity(fromName);
+            City to = cities.FindCity(toName);
+            return cities.FindCitiesBetween(from, to);
+        }
+
+        /// <summary>
+        /// Return distinct list of cities contained in at least one route with the given transportMode
+        /// </summary>
+        /// <param name="transportMode"></param>
+        /// <returns></returns>
+        public City[] FindCities(TransportModes transportMode)
+        {
+            return (from r in routes where r.TransportMode.Equals(transportMode) select r.ToCity)
+                .Union((from r in routes where r.TransportMode.Equals(transportMode) select r.FromCity))
+                .Distinct()
+                .ToArray();
+        }
+
+        /// <summary>
+        /// Finds the link between two cities.
+        /// </summary>
+        /// <param name="c1">first city</param>
+        /// <param name="c2">second city</param>
+        /// <param name="t"></param>
+        /// <returns>found link or null</returns>
+
+        protected Link FindLink(City c1, City c2, TransportModes t)
+        {
+            foreach (Link l in routes)
+            {
+                if (t.Equals(l.TransportMode) &&
+                          ((c1.Equals(l.FromCity) && c2.Equals(l.ToCity))
+                        || (c2.Equals(l.FromCity) && c1.Equals(l.ToCity))))
+                {
+                    return new Link(c1, c2, l.Distance, TransportModes.Rail);
+                }
+            }
+            return null;
+        }
+
+        protected List<Link> FindPath(List<City> citiesOnRoute, TransportModes mode)
+        {
+            City to = null;
+            List<Link> itinerary = new List<Link>();
+            foreach (City c in citiesOnRoute)
+            {
+                City from = to;
+                to = c;
+                if (from != null)
+                {
+                    Link l = FindLink(from, to, mode);
+                    if (l != null)
+                    {
+                        itinerary.Add(l);
+                    }
+                }
+            }
+            return itinerary;
+        }
+        private static List<City> FillListOfNodes(List<City> cities,
+                      out Dictionary<City, double> dist, out Dictionary<City, City> previous)
+        {
+            List<City> cityNodesList = new List<City>(); // the set of all nodes (cities) in Graph ;
+            dist = new Dictionary<City, double>();
+            previous = new Dictionary<City, City>();
+            foreach (City v in cities)
+            {
+                dist[v] = double.MaxValue;
+                previous[v] = null;
+                cityNodesList.Add(v);
+            }
+
+            return cityNodesList;
+        }
+
+        private List<City> GetCitiesOnRoute(City source, City target, Dictionary<City, City> previous)
+        {
+            List<City> citiesOnRoute = new List<City>();
+            City cr = target;
+            while (previous[cr] != null)
+            {
+                citiesOnRoute.Add(cr);
+                cr = previous[cr];
+            }
+            citiesOnRoute.Add(source);
+
+            citiesOnRoute.Reverse();
+            return citiesOnRoute;
+        }
+
+        /// <summary>
+        /// Finds all neighbor cities of a city. 
+        /// </summary>
+        /// <param name="city">source city</param>
+        /// <param name="mode">transportation mode</param>
+        /// <returns>list of neighbor cities</returns>
+        private List<City> FindNeighbours(City city, TransportModes mode)
+        {
+            List<City> neighbors = new List<City>();
+            foreach (Link r in routes)
+            {
+                if (mode.Equals(r.TransportMode))
+                {
+                    if (city.Equals(r.FromCity))
+                    {
+                        neighbors.Add(r.ToCity);
+                    }
+                    else if (city.Equals(r.ToCity))
+                    {
+                        neighbors.Add(r.FromCity);
+                    }
+                }
+            }
+            return neighbors;
+        }
+    }
+}

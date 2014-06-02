@@ -6,6 +6,9 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.ImageData;
 import org.eclipse.swt.graphics.RGB;
 
+import utils.Matrix;
+import utils.Vector;
+
 public class Rotation implements IImageProcessor {
 
 	@Override
@@ -16,12 +19,64 @@ public class Rotation implements IImageProcessor {
 
 	@Override
 	public Image run(Image input, int imageType) {
-		// TODO Auto-generated method stub
-		ImageData id1 = (ImageData) input.getImageData().clone();
-		ImageData id2 = (ImageData) input.getImageData().clone();
-		String deg = JOptionPane.showInputDialog("text");
+
+
+		
+		
+		
+		ImageData id = (ImageData) input.getImageData().clone();
+		String deg = JOptionPane.showInputDialog("Rotationswinkel in Grad");
 		ImageData inData = input.getImageData();
-		int height = inData.height;
+		
+		//Matrix trans1 = Matrix.translation(-inData.width/2, -inData.height/2);
+		//Matrix trans2 = Matrix.translation(inData.width/2, inData.height/2);
+		Matrix rot = Matrix.rotation2d(Double.parseDouble(deg));
+		Matrix scale = Matrix.scale(2);
+		
+		for (int i = 0; i < inData.width; i++) {
+			for (int j = 0; j < inData.height; j++) {
+				id.setPixel(i, j, 0);
+				
+				Vector vin = new Vector(i, j, 1);
+								
+				//Vector vout = scale.times(trans2.times(rot.times((trans1.times(vin)))));
+				//Vector vout = trans1.times(vin);
+				Matrix trans1 = Matrix.translation(-i, -j);
+				Matrix trans2 = Matrix.translation(i, j);
+				
+				Vector vout = new Vector(0,0,0);
+				try {
+					vout = trans2.times((Vector) rot.times(trans1.times(vin)));
+				} catch (Exception e) {
+					System.out.println(e.toString());
+				}
+				
+				
+				int x = (int) vout.x(0);
+				int y = (int) vout.x(1);
+
+				//System.out.println("hm. x="+x+", y="+y+", i="+i+", j="+j);
+
+				if (x < inData.width && x >= 0 && y < inData.height && y >= 0) {
+						//id2.setPixel(x, y, inData.getPixel(i, j));
+						id.setPixel(i, j, inData.getPixel(x, y));
+				} 
+			}
+			
+		}
+		Matrix trans1 = Matrix.translation(100, 100);
+		trans1.print();
+		
+		Vector vin = new Vector(10, 10, 1);
+		vin.print();
+		
+		Vector vout = trans1.times(vin);
+		vout.print();
+		
+		
+		
+		/*
+		// Rotate variante 2
 		
 		double cosa = Math.cos(Math.toRadians(Double.parseDouble(deg)));
 		double sina = Math.sin(Math.toRadians(Double.parseDouble(deg)));
@@ -29,10 +84,6 @@ public class Rotation implements IImageProcessor {
 		
 		int x = 0;
 		int y = 0;
-		
-		
-		
-		// Rotate
 		
 		// find center to determine offset of mapped image
 		int lcX = (int) (cosa*(inData.width/2)+sina*(inData.height/2));
@@ -42,28 +93,22 @@ public class Rotation implements IImageProcessor {
 		
 		for (int i = 0; i < inData.width; i++) {
 			for (int j = 0; j < inData.height; j++) {
-				id2.setPixel(i, j, 0);
+				id.setPixel(i, j, 0);
 				x = (int) (cosa*i+sina*j) + offsetX;
 				y = (int) ((-sina)*i+cosa*j) + offsetY;
-				
+
 				//System.out.println("hm. x="+x+", y="+y+", i="+i+", j="+j);
 
 				if (x < inData.width && x >= 0 && y < inData.height && y >= 0) {
 						//id2.setPixel(x, y, inData.getPixel(i, j));
-						id2.setPixel(i, j, inData.getPixel(x, y));
-				} else {
-					/*if (x > inData.width) {
-						System.out.println("Problem at ("+x+","+y+"): x too big");
-					} else if ( y > inData.height) {
-						System.out.println("Problem at ("+x+","+y+"): y too big");
-					} else {
-						System.out.println("Problem at ("+x+","+y+"): ???");
-					}*/
+						id.setPixel(i, j, inData.getPixel(x, y));
+				} 
 					}
 			}
 		}
 		
-		return new Image(input.getDevice(), id2);
+		*/
+		return new Image(input.getDevice(), id);
 	}
 	
 	

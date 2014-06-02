@@ -1,0 +1,6 @@
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WebPagePingTPL\WebPagePingTPL\bin\Debug\WebPagePingTPL.exe.config
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WebPagePingTPL\WebPagePingTPL\bin\Debug\WebPagePingTPL.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WebPagePingTPL\WebPagePingTPL\bin\Debug\WebPagePingTPL.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WebPagePingTPL\WebPagePingTPL\obj\Debug\WebPagePingTPL.csprojResolveAssemblyReference.cache
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WebPagePingTPL\WebPagePingTPL\obj\Debug\WebPagePingTPL.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\WebPagePingTPL\WebPagePingTPL\obj\Debug\WebPagePingTPL.pdb

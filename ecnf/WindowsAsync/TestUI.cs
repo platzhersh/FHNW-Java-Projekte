@@ -47,6 +47,7 @@ namespace WindowsAsync
             // TODO: make this call asynchronous
             await DisplayNumberOfPrimes();
             // shows the current time
+            Console.WriteLine("show current time call");
             await ShowCurrentTime();
 
         }

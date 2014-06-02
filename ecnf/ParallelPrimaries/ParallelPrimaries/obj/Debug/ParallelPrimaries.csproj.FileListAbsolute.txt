@@ -1,0 +1,5 @@
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\ParallelPrimaries\ParallelPrimaries\bin\Debug\ParallelPrimaries.exe.config
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\ParallelPrimaries\ParallelPrimaries\bin\Debug\ParallelPrimaries.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\ParallelPrimaries\ParallelPrimaries\bin\Debug\ParallelPrimaries.pdb
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\ParallelPrimaries\ParallelPrimaries\obj\Debug\ParallelPrimaries.exe
+D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\ecnf\ParallelPrimaries\ParallelPrimaries\obj\Debug\ParallelPrimaries.pdb

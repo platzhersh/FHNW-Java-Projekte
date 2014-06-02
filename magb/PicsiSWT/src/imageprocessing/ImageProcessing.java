@@ -39,6 +39,7 @@ public class ImageProcessing {
 		// TODO add here further image processing objects (they are inserted into the Image menu)
 		m_menuItems.add(new ImageMenuItem("&Rotate\tF2", SWT.F2, new Rotation()));
 		m_menuItems.add(new ImageMenuItem("&Offset\tF2", SWT.F3, new Offset()));
+		m_menuItems.add(new ImageMenuItem("&PatternMatching\tF4", SWT.F4, new PM()));
 	}
 	
 	public void createMenuItems(Menu menu) {
