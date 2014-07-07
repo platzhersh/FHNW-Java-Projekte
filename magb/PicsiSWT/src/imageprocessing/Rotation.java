@@ -18,11 +18,7 @@ public class Rotation implements IImageProcessor {
 	}
 
 	@Override
-	public Image run(Image input, int imageType) {
-
-
-		
-		
+	public Image run(Image input, int imageType) {		
 		
 		ImageData id = (ImageData) input.getImageData().clone();
 		String deg = JOptionPane.showInputDialog("Rotationswinkel in Grad");
@@ -32,7 +28,7 @@ public class Rotation implements IImageProcessor {
 		//Matrix trans2 = Matrix.translation(inData.width/2, inData.height/2);
 		Matrix rot = Matrix.rotation2d(Double.parseDouble(deg));
 		Matrix scale = Matrix.scale(2);
-		
+		/*
 		for (int i = 0; i < inData.width; i++) {
 			for (int j = 0; j < inData.height; j++) {
 				id.setPixel(i, j, 0);
@@ -58,12 +54,12 @@ public class Rotation implements IImageProcessor {
 				//System.out.println("hm. x="+x+", y="+y+", i="+i+", j="+j);
 
 				if (x < inData.width && x >= 0 && y < inData.height && y >= 0) {
-						//id2.setPixel(x, y, inData.getPixel(i, j));
+						//id.setPixel(x, y, inData.getPixel(i, j));
 						id.setPixel(i, j, inData.getPixel(x, y));
 				} 
 			}
 			
-		}
+		}*/
 		Matrix trans1 = Matrix.translation(100, 100);
 		trans1.print();
 		
@@ -75,8 +71,8 @@ public class Rotation implements IImageProcessor {
 		
 		
 		
-		/*
-		// Rotate variante 2
+		
+		// Rotate variante 2 (working)
 		
 		double cosa = Math.cos(Math.toRadians(Double.parseDouble(deg)));
 		double sina = Math.sin(Math.toRadians(Double.parseDouble(deg)));
@@ -105,9 +101,9 @@ public class Rotation implements IImageProcessor {
 				} 
 					}
 			}
-		}
 		
-		*/
+		
+		
 		return new Image(input.getDevice(), id);
 	}
 	
