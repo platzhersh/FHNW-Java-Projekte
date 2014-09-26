@@ -1,4 +1,4 @@
-package tasks;
+
 
 import java.io.*;
 import java.util.*;
@@ -11,10 +11,11 @@ public class StreetParade
     Scanner in=new Scanner(new File("streetparade.in"));
     PrintWriter out=new PrintWriter("streetparade.out");
     
-    Stack<Integer> sidestreet = new Stack();
-    Stack<Integer> parade = new Stack();
+    Stack<Integer> sidestreet = new Stack<Integer>();
+    Stack<Integer> parade = new Stack<Integer>();
 
-    
+    // skip first line (number of lovemobiles)
+    in.nextLine();
     
     // Try to maneuver the lovemobiles into the parade by using the sidestreet
     
@@ -33,7 +34,7 @@ public class StreetParade
 
     // return true or false for possible or impossible
     
-	out.println(sidestreet.empty());
+	out.println(sidestreet.empty() ? "yes" : "no");
 	Date stop = new Date();
 	System.out.println("time: " + (stop.getTime() - start.getTime() + "ms"));
     in.close();
