@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- all the DAOs -->
+	<bean id="userDAO" class="ch.fhnw.edu.rental.daos.impl.MemoryUserDAO">
+		<property name="rentalDAO" ref="rentalDAO"/>
+	</bean>
+	
+	<bean id="movieDAO" class="ch.fhnw.edu.rental.daos.impl.MemoryMovieDAO">
+		<property name="priceCategoryDAO" ref="priceCategoryDAO"/>
+	</bean>
+	
+	<bean id="rentalDAO" class="ch.fhnw.edu.rental.daos.impl.MemoryRentalDAO">
+		<property name="movieDAO" ref="movieDAO"/>
+		<property name="userDAO" ref="userDAO"/>
+	</bean>
+	
+	<bean id="priceCategoryDAO" class="ch.fhnw.edu.rental.daos.impl.MemoryPriceCategoryDAO">
+	</bean>
+	
+	<!-- test data initializer -->
+	<bean id="dbinit" class="ch.fhnw.edu.rental.test.util.MemoryDbInitializer" init-method="initData"/>
+	
+	<bean id="transactionManager" class="ch.fhnw.edu.rental.test.util.MemoryTransactionManager">
+		<property name="dbinit" ref="dbinit" />
+	</bean>
+</beans>
