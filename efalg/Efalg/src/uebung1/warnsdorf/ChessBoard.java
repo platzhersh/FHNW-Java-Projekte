@@ -44,7 +44,7 @@ public class ChessBoard {
 		List<ChessBoardField> neighbors = new ArrayList<ChessBoardField>();
 		
 		if (i-2 >= 0) {
-			if (j-1 >= 0 && !fields[i-2][j-1].visited())  {
+			if (j-1 >= 0 )  {
 				neighbors.add(fields[i-2][j-1]);
 			}
 			if (j+1 < size) {
@@ -52,26 +52,26 @@ public class ChessBoard {
 			}
 		}
 		if (i+2 < size) {
-			if (j-1 >= 0 && !fields[i+2][j-1].visited()) {
+			if (j-1 >= 0) {
 				neighbors.add(fields[i+2][j-1]);
 			}
-			if (j+1 < size && !fields[i+2][j+1].visited()) {
+			if (j+1 < size) {
 				neighbors.add(fields[i+2][j+1]);
 			}
 		}
 		if (i-1 >= 0) {
-			if (j-2 >= 0 && !fields[i-1][j-2].visited()) {
+			if (j-2 >= 0) {
 				neighbors.add(fields[i-1][j-2]);
 			}
-			if (j+2 < size && !fields[i-1][j+2].visited()) {
+			if (j+2 < size) {
 				neighbors.add(fields[i-1][j+2]);
 			}
 		}
 		if (i+1 < size) {
-			if (j-2 >= 0 && !fields[i+1][j-2].visited()) {
+			if (j-2 >= 0) {
 				neighbors.add(fields[i+1][j-2]);
 			}
-			if (j+2 < size && !fields[i+1][j+2].visited()) {
+			if (j+2 < size) {
 				neighbors.add(fields[i+1][j+2]);
 			}
 		}

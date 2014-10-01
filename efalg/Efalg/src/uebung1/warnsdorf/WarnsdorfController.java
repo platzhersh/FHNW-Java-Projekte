@@ -21,13 +21,14 @@ public class WarnsdorfController {
 	public void start(int i, int j) {
 		running = true;
 		boolean result = goOn(i,j);
+		if (!result) running = false;
 	}
 	
 	public boolean goOn(int i, int j) {
 		view.fields[i][j].setBackground(new Color(120,120,200));
 		model.board.get(i, j).setVisited(true);
 		List<ChessBoardField> list = model.board.getNeighbors(i, j);
-		updateNeighbors(list);
+		updateNeighbors(list,-1);
 		
 		view.validate();
 		view.repaint();
@@ -43,22 +44,28 @@ public class WarnsdorfController {
 		
 		for (int k = 0; k < list.size(); k++) {
 			ChessBoardField c = list.get(k);
-			if (goOn(c.getI(),c.getJ())) return true;
+			if(!c.visited()){
+				if (goOn(c.getI(),c.getJ())) return true;
+			}
 		}
 
-		// remove highlight
-		Color background = (i+j)%2==0 ? new Color(255,255,255) : new Color(0,0,0);
-		view.fields[i][j].setBackground(background);
-		model.board.get(i, j).setVisited(false);
-		return false;
+		// check if all fields visited already, if not go back
+		if (model.allVisited()) return true;
+		else {
+			Color background = (i+j)%2==0 ? new Color(255,255,255) : new Color(0,0,0);
+			view.fields[i][j].setBackground(background);
+			model.board.get(i, j).setVisited(false);
+			updateNeighbors(list,1);
+			return false;
+		}
 		
 	}
 	
 	
 	
-	public void updateNeighbors(List<ChessBoardField> list) {		
+	public void updateNeighbors(List<ChessBoardField> list, int addCount) {		
 		for (ChessBoardField c : list) {
-			c.setCount(c.getCount()-1);
+			c.setCount(c.getCount()+addCount);
 			view.fields[c.getI()][c.getJ()].updateText();
 		}
 	}
