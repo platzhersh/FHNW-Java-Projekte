@@ -3,6 +3,11 @@ package uebung1.warnsdorf;
 import java.util.ArrayList;
 import java.util.List;
 
+/***
+ * Collection of ChessBoardFields representing a Chessboard of individual (square) dimensions.
+ * @author chregi
+ *
+ */
 public class ChessBoard {
 
 	public int size;
@@ -35,10 +40,10 @@ public class ChessBoard {
 	}
 	
 	/***
-	 * Returns all not yet visited neighbors
-	 * @param i 
-	 * @param j
-	 * @return list of not yet visited neighbors
+	 * Returns all neighbors
+	 * @param i x-coordinate
+	 * @param j y-coordinate
+	 * @return list of neighbors
 	 */
 	public List<ChessBoardField> getNeighbors(int i, int j) {
 		List<ChessBoardField> neighbors = new ArrayList<ChessBoardField>();

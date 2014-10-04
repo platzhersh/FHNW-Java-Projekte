@@ -16,6 +16,11 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+/***
+ * Containing, generating and displaying all the view elements
+ * @author chregi
+ *
+ */
 public class WarnsdorfView extends JFrame {
 
 	private WarnsdorfModel model;
@@ -25,7 +30,15 @@ public class WarnsdorfView extends JFrame {
 	public ChessBoardFieldLabel[][] fields;
 	private JPanel jPnlChessboard;
 	
+	public JLabel lblStartingValue;
+	public JLabel lblTimeValue;
 	
+	
+	/***
+	 * Special JLabel, storing information about position on ChessBoard
+	 * @author chregi
+	 *
+	 */
 	class ChessBoardFieldLabel extends JLabel {
 		int i;
 		int j;
@@ -53,6 +66,9 @@ public class WarnsdorfView extends JFrame {
 		}
 	}
 	
+	/***
+	 * generate ChessBoard according to the Model
+	 */
 	public void generateChessBoard() {
 
 		// cleanup
@@ -89,7 +105,7 @@ public class WarnsdorfView extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the JFrame
 	 */
 	public WarnsdorfView(WarnsdorfModel m, WarnsdorfController c) {
 		model = m;
@@ -132,10 +148,29 @@ public class WarnsdorfView extends JFrame {
 		
 		panel.add(btnGenerate);
 		
+		
+		// CENTER
 		jPnlChessboard = new JPanel();
 		this.getContentPane().add(jPnlChessboard, BorderLayout.CENTER);
 
+		
 		generateChessBoard();
+		
+		
+		// SOUTH
+		JPanel panelMeta = new JPanel();
+		this.getContentPane().add(panelMeta, BorderLayout.SOUTH);
+		
+		JLabel lblStartingTitle = new JLabel("Starting: ");
+		lblStartingValue = new JLabel("...");
+		JLabel lblTimeTitle = new JLabel("Time: ");
+		lblTimeValue = new JLabel("...");
+		
+		panelMeta.add(lblStartingTitle);
+		panelMeta.add(lblStartingValue);
+		panelMeta.add(lblTimeTitle);
+		panelMeta.add(lblTimeValue);
+
 		
 	}
 	

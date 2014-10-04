@@ -1,5 +1,10 @@
 package uebung1.warnsdorf;
 
+/***
+ * Container of ChessBoard
+ * @author chregi
+ *
+ */
 public class WarnsdorfModel {
 	
 	ChessBoard board;
@@ -27,6 +32,10 @@ public class WarnsdorfModel {
 		return true;
 	}
 	
+	/***
+	 * Generate a new Collection of ChessBoardFields and initialize with default values.
+	 * @param boardSize
+	 */
 	public void generateChessBoard(int boardSize) {
 		if (boardSize <= 2) {
 			throw new IllegalArgumentException("Schachbrettgrösse muss mindestens 3 sein.");

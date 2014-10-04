@@ -5,6 +5,11 @@ import java.awt.event.MouseListener;
 
 import uebung1.warnsdorf.WarnsdorfView.ChessBoardFieldLabel;
 
+/***
+ * Register this Listener on a ChessBoardField to detect ClickAction.
+ * @author chregi
+ *
+ */
 public class ChessBoardFieldClickListener implements MouseListener {
 
 	WarnsdorfController controller;

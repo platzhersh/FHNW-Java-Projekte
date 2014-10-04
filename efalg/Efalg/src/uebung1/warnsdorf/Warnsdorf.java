@@ -8,6 +8,11 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.BoxLayout;
 
+/***
+ * Everything starts here
+ * @author chregi
+ *
+ */
 public class Warnsdorf {
 
 	/**

@@ -1,6 +1,12 @@
 package uebung1.warnsdorf;
 
-
+/***
+ * Representing a single field on a chessboard. 
+ * Stores a counter indicating the number of possible next springer fields.
+ * Also stores if it has already been visited.
+ * @author chregi
+ *
+ */
 public class ChessBoardField implements Comparable<ChessBoardField>{
 	int i;
 	int j;
