@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<project name="jdraw-2.6" default="compile" basedir=".">
+
+	<property file="build.properties" />
+	
+	<path id="jdraw.class.path">
+		<fileset dir="${lib.dir}">
+			<include name="*.jar" />
+		</fileset>
+		<dirset dir="${bin.dir}"/>
+	</path>
+
+	<path id="run.class.path">
+		<path refid="jdraw.class.path"/>
+		<dirset dir="${res.dir}"/>
+	</path>
+
+	<path id="test.class.path">
+		<path refid="run.class.path"/>
+		<dirset dir="${test.bin.dir}"/>
+	</path>
+
+
+	<target name="init">
+		<mkdir dir="${bin.dir}"/>
+		<mkdir dir="${test.bin.dir}"/>
+	</target>
+
+	<target name="clean" description="erases contents of classes dir">
+		<delete dir="${bin.dir}"/>
+		<delete dir="${test.bin.dir}"/>
+		<delete dir="${doc.dir}"/>
+	</target>
+
+	<target name="compile" depends="init" description="compiles all source code.">
+		<javac srcdir="${src.dir}" destdir="${bin.dir}"
+			classpathref="jdraw.class.path"
+			includeantruntime="false"
+		/>
+	</target>
+
+	<target name="run" depends="compile" description="launches jdraw">
+		<java classname="jdraw.JDraw" fork="yes" dir=".">
+			<arg value="${spring.context}"/>
+			<classpath refid="run.class.path"/>
+		</java>
+	</target>
+
+	<target name="test.compile" depends="init,compile" description="compiles all unit test source">
+		<javac srcdir="${test.src.dir}" destdir="${test.bin.dir}" classpathref="test.class.path"/>
+	</target>
+
+	<target name="test.run" depends="test.compile" description="runs the unit tests">
+		<junit printsummary="withOutAndErr" haltonfailure="no" haltonerror="no" fork="yes">
+			<classpath refid="test.class.path"/>
+			<formatter type="plain" usefile="true" />
+			<batchtest todir="${test.dir}">
+				<fileset dir="${test.bin.dir}">
+<!--
+					<include name="**/*Test.*"/>
+-->
+					<include name="**/JDrawTests.*"/>
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+
+	<target name="docs" description="creates the api docs">
+		<javadoc 
+			nohelp="true"
+			nodeprecatedlist="true"
+			notree="true"
+			noindex="true"
+			nonavbar="false"
+			destdir="${doc.dir}"
+			classpath="${bin.dir}"
+			access="protected"
+			author="true"
+			version="true"
+			use="true"
+			windowtitle="JDraw API">
+			
+			<packageset dir="${src.dir}" defaultexcludes="yes">
+				<include name="jdraw/framework/**"/>
+				<include name="jdraw/*.java"/>
+				<include name="jdraw/figures/*.java"/>
+				<include name="jdraw/std/*.java"/>
+			</packageset>
+	
+			<bottom><![CDATA[<i>Copyright &#169; 2000-2013 D. Gruntz & Ch. Denzler, FHNW. All Rights Reserved.</i>]]></bottom>
+			<link href="http://download.oracle.com/javase/7/docs/api"/>
+		</javadoc>
+
+	</target>
+	
+</project>
