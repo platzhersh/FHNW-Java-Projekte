@@ -53,6 +53,8 @@ public class WarnsdorfController {
 		List<ChessBoardField> list = model.board.getNeighbors(i, j);
 		updateNeighbors(list,-1);
 		
+		System.out.println(i+","+j);
+		
 		view.validate();
 		view.repaint();
 		
