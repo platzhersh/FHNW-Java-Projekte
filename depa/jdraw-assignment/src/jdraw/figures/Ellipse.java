@@ -13,11 +13,12 @@ import jdraw.framework.FigureEvent;
 import jdraw.framework.FigureHandle;
 import jdraw.framework.FigureListener;
 
-public class Circle implements Figure {
+public class Ellipse implements Figure {
 	
 	int x;
 	int y;
-	int diameter;
+	int width;
+	int height;
 	Ellipse2D circle;
 	
 	Rectangle rectangle;
@@ -31,20 +32,21 @@ public class Circle implements Figure {
      * @param width the width of the oval to be drawn.
      * @param height the height of the oval to be drawn.
      */
-	public Circle(int x, int y, int diameter) {
+	public Ellipse(int x, int y, int width, int height) {
     	this.x = x;
     	this.y = y;
-    	this.diameter = diameter;
-    	rectangle = new Rectangle(x, y, diameter, diameter);
+    	this.width = width;
+    	this.height = height;
+    	rectangle = new Rectangle(x, y, width, height);
     }
 	
 	@Override
 	public void draw(Graphics g) {
 		
 		g.setColor(Color.WHITE);
-		g.fillOval(x, y, diameter, diameter);
+		g.fillOval(x, y, width, height);
 		g.setColor(Color.BLACK);
-		g.drawOval(x, y, diameter, diameter);
+		g.drawOval(x, y, width, height);
 	}
 
 	@Override
@@ -59,7 +61,7 @@ public class Circle implements Figure {
 
 	@Override
 	public boolean contains(int x, int y) {
-		return (x > this.x && x < this.x+diameter) && (y > this.y && y < this.y+diameter);
+		return (x > this.x && x < this.x+width) && (y > this.y && y < this.y+height);
 	}
 
 	@Override
@@ -67,10 +69,8 @@ public class Circle implements Figure {
 		java.awt.Rectangle original = new java.awt.Rectangle(rectangle);
 		rectangle.setFrameFromDiagonal(origin, corner);
 
-		
-		int d1 = Math.abs(corner.x - origin.x);
-		int d2 = Math.abs(corner.y - origin.y);
-		diameter = d1 < d2 ? d1 : d2;
+		width = Math.abs(corner.x - origin.x);
+		height = Math.abs(corner.y - origin.y);
 		
 		if(!original.equals(rectangle)) {
 			propagateFigureEvent(new FigureEvent(this));

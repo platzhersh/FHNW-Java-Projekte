@@ -11,7 +11,7 @@ import jdraw.framework.DrawContext;
 import jdraw.framework.DrawTool;
 import jdraw.framework.DrawView;
 
-public class CircleTool implements DrawTool {
+public class EllipseTool implements DrawTool {
 
 	/** 
 	 * the image resource path. 
@@ -34,13 +34,13 @@ public class CircleTool implements DrawTool {
 	 * mouse down - mouse drag - mouse up cycle) this variable refers
 	 * to the new rectangle that is inserted.
 	 */
-	private Circle newCirc = null;
+	private Ellipse newElli = null;
 	
 	/**
 	 * Create a new circle tool for the given context.
 	 * @param context a context to use this tool in.
 	 */
-	public CircleTool(DrawContext context) {
+	public EllipseTool(DrawContext context) {
 		this.context = context;
 		this.view = context.getView();
 	}
@@ -66,25 +66,25 @@ public class CircleTool implements DrawTool {
 
 	@Override
 	public void mouseDown(int x, int y, MouseEvent e) {
-		if (newCirc != null) {
+		if (newElli != null) {
 			throw new IllegalStateException();
 		}
 		anchor = new Point(x, y);
-		newCirc = new Circle(x, y, 0);
-		view.getModel().addFigure(newCirc);
+		newElli = new Ellipse(x, y, 0, 0);
+		view.getModel().addFigure(newElli);
 		
 	}
 
 	@Override
 	public void mouseDrag(int x, int y, MouseEvent e) {
-		newCirc.setBounds(anchor, new Point(x, y));
-		java.awt.Rectangle r = newCirc.getBounds();
+		newElli.setBounds(anchor, new Point(x, y));
+		java.awt.Rectangle r = newElli.getBounds();
 		this.context.showStatusText("w: " + r.width + ", h: " + r.height);
 	}
 
 	@Override
 	public void mouseUp(int x, int y, MouseEvent e) {
-		newCirc = null;
+		newElli = null;
 		anchor = null;
 		this.context.showStatusText("Circle Mode");
 	}
@@ -96,7 +96,7 @@ public class CircleTool implements DrawTool {
 
 	@Override
 	public Icon getIcon() {
-		return new ImageIcon(getClass().getResource(IMAGES + "circle.png"));
+		return new ImageIcon(getClass().getResource(IMAGES + "oval.png"));
 	}
 
 	@Override
