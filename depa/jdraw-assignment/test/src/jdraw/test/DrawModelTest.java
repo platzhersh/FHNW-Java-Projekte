@@ -143,7 +143,7 @@ public class DrawModelTest {
 			}
 
 			public void removeFigureListener(FigureListener l) {
-				cnt--;
+				cnt--;		
 			}
 		};
 		m.addFigure(f);

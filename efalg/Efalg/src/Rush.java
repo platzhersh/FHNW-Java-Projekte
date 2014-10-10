@@ -47,14 +47,15 @@ public class Rush
     //out.println("solution");
     Car yoshi = cars.get('A');
     Car d = cars.get('D');
+    Car i = cars.get('I');
     
     yoshi.move(true);
     r.printField();
     
-    d.move(true);
+    i.move(false);
     r.printField();
     
-    d.move(true);
+    d.move(false);
     r.printField();
     
     yoshi.move(true);

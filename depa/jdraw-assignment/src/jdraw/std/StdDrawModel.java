@@ -110,16 +110,20 @@ public class StdDrawModel implements DrawModel, FigureListener {
 
 	@Override
 	public void removeAllFigures() {
-		for (Figure f : figures) {
-			if (figures.remove(f)) {
-				f.removeFigureListener(this);
-				notifyListeners(f, DrawModelEvent.Type.DRAWING_CLEARED);
-			}
+		// TODO: maybe better with an iterator?
+		
+		List<Figure> copy = new LinkedList<Figure>(figures);
+		
+		for (Figure f : copy) {
+			removeFigure(f);
 		}
 		
-		//notifyListeners(DrawModelEvent.Type.DRAWING_CLEARED);
 		
-		System.out.println("StdDrawModel.removeAllFigures has to be implemented");
+		//notifyListeners(, DrawModelEvent.Type.DRAWING_CLEARED);
+		
+		notifyListeners(null, DrawModelEvent.Type.DRAWING_CLEARED);
+		
+		//System.out.println("StdDrawModel.removeAllFigures has to be implemented");
 	}
 
 }
