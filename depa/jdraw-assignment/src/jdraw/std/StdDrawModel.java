@@ -110,7 +110,15 @@ public class StdDrawModel implements DrawModel, FigureListener {
 
 	@Override
 	public void removeAllFigures() {
-		// TODO to be implemented  
+		for (Figure f : figures) {
+			if (figures.remove(f)) {
+				f.removeFigureListener(this);
+				notifyListeners(f, DrawModelEvent.Type.DRAWING_CLEARED);
+			}
+		}
+		
+		//notifyListeners(DrawModelEvent.Type.DRAWING_CLEARED);
+		
 		System.out.println("StdDrawModel.removeAllFigures has to be implemented");
 	}
 

@@ -61,7 +61,7 @@ public class Ellipse implements Figure {
 
 	@Override
 	public boolean contains(int x, int y) {
-		return (x > this.x && x < this.x+width) && (y > this.y && y < this.y+height);
+		return rectangle.contains(x, y);
 	}
 
 	@Override

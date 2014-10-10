@@ -59,7 +59,7 @@ public class Circle implements Figure {
 
 	@Override
 	public boolean contains(int x, int y) {
-		return (x > this.x && x < this.x+diameter) && (y > this.y && y < this.y+diameter);
+		return rectangle.contains(x, y);
 	}
 
 	@Override

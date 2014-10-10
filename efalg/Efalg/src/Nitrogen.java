@@ -5,6 +5,7 @@ public class Nitrogen
 {
 	
   double vaporation;
+  int bottles;
   List<Bottle> incomingBottles;
   TreeMap<Integer, Double> volumesByDay;
 	
@@ -24,27 +25,28 @@ public class Nitrogen
     
     Nitrogen n = new Nitrogen();
     
+    n.bottles = in.nextInt();
     n.vaporation = in.nextInt();
     
-    int day = 0;
+    int day = 1;
     while (in.hasNextInt()) {
     	n.incomingBottles.add(n.new Bottle(day++, in.nextInt()));
     }
     
-    for (Bottle b : n.incomingBottles) {
+    /*for (Bottle b : n.incomingBottles) {
 		System.out.println("Vap/Day: "+ (b.initVolume/n.vaporation));
 		System.out.println("VolByDay(6): "+ b.getVolumeByDay(6, n.vaporation));
-	}
+	}*/
     
-    int bestDay = 0;
+    int bestDay = 1;
     double bestVolume = 0;
-    for (int i = 0; i < n.getSimulationTime(); i++) {
+    for (int i = 1; i <= n.getSimulationTime(); i++) {
     	double volumeTot = 0;
     	for (Bottle b : n.incomingBottles) {
     		volumeTot += b.getVolumeByDay(i, n.vaporation);
     	}
     	n.volumesByDay.put(i, volumeTot);
-    	System.out.println("Day "+ i +", Volume: "+volumeTot);
+    	//System.out.println("Day "+ i +", Volume: "+volumeTot);
     	
     	if (bestVolume < volumeTot) {
     		bestVolume = volumeTot;
@@ -52,8 +54,8 @@ public class Nitrogen
     	}    	
     }
 
-    System.out.println("BestDay: "+bestDay);
-    System.out.println("BestVolume: "+bestVolume);
+    //System.out.println("BestDay: "+bestDay);
+    //System.out.println("BestVolume: "+bestVolume);
     
     out.println(bestDay);
     
