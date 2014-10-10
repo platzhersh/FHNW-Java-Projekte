@@ -4,33 +4,32 @@ import java.util.*;
 public class Nitrogen
 {
 	
-  double vaporation;
-  int bottles;
   List<Bottle> incomingBottles;
-  TreeMap<Integer, Double> volumesByDay;
+  //TreeMap<Integer, Double> volumesByDay;
+  //double[] volumesByDay;
 	
   public Nitrogen() {
 	  incomingBottles = new ArrayList<Bottle>();
-	  volumesByDay = new TreeMap<Integer, Double>();
-  }
-  
-  public int getSimulationTime() {
-	  return incomingBottles.size()+incomingBottles.get(incomingBottles.size()-1).getLifetime(vaporation);
+	  //volumesByDay = new TreeMap<Integer, Double>();
   }
   
   public static void main(String[] args) throws Exception
   {
-    Scanner in = new Scanner(new File("nitrogen.in"));
+    //Scanner in = new Scanner(new File("nitrogen.in"));
+    BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(new File("nitrogen.in"))));
     PrintWriter out=new PrintWriter("nitrogen.out");
     
     Nitrogen n = new Nitrogen();
+
+    // skip first int
+    String[] line1 = in.readLine().split(" ");
+    int bottles = Integer.valueOf(line1[0]);
+    //n.volumesByDay = new double[in.nextInt()];
+    double vaporation = Integer.valueOf(line1[1]);
     
-    n.bottles = in.nextInt();
-    n.vaporation = in.nextInt();
-    
-    int day = 1;
-    while (in.hasNextInt()) {
-    	n.incomingBottles.add(n.new Bottle(day++, in.nextInt()));
+    String[] line = in.readLine().split(" ");
+    for (int i = 1; i <= bottles; i++){
+    	n.incomingBottles.add(n.new Bottle(i, Integer.valueOf(line[i-1]), vaporation));
     }
     
     /*for (Bottle b : n.incomingBottles) {
@@ -40,12 +39,12 @@ public class Nitrogen
     
     int bestDay = 1;
     double bestVolume = 0;
-    for (int i = 1; i <= n.getSimulationTime(); i++) {
+    for (int i = 1; i < bottles+vaporation; i++) {
     	double volumeTot = 0;
     	for (Bottle b : n.incomingBottles) {
-    		volumeTot += b.getVolumeByDay(i, n.vaporation);
+    		volumeTot += b.getVolumeByDay(i);
     	}
-    	n.volumesByDay.put(i, volumeTot);
+    	//n.volumesByDay[i] = volumeTot;
     	//System.out.println("Day "+ i +", Volume: "+volumeTot);
     	
     	if (bestVolume < volumeTot) {
@@ -65,22 +64,24 @@ public class Nitrogen
   public class Bottle {
 	  int initDay;
 	  double initVolume;
+	  double lossPerDay;
 	  
-	  public Bottle(int day, double vol) {
+	  public Bottle(int day, double vol, double vap) {
 		  initDay = day;
 		  initVolume = vol;
+		  lossPerDay = (initVolume /vap);
 	  }
 	  
-	  public double getVolumeByDay(int day, double v) {
+	  public double getVolumeByDay(int day) {
 		  if (day < initDay) return 0;
 		  else {
 			  // could also be solved using getLifetime
-			  double vol = initVolume - (initVolume /v) * (day-initDay);
+			  double vol = initVolume - lossPerDay * (day-initDay);
 			  return vol >= 0 ? vol : 0;
 		  }
 	  }
 	  public int getLifetime(double v) {
-		  return (int) (initVolume / (initVolume/v));
+		  return (int) (initVolume / lossPerDay);
 	  }
   }
    
