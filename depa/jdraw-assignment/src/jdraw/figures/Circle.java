@@ -15,11 +15,6 @@ import jdraw.framework.FigureListener;
 
 public class Circle implements Figure {
 	
-	int x;
-	int y;
-	int diameter;
-	Ellipse2D circle;
-	
 	Rectangle rectangle;
 	
 	private final List<FigureListener> listeners = new LinkedList<FigureListener>();
@@ -31,10 +26,7 @@ public class Circle implements Figure {
      * @param width the width of the oval to be drawn.
      * @param height the height of the oval to be drawn.
      */
-	public Circle(int x, int y, int diameter) {
-    	this.x = x;
-    	this.y = y;
-    	this.diameter = diameter;
+	public Circle(int x, int y, int diameter) {   	
     	rectangle = new Rectangle(x, y, diameter, diameter);
     }
 	
@@ -42,16 +34,16 @@ public class Circle implements Figure {
 	public void draw(Graphics g) {
 		
 		g.setColor(Color.WHITE);
-		g.fillOval(x, y, diameter, diameter);
+		g.fillOval(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
 		g.setColor(Color.BLACK);
-		g.drawOval(x, y, diameter, diameter);
+		g.drawOval(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
 	}
 
 	@Override
 	public void move(int dx, int dy) {
 		if(dx != 0 || dy != 0) {
-			x += dx;
-			y += dy;
+			rectangle.x += dx;
+			rectangle.y += dy;
 			propagateFigureEvent(new FigureEvent(this));
 		}
 
@@ -65,13 +57,18 @@ public class Circle implements Figure {
 	@Override
 	public void setBounds(Point origin, Point corner) {
 		java.awt.Rectangle original = new java.awt.Rectangle(rectangle);
-		rectangle.setFrameFromDiagonal(origin, corner);
+		
+		
+		int d1 = corner.x - origin.x;
+		int d2 = corner.y - origin.y;
+		rectangle.width = Math.abs(d1) < Math.abs(d2) ? d1 : d2;
+		rectangle.height = rectangle.width;
+		
 
+		corner.x = origin.x + rectangle.width;
+		corner.y = origin.y + rectangle.height;
 		
-		int d1 = Math.abs(corner.x - origin.x);
-		int d2 = Math.abs(corner.y - origin.y);
-		diameter = d1 < d2 ? d1 : d2;
-		
+		rectangle.setFrameFromDiagonal(origin, corner);
 		if(!original.equals(rectangle)) {
 			propagateFigureEvent(new FigureEvent(this));
 		}
@@ -102,8 +99,8 @@ public class Circle implements Figure {
 		FigureListener[] copy = listeners.toArray(
 			new FigureListener[listeners.size()]);
 			for(FigureListener listener : copy) {
-			listener.figureChanged(evt);
-		}
+				listener.figureChanged(evt);
+			}
 	}
 	
 	@Override

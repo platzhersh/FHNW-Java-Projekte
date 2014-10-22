@@ -15,11 +15,6 @@ import jdraw.framework.FigureListener;
 
 public class Ellipse implements Figure {
 	
-	int x;
-	int y;
-	int width;
-	int height;
-	Ellipse2D circle;
 	
 	Rectangle rectangle;
 	
@@ -33,10 +28,6 @@ public class Ellipse implements Figure {
      * @param height the height of the oval to be drawn.
      */
 	public Ellipse(int x, int y, int width, int height) {
-    	this.x = x;
-    	this.y = y;
-    	this.width = width;
-    	this.height = height;
     	rectangle = new Rectangle(x, y, width, height);
     }
 	
@@ -44,16 +35,16 @@ public class Ellipse implements Figure {
 	public void draw(Graphics g) {
 		
 		g.setColor(Color.WHITE);
-		g.fillOval(x, y, width, height);
+		g.fillOval(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
 		g.setColor(Color.BLACK);
-		g.drawOval(x, y, width, height);
+		g.drawOval(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
 	}
 
 	@Override
 	public void move(int dx, int dy) {
 		if(dx != 0 || dy != 0) {
-			x += dx;
-			y += dy;
+			rectangle.x += dx;
+			rectangle.y += dy;
 			propagateFigureEvent(new FigureEvent(this));
 		}
 
@@ -68,9 +59,6 @@ public class Ellipse implements Figure {
 	public void setBounds(Point origin, Point corner) {
 		java.awt.Rectangle original = new java.awt.Rectangle(rectangle);
 		rectangle.setFrameFromDiagonal(origin, corner);
-
-		width = Math.abs(corner.x - origin.x);
-		height = Math.abs(corner.y - origin.y);
 		
 		if(!original.equals(rectangle)) {
 			propagateFigureEvent(new FigureEvent(this));
