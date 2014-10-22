@@ -8,26 +8,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 import jdraw.framework.DrawContext;
-import jdraw.framework.DrawTool;
-import jdraw.framework.DrawView;
-
-public class EllipseTool implements DrawTool {
-
-	/** 
-	 * the image resource path. 
-	 */
-	private static final String IMAGES = "/images/";
-	
-	/**
-	 * The context we use for drawing.
-	 */
-	private DrawContext context;
-	
-	/**
-	 * The context's view. This variable can be used as a shortcut, i.e.
-	 * instead of calling context.getView().
-	 */
-	private DrawView view;
+public class EllipseTool extends AbstractDrawTool {
 
 	/**
 	 * Temporary variable. During rectangle creation (during a

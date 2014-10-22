@@ -25,6 +25,11 @@ import jdraw.framework.FigureListener;
  */
 public class Rect implements Figure {
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8582771300902110131L;
+
+	/**
 	 * Use the java.awt.Rectangle in order to save/reuse code.
 	 */
 	private java.awt.Rectangle rectangle;

@@ -4,8 +4,6 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.geom.Ellipse2D;
-import java.util.LinkedList;
 import java.util.List;
 
 import jdraw.framework.Figure;
@@ -13,14 +11,15 @@ import jdraw.framework.FigureEvent;
 import jdraw.framework.FigureHandle;
 import jdraw.framework.FigureListener;
 
-public class Ellipse implements Figure {
+public class Ellipse extends AbstractRectangularFigure {
 	
 	
-	Rectangle rectangle;
-	
-	private final List<FigureListener> listeners = new LinkedList<FigureListener>();
-	
-    /***
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 3291112924237530027L;
+
+	/***
      * 
      * @param x the x coordinate of the upper left corner of the oval to be drawn.
      * @param y the y coordinate of the upper left corner of the oval to be drawn.
