@@ -4,3 +4,5 @@
 # Package Files #
 *.war
 *.ear
+*.zip
+*.rar
