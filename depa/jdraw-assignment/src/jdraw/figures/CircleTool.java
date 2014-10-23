@@ -9,7 +9,7 @@ import javax.swing.ImageIcon;
 
 import jdraw.framework.DrawContext;
 
-public class CircleTool extends AbstractDrawTool {
+public class CircleTool extends AbstractRectangularDrawTool {
 
 	
 	/**
@@ -17,6 +17,7 @@ public class CircleTool extends AbstractDrawTool {
 	 * @param context a context to use this tool in.
 	 */
 	public CircleTool(DrawContext context) {
+		super();
 		this.context = context;
 		this.view = context.getView();
 	}

@@ -53,6 +53,7 @@ public abstract class AbstractDrawTool implements DrawTool {
 	
 	@Override
 	public void mouseUp(int x, int y, MouseEvent e) {
+		createHandles();
 		fig = null;
 		anchor = null;
 		this.context.showStatusText(getName() + " Mode");
@@ -64,4 +65,6 @@ public abstract class AbstractDrawTool implements DrawTool {
 		java.awt.Rectangle r = fig.getBounds();
 		this.context.showStatusText("w: " + r.width + ", h: " + r.height);
 	}
+	
+	abstract public void createHandles();
 }

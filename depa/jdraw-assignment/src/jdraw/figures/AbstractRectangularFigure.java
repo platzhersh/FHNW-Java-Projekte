@@ -1,11 +1,9 @@
 package jdraw.figures;
 
 import java.awt.Rectangle;
-import java.util.List;
 
 import jdraw.framework.Figure;
 import jdraw.framework.FigureEvent;
-import jdraw.framework.FigureHandle;
 import jdraw.framework.FigureListener;
 
 public abstract class AbstractRectangularFigure extends AbstractFigure {
@@ -37,11 +35,6 @@ public abstract class AbstractRectangularFigure extends AbstractFigure {
 		return rectangle.getBounds();
 	}
 
-	@Override
-	public List<FigureHandle> getHandles() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public void addFigureListener(FigureListener listener) {

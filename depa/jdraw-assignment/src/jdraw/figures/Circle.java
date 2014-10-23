@@ -43,7 +43,7 @@ public class Circle extends AbstractRectangularFigure {
 		
 		int d1 = corner.x - origin.x;
 		int d2 = corner.y - origin.y;
-		rectangle.width = Math.abs(d1) < Math.abs(d2) ? d1 : d2;
+		rectangle.width = Math.abs(d1) < Math.abs(d2) ? d2 : d1;
 		rectangle.height = rectangle.width;
 		
 

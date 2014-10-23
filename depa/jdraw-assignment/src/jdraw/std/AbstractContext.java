@@ -58,6 +58,10 @@ import jdraw.framework.DrawView;
  */
 public abstract class AbstractContext extends JFrame implements DrawContext {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8164434752241630800L;
 	/** Default width of view. */
 	private static final int DEFAULT_WIDTH = 300;
 	/** Default height of view. */
@@ -283,6 +287,11 @@ public abstract class AbstractContext extends JFrame implements DrawContext {
 		}
 		
 		Action action = new AbstractAction() {
+			/**
+			 * 
+			 */
+			private static final long serialVersionUID = 3907446702122835209L;
+
 			public void actionPerformed(ActionEvent e) {
 				setTool(tool);
 			}

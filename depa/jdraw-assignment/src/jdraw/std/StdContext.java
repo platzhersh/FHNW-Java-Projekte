@@ -35,6 +35,11 @@ import jdraw.framework.Figure;
 public class StdContext extends AbstractContext {
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5572498940223321980L;
+
+	/**
 	 * Constructs a standard context with a default set of drawing tools.
 	 * @param view the view that is displaying the actual drawing.
 	 */
