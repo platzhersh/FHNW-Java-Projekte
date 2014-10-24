@@ -59,6 +59,7 @@ public class Nitrogen
     out.println(bestDay);
     
     out.close();
+    in.close();
   }
   
   public class Bottle {

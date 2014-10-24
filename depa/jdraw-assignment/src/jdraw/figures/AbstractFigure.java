@@ -42,7 +42,6 @@ public abstract class AbstractFigure implements Figure {
 
 	public void flipHorizontal(){
 		handles.flipHorizontal();
-		System.out.println("FlipHorizontal");
 	}
 	public void flipVertical(){
 		handles.flipVertical();

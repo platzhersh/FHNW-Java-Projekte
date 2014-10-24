@@ -1,5 +1,4 @@
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.*;
 
 public class Bus
@@ -88,6 +87,7 @@ public class Bus
     }
     
     out.close();
+    in.close();
   }
   
   public static void syncKnownSecrets(Bus b1, Bus b2) {

@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.*;
 
 public class Stadion
 {
@@ -54,5 +53,6 @@ public class Stadion
     out.println(bestMin);
     
     out.close();
+    in.close();
   }
 }
