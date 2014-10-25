@@ -24,6 +24,7 @@ import jdraw.framework.DrawTool;
 import jdraw.framework.DrawToolFactory;
 import jdraw.framework.DrawView;
 import jdraw.framework.Figure;
+import jdraw.std.grid.Grid50;
 
 /**
  * Standard implementation of interface DrawContext.
@@ -131,13 +132,19 @@ public class StdContext extends AbstractContext {
 		editMenu.add(orderMenu);
 
 		JMenu grid = new JMenu("Grid...");
-		JMenuItem grid50 = new JMenuItem("50");
-		grid50.addActionListener(new ActionListener() {
+		JMenuItem grid1 = new JMenuItem("Default (none)");
+		grid1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// TODO: set PointConstrainer
-				System.out.println("set Grid 50");
+				getView().setConstrainer(null);
 			}
 		});
+		JMenuItem grid50 = new JMenuItem("50 Grid");
+		grid50.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				getView().setConstrainer(new StdPointConstrainer(getView(), new Grid50(getView())));	
+			}
+		});
+		grid.add(grid1);
 		grid.add(grid50);
 
 		editMenu.add(grid);
