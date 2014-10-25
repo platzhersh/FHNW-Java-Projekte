@@ -131,9 +131,15 @@ public class StdContext extends AbstractContext {
 		editMenu.add(orderMenu);
 
 		JMenu grid = new JMenu("Grid...");
-		grid.add("Grid 1");
-		grid.add("Grid 2");
-		grid.add("Grid 3");
+		JMenuItem grid50 = new JMenuItem("50");
+		grid50.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// TODO: set PointConstrainer
+				System.out.println("set Grid 50");
+			}
+		});
+		grid.add(grid50);
+
 		editMenu.add(grid);
 		
 		return editMenu;

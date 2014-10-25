@@ -16,25 +16,24 @@ public class Heuberger {
 	    PrintWriter out=new PrintWriter("heuberger.out");
 	    
 	    // location of shooter	    
-	    int sX = in.nextInt();
-	    int sY = in.nextInt();
-	    TargetPoint origin = new TargetPoint(sX, sY);
+	    TargetPoint origin = new TargetPoint(0, 0);
 	    
 	    int count = 0;
 	    LinkedList<Target> visible = new LinkedList<Target>();
 	    
 	    // TODO: just for debugging
-	    LinkedList<Target> targetList = new LinkedList<Target>();
+	    //LinkedList<Target> targetList = new LinkedList<Target>();
 	    
 	    
-	    int numOfCoordinates = in.nextInt();
+	    int numOfTargets = Integer.parseInt(in.nextLine());
 	    
 	    List<TargetPoint> points = new ArrayList<TargetPoint>();
 	    
 	    // für alle Punkte Distanz & Winkel zum Schützen bestimmen 
-	    for (int i = 0; i < numOfCoordinates; i+=2) {
-	    	TargetPoint t1 = new TargetPoint(in.nextInt(), in.nextInt());
-	    	TargetPoint t2 = new TargetPoint(in.nextInt(), in.nextInt());
+	    for (int i = 0; i < numOfTargets; i++) {
+	    	String[] line = in.nextLine().split(" ");
+	    	TargetPoint t1 = new TargetPoint(Double.parseDouble(line[0]), Double.parseDouble(line[1]));
+	    	TargetPoint t2 = new TargetPoint(Double.parseDouble(line[2]), Double.parseDouble(line[3]));
 	    	
 	    	t1.angle = getAngle(origin, t1);
 	    	t2.angle = getAngle(origin, t2);
@@ -47,7 +46,7 @@ public class Heuberger {
 	    		t = new Target(t1, t2);
 	    	}
 	    	// TODO: just for debugging
-	    	targetList.add(t);
+	    	//targetList.add(t);
 	    	
 	    	points.add(t1);
 	    	points.add(t2);
@@ -57,13 +56,13 @@ public class Heuberger {
 	    Collections.sort(points);
 	    
 	    // Punkte abarbeiten
-	    System.out.println(points.size());
+	    // System.out.println(points.size());
 	    for (int i = 0; i < points.size(); i++) {
 	    	TargetPoint p = points.get(i);
 	    	
 	    	// case: Punkt ist Anfang eines Targets
 	    	if (p == p.t.start) {
-	    		System.out.println(p.toString() + " Punkt ist Targetstart");
+	    		// System.out.println(p.toString() + " Punkt ist Targetstart");
 	    		if (visible.size() == 0) {
 	    			visible.add(p.t);
 	    			visible.get(0).visible = true;
@@ -77,7 +76,7 @@ public class Heuberger {
 	    				
 	    				// case: Point on Line
 	    				if (intercept == 0) {
-	    					System.out.println("WATCH OUT: 0");
+	    					// System.out.println("WATCH OUT: 0");
 	    					TargetPoint ep = p.t.end;
 	    					for (Target l : visible) {
 	    						int ic = CounterClockWise(l.start, l.end ,ep);
@@ -104,20 +103,22 @@ public class Heuberger {
 	    	
 	    	// case: Punkt ist Ende eines Target
 	    	else {
-	    		System.out.println(p.toString() + " Punkt ist Targetend");
+	    		// System.out.println(p.toString() + " Punkt ist Targetend");
 	    		if (p.t.visible) count++;
 	    		visible.remove(p.t);
 	    		if (visible.size() > 0) visible.get(0).visible = true;
 	    	}
 	    }
 
-	    System.out.println("Count: " + count);
+	    //// System.out.println("Count: " + count);
+	    
+	    out.write(Integer.toString(count));
 	    
 	    
 	    // TODO: just for debugging
-	    for (Target t : targetList) {
-	    	System.out.println(t.toString());
-	    }
+	    /*for (Target t : targetList) {
+	    	// System.out.println(t.toString());
+	    }*/
 	    
 	    in.close();
 	    out.close();
@@ -151,15 +152,15 @@ public class Heuberger {
 	
 	public static class Vektor {
 		  
-		  int x, y, z;
+		  double x, y, z;
 		  
-		  public Vektor(int x, int y){
+		  public Vektor(double x, double y){
 			  this.x = x;
 			  this.y = y;
 			  this.z = 0;
 		  }
 		  
-		  private Vektor(int x, int y, int z){
+		  private Vektor(double x, double y, double z){
 			  this.x = x;
 			  this.y = y;
 			  this.z = z;
@@ -167,9 +168,9 @@ public class Heuberger {
 		  
 		  private Vektor cross(Vektor other){
 			  
-			  int a = y*other.z - z*other.y;
-			  int b = z*other.x - x*other.z;
-			  int c = x*other.y - y*other.x;
+			  double a = y*other.z - z*other.y;
+			  double b = z*other.x - x*other.z;
+			  double c = x*other.y - y*other.x;
 			  
 			  Vektor ret = new Vektor(a,b,c);  
 			  return ret;
@@ -194,13 +195,13 @@ public class Heuberger {
 	  }
 	
 	public static class TargetPoint implements Comparable<TargetPoint> {
-		int x;
-		int y;
+		double x;
+		double y;
 		Target t;
 		double angle;
 		double distance;	// deprecated
 		
-		public TargetPoint(int t1, int t2) {
+		public TargetPoint(double t1, double t2) {
 			x = t1;
 			y = t2;
 		}

@@ -25,8 +25,8 @@ public class GeometryHelperTest {
 	public void testGetInterceptionPoint() {
 		Point a = new Point(1,1);
 		Point b = new Point(3,1);
-		Point c = new Point(2,0);
-		Point d = new Point(2,2);
+		Point c = new Point(2,2);
+		Point d = new Point(2,0);
 		
 		Point r = GeometryHelper.getInterceptionPoint(a, b, c, d);
 		

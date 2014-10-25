@@ -52,9 +52,10 @@ public class GeometryHelper {
 	
 	public static Point getInterceptionPoint(Point a, Point b, Point c, Point d) {
 		
-		int hauptD = (d.x-c.x)*(c.x-a.x)-(d.x-c.x)*(c.x-a.x);
-		int nebenD = (b.y-a.y)*(d.y-c.y)-(d.y-c.y)*(b.y-a.y);
-		double s = hauptD / nebenD;
+		double nebenD = (d.x-c.x)*(c.y-a.y)-(d.y-c.y)*(c.x-a.x);
+		double hauptD = (b.x-a.x)*(d.y-c.y)-(d.x-c.x)*(b.y-a.y);
+		double s = nebenD / hauptD;
+		System.out.println(s);
 		
 		double rx = a.x + s*(b.x-a.x);
 		double ry = a.y + s*(b.y-a.y);
