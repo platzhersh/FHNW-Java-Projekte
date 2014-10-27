@@ -25,6 +25,7 @@ import jdraw.framework.DrawToolFactory;
 import jdraw.framework.DrawView;
 import jdraw.framework.Figure;
 import jdraw.std.grid.Grid50;
+import jdraw.std.grid.SnapGrid;
 
 /**
  * Standard implementation of interface DrawContext.
@@ -142,6 +143,12 @@ public class StdContext extends AbstractContext {
 		grid50.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				getView().setConstrainer(new StdPointConstrainer(getView(), new Grid50(getView())));	
+			}
+		});
+		JMenuItem gridSnap = new JMenuItem("Snap Grid");
+		gridSnap.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				getView().setConstrainer(new StdPointConstrainer(getView(), new SnapGrid(getView())));	
 			}
 		});
 		grid.add(grid1);
