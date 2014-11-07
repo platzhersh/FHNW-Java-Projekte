@@ -1,29 +1,42 @@
 package uebung3.voronoi;
 
-import geometry.JarvisMarch;
 import geometry.Point;
 import geometry.Vector;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Controller {
 
 	private View v;
 	private Model model;
+	private Debug debug;
 	
 	public Controller(View view, Model model) {
 		this.v = view;
 		this.model = model;
+		this.debug = new Debug();
 		registerListeners();
 	}
 	
 	public void registerListeners() {
 		
+		v.addComponentListener(new ComponentAdapter() {
+			@Override
+		    public void componentResized(ComponentEvent e)
+		    {
+		        v.getCanvas().repaint();
+		    }
+		});
 		v.getCanvas().addMouseListener(new MouseListener() {
 			
 			@Override
@@ -44,26 +57,44 @@ public class Controller {
 			}
 			
 			@Override
-			public void mouseEntered(MouseEvent arg0) {
-				// TODO Auto-generated method stub
-				
+			public void mouseEntered(MouseEvent evt) {
+				// TODO
 			}
 			
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				
+				Graphics g = v.getCanvas().getGraphics();
 				model.points.add(new Point(arg0.getX(), arg0.getY()));
-				v.drawPoints(v.getCanvas().getGraphics());
+				
+				debug.paintAreas(v.getCanvas(), model.points);
+				v.drawPoints(g);
+				
 				System.out.println("Median:" + getMedian(model.points));
 				divideEtImpera(model.points);
 			}
 		});
-		
+		v.getCanvas().addMouseMotionListener(new MouseMotionListener() {
+			
+			@Override
+			public void mouseMoved(MouseEvent evt) {
+				int x = evt.getPoint().x;
+				int y = evt.getPoint().y;
+				v.setPosLbl("("+x+", "+y+")");				
+			}
+			
+			@Override
+			public void mouseDragged(MouseEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
 	}
 	
 	
 	
 	public EdgeList divideEtImpera(List<Point> lp) {
+		Graphics g = v.getCanvas().getGraphics();
+		v.validate();
 		// base case
 		if (lp.size() == 1) return new EdgeList();
 		if (lp.size() == 2) {
@@ -80,8 +111,8 @@ public class Controller {
 			v.repaint();
 			
 			// TODO: check left / right maybe with ccw?
-			VoronoiRegion vrLeft = new VoronoiRegion(lp.get(0));
-			VoronoiRegion vrRight = new VoronoiRegion(lp.get(1));
+			Point vrLeft = new Point(lp.get(0));
+			Point vrRight = new Point(lp.get(1));
 			model.regions.add(vrLeft);
 			model.regions.add(vrRight);
 			
@@ -103,112 +134,149 @@ public class Controller {
 		EdgeList edges1 = divideEtImpera(sub1);
 		EdgeList edges2 = divideEtImpera(sub2);
 		
-		// conquer
-		/* convexHull - nicht nötig, einfach Punkt mit kleinstem y aus beiden Listen nehmen
-		Point[] p = new Point[lp.size()]; 
-		p = lp.toArray(p);
-		int h = JarvisMarch.computeHull(p);
+		// the Edgelist to pass on
+		EdgeList el = new EdgeList();
 		
-		for( int i=0; i<h; i++)
-            System.out.println("Convex hull point Nr. "+(i+1)+" ("+p[i].x+" , "+p[i].y+")"); 
-		*/
+		// conquer
 		
 		// sort points ascending by their y-coordinate
 		sub1.sort((p1,p2) -> Double.compare(p1.y,p2.y));
 		sub2.sort((p1,p2) -> Double.compare(p1.y,p2.y));
+				
 		
-		Graphics g = v.getCanvas().getGraphics();
-		
-		
-		// obere Tangentialpunkte (Startpunkt um K zu berechnen)
 		Point tp1_top = new Point(sub1.get(0).x, sub1.get(0).y);
 		Point tp2_top = new Point(sub2.get(0).x, sub2.get(0).y);
+		
+		// distance vector between tp1_top and tp2_top
+		Vector diff = Vector.diff(tp1_top, tp2_top);
+		// norm vector on distance vector
+		Vector norm = Vector.norm(diff);
+					
+		// point on perpendicular bisector of tp1_top and tp2_top (very far away)
+		Point k = new Point(tp1_top.x+diff.getX()/2+norm.getX()*1000, tp1_top.y+diff.getY()/2+norm.getY()*1000) ;
+		
 		// untere Tangentialpunkte (Endpunkt um K zu berechnen)
 		Point tp1_bottom = new Point(sub1.get(sub1.size()-1).x, sub1.get(sub1.size()-1).y);
 		Point tp2_bottom = new Point(sub2.get(sub2.size()-1).x, sub2.get(sub2.size()-1).y);
-					
-		Vector diff = Vector.diff(tp1_top, tp2_top);
-		Vector norm = Vector.norm(diff);
 		
-		Point k = new Point(tp1_top.x+diff.getX()/2+norm.getX()*1000, tp1_top.y+diff.getY()/2+norm.getY()*1000) ;
-		Point m = new Point(tp1_top.x+diff.getX()/2, tp1_top.y+diff.getY()/2);
-		Point m2 = new Point(tp1_top.x+diff.getX()/2-norm.getX()*1000, tp1_top.y+diff.getY()/2-norm.getY()*1000);
+		// index i of P1 and P2 points
+		int p1Index = 0;
+		int p2Index = 0;
 		
-		Edge ke = new Edge(k,m2, new VoronoiRegion(tp2_top), new VoronoiRegion(tp1_top), null, null);
+		List<Edge> kEdges = new LinkedList<Edge>();
 		
-		g.setColor(Color.GREEN);
-		g.drawLine((int) tp1_top.x, (int) tp1_top.y, (int) tp2_top.x, (int) tp2_top.y);
-		g.setColor(Color.RED);
-		g.drawLine((int)k.x, (int)k.y, (int)m.x, (int)m.y);
-		System.out.println("Draw Line");
-		
-		while (tp1_top != tp1_bottom && tp2_top != tp2_bottom) {
+		while (!tp1_top.equals(tp1_bottom) || !tp2_top.equals(tp2_bottom)) {
 			Point s1 = new Point(Double.MAX_VALUE,Double.MAX_VALUE);
-			Point s2 = new Point(Double.MAX_VALUE,Double.MAX_VALUE);;
+			Point s2 = new Point(Double.MAX_VALUE,Double.MAX_VALUE);
 			
-			// Todo: make more efficient
-			if (edges1.head != null) {
-				if (edges1.head.regionLeft.p.equals(tp1_top)) {
-					Point s = Edge.interceptionPoint(edges1.head, ke);
-					if (null != s) {
-						s1 = s.y < s1.y ? s : s1;
+			// obere Tangentialpunkte (Startpunkt um K zu berechnen)
+			tp1_top = new Point(sub1.get(p1Index).x, sub1.get(p1Index).y);
+			tp2_top = new Point(sub2.get(p2Index).x, sub2.get(p2Index).y);
+			
+			System.out.println("tp1_top: "+tp1_top.toString());
+			System.out.println("tp2_top: "+tp2_top.toString());
+			
+			// distance vector between tp1_top and tp2_top
+			diff = Vector.diff(tp1_top, tp2_top);
+			// norm vector on distance vector
+			norm = Vector.norm(diff);
+			
+			// interception point of perpendicular bisector of tp1_top and tp2_top and distance vector between them
+			Point m = new Point(tp1_top.x+diff.getX()/2, tp1_top.y+diff.getY()/2);
+			// point on perpendicular bisector of tp1_top and tp2_top (very far away)
+			Point m2 = new Point(tp1_top.x+diff.getX()/2-norm.getX()*1000, tp1_top.y+diff.getY()/2-norm.getY()*1000);
+			
+			Edge ke = new Edge(k,m2, new Point(tp2_top), new Point(tp1_top), null, null);
+			
+			g.setColor(Color.GREEN);	// Tangente
+			g.drawLine((int) tp1_top.x, (int) tp1_top.y, (int) tp2_top.x, (int) tp2_top.y);
+			g.setColor(Color.RED);		// m durch Tangente
+			ke.drawEdge(g);
+			
+			// used to find interception points 
+			Edge kLast;
+			
+			// Todo: go through all edges and fix conditions
+			for (Edge e : edges1.edges) {
+				//if (e.regionRight.equals(tp1_top) || e.regionRight.equals(tp1_top)) {
+					Point s = Edge.interceptionPoint(e, ke);
+					if (null != s && s.y >= k.y && s.y < s1.y) {
+						kLast = e;
+						s1 = s;
 					}
-				}
-				if (edges1.head.regionRight.p.equals(tp1_top)) {
-					Point s = Edge.interceptionPoint(edges1.head, ke);
-					if (null != s) {
-						s1 = s.y < s1.y ? s : s1;
-					}
-				}
-
+				//}
 			}
-			if (edges2.head != null) {
-				if (edges2.head.regionLeft.p.equals(tp2_top)) {
-					Point s = Edge.interceptionPoint(edges2.head, ke);
-					if (null != s) {
-						s1 = s.y < s1.y ? s : s1;
-					}
-				}
-				if (edges2.head.regionRight.p.equals(tp2_top)) {
-					Point s = Edge.interceptionPoint(edges2.head, ke);
-					if (null != s) {
-						s1 = s.y < s1.y ? s : s1;
-					}
-				}
 
+			for (Edge e : edges2.edges) {
+				//if (e.regionRight.equals(tp2_top) || e.regionRight.equals(tp2_top)) {
+					Point s = Edge.interceptionPoint(e, ke);
+					if (null != s && s.y >= k.y && s.y < s2.y) {
+						kLast = e;
+						s2 = s;
+					}
+				//}
 			}
 			
-//			for (VoronoiRegion vr : model.regions) {
-//				if (vr.p.x == tp1_top.x && vr.p.y == tp1_top.y) {
-//					for (Edge e : vr.edges) {
-//						
-//					}
-//				}
-//				if (vr.p.x == tp2_top.x && vr.p.y == tp2_top.y) {
-//					for (Edge e : vr.edges) {
-//						Point s = Edge.interceptionPoint(e, ke);
-//						if (null != s) {
-//							s2 = s.y < s2.y ? s : s1;
-//						}
-//					}
-//				}
-//				
-//				
-//			}
 			
-			Point smin = s1.y > s2.y ? s2 : s1;
-			g.setColor(Color.BLUE);
-			g.drawLine((int)k.x, (int)k.y, (int)smin.x, (int)smin.y);
+			// first Interception Point of ke with Voronoi Edge
+			Point smin;
+			Edge ki = new Edge(ke);
+
+			// get next Point
+			if (s1.y == s2.y && s1.y == Double.MAX_VALUE) {
+				System.out.println("kein Schnittpunkt - end");
+				// nonetheless: have to paint the line because it is the final one
+				ki.start = new Point(k.x,k.y);
+				el.addEdge(ki);
+				g.setColor(Color.PINK);	
+				ki.drawEdge(g);
+				break;
+			}
+			if (s1.y < s2.y) {
+				smin = s1;
+				System.out.println("s1 < s2: " + s1.y + " / " + s2.y);
+				System.out.println("get next tp1_top (s1 size: "+sub1.size()+", i: "+p1Index+")");
+				p1Index++;
+				ki.setLeftEnd(new Point(k.x,k.y));
+				ki.setRightEnd(smin);
+			} else if (s1.y > s2.y){
+				smin = s2;
+				System.out.println("s1 > s2: " + s1.y + " / " + s2.y);
+				System.out.println("get next tp2_top (s2 size: "+sub2.size()+", i: "+p2Index+")");
+				p2Index++;
+				ki.setLeftEnd(smin);
+				ki.setRightEnd(new Point(k.x,k.y));
+			} else {
+				smin= new Point(0,0);
+				System.out.println("s1 == s2 aber nicht double.MAX_VALUE sondern " + s1.y + " == " +s2.y);
+				ke.drawEdge(g);
+				break;
+			}
+
+			el.addEdge(ki);
+			// draw K until interception point
+			g.setColor(Color.BLUE);	
+			ki.drawEdge(g);
 			v.repaint();
-			System.out.println("Going into loop");
+			
 			k = smin;
-			tp1_top = tp1_bottom;
+			/*
+			kLast = new Edge(ki);
+			kLast.start.x*=1000;
+			kLast.start.y*=1000;
+			kLast.end.x*=1000;
+			kLast.end.y*=1000;
+			*/
+			System.out.println("while bedingung: "+ (!tp1_top.equals(tp1_bottom) || !tp2_top.equals(tp2_bottom)));
 			
 		}
 		
+		for (Edge e : el.edges) {
+			System.out.println(e.toString());
+		}
 		
 		
-		return null;
+		return el;
 	}
 	
 	

@@ -1,4 +1,4 @@
-package geometry;
+package algorithms;
 /** -----------------------------------------------------------------
  *  -------  Effiziente Algorithmen                  ----------------
  *  -------                                          ----------------
@@ -10,7 +10,7 @@ package geometry;
  *  -----------------------------------------------------------------
  */   
 
-public class Point  {
+class Point  {
 
     public double x, y;
 
@@ -54,13 +54,5 @@ public class Point  {
         double f=area2(p0, p1);
         return f<0 || f==0 && !isBetween(p0, p1);
     }
-    
-    public boolean equals(Point p) {
-    	return (this.x == p.x && this.y == p.y);
-    }
-    
-    public String toString() {
-    	return "("+this.x+", "+this.y+")";
-    }
-    
+
 }    

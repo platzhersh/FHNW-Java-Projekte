@@ -29,6 +29,16 @@ public class EdgeTest {
 	}
 	
 	@Test
+	public void testInterceptionPointTwice(){
+		Point p1 = Edge.interceptionPoint(e1, e2);
+		e1.setLeftEnd(e1.getEnd());
+		e1.setRightEnd(p1);
+		Point p2 = Edge.interceptionPoint(e1, e2);
+		assertEquals(p1.equals(p2),true);
+	}
+	
+	/*
+	@Test
 	public void testParallel() {
 		Point p = Edge.interceptionPoint(e1, e1);
 		System.out.println(p);
@@ -40,6 +50,6 @@ public class EdgeTest {
 		Point p = Edge.interceptionPoint(e1, e3);
 		System.out.println(p);
 		assertEquals((new Point(3,2)).equals(p), true);
-	}
+	}*/
 
 }
