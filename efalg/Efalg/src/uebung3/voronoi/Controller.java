@@ -166,14 +166,11 @@ public class Controller {
 		int p2Index = 0;
 		
 		List<Edge> kEdges = new LinkedList<Edge>();
-		
-		while (!tp1_top.equals(tp1_bottom) || !tp2_top.equals(tp2_bottom)) {
+		boolean goOn = true;
+		//while (!tp1_top.equals(tp1_bottom) || !tp2_top.equals(tp2_bottom)) {
+		while(goOn) {
 			Point s1 = new Point(Double.MAX_VALUE,Double.MAX_VALUE);
 			Point s2 = new Point(Double.MAX_VALUE,Double.MAX_VALUE);
-			
-			// obere Tangentialpunkte (Startpunkt um K zu berechnen)
-			tp1_top = new Point(sub1.get(p1Index).x, sub1.get(p1Index).y);
-			tp2_top = new Point(sub2.get(p2Index).x, sub2.get(p2Index).y);
 			
 			System.out.println("tp1_top: "+tp1_top.toString());
 			System.out.println("tp2_top: "+tp2_top.toString());
@@ -204,7 +201,7 @@ public class Controller {
 			for (Edge e : edges1.edges) {
 				//if (e.regionRight.equals(tp1_top) || e.regionRight.equals(tp1_top)) {
 					Point s = Edge.interceptionPoint(e, ke);
-					if (null != s && s.y >= k.y && s.y < s1.y && !e.cut) {
+					if (null != s && s.y >= k.y && s.y < s1.y) {
 						kLast = e; kLast.cut = true;
 						s1 = s;
 					}
@@ -214,7 +211,7 @@ public class Controller {
 			for (Edge e : edges2.edges) {
 				//if (e.regionRight.equals(tp2_top) || e.regionRight.equals(tp2_top)) {
 					Point s = Edge.interceptionPoint(e, ke);
-					if (null != s && s.y >= k.y && s.y < s2.y && !e.cut) {
+					if (null != s && s.y >= k.y && s.y < s2.y) {
 						kLast = e; kLast.cut = true;
 						s2 = s;
 					}
@@ -234,25 +231,35 @@ public class Controller {
 				el.addEdge(ki);
 				g.setColor(Color.PINK);	
 				ki.drawEdge(g);
+				goOn = false;
 				break;
 			}
+			// s1 höher als s2
 			if (s1.y < s2.y) {
 				smin = s1;
 				System.out.println("s1 < s2: " + s1.y + " / " + s2.y);
-				System.out.println("get next tp1_top (s1 size: "+sub1.size()+", i: "+p1Index+")");
-				p1Index++;
-				edges1.edges.remove(kLast);
-				edges1.edges.add(ke);
+				//System.out.println("get next tp1_top (s1 size: "+sub1.size()+", i: "+p1Index+")");
+				//p1Index++;
+				
+				System.out.println("switch tp1_top: " + tp1_top.equals(kLast.regionLeft) + " " + tp1_top.equals(kLast.regionRight));
+				tp1_top = kLast.regionLeft.equals(tp1_top) ? kLast.regionRight : kLast.regionLeft;
+				
 				ki.setLeftEnd(new Point(k.x,k.y));
 				ki.setRightEnd(new Point(smin.x,smin.y));
 				kLast.setRightEnd(new Point(smin.x,smin.y));
-			} else if (s1.y > s2.y){
+				
+			// s2 höher als s1
+			} else if (s2.y < s1.y){
 				smin = s2;
 				System.out.println("s1 > s2: " + s1.y + " / " + s2.y);
-				System.out.println("get next tp2_top (s2 size: "+sub2.size()+", i: "+p2Index+")");
-				p2Index++;
-				edges2.edges.remove(kLast);
-				edges2.edges.add(ke);
+//				System.out.println("get next tp2_top (s2 size: "+sub2.size()+", i: "+p2Index+")");
+//				p2Index++;
+//				edges2.edges.remove(kLast);
+//				edges2.edges.add(ke);
+				
+				System.out.println("switch tp2_top: " + tp2_top.equals(kLast.regionLeft) + " " + tp2_top.equals(kLast.regionRight));
+				tp2_top = kLast.regionLeft.equals(tp2_top) ? kLast.regionRight : kLast.regionLeft;
+				
 				ki.setLeftEnd(smin);
 				ki.setRightEnd(new Point(k.x,k.y));
 				kLast.setLeftEnd(new Point(smin.x,smin.y));
