@@ -4,11 +4,16 @@ import geometry.Point;
 
 import java.awt.Canvas;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+
 import java.awt.BorderLayout;
+
+import javax.swing.JPanel;
+import javax.swing.JButton;
 
 
 public class View extends JFrame {
@@ -21,6 +26,8 @@ public class View extends JFrame {
 	private static final long serialVersionUID = -5402716063017734083L;
 	private Canvas canvas;
 	private JLabel lblPos;
+	public JButton btnReset;
+	public JButton btnRefresh;
 
 	/**
 	 * Create the frame.
@@ -32,8 +39,18 @@ public class View extends JFrame {
 		canvas = new Canvas();
 		getContentPane().add(canvas);
 		
+		JPanel panel = new JPanel();
+		getContentPane().add(panel, BorderLayout.SOUTH);
+		
 		lblPos = new JLabel("Pos");
-		getContentPane().add(lblPos, BorderLayout.SOUTH);
+		panel.add(lblPos);
+		
+		btnReset = new JButton("Reset");
+		
+		panel.add(btnReset);
+		
+		btnRefresh = new JButton("Refresh");
+		//panel.add(btnRefresh);
 		m = model;
 	}
 
@@ -41,6 +58,7 @@ public class View extends JFrame {
 	public Canvas getCanvas() {
 		return canvas;
 	}
+
 	public void setPosLbl(String text) {
 		lblPos.setText(text);
 	}
@@ -62,13 +80,18 @@ public class View extends JFrame {
 		this.repaint();
 	}*/
 	
-	/*
-	public void paint() {
-		Graphics g = getCanvas().getGraphics();
+	
+	public void paintComponent(Graphics g) {
 		g.setColor( Color.white ); 
 		g.fillRect (0, 0, getWidth(), getHeight());
 		
 		drawPoints(g);
-		drawEdges(g);
-	}*/
+		//drawEdges(g);
+	}
+	
+	public Dimension getPreferredSize() {
+		return new Dimension(400, 300);
+	}
+	
+	
 }

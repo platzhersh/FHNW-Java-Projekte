@@ -5,9 +5,10 @@ import geometry.Vector;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -30,6 +31,29 @@ public class Controller {
 	
 	public void registerListeners() {
 		
+		v.btnReset.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				model = new Model();
+				v.m = model;
+				Graphics g = v.getCanvas().getGraphics();
+				v.update(g);
+				v.repaint();
+				
+			}
+		});
+		v.btnRefresh.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Graphics g = v.getCanvas().getGraphics();
+				v.getCanvas().revalidate();
+				v.getCanvas().repaint();
+				v.getCanvas().update(g);
+				
+			}
+		});
 		v.addComponentListener(new ComponentAdapter() {
 			@Override
 		    public void componentResized(ComponentEvent e)
@@ -70,7 +94,12 @@ public class Controller {
 				v.drawPoints(g);
 				
 				System.out.println("Median:" + getMedian(model.points));
-				divideEtImpera(model.points);
+				EdgeList l = divideEtImpera(model.points);
+				
+				for (Edge e : l.edges) {
+					g.setColor(Color.CYAN);
+					e.drawEdge(g);
+				}
 			}
 		});
 		v.getCanvas().addMouseMotionListener(new MouseMotionListener() {
