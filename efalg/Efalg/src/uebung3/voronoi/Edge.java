@@ -11,6 +11,7 @@ public class Edge {
 	Point regionRight;
 	Edge nextLeft;
 	Edge nextRight;
+	boolean cut;
 	
 	public Edge(Point start, Point end, Point left, Point right, Edge leftEdge, Edge rightEdge) {
 		this.start=start;
@@ -19,6 +20,7 @@ public class Edge {
 		regionRight=right;
 		nextLeft=leftEdge;
 		nextRight=rightEdge;
+		cut = false;
 	}
 	
 	public Edge(Edge e) {
@@ -28,6 +30,7 @@ public class Edge {
 		this.regionRight = e.regionRight;
 		this.nextLeft = null;
 		this.nextRight = null;
+		cut = false;
 	}
 	
 	public Point getStart() {

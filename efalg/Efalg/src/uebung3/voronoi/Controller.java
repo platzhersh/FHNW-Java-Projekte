@@ -128,6 +128,7 @@ public class Controller {
 		
 		// divide
 		int spl = getSplitIndex(lp);
+		System.out.println("SplitIndex: "+ spl);
 		ArrayList<Point> sub1 = new ArrayList<Point>(lp.subList(0, spl));
 		ArrayList<Point> sub2 = new ArrayList<Point>(lp.subList(spl, lp.size()));
 		
@@ -153,7 +154,8 @@ public class Controller {
 		Vector norm = Vector.norm(diff);
 					
 		// point on perpendicular bisector of tp1_top and tp2_top (very far away)
-		Point k = new Point(tp1_top.x+diff.getX()/2+norm.getX()*1000, tp1_top.y+diff.getY()/2+norm.getY()*1000) ;
+		Point kAway = new Point(tp1_top.x+diff.getX()/2+norm.getX()*1000, tp1_top.y+diff.getY()/2+norm.getY()*1000);
+		Point k = new Point(kAway);
 		
 		// untere Tangentialpunkte (Endpunkt um K zu berechnen)
 		Point tp1_bottom = new Point(sub1.get(sub1.size()-1).x, sub1.get(sub1.size()-1).y);
@@ -186,7 +188,9 @@ public class Controller {
 			// point on perpendicular bisector of tp1_top and tp2_top (very far away)
 			Point m2 = new Point(tp1_top.x+diff.getX()/2-norm.getX()*1000, tp1_top.y+diff.getY()/2-norm.getY()*1000);
 			
-			Edge ke = new Edge(k,m2, new Point(tp2_top), new Point(tp1_top), null, null);
+			kAway = new Point(tp1_top.x+diff.getX()/2+norm.getX()*1000, tp1_top.y+diff.getY()/2+norm.getY()*1000);
+			Edge ke = new Edge(kAway,m2, new Point(tp2_top), new Point(tp1_top), null, null);
+			kEdges.add(ke);
 			
 			g.setColor(Color.GREEN);	// Tangente
 			g.drawLine((int) tp1_top.x, (int) tp1_top.y, (int) tp2_top.x, (int) tp2_top.y);
@@ -194,14 +198,14 @@ public class Controller {
 			ke.drawEdge(g);
 			
 			// used to find interception points 
-			Edge kLast;
+			Edge kLast = new Edge(null,null,null,null,null,null);
 			
 			// Todo: go through all edges and fix conditions
 			for (Edge e : edges1.edges) {
 				//if (e.regionRight.equals(tp1_top) || e.regionRight.equals(tp1_top)) {
 					Point s = Edge.interceptionPoint(e, ke);
-					if (null != s && s.y >= k.y && s.y < s1.y) {
-						kLast = e;
+					if (null != s && s.y >= k.y && s.y < s1.y && !e.cut) {
+						kLast = e; kLast.cut = true;
 						s1 = s;
 					}
 				//}
@@ -210,8 +214,8 @@ public class Controller {
 			for (Edge e : edges2.edges) {
 				//if (e.regionRight.equals(tp2_top) || e.regionRight.equals(tp2_top)) {
 					Point s = Edge.interceptionPoint(e, ke);
-					if (null != s && s.y >= k.y && s.y < s2.y) {
-						kLast = e;
+					if (null != s && s.y >= k.y && s.y < s2.y && !e.cut) {
+						kLast = e; kLast.cut = true;
 						s2 = s;
 					}
 				//}
@@ -237,26 +241,37 @@ public class Controller {
 				System.out.println("s1 < s2: " + s1.y + " / " + s2.y);
 				System.out.println("get next tp1_top (s1 size: "+sub1.size()+", i: "+p1Index+")");
 				p1Index++;
+				edges1.edges.remove(kLast);
+				edges1.edges.add(ke);
 				ki.setLeftEnd(new Point(k.x,k.y));
-				ki.setRightEnd(smin);
+				ki.setRightEnd(new Point(smin.x,smin.y));
+				kLast.setRightEnd(new Point(smin.x,smin.y));
 			} else if (s1.y > s2.y){
 				smin = s2;
 				System.out.println("s1 > s2: " + s1.y + " / " + s2.y);
 				System.out.println("get next tp2_top (s2 size: "+sub2.size()+", i: "+p2Index+")");
 				p2Index++;
+				edges2.edges.remove(kLast);
+				edges2.edges.add(ke);
 				ki.setLeftEnd(smin);
 				ki.setRightEnd(new Point(k.x,k.y));
+				kLast.setLeftEnd(new Point(smin.x,smin.y));
 			} else {
 				smin= new Point(0,0);
 				System.out.println("s1 == s2 aber nicht double.MAX_VALUE sondern " + s1.y + " == " +s2.y);
 				ke.drawEdge(g);
 				break;
 			}
+			
+			ki.cut = true;
 
 			el.addEdge(ki);
+			el.addEdge(kLast);
 			// draw K until interception point
 			g.setColor(Color.BLUE);	
 			ki.drawEdge(g);
+			g.setColor(Color.YELLOW);
+			kLast.drawEdge(g);
 			v.repaint();
 			
 			k = smin;
@@ -294,7 +309,7 @@ public class Controller {
 	
 	public static int getSplitIndex(List<Point> l) {
 		int s = l.size();
-		return s > 0 ? (s-1)/2 : 0;
+		return s > 0 ? s/2 : 0;
 	}
 	
 	
