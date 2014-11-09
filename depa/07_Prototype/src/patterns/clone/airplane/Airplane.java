@@ -9,6 +9,13 @@ class Airplane implements Cloneable {
 		}
 		public void drawFire() {onFire = false;}
 		
+		public Engine() {
+			
+		}
+		public Engine(Engine e) {
+			this.onFire = e.onFire;
+		}
+		
 		public Object clone() {
 			try {
 				return super.clone();
@@ -35,14 +42,19 @@ class Airplane implements Cloneable {
 	public Object clone(){
 		try {
 			Airplane clone = (Airplane)super.clone();
-			clone.engines = (Engine[])engines.clone();
-			for(int i = 0; i < clone.engines.length; i++) {
-				clone.engines[i] = (Engine)engines[i].clone();
-			}
+			clone.engines = clone.cloneInner();
 			return clone;
 		} catch (CloneNotSupportedException e) {
 			throw new InternalError();
 		}
-	}		
+	}
+	
+	public Engine[] cloneInner() {
+		Engine[] e = new Engine[4];
+		for(int i = 0; i < engines.length; i++) {
+			e[i] = new Engine(engines[i]);
+		}
+		return e;
+	}
 
 }

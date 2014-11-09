@@ -31,14 +31,16 @@ public class LayoutComparer extends JFrame {
 	LayoutComparer() {
 		setTitle("Layout Manager Test");
 		setLayout(new GridLayout(1, 2));
-		LayoutManager m1;
-		LayoutManager m2;
+		LayoutManager m;
+		// LayoutManager m1;
+		// LayoutManager m2;
 		//m = new java.awt.FlowLayout();
-		m1 = new java.awt.BorderLayout();
-		m2 = new java.awt.BorderLayout();
+		m = new java.awt.BorderLayout();
+		//m1 = new java.awt.BorderLayout();
+		//m2 = new java.awt.BorderLayout();
 
-		add(createPanel(m1, "Left"));
-		//pack();
-		add(createPanel(m2, "Right"));
+		add(createPanel(m, "Left"));
+		pack();
+		add(createPanel(m, "Right"));
 	}
 }
