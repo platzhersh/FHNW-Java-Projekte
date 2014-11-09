@@ -1,7 +1,6 @@
 package uebung3.voronoi;
 
-import geometry.Point;
-import geometry.Vector;
+import uebung3.voronoi.helpers.Point;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -15,6 +14,10 @@ import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import uebung3.voronoi.helpers.Debug;
+import uebung3.voronoi.helpers.Edge;
+import uebung3.voronoi.helpers.Vector;
 
 public class Controller {
 
@@ -146,7 +149,7 @@ public class Controller {
 			model.regions.add(vrRight);
 			
 			// not really necessary
-			Edge e1 = new Edge(p1, p2, vrLeft , vrRight, null, null);
+			Edge e1 = new Edge(p1, p2, vrLeft , vrRight);
 			/*
 			vrLeft.edges.add(e1);
 			vrRight.edges.add(e1);
@@ -164,9 +167,15 @@ public class Controller {
 		EdgeList edges1 = divideEtImpera(sub1);
 		EdgeList edges2 = divideEtImpera(sub2);
 		
-		// the Edgelist to pass on
+		// the Edgelist to pass on with all the edges from previous recursions
+		// edges will be trimmed later in the algorithm
 		EdgeList el = new EdgeList();
-		
+		for (Edge e : edges1.edges) {
+			el.addEdge(e);
+		}
+		for (Edge e : edges2.edges) {
+			el.addEdge(e);
+		}
 		// conquer
 		
 		// sort points ascending by their y-coordinate
@@ -215,7 +224,7 @@ public class Controller {
 			Point m2 = new Point(tp1_top.x+diff.getX()/2-norm.getX()*1000, tp1_top.y+diff.getY()/2-norm.getY()*1000);
 			
 			kAway = new Point(tp1_top.x+diff.getX()/2+norm.getX()*1000, tp1_top.y+diff.getY()/2+norm.getY()*1000);
-			Edge ke = new Edge(kAway,m2, new Point(tp2_top), new Point(tp1_top), null, null);
+			Edge ke = new Edge(kAway,m2, new Point(tp2_top), new Point(tp1_top));
 			kEdges.add(ke);
 			
 			g.setColor(Color.GREEN);	// Tangente
@@ -224,42 +233,40 @@ public class Controller {
 			ke.drawEdge(g);
 			
 			// used to find interception points 
-			Edge kLast = new Edge(null,null,null,null,null,null);
+			Edge kLast = new Edge(null,null);
 			
 			// Todo: go through all edges and fix conditions
 			for (Edge e : edges1.edges) {
-				//if (e.regionRight.equals(tp1_top) || e.regionRight.equals(tp1_top)) {
+				if (e.getRegionLeft().equals(tp1_top) || e.getRegionRight().equals(tp1_top)) {
 					Point s = Edge.interceptionPoint(e, ke);
 					if (null != s && s.y >= k.y && s.y < s1.y) {
 						kLast = e; kLast.cut = true;
 						s1 = s;
 					}
-				//}
+				}
 			}
 
 			for (Edge e : edges2.edges) {
-				//if (e.regionRight.equals(tp2_top) || e.regionRight.equals(tp2_top)) {
+				if (e.getRegionRight().equals(tp2_top) || e.getRegionLeft().equals(tp2_top)) {
 					Point s = Edge.interceptionPoint(e, ke);
 					if (null != s && s.y >= k.y && s.y < s2.y) {
 						kLast = e; kLast.cut = true;
 						s2 = s;
 					}
-				//}
+				}
 			}
 			
 			
 			// first Interception Point of ke with Voronoi Edge
 			Point smin;
-			Edge ki = new Edge(ke);
 
 			// get next Point
 			if (s1.y == s2.y && s1.y == Double.MAX_VALUE) {
 				System.out.println("kein Schnittpunkt - end");
 				// nonetheless: have to paint the line because it is the final one
-				ki.start = new Point(k.x,k.y);
-				el.addEdge(ki);
+				ke.setStart(new Point(k.x,k.y));
 				g.setColor(Color.PINK);	
-				ki.drawEdge(g);
+				ke.drawEdge(g);
 				goOn = false;
 				break;
 			}
@@ -270,27 +277,22 @@ public class Controller {
 				//System.out.println("get next tp1_top (s1 size: "+sub1.size()+", i: "+p1Index+")");
 				//p1Index++;
 				
-				System.out.println("switch tp1_top: " + tp1_top.equals(kLast.regionLeft) + " " + tp1_top.equals(kLast.regionRight));
-				tp1_top = kLast.regionLeft.equals(tp1_top) ? kLast.regionRight : kLast.regionLeft;
+				System.out.println("switch tp1_top: " + tp1_top.equals(kLast.getRegionLeft()) + " " + tp1_top.equals(kLast.getRegionRight()));
+				tp1_top = kLast.getRegionLeft().equals(tp1_top) ? kLast.getRegionRight() : kLast.getRegionLeft();
 				
-				ki.setLeftEnd(new Point(k.x,k.y));
-				ki.setRightEnd(new Point(smin.x,smin.y));
+				ke.setLeftEnd(new Point(k.x,k.y));
+				ke.setRightEnd(new Point(smin.x,smin.y));
 				kLast.setRightEnd(new Point(smin.x,smin.y));
 				
 			// s2 höher als s1
 			} else if (s2.y < s1.y){
 				smin = s2;
-				System.out.println("s1 > s2: " + s1.y + " / " + s2.y);
-//				System.out.println("get next tp2_top (s2 size: "+sub2.size()+", i: "+p2Index+")");
-//				p2Index++;
-//				edges2.edges.remove(kLast);
-//				edges2.edges.add(ke);
+				System.out.println("s1 > s2: " + s1.y + " / " + s2.y);				
+				System.out.println("switch tp2_top: " + tp2_top.equals(kLast.getRegionLeft()) + " " + tp2_top.equals(kLast.getRegionRight()));
+				tp2_top = kLast.getRegionLeft().equals(tp2_top) ? kLast.getRegionRight() : kLast.getRegionLeft();
 				
-				System.out.println("switch tp2_top: " + tp2_top.equals(kLast.regionLeft) + " " + tp2_top.equals(kLast.regionRight));
-				tp2_top = kLast.regionLeft.equals(tp2_top) ? kLast.regionRight : kLast.regionLeft;
-				
-				ki.setLeftEnd(smin);
-				ki.setRightEnd(new Point(k.x,k.y));
+				ke.setRightEnd(smin);
+				ke.setRightEnd(new Point(k.x,k.y));
 				kLast.setLeftEnd(new Point(smin.x,smin.y));
 			} else {
 				smin= new Point(0,0);
@@ -299,13 +301,13 @@ public class Controller {
 				break;
 			}
 			
-			ki.cut = true;
+			ke.cut = true;
 
-			el.addEdge(ki);
+			
 			el.addEdge(kLast);
 			// draw K until interception point
 			g.setColor(Color.BLUE);	
-			ki.drawEdge(g);
+			ke.drawEdge(g);
 			g.setColor(Color.YELLOW);
 			kLast.drawEdge(g);
 			v.repaint();

@@ -1,6 +1,6 @@
-package uebung3.voronoi;
+package uebung3.voronoi.helpers;
 
-import geometry.Point;
+import uebung3.voronoi.helpers.Point;
 
 import java.awt.Canvas;
 import java.awt.Color;

@@ -1,6 +1,6 @@
-package geometry;
+package uebung3.voronoi.helpers;
 
-import geometry.Point;
+import uebung3.voronoi.helpers.Point;
 
 
 public class Vector {
@@ -47,14 +47,28 @@ public class Vector {
 		  return new Vector(v.getY(),-v.getX());
 	  }
 	  
-	  public static double ccw(Point q, Point r, Point p) {
-		  
-		  Vector a = new Vector(q.x-p.x,q.y-p.y);
-		  Vector b = new Vector(r.x-p.x,r.y-p.y);
-		  
-		  Vector res = a.cross(b);
-		  
-		  return res.z;
-	  }
+	  /***
+		 * 
+		 * @param p Punkt auf PQ
+		 * @param q Punkt auf PQ
+		 * @param r Punkt 
+		 * @return 	1  falls P links von QR oder auf QR aber nach R
+		 * 			0  falls P zwischen Q und R
+		 * 			-1 falls P rechts von QR oder auf QR vor Q
+		 */
+	  public static int ccw(Point q, Point r, Point p) {
+			Vector a = new Vector(q.x-p.x,q.y-p.y);
+			Vector b = new Vector(r.x-p.x,r.y-p.y);
+			  
+			Vector res = a.cross(b);
+			  
+			// normalize
+			int result = 0;
+			result = res.z > 0 ? 1 : -1;
+			  
+			return result;
+		}
+	  
+	   
 	  
 }

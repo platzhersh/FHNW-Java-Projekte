@@ -1,25 +1,42 @@
-package uebung3.voronoi;
+package uebung3.voronoi.helpers;
 
 import java.awt.Graphics;
 
-import geometry.Point;
+import uebung3.voronoi.helpers.Point;
 
 public class Edge {
-	Point start;
-	Point end;
-	Point regionLeft;
-	Point regionRight;
-	Edge nextLeft;
-	Edge nextRight;
-	boolean cut;
+	private Point start, end, regionLeft, regionRight;
+	public Edge nextLeft;
+	public Edge nextRight;
 	
-	public Edge(Point start, Point end, Point left, Point right, Edge leftEdge, Edge rightEdge) {
-		this.start=start;
-		this.end=end;
-		regionLeft=left;
-		regionRight=right;
-		nextLeft=leftEdge;
-		nextRight=rightEdge;
+	public boolean cut;
+	
+	
+	public Edge(Point p1, Point p2) {
+		if ( null != p1 && null != p2) {
+			if (p2.y < p1.y) {
+				this.start = p2;
+				this.end = p1;
+			} else {
+				this.start = p1;
+				this.end = p2;
+			}
+		}
+	}
+	
+	// always set start as the point with the lower y coordinate
+	public Edge(Point p1, Point p2, Point n1, Point n2) {
+		
+		this(p1,p2);
+		
+		if (Vector.ccw(start, end, n1) == 1) {
+			this.regionLeft = n1;
+			this.regionRight = n2;
+		} else {
+			this.regionRight = n1;
+			this.regionLeft = n2;
+		}
+		
 		cut = false;
 	}
 	
@@ -33,12 +50,51 @@ public class Edge {
 		cut = false;
 	}
 	
+	
+	/* --------- Setter & Getter --------------------- */
+	
 	public Point getStart() {
 		return start;
 	}
 	public Point getEnd() {
 		return end;
 	}
+	
+	public void setStart(Point p) {
+		if (p.y < end.y) start = new Point(p);
+		else {
+			start = end;
+			end = new Point(p);
+		}
+	}
+	
+	public void setEnd(Point p) {
+		if (p.y > end.y) end = new Point(p);
+		else {
+			end = start;
+			start = new Point(p);
+		}
+	}
+	
+	public Point getRegionLeft() {
+		return this.regionLeft;
+	}
+	
+	public Point getRegionRight() {
+		return this.regionRight;
+	}
+	
+	public void setNeighbours(Point n1, Point n2) {
+		if (Vector.ccw(start, end, n1) == 1) {
+			this.regionLeft = n1;
+			this.regionRight = n2;
+		} else {
+			this.regionRight = n1;
+			this.regionLeft = n2;
+		}
+	}
+	
+	
 	
 	// Remember: coordinates root is top-left window corner
 	
@@ -49,20 +105,13 @@ public class Edge {
 		return end.x < start.x ? end : start;
 	}
 	
-	public Point getUpperEnd() {
-		return end.y > start.y ? start : end;
-	}
-	public Point getLowerEnd() {
-		return end.y > start.y ? end : start;
-	}
-	
 	public void setRightEnd(Point p) {
 		if (end.x > start.x) end = p;
-		else start = p;
+		else start = new Point(p);
 	}
 	public void setLeftEnd(Point p) {
 		if (end.x < start.x) end = p;
-		else start = p;
+		else start = new Point(p);
 	}
 	
 	// source: http://stackoverflow.com/questions/16314069/calculation-of-intersections-between-line-segments

@@ -1,8 +1,8 @@
 package uebung3.voronoi;
 
-import geometry.Point;
-
 import java.util.LinkedList;
+
+import uebung3.voronoi.helpers.Edge;
 
 public class EdgeList {
 	Edge head;

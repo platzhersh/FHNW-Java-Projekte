@@ -1,11 +1,13 @@
 package uebung3.voronoi;
 
-import geometry.Point;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+
+import uebung3.voronoi.helpers.Edge;
+import uebung3.voronoi.helpers.Point;
 
 public class Model {
 	public ArrayList<Point> points;
