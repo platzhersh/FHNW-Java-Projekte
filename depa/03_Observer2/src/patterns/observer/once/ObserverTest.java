@@ -7,7 +7,11 @@ public class ObserverTest {
 		s.addObserver(new PrintObserver("Printer 1"));
 		s.addObserver(new OnceObserver());
 		s.addObserver(new PrintObserver("Printer 2"));
+		s.addObserver(new OnceObserver());
 		s.addObserver(new PrintObserver("Printer 3"));
+		s.addObserver(new OnceObserver());
+		s.addObserver(new OnceObserver());
+		
 
 		s.setValue(22);
 		s.setValue(30);

@@ -65,6 +65,7 @@ public class Edge {
 		else start = p;
 	}
 	
+	// source: http://stackoverflow.com/questions/16314069/calculation-of-intersections-between-line-segments
 	public static Point interceptionPoint(Edge e1, Edge e2) {
 		
 		double x1,x2,x3,x4;
@@ -80,20 +81,32 @@ public class Edge {
 		y3 = e2.getStart().y;
 		y4 = e2.getEnd().y;
 		
-		
-		// check if vertical
-		if (e1.getStart().x == e1.getEnd().x) {
-			System.out.println("e1 vertical!");
-		}
-		if (e2.getStart().x == e2.getEnd().x) {
-			System.out.println("e2 vertical!");
-		}
-		
 		// equations
 		double a1 = (y2-y1)/(x2-x1);
 		double b1 = y1 - a1*x1;
 		double a2 = (y4-y3)/(x4-x3);
 		double b2 = y3 - a2*x3;
+		
+		// check if vertical
+		boolean e1Vert = e1.getStart().x == e1.getEnd().x;
+		boolean e2Vert = e2.getStart().x == e2.getEnd().x;
+		if (e1Vert || e2Vert) {
+			double y0 = 0, x0 = 0;
+			if (e1Vert) y0 = a2*x1+b2; x0 = x1;
+			if (e2Vert) y0 = a1*x3+b1; x0 = x3;
+			
+			// check if y0 is element of both edges
+			if (Math.min(y1, y2) < y0 && y0 < Math.max(y1, y2) &&
+					Math.min(y3, y4) < y0 && y0 < Math.max(y3, y4)
+				) {
+				return new Point(x0,y0);
+			} else {
+				return null;
+			}
+		}
+		
+		
+		
 		
 		// special case: one edge goes through start / end vertex of the other
 		double ye1_1 = a1*x3 + b1;

@@ -4,19 +4,19 @@ import javax.swing.JLabel;
 
 public class TextListener extends JLabel implements Listener {
 
+	TextModel text;
+	
+	public TextListener(TextModel m) {
+		text = m;
+	}
+	
 	@Override
 	public void notifyDelete(int from, int len) {
-		System.out.println(String.format("notifyDelete(%d, %d)", from, len));
-		String h = getText().substring(0, from);
-		String t = getText().substring(from + len);
-		setText(h + t);
+		setText(text.toString());
 	}
 
 	@Override
 	public void notifyInsert(int pos, char ch) {
-		System.out.println(String.format("notifyInsert(%d, %c)", pos, ch));
-		String h = getText().substring(0, pos);
-		String t = getText().substring(pos);
-		setText(h + ch + t);
+		setText(text.toString());
 	}
 }

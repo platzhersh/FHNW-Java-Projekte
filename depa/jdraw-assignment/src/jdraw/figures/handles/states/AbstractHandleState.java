@@ -28,5 +28,7 @@ public abstract class AbstractHandleState {
 		anchor = null;
 	}
 	
+	// public abstract Point getFixedCorner();	
+	// public abstract Point getVariableCorner(int x, int y);
 	
 }

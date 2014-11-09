@@ -46,4 +46,15 @@ public abstract class AbstractFigure implements Figure {
 	public void flipVertical(){
 		handles.flipVertical();
 	}
+	
+
+	@Override
+	public void addFigureListener(FigureListener listener) {
+		listeners.add(listener);
+	}
+
+	@Override
+	public void removeFigureListener(FigureListener listener) {
+		listeners.remove(listener);
+	}
 }

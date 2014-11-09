@@ -4,7 +4,6 @@ import java.awt.Rectangle;
 
 import jdraw.framework.Figure;
 import jdraw.framework.FigureEvent;
-import jdraw.framework.FigureListener;
 
 public abstract class AbstractRectangularFigure extends AbstractFigure {
 
@@ -33,17 +32,6 @@ public abstract class AbstractRectangularFigure extends AbstractFigure {
 	@Override
 	public Rectangle getBounds() {
 		return rectangle.getBounds();
-	}
-
-
-	@Override
-	public void addFigureListener(FigureListener listener) {
-		listeners.add(listener);
-	}
-
-	@Override
-	public void removeFigureListener(FigureListener listener) {
-		listeners.remove(listener);
 	}
 	
 

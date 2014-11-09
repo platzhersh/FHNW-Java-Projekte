@@ -19,7 +19,7 @@ public class CorrectionListener implements Listener {
 			if ("(C)".equals(s)) {
 				System.out.println("correct on: " + text);
 				text.delete(pos - 2, 3);
-				text.insert(pos - 2, 'Â©');
+				text.insert(pos - 2, '©');
 				System.out.println("corrected text: " + text);
 			}
 		}

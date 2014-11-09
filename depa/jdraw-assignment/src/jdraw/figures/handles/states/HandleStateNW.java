@@ -38,7 +38,7 @@ public class HandleStateNW extends AbstractHandleState {
 	@Override
 	public void dragInteraction(int x, int y) {
 		Rectangle r = owner.getBounds();
-		owner.setBounds(new Point(x,y), anchor);
+		owner.setBounds(anchor, new Point(x,y));
 		
 		if (x > r.x + r.width) {
 			owner.flipHorizontal();

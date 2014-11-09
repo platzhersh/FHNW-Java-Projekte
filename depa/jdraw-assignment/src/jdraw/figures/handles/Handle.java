@@ -87,4 +87,11 @@ public class Handle implements FigureHandle {
 		state = s;
 	}
 
+	/*public Point getFixedCorner() {
+		state.getFixedCorner();
+		}
+	public Point getVariableCorner(int x, int y) {
+		state.getVariableCorner();
+	}*/
+
 }

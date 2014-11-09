@@ -17,7 +17,7 @@ public class RedScrollbar extends Observable implements Observer {
 
     public void setValue(int value) {
         this.value = value;
-        this.notifyObservers(value);
+        //this.notifyObservers(value);
     }
 
 	@Override
