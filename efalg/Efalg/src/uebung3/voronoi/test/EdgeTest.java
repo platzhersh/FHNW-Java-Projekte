@@ -25,15 +25,15 @@ public class EdgeTest {
 	@Test
 	public void testInterceptionPoint() {
 		Point p = Edge.interceptionPoint(e1, e2);
-		System.out.println(p);
 		assertEquals((new Point(3,2)).equals(p), true);
 	}
 	
 	@Test
 	public void testInterceptionPointTwice(){
 		Point p1 = Edge.interceptionPoint(e1, e2);
-		e1.setLeftEnd(e1.getEnd());
-		e1.setRightEnd(p1);
+		e1.setStart(e1.getLeftEnd());
+		e1.setEnd(p1);
+		
 		Point p2 = Edge.interceptionPoint(e1, e2);
 		assertEquals(p1.equals(p2),true);
 	}
@@ -42,24 +42,50 @@ public class EdgeTest {
 	public void testStartAndEndpoint() {
 		Point p1 = new Point(0,1);
 		Point p2 = new Point(0,5);
+		Point p3 = new Point(0,10);
 		Edge e = new Edge(p2,p1);
-		assertTrue(e.start.y < e.end.y);
-		assertTrue(e.start.y == p1.y);
+		assertTrue(e.getStart().y < e.getEnd().y);
+		assertTrue(e.getStart().y == p1.y);
+		
+		e.setStart(p3);
+		assertTrue(e.getEnd().equals(p3));
 	}
 	
 	@Test
-	public void testRegionLeftAndRight() {
+	public void testCCW() {
 		Point p1 = new Point(0,1);
 		Point p2 = new Point(0,5);
 		Edge e = new Edge(p2,p1);
 		
-		Point left = new Point(3,0);
-		Point right = new Point(-3,0);
+		Point right = new Point(3,0);
+		Point left = new Point(-3,0);
 		
-		assertEquals(-1, Vector.ccw(e.start, e.end, left));
-		assertEquals(1, Vector.ccw(e.start, e.end, right));
+		assertEquals(-1, Vector.ccw(e.getStart(), e.getEnd(), right));
+		assertEquals(1, Vector.ccw(e.getStart(), e.getEnd(), left));
 	}
 	
+	@Test
+	public void testRegions() {
+		Point p1 = new Point(0,1);
+		Point p2 = new Point(0,5);
+		
+		Point right = new Point(3,0);
+		Point left = new Point(-3,0);
+		Edge e = new Edge(p2,p1,right,left);
+		
+		assertTrue(e.getRegionLeft().equals(left));
+		assertTrue(e.getRegionRight().equals(right));
+
+	}
+	
+	@Test
+	public void regionTest() {
+		Edge e = new Edge(new Point(-62680.0, -129874.5), new Point(63320.0, 130125.5));
+		Point p1 = new Point(255.0, 157.0);
+		Point p2 = new Point(385.0, 94.0);
+		
+		assertEquals(-1,Vector.ccw(e.getStart(), e.getEnd(), p1));
+	}
 	/*
 	@Test
 	public void testParallel() {

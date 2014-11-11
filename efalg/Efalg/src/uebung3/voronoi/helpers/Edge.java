@@ -15,11 +15,11 @@ public class Edge {
 	public Edge(Point p1, Point p2) {
 		if ( null != p1 && null != p2) {
 			if (p2.y < p1.y) {
-				this.start = p2;
-				this.end = p1;
+				this.start = new Point(p2);
+				this.end = new Point(p1);
 			} else {
-				this.start = p1;
-				this.end = p2;
+				this.start = new Point(p1);
+				this.end = new Point(p2);
 			}
 		}
 	}
@@ -29,24 +29,15 @@ public class Edge {
 		
 		this(p1,p2);
 		
-		if (Vector.ccw(start, end, n1) == 1) {
-			this.regionLeft = n1;
-			this.regionRight = n2;
-		} else {
-			this.regionRight = n1;
-			this.regionLeft = n2;
-		}
+		regionLeft = n1;
+		regionRight = n2;
+		checkRegions();
 		
 		cut = false;
 	}
 	
 	public Edge(Edge e) {
-		this.start = new Point(e.start.x, e.start.y);
-		this.end = new Point(e.end.x, e.end.y);
-		this.regionLeft = e.regionLeft;
-		this.regionRight = e.regionRight;
-		this.nextLeft = null;
-		this.nextRight = null;
+		this(e.start, e.end, e.regionLeft, e.regionRight);
 		cut = false;
 	}
 	
@@ -63,17 +54,21 @@ public class Edge {
 	public void setStart(Point p) {
 		if (p.y < end.y) start = new Point(p);
 		else {
-			start = end;
+			start = new Point(end);
 			end = new Point(p);
 		}
+		// check if regions are still correct
+		checkRegions();
 	}
 	
 	public void setEnd(Point p) {
 		if (p.y > end.y) end = new Point(p);
 		else {
-			end = start;
+			end = new Point(start);
 			start = new Point(p);
 		}
+		// check if regions are still correct
+		checkRegions();
 	}
 	
 	public Point getRegionLeft() {
@@ -85,13 +80,9 @@ public class Edge {
 	}
 	
 	public void setNeighbours(Point n1, Point n2) {
-		if (Vector.ccw(start, end, n1) == 1) {
-			this.regionLeft = n1;
-			this.regionRight = n2;
-		} else {
-			this.regionRight = n1;
-			this.regionLeft = n2;
-		}
+		regionLeft = n1;
+		regionRight = n2;
+		checkRegions();
 	}
 	
 	
@@ -106,12 +97,36 @@ public class Edge {
 	}
 	
 	public void setRightEnd(Point p) {
-		if (end.x > start.x) end = p;
-		else start = new Point(p);
+		if (end.x > start.x) setEnd(new Point(p));
+		else setStart(new Point(p));
+		
+		// check if regions are still correct
+		checkRegions();
 	}
 	public void setLeftEnd(Point p) {
-		if (end.x < start.x) end = p;
-		else start = new Point(p);
+		if (end.x < start.x) setEnd(new Point(p));
+		else setStart(new Point(p));
+		
+		// check if regions are still correct
+		checkRegions();
+	}
+	
+	// check regions
+	private void checkRegions() {
+		if (null != regionLeft && null != regionRight) {
+			Point n1 = new Point(regionLeft);
+			Point n2 = new Point(regionRight);
+			
+			if (Vector.ccw(start, end, n1) == 1) {
+				this.regionLeft = n1;
+				this.regionRight = n2;
+			} else if (Vector.ccw(start, end, n1) == -1){
+				this.regionLeft = n1;
+				this.regionRight = n2;
+			} else {
+				System.out.println("Point is ON the edge!");
+			}
+		}
 	}
 	
 	// source: http://stackoverflow.com/questions/16314069/calculation-of-intersections-between-line-segments
@@ -154,9 +169,6 @@ public class Edge {
 			}
 		}
 		
-		
-		
-		
 		// special case: one edge goes through start / end vertex of the other
 		double ye1_1 = a1*x3 + b1;
 		double ye1_2 = a1*x4 + b1;
@@ -191,6 +203,6 @@ public class Edge {
 	}
 	
 	public String toString() {
-		return this.start.toString() + " -> " + this.end.toString();
+		return this.start.toString() + " -> " + this.end.toString() + " rLeft: " + this.regionLeft + " rRight: " + this.regionRight;
 	}
 }
