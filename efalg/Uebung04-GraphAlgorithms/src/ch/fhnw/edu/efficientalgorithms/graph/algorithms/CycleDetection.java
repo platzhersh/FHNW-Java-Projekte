@@ -14,41 +14,14 @@ import ch.fhnw.edu.efficientalgorithms.graph.Graph;
 import ch.fhnw.edu.efficientalgorithms.graph.GraphAlgorithmData;
 import ch.fhnw.edu.efficientalgorithms.graph.Vertex;
 
-/**
- * Implementation on the depth-first-search (DFS) algorithm.
- * 
- * @author Martin Schaub
- * 
- * @param <V> vertex type
- * @param <E> edge type
- */
-public final class DFS<V extends Vertex, E extends Edge> extends AbstractAlgorithm<V, E> {
+public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAlgorithm<V, E>  {
 
-	/**
-	 * Constructor
-	 */
-	public DFS() {
-		super("Depth First Search", true);
+	public CycleDetection() {
+		super("Cycle Detection", true);
 	}
 
-	/**
-	 * This algorithm works with all graph implementations, however a start vertex needs to be selected.
-	 * 
-	 * {@inheritDoc}
-	 */
 	@Override
-	public boolean worksWith(final Graph<V, E> graph) {
-		return true;
-	}
-
-	/**
-	 * Non-recursive implementation of the DFS algorithm.
-	 * 
-	 * {@inheritDoc}
-	 */
-	@Override
-	public String execute(final GraphAlgorithmData<V, E> data) {
-
+	public String execute(GraphAlgorithmData<V, E> data) {
 		// Stack to terminate the order of nodes to visit.
 		Stack<V> toVisit = new Stack<V>();
 		// Stores all already seen vertices
@@ -69,6 +42,8 @@ public final class DFS<V extends Vertex, E extends Edge> extends AbstractAlgorit
 				visited.add(cur);
 				for (E e : data.getGraph().getOutgoingEdges(cur)) {
 					V dst = otherEndpoint(data, e, cur);
+					if (usedEdge.containsKey(dst) && !usedEdge.get(dst).equals(e)) return "Cyclic";
+					//if (dst.equals(start)) return "Cyclic";
 					if (!visited.contains(dst)) {
 						usedEdge.put(dst, e);
 						//toVisit.add(dst);
@@ -77,13 +52,14 @@ public final class DFS<V extends Vertex, E extends Edge> extends AbstractAlgorit
 				}
 			}
 		}
+		return "Acyclic";
 
-		// Stores the used edges
-		List<E> edges = new LinkedList<E>(usedEdge.values());
-
-		highlightEdges(data, edges);
-		darkenOtherEdges(data, edges);
-
-		return "Finished";
 	}
+
+	@Override
+	public boolean worksWith(Graph<V, E> graph) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
 }

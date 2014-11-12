@@ -26,20 +26,20 @@ public class Debug {
 			colors.add(new Color(r, g ,b));
 		}
 		
-		for (int i = 0; i < canvas.getWidth(); i++) {
-			for (int j = 0; j < canvas.getHeight(); j++) {
+		for (int i = 0; i < canvas.getHeight(); i++) {
+			for (int j = 0; j < canvas.getWidth(); j++) {
 				
 				double min = Double.MAX_VALUE;
 				int minID = 0;
 				for (int k = 0; k < points.size(); k++) {
-					double dist = Math.abs(calcDistance(new Point(i,j), points.get(k)));
+					double dist = Math.abs(calcDistance(new Point(j,i), points.get(k)));
 					if (dist < min) {
 						min = dist;
 						minID = k;
 					}
 				}
 				gr.setColor(colors.get(minID));
-				gr.drawRect(i, j, 1, 1);
+				gr.drawRect(j, i, 1, 1);
 			}
 		}
 	}

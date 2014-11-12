@@ -8,9 +8,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.awt.event.WindowStateListener;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -58,12 +62,14 @@ public class Controller {
 				
 			}
 		});
-		v.addComponentListener(new ComponentAdapter() {
-			@Override
-		    public void componentResized(ComponentEvent e)
-		    {
-		        v.getCanvas().repaint();
-		    }
+		v.getCanvas().addComponentListener(new ComponentAdapter() {
+			
+			public void componentResized(ComponentEvent e) {
+				System.out.println("resized");
+				//e.getComponent().repaint();
+				v.drawPoints(e.getComponent().getGraphics());
+	        }
+			
 		});
 		v.getCanvas().addMouseListener(new MouseListener() {
 			

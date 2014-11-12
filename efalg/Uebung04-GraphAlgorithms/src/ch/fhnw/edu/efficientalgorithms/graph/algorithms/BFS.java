@@ -1,11 +1,13 @@
 package ch.fhnw.edu.efficientalgorithms.graph.algorithms;
 
 import java.awt.Color;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 import java.util.Set;
 import java.util.Stack;
 
@@ -15,20 +17,20 @@ import ch.fhnw.edu.efficientalgorithms.graph.GraphAlgorithmData;
 import ch.fhnw.edu.efficientalgorithms.graph.Vertex;
 
 /**
- * Implementation on the depth-first-search (DFS) algorithm.
+ * Implementation on the bredth-first-search (BFS) algorithm.
  * 
  * @author Martin Schaub
  * 
  * @param <V> vertex type
  * @param <E> edge type
  */
-public final class DFS<V extends Vertex, E extends Edge> extends AbstractAlgorithm<V, E> {
+public final class BFS<V extends Vertex, E extends Edge> extends AbstractAlgorithm<V, E> {
 
 	/**
 	 * Constructor
 	 */
-	public DFS() {
-		super("Depth First Search", true);
+	public BFS() {
+		super("Bredth First Search", true);
 	}
 
 	/**
@@ -61,7 +63,7 @@ public final class DFS<V extends Vertex, E extends Edge> extends AbstractAlgorit
 			return "Empty graph,\nnothing to do";
 		}
 		data.getColorMapper().setVertexColor(start, Color.RED);
-		toVisit.add(start);
+		toVisit.push(start);
 
 		while (!toVisit.isEmpty()) {
 			V cur = toVisit.pop();
@@ -69,10 +71,9 @@ public final class DFS<V extends Vertex, E extends Edge> extends AbstractAlgorit
 				visited.add(cur);
 				for (E e : data.getGraph().getOutgoingEdges(cur)) {
 					V dst = otherEndpoint(data, e, cur);
-					if (!visited.contains(dst)) {
-						usedEdge.put(dst, e);
-						//toVisit.add(dst);
-						toVisit.push(dst);
+					if (!visited.contains(dst) && !toVisit.contains(dst)) {
+							usedEdge.put(dst, e);
+							toVisit.add(dst);
 					}
 				}
 			}
