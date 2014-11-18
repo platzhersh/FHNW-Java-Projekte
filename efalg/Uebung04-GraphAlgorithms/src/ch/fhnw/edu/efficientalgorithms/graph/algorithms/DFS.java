@@ -51,7 +51,7 @@ public final class DFS<V extends Vertex, E extends Edge> extends AbstractAlgorit
 	public String execute(final GraphAlgorithmData<V, E> data) {
 
 		// Stack to terminate the order of nodes to visit.
-		Queue<V> toVisit = new LinkedList<V>();
+		Stack<V> toVisit = new Stack<V>();
 		// Stores all already seen vertices
 		Set<V> visited = new HashSet<V>();
 		// Stores the edges that led to a node
@@ -65,15 +65,15 @@ public final class DFS<V extends Vertex, E extends Edge> extends AbstractAlgorit
 		toVisit.add(start);
 
 		while (!toVisit.isEmpty()) {
-			V cur = toVisit.poll();
+			V cur = toVisit.pop();
 			if (!visited.contains(cur)) {
 				visited.add(cur);
 				for (E e : data.getGraph().getOutgoingEdges(cur)) {
 					V dst = otherEndpoint(data, e, cur);
 					if (!visited.contains(dst)) {
 						usedEdge.put(dst, e);		// mark edge as used, will probably be overwritten later on
-						toVisit.add(dst);
-						//toVisit.push(dst);
+						//toVisit.add(dst);
+						toVisit.push(dst);
 					}
 				}
 			}
