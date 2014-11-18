@@ -51,8 +51,8 @@ public final class BFS<V extends Vertex, E extends Edge> extends AbstractAlgorit
 	@Override
 	public String execute(final GraphAlgorithmData<V, E> data) {
 
-		// Stack to terminate the order of nodes to visit.
-		Stack<V> toVisit = new Stack<V>();
+		// Queue to terminate the order of nodes to visit.
+		Queue<V> toVisit = new LinkedList<V>();
 		// Stores all already seen vertices
 		Set<V> visited = new HashSet<V>();
 		// Stores the edges that led to a node
@@ -63,10 +63,10 @@ public final class BFS<V extends Vertex, E extends Edge> extends AbstractAlgorit
 			return "Empty graph,\nnothing to do";
 		}
 		data.getColorMapper().setVertexColor(start, Color.RED);
-		toVisit.push(start);
+		toVisit.add(start);
 
 		while (!toVisit.isEmpty()) {
-			V cur = toVisit.pop();
+			V cur = toVisit.poll();
 			if (!visited.contains(cur)) {
 				visited.add(cur);
 				for (E e : data.getGraph().getOutgoingEdges(cur)) {
