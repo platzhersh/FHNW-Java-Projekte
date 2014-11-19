@@ -3,26 +3,25 @@ package ch.fhnw.edu.efficientalgorithms.graph.test;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ch.fhnw.edu.efficientalgorithms.graph.Edge;
 import ch.fhnw.edu.efficientalgorithms.graph.Vertex;
 import ch.fhnw.edu.efficientalgorithms.graph.auxiliary.UnionFind;
+import ch.fhnw.edu.efficientalgorithms.graph.auxiliary.UnionFind.TDecorator;
 import ch.fhnw.edu.efficientalgorithms.graph.edges.IntegerEdge;
 import ch.fhnw.edu.efficientalgorithms.graph.impl.UniversalGraph;
 import ch.fhnw.edu.efficientalgorithms.graph.vertices.IntegerVertex;
 
 public class UnionFindTest {
 	
-	UnionFind<Vertex> uf;
+	UnionFind<IntegerVertex> uf;
 	IntegerVertex a, b, c, d, e;
 	IntegerEdge e1, e2, e3, e4, e5, e6, e7, e8;
 	UniversalGraph<IntegerVertex, IntegerEdge> graph;
 	
 	@Before
 	public void setup() {
-		uf = new UnionFind<Vertex>();
+		uf = new UnionFind<IntegerVertex>();
 		a = new IntegerVertex(0);
 		b = new IntegerVertex(1);
 		c = new IntegerVertex(2);
@@ -86,12 +85,58 @@ public class UnionFindTest {
 
 	@Test
 	public void testConnected() {
-		//td1 uf.find(t)
-	}
-
-	@Test
-	public void testConnect() {
+		uf.connect(a, b);
+		uf.connect(b, c);
+		uf.connect(d, e);
+		TDecorator td1 = uf.find(a);
+		TDecorator td2 = uf.find(b);
+		TDecorator td3 = uf.find(c);
+		TDecorator td4 = uf.find(d);
+		TDecorator td5 = uf.find(e);
+		
+		assertTrue(td1.connectedTo(td2));
+		assertTrue(td1.connectedTo(td3));
+		assertTrue(td2.connectedTo(td1));
+		assertTrue(td2.connectedTo(td3));
+		assertTrue(td3.connectedTo(td1));
+		assertTrue(td3.connectedTo(td2));
+		
+		assertTrue(td4.connectedTo(td5));
+		assertTrue(td5.connectedTo(td4));
+		
+		uf.connect(e,a);
+		
+		assertTrue(td1.connectedTo(td5));
+		assertTrue(td1.connectedTo(td4));
+		assertTrue(td2.connectedTo(td5));
+		assertTrue(td2.connectedTo(td4));
+		assertTrue(td3.connectedTo(td5));
+		assertTrue(td3.connectedTo(td4));
+		assertTrue(td4.connectedTo(td1));
+		assertTrue(td4.connectedTo(td2));
+		assertTrue(td4.connectedTo(td3));
+		assertTrue(td5.connectedTo(td1));
+		assertTrue(td5.connectedTo(td2));
+		assertTrue(td5.connectedTo(td3));
 		
 	}
-
+	
+	@Test
+	public void testConnectedExtended() {
+		uf.connect(a, b);
+		TDecorator td1 = uf.find(a);
+		TDecorator td2 = uf.find(b);
+		TDecorator td3 = uf.find(c);
+		
+		assertTrue(td1.connectedTo(td2));
+		
+		assertTrue(!td1.connectedTo(td3));
+		
+		uf.connect(a, c);
+		
+		assertTrue(td1.connectedTo(td3));
+		
+		assertTrue(td2.connectedTo(td3));
+		
+	}
 }

@@ -12,7 +12,7 @@ public class UnionFind<T> {
 		content = new ArrayList<TDecorator<T>>();
 	}
 	
-	public boolean contains(T t) {
+	public synchronized boolean contains(T t) {
 		boolean res = false;
 		for (TDecorator<T> td : content) {
 			res = td.getValue().equals(t) || res;
@@ -20,7 +20,7 @@ public class UnionFind<T> {
 		return res;
 	}
 	
-	public boolean add(T t) {
+	public synchronized boolean add(T t) {
 		if (!contains(t)) {
 			content.add(new TDecorator<T>(t));
 			return true;
@@ -43,18 +43,33 @@ public class UnionFind<T> {
 		return list;
 	}
 	
-	public boolean connected(T t1, T t2) {
+	public synchronized boolean connected(T t1, T t2) {
 		TDecorator<T> td1 = find(t1);
 		TDecorator<T> td2 = find(t2);
-		if (td1 != null && td2 != null) {
-			for (TDecorator<T> td : td1.getConnections()) {
-				if (td.getValue().equals(t2)) return true;
-			}
-		}
-		return false;
+		return td1.connectedTo(td2);
 	}
 	
-	public void connect(T t1, T t2) {
+	public synchronized void connect(T t1, T t2) {
+		TDecorator<T> td1 = find(t1);
+		TDecorator<T> td2 = find(t2);
+		
+		// connect all vertices connected to td1 to td2
+		for (int i = 0; i < td1.getConnections().size(); i++) {
+			TDecorator<T> td1V = td1.getConnections().get(i);
+			td1V.connectTo(td2);
+			td2.connectTo(td1V);
+			for (int j = 0; j < td2.getConnections().size(); j++) {
+				td2.getConnections().get(j).connectTo(td1);
+				td1.connectTo(td2.getConnections().get(j));
+				td2.getConnections().get(j).connectTo(td1V);
+				td1V.connectTo(td2.getConnections().get(j));
+			}
+		}		
+
+		// connect td1 to td2
+		td1.connectTo(td2);
+		td2.connectTo(td1);
+		
 		
 	}
 	
@@ -72,11 +87,19 @@ public class UnionFind<T> {
 			return inner;
 		}
 		
-		public ArrayList<TDecorator<S>> getConnections() {
+		public synchronized ArrayList<TDecorator<S>> getConnections() {
 			return connections;
 		}
 		
-		public boolean connectedTo(TDecorator<S> t) {
+		public synchronized boolean connectTo(TDecorator<S> t) {
+			if (!connections.contains(t)) {
+				connections.add(t);
+				return true;
+			}
+			return false;
+		}
+		
+		public synchronized boolean connectedTo(TDecorator<S> t) {
 			return connections.contains(t);
 		}
 
