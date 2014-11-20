@@ -1,5 +1,6 @@
 package ch.fhnw.edu.efficientalgorithms.graph.algorithms;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -21,6 +22,8 @@ public class Kruskal<V extends Vertex, E extends Edge> extends AbstractAlgorithm
 		// List containing all the Edges sorted by Weight (if weighted)
 		// --> seems like there are no weighted edges included in the framework
 		List<E> edges = new LinkedList<E>();
+		
+		//HashMap<V,Integer> uf2 = new HashMap(); 
 		
 		// List where to add all the used Edges
 		List<E> usedEdges = new LinkedList<E>();

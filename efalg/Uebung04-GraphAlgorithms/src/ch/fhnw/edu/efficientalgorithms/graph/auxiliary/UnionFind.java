@@ -3,7 +3,17 @@ package ch.fhnw.edu.efficientalgorithms.graph.auxiliary;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
+/***
+ * 
+ * Used in Kruskal algorithm
+ * current version is very inefficient, try to improve by using Weighted quick-union with path compression
+ * see: https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf
+ * see: http://algs4.cs.princeton.edu/15uf/UF.java.html
+ * 
+ * @author chregi
+ *
+ * @param <T>
+ */
 public class UnionFind<T> {
 
 	private ArrayList<TDecorator<T>> content;
