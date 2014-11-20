@@ -29,9 +29,17 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 		// Stores the edges that led to a node
 		Map<V, E> usedEdge = new HashMap<V, E>();
 
+		// need to check if start Vertex has outgoing edges
 		V start = getFirstVertex(data);
 		if (start == null) {
 			return "Empty graph,\nnothing to do";
+		} else if (data.getGraph().getOutgoingEdges(start).size() == 0) {
+			for (V v : data.getGraph().getVertices()) {
+				if (data.getGraph().getOutgoingEdges(v).size() != 0) {
+					start = v; 
+					break;
+				}
+			}
 		}
 		data.getColorMapper().setVertexColor(start, Color.RED);
 		toVisit.add(start);
