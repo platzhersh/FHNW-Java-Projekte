@@ -75,6 +75,9 @@ public class MSTHeuristik<V extends Vertex, E extends Edge> extends AbstractAlgo
 		
 		int hamiltonCost = 0;
 		V cur = start;
+		
+		// clone all the Edges
+		
 		while (visited.size() <= vArr.length) {
 			newGraph.getOutgoingEdges(cur);
 		}

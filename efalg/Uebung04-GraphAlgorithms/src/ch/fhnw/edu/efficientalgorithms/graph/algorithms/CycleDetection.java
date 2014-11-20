@@ -14,6 +14,14 @@ import ch.fhnw.edu.efficientalgorithms.graph.Graph;
 import ch.fhnw.edu.efficientalgorithms.graph.GraphAlgorithmData;
 import ch.fhnw.edu.efficientalgorithms.graph.Vertex;
 
+
+/***
+ *  Cycle Detection based on DFS
+ * @author chregi
+ *
+ * @param <V>
+ * @param <E>
+ */
 public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAlgorithm<V, E>  {
 
 	public CycleDetection() {
@@ -43,15 +51,16 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 		}
 		data.getColorMapper().setVertexColor(start, Color.RED);
 		toVisit.add(start);
-
+		V directAncestor = null;
+		
 		while (!toVisit.isEmpty()) {
 			V cur = toVisit.pop();
 			if (!visited.contains(cur)) {
 				visited.add(cur);
 				for (E e : data.getGraph().getOutgoingEdges(cur)) {
 					V dst = otherEndpoint(data, e, cur);
-					if (visited.contains(dst) && !e.equals(usedEdge.get(dst))) {
-						
+					
+					if (visited.contains(dst) && !dst.equals(directAncestor)) {
 						// Stores the used edges
 						List<E> edges = new LinkedList<E>(usedEdge.values());
 
@@ -60,11 +69,10 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 						
 						return "Cyclic";
 					}
-					//if (dst.equals(start)) return "Cyclic";
 					if (!visited.contains(dst)) {
 						usedEdge.put(dst, e);
-						//toVisit.add(dst);
 						toVisit.push(dst);
+						directAncestor = cur;
 					}
 				}
 			}
