@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 /***
  * 
- * Used in Kruskal algorithm
+ * Used in Kruskal algorithm (not anymore, replaced by HashMap)
  * current version is very inefficient, try to improve by using Weighted quick-union with path compression
  * see: https://www.cs.princeton.edu/~rs/AlgsDS07/01UnionFind.pdf
  * see: http://algs4.cs.princeton.edu/15uf/UF.java.html

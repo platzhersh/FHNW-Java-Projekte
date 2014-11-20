@@ -42,7 +42,16 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 				visited.add(cur);
 				for (E e : data.getGraph().getOutgoingEdges(cur)) {
 					V dst = otherEndpoint(data, e, cur);
-					if (usedEdge.containsKey(dst) && !usedEdge.get(dst).equals(e)) return "Cyclic";
+					if (visited.contains(dst) && !e.equals(usedEdge.get(dst))) {
+						
+						// Stores the used edges
+						List<E> edges = new LinkedList<E>(usedEdge.values());
+
+						highlightEdges(data, edges);
+						darkenOtherEdges(data, edges);
+						
+						return "Cyclic";
+					}
 					//if (dst.equals(start)) return "Cyclic";
 					if (!visited.contains(dst)) {
 						usedEdge.put(dst, e);
@@ -52,6 +61,13 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 				}
 			}
 		}
+		
+		// Stores the used edges
+		List<E> edges = new LinkedList<E>(usedEdge.values());
+
+		highlightEdges(data, edges);
+		darkenOtherEdges(data, edges);
+				
 		return "Acyclic";
 
 	}

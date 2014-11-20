@@ -8,12 +8,11 @@ import ch.fhnw.edu.efficientalgorithms.graph.Edge;
 import ch.fhnw.edu.efficientalgorithms.graph.Graph;
 import ch.fhnw.edu.efficientalgorithms.graph.GraphAlgorithmData;
 import ch.fhnw.edu.efficientalgorithms.graph.Vertex;
-import ch.fhnw.edu.efficientalgorithms.graph.auxiliary.UnionFind;
 
 public class Kruskal<V extends Vertex, E extends Edge> extends AbstractAlgorithm<V, E>  {
 
 	public Kruskal() {
-		super("Kruskal", false);
+		super("Kruskal", true);
 	}
 
 	@Override
@@ -22,41 +21,37 @@ public class Kruskal<V extends Vertex, E extends Edge> extends AbstractAlgorithm
 		// List containing all the Edges sorted by Weight (if weighted)
 		// --> seems like there are no weighted edges included in the framework
 		List<E> edges = new LinkedList<E>();
-		
-		//HashMap<V,Integer> uf2 = new HashMap(); 
+		edges.addAll(data.getGraph().getEdges());
 		
 		// List where to add all the used Edges
 		List<E> usedEdges = new LinkedList<E>();
 		
-		// UnionFind containing all the Vertices (all unconnected at first)
-		UnionFind<V> uf = new UnionFind<V>();
+		HashMap<V,Integer> uf = new HashMap();
 		
-		// get all the edges
-		edges.addAll(data.getGraph().getEdges());
-		
-		// add all the vertices (unconnected)
-		for (V v : data.getGraph().getVertices()) {
-			uf.add(v);
+		// initialize uf2
+		Object vArr[] = data.getGraph().getVertices().toArray();
+		for (int i = 0; i < vArr.length; i++) {
+			uf.put((V) vArr[i], i);
 		}
 		
-		/*
-		if (IntegerVertex.class.isInstance(edges.get(0))) {
-			//Collections.sort(edges);
-		}*/
-		
-		// build MST with Kruskal
-		for (E e : data.getGraph().getEdges()) {
+		// build MST with Kruskal and new uf
+		for (E e : edges) {
 			System.out.println(e.toString());
 			List<V> ep = data.getGraph().getEndpoints(e);
-			if(!uf.connected(ep.get(0), ep.get(1))) {
+			if(uf.get(ep.get(0)).intValue() != uf.get(ep.get(1)).intValue()) {
 				usedEdges.add(e);
-				uf.connect(ep.get(0), ep.get(1));
+				int ref = uf.get(ep.get(0));
+				int trgt = uf.get(ep.get(1));
+				for (V v : data.getGraph().getVertices()) {
+					if (uf.get(v) == ref) {
+						uf.put(v, trgt);
+					}
+				}
 			} else System.out.println("Skip edge");
 		}
 		
 		highlightEdges(data, usedEdges);
 		darkenOtherEdges(data, usedEdges);
-		
 		
 		return "finished";
 		
@@ -64,8 +59,7 @@ public class Kruskal<V extends Vertex, E extends Edge> extends AbstractAlgorithm
 
 	@Override
 	public boolean worksWith(Graph<V, E> graph) {
-		// TODO Auto-generated method stub
-		return true;
+		return !graph.isDirected();
 	}
 
 }
