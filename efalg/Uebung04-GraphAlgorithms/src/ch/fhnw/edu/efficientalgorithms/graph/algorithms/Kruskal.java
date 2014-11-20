@@ -1,5 +1,6 @@
 package ch.fhnw.edu.efficientalgorithms.graph.algorithms;
 
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -8,6 +9,8 @@ import ch.fhnw.edu.efficientalgorithms.graph.Edge;
 import ch.fhnw.edu.efficientalgorithms.graph.Graph;
 import ch.fhnw.edu.efficientalgorithms.graph.GraphAlgorithmData;
 import ch.fhnw.edu.efficientalgorithms.graph.Vertex;
+import ch.fhnw.edu.efficientalgorithms.graph.edges.IntegerEdge;
+import ch.fhnw.edu.efficientalgorithms.graph.vertices.IntegerVertex;
 
 public class Kruskal<V extends Vertex, E extends Edge> extends AbstractAlgorithm<V, E>  {
 
@@ -22,6 +25,18 @@ public class Kruskal<V extends Vertex, E extends Edge> extends AbstractAlgorithm
 		// --> seems like there are no weighted edges included in the framework
 		List<E> edges = new LinkedList<E>();
 		edges.addAll(data.getGraph().getEdges());
+		
+		// sort if edges are weighted
+		if (edges.get(0).getClass().isInstance(IntegerEdge.class)) {
+			edges.sort(new Comparator<E>() {
+
+				@Override
+				public int compare(E o1, E o2) {
+					return Integer.parseInt(o1.getLabel()) - Integer.parseInt(o2.getLabel());
+				}
+				
+			});
+		}
 		
 		// List where to add all the used Edges
 		List<E> usedEdges = new LinkedList<E>();

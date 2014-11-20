@@ -60,7 +60,7 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 				for (E e : data.getGraph().getOutgoingEdges(cur)) {
 					V dst = otherEndpoint(data, e, cur);
 					
-					if (visited.contains(dst) && !dst.equals(directAncestor)) {
+					if (visited.contains(dst) && !dst.equals(directAncestor) && !usedEdge.containsValue(e)) {
 						// Stores the used edges
 						List<E> edges = new LinkedList<E>(usedEdge.values());
 
@@ -68,7 +68,9 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 						darkenOtherEdges(data, edges);
 						
 						return "Cyclic";
+
 					}
+
 					if (!visited.contains(dst)) {
 						usedEdge.put(dst, e);
 						toVisit.push(dst);
