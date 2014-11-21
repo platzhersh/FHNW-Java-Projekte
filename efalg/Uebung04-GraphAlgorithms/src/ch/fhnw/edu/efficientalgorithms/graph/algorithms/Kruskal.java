@@ -10,39 +10,49 @@ import ch.fhnw.edu.efficientalgorithms.graph.Graph;
 import ch.fhnw.edu.efficientalgorithms.graph.GraphAlgorithmData;
 import ch.fhnw.edu.efficientalgorithms.graph.Vertex;
 import ch.fhnw.edu.efficientalgorithms.graph.edges.IntegerEdge;
-import ch.fhnw.edu.efficientalgorithms.graph.vertices.IntegerVertex;
 
+/***
+ * Builds an MST using Kruskal algorithm
+ * 
+ * @author chregi
+ *
+ * @param <V> vertex type
+ * @param <E> edge type
+ */
 public class Kruskal<V extends Vertex, E extends Edge> extends AbstractAlgorithm<V, E>  {
 
 	public Kruskal() {
 		super("Kruskal", true);
 	}
 
+	/***
+	 * Puts all the vertices in separate sets, then iterates through the list of edges (sorted ascending by weight)
+	 * if endpoints of the edge are in the same set it will be ignored
+	 * if endpoints of the edge are in different sets, it will be added to the spanning tree and the sets containing
+	 * the two endpoints will be unified
+	 * 
+	 * The MST will be highlighted in RED
+	 */
 	@Override
 	public String execute(GraphAlgorithmData<V, E> data) {
 		
 		// List containing all the Edges sorted by Weight (if weighted)
-		// --> seems like there are no weighted edges included in the framework
 		List<E> edges = new LinkedList<E>();
 		edges.addAll(data.getGraph().getEdges());
 		
 		// sort if edges are weighted
-		if (edges.get(0).getClass().equals(IntegerEdge.class)) {
-			System.out.println("sort me baby one more time");
-			edges.sort(new Comparator<E>() {
+		//Comparator<E> byWeightDESC = (e1, e2) -> Integer.parseInt(e2.getLabel()) - Integer.parseInt(e1.getLabel());
+		Comparator<E> byWeightASC = (e1, e2) -> Integer.parseInt(e1.getLabel()) - Integer.parseInt(e2.getLabel());
+		boolean isWeighted = data.getGraph().edgeClass().equals(IntegerEdge.class); 
 
-				@Override
-				public int compare(E o1, E o2) {
-					return Integer.parseInt(o1.getLabel()) - Integer.parseInt(o2.getLabel());
-				}
-				
-			});
+		if (isWeighted) {
+			edges.sort(byWeightASC);
 		}
 		
 		// List where to add all the used Edges
 		List<E> usedEdges = new LinkedList<E>();
 		
-		HashMap<V,Integer> uf = new HashMap();
+		HashMap<V,Integer> uf = new HashMap<V, Integer>();
 		
 		// initialize uf2
 		Object vArr[] = data.getGraph().getVertices().toArray();
@@ -52,7 +62,6 @@ public class Kruskal<V extends Vertex, E extends Edge> extends AbstractAlgorithm
 		
 		// build MST with Kruskal and new uf
 		for (E e : edges) {
-			System.out.println(e.toString());
 			List<V> ep = data.getGraph().getEndpoints(e);
 			if(uf.get(ep.get(0)).intValue() != uf.get(ep.get(1)).intValue()) {
 				usedEdges.add(e);
@@ -63,7 +72,7 @@ public class Kruskal<V extends Vertex, E extends Edge> extends AbstractAlgorithm
 						uf.put(v, trgt);
 					}
 				}
-			} else System.out.println("Skip edge");
+			}
 		}
 		
 		highlightEdges(data, usedEdges);
@@ -73,6 +82,9 @@ public class Kruskal<V extends Vertex, E extends Edge> extends AbstractAlgorithm
 		
 	}
 
+	/***
+	 * only works with undirected graphs
+	 */
 	@Override
 	public boolean worksWith(Graph<V, E> graph) {
 		return !graph.isDirected();
