@@ -27,7 +27,8 @@ public class Kruskal<V extends Vertex, E extends Edge> extends AbstractAlgorithm
 		edges.addAll(data.getGraph().getEdges());
 		
 		// sort if edges are weighted
-		if (edges.get(0).getClass().isInstance(IntegerEdge.class)) {
+		if (edges.get(0).getClass().equals(IntegerEdge.class)) {
+			System.out.println("sort me baby one more time");
 			edges.sort(new Comparator<E>() {
 
 				@Override

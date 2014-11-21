@@ -4,6 +4,7 @@ import ch.fhnw.edu.efficientalgorithms.graph.Edge;
 import ch.fhnw.edu.efficientalgorithms.graph.Graph;
 import ch.fhnw.edu.efficientalgorithms.graph.GraphAlgorithmData;
 import ch.fhnw.edu.efficientalgorithms.graph.Vertex;
+import ch.fhnw.edu.efficientalgorithms.graph.edges.CostCapacityFlowEdge;
 
 public class FordFulkerson<V extends Vertex, E extends Edge> extends AbstractAlgorithm<V, E>  {
 
@@ -20,7 +21,7 @@ public class FordFulkerson<V extends Vertex, E extends Edge> extends AbstractAlg
 	@Override
 	public boolean worksWith(Graph<V, E> graph) {
 		// TODO Auto-generated method stub
-		return true;
+		return (graph.edgeClass() == CostCapacityFlowEdge.class);
 	}
 
 }

@@ -19,7 +19,7 @@ import ch.fhnw.edu.efficientalgorithms.graph.Vertex;
 /**
  * Implementation on the bredth-first-search (BFS) algorithm.
  * 
- * @author Martin Schaub
+ * @author chregi
  * 
  * @param <V> vertex type
  * @param <E> edge type
@@ -44,7 +44,7 @@ public final class BFS<V extends Vertex, E extends Edge> extends AbstractAlgorit
 	}
 
 	/**
-	 * Non-recursive implementation of the DFS algorithm.
+	 * Non-recursive implementation of the BFS algorithm.
 	 * 
 	 * {@inheritDoc}
 	 */

@@ -140,6 +140,7 @@ public abstract class AbstractAlgorithm<V extends Vertex, E extends Edge> implem
 	protected void highlightEdges(final GraphAlgorithmData<V, E> data, final List<E> list) {
 		highlightEdges(data, list, Color.RED);
 	}
+	
 
 	/**
 	 * Sets the color of a selected edge list to a custom color.

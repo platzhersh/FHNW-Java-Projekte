@@ -32,7 +32,8 @@ public class MSTHeuristik<V extends Vertex, E extends Edge> extends AbstractAlgo
 		edges.addAll(data.getGraph().getEdges());
 		
 		// sort if edges are weighted
-		if (edges.get(0).getClass().isInstance(IntegerEdge.class)) {
+		if (edges.get(0).getClass().equals(IntegerEdge.class)) {
+			System.out.println("sort me baby one more time");
 			edges.sort(new Comparator<E>() {
 
 				@Override
@@ -93,10 +94,15 @@ public class MSTHeuristik<V extends Vertex, E extends Edge> extends AbstractAlgo
 		int hamiltonCost = 0;
 		V cur = start;
 		
-		//if (edges.get(0).getClass().isInstance(IntegerEdge.class)) {
-		for (Edge e : newGraph.getEdges()) {
-			hamiltonCost += Integer.parseInt(e.getLabel()) * 2;
-		}	
+		if (edges.get(0).getClass().isInstance(IntegerEdge.class)) {
+			for (Edge e : newGraph.getEdges()) {
+				hamiltonCost += Integer.parseInt(e.getLabel()) * 2;
+			}	
+		} else {
+			for (Edge e : newGraph.getEdges()) {
+				hamiltonCost += 2;
+			}
+		}
 		
 		return Integer.toString(hamiltonCost);
 		
