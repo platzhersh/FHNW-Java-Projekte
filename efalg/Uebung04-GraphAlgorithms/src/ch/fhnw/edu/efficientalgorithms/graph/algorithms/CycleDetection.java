@@ -17,11 +17,11 @@ import ch.fhnw.edu.efficientalgorithms.graph.Vertex;
 
 
 /***
- * Cycle Detection based on DFS
+ * Cycle Detection based on DFS, if there is a back-edge it will be highlighted in RED
  * @author chregi
  *
- * @param <V>
- * @param <E>
+ * @param <V> vertex type
+ * @param <E> edge type
  */
 public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAlgorithm<V, E>  {
 
@@ -32,7 +32,7 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 	/***
 	 * Runs DFS from every vertex which has not been visited before
 	 * checks for back-edges every time it is visiting a vertex to make cycle detection
-	 * stops at first detected back-edge
+	 * stops at first detected back-edge and highlights it in RED
 	 */
 	@Override
 	public String execute(GraphAlgorithmData<V, E> data) {
