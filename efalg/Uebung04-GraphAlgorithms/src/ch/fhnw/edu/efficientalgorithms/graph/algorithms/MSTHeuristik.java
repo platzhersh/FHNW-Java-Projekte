@@ -166,8 +166,8 @@ public class MSTHeuristik<V extends Vertex, E extends Edge> extends AbstractAlgo
 			return "invalid graph, can't close circle";
 		}
 		else {
-			highlightEdges(data, hamiltonCircle, Color.BLUE);
 			hamiltonCircle.add(data.getGraph().getEdge(lastDeadEnd, start));
+			highlightEdges(data, hamiltonCircle, Color.BLUE);
 		}
 		
 		// if it is a weighted graph, sum up all the edge weights, otherwise count +1 for each edge

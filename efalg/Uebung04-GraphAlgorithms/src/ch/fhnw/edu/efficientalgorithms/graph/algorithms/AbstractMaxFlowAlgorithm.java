@@ -11,7 +11,7 @@ import ch.fhnw.edu.efficientalgorithms.graph.edges.CapacityFlowEdge;
 /**
  * Abstract base class for max flow implementations.
  * 
- * The virtual edges are emulated using several methods which do their job with respect to a source edge (event when in
+ * The virtual edges are emulated using several methods which do their job with respect to a source edge (even when in
  * the graph this edge is not a source one).
  * 
  * @author Martin Schaub
