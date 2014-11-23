@@ -51,6 +51,7 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 			if (!visited.contains(v) && data.getGraph().getOutgoingEdges(v).size() != 0){
 				data.getColorMapper().setVertexColor(v, Color.RED);
 				toVisit.add(v);
+				V directAncestor = null;
 				
 				while (!toVisit.isEmpty()) {
 					V cur = toVisit.pop();
@@ -60,7 +61,7 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 							V dst = otherEndpoint(data, e, cur);
 							
 							// check for back-edge
-							if (visited.contains(dst) && !usedEdge.containsValue(e)) {
+							if (visited.contains(dst) && !dst.equals(directAncestor) && !usedEdge.containsValue(e))	 {
 
 								// Stores the used edges
 								List<E> edges = new LinkedList<E>(usedEdge.values());
@@ -77,6 +78,7 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 							if (!visited.contains(dst)) {
 								usedEdge.put(dst, e);
 								toVisit.push(dst);
+								directAncestor = cur;
 							}
 						}
 					}
@@ -99,11 +101,11 @@ public class CycleDetection<V extends Vertex, E extends Edge> extends AbstractAl
 
 	
 	/**
-	 * This algorithm works with all graph implementations
+	 * This algorithm works only on undirected graphs
 	 */
 	@Override
 	public boolean worksWith(Graph<V, E> graph) {
-		return true;
+		return !graph.isDirected();
 	}
 
 }

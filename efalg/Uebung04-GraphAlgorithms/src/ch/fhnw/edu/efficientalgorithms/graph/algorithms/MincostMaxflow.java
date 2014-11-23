@@ -13,10 +13,8 @@ public class MincostMaxflow<V extends Vertex, E extends Edge> extends AbstractMa
 
 
 	@Override
-	protected void calculateMaxFlow(GraphAlgorithmData<V, E> data, V source,
-			V sink) {
-		// TODO Auto-generated method stub
-		
+	protected void calculateMaxFlow(GraphAlgorithmData<V, E> data, V source, V sink) {
+
 	}
 
 }

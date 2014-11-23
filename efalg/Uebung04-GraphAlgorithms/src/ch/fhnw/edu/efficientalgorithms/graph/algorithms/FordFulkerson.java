@@ -15,13 +15,22 @@ import ch.fhnw.edu.efficientalgorithms.graph.GraphAlgorithmData;
 import ch.fhnw.edu.efficientalgorithms.graph.Vertex;
 import ch.fhnw.edu.efficientalgorithms.graph.edges.CapacityFlowEdge;
 import ch.fhnw.edu.efficientalgorithms.graph.edges.CostCapacityFlowEdge;
-
+/***
+ * 
+ * @author chregi
+ *
+ * @param <V>
+ * @param <E>
+ */
 public class FordFulkerson<V extends Vertex, E extends Edge> extends AbstractMaxFlowAlgorithm<V, E>  {
 
 	public FordFulkerson() {
 		super("Ford Fulkerson");
 	}
 
+	/***
+	 * 
+	 */
 	@Override
 	public String execute(GraphAlgorithmData<V, E> data) {
 		// TODO Auto-generated method stub

@@ -97,23 +97,23 @@ public class MSTHeuristik<V extends Vertex, E extends Edge> extends AbstractAlgo
 		// uncomment commented code to take smallest outgoing edge to calculate hamilton circle
 		V start = null;
 		while (start == null) {
-//			if (isWeighted) {
-//				int min = Integer.MAX_VALUE/2;
-//				for (V v : mstGraph.getVertices()) {
-//					if (mstGraph.getOutgoingEdges(v).size() <= 1) {
-//						List<E> ed = new ArrayList<E>(mstGraph.getOutgoingEdges(v));
-//						int weight = Integer.parseInt(ed.get(0).getLabel());
-//						if (weight < min) {
-//							min = weight;
-//							start = v;
-//						}
-//					}
-//				}
-//			} else {
+			if (isWeighted) {
+				int min = Integer.MAX_VALUE/2;
+				for (V v : mstGraph.getVertices()) {
+					if (mstGraph.getOutgoingEdges(v).size() <= 1) {
+						List<E> ed = new ArrayList<E>(mstGraph.getOutgoingEdges(v));
+						int weight = Integer.parseInt(ed.get(0).getLabel());
+						if (weight < min) {
+							min = weight;
+							start = v;
+						}
+					}
+				}
+			} else {
 				for (V v : mstGraph.getVertices()) {
 					if (mstGraph.getOutgoingEdges(v).size() == 1) start = v;
 				}
-			//}
+			}
 		}
 		
 		List<V> visited = new LinkedList<V>();	
