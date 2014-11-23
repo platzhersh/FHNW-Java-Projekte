@@ -62,20 +62,19 @@ public class FordFulkerson<V extends Vertex, E extends Edge> extends AbstractMax
 	}
 	/***
 	 * calculates maximum flows through the network using augmenting paths
-	 * creates residual edges and adds them to the graph
+	 * creates back edges and adds them to the graph (BLUE)
 	 */
 	@Override
-	protected synchronized void calculateMaxFlow(GraphAlgorithmData<V, E> data, final V source, final V sink) {
+	protected void calculateMaxFlow(GraphAlgorithmData<V, E> data, final V source, final V sink) {
 		
 		int flowMax = Integer.MAX_VALUE/2;
-		// TODO: residual graph & edges
-		Graph residualGraph = data.getGraph();
-		
+
 		// get augmented path with DFS
 		Stack<V> toVisit = new Stack<V>();
 		List<V> visited = new LinkedList<V>();
 		Map<V, E> eToVisit = new HashMap<V, E>();
 		Map<V, E> eVisited = new HashMap<V, E>();
+		List<E> backEdges = new LinkedList<E>();
 		
 		toVisit.add(source);
 
@@ -116,6 +115,7 @@ public class FordFulkerson<V extends Vertex, E extends Edge> extends AbstractMax
 						CapacityFlowEdge resEdge = (CapacityFlowEdge) data.getGraph().getEdge(to, from);
 						if (null == resEdge){
 							resEdge = new CapacityFlowEdge(((CapacityFlowEdge)e).getCapacity());
+							backEdges.add((E) resEdge);
 							if (!data.getGraph().addEdge(to, from, (E) resEdge)) {
 								System.out.println("Could not add residual Edge " + resEdge.toString());
 							}
@@ -150,7 +150,9 @@ public class FordFulkerson<V extends Vertex, E extends Edge> extends AbstractMax
 					}
 				}
 			}
-		}		
+		}	
+		
+		highlightEdges(data, backEdges, Color.BLUE);
 		
 	}
 
