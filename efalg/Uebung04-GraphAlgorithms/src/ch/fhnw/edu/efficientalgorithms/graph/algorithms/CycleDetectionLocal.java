@@ -62,7 +62,7 @@ public class CycleDetectionLocal<V extends Vertex, E extends Edge> extends Abstr
 					V dst = otherEndpoint(data, e, cur);
 					
 					// check for back-edge
-					if (visited.contains(dst) && !dst.equals(directAncestor) && !usedEdge.containsValue(e))	 {
+					if (visited.contains(dst) && !usedEdge.containsValue(e))	 {
 
 						// Stores the used edges
 						List<E> edges = new LinkedList<E>(usedEdge.values());
