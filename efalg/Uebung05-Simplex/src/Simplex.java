@@ -19,6 +19,8 @@ public class Simplex {
 		//System.out.println(m2[1][0]);
 	}
 	
+	// TODO: read CSV
+	// TODO: build proper matrix
 	// TODO: determine pivot element
 	// TODO: Abbruchkriterium
 	// TODO: Auswertung
