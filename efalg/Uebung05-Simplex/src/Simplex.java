@@ -1,5 +1,9 @@
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 /***
@@ -49,51 +53,83 @@ public class Simplex {
 	
 		
 	public int[][] readCSV(String filePath) throws FileNotFoundException {
+		
+		String csvFile = "lp_problems/" + filePath;
+		BufferedReader br = null;
+		String line = "";
+		String csvSplitBy = ";";
+		
 		Scanner in=new Scanner(new File("lp_problems/" + filePath));
 		
-		numOfX = in.nextInt();
-		numOfY = in.nextInt();
-		
-		varRow = new int[numOfX+numOfY];
-		varCol = new int[numOfX+numOfY];
-		
-		// height = number of y + "Zielfunktion" + header row
-		// width = number of x + constants + header column
-		simplexTable = new int[numOfY+2][numOfX+2];
-		
-		// initialise x1 ... xq
-		for (int i = 0; i < numOfX; i++) {
-			simplexTable[0][1+i] = i;
-			varRow[i] = 0;
-			varCol[i] = 1+i;
-		}
-		
-		// initialise target function (z = b1 + b2 ... + bq)
-		String[] line1 = in.nextLine().split(";");
-		max = line1[0].equals("max");
-		for (int i = 1; i <= numOfX+1; i++) {
-			simplexTable[numOfY+1][i+1] = Integer.parseInt(line1[i]);
-		}
-		
-		
-		
-		String[] line2 = in.nextLine().split(";");
-		max = line2[0].equals("max");	
-		for (int i = 0; i < numOfX; i++) {
-			varNotNegative[i] = line2[i].equals("true");
-		}
-				
-		// read restrictions, Y rows so to say
-		for (int i = 0; i <= numOfY; i++) {
-			String [] l = in.nextLine().split(";");
-			varCol[numOfX+i] = 0;
-			varRow[numOfX+i] = 1+i;
-			simplexTable[1+i][0] = i;
-			simplexTable[1+i][1+i] = Integer.parseInt(l[i]);
-		}
+		try {
+			br = new BufferedReader(new FileReader(csvFile));
+			
+			LinkedList<String> lines = new LinkedList<String>();
+			
+			while ((line = br.readLine()) != null) {
+				lines.add(line); 
+			}
+			
+			String [] n = lines.get(0).split(csvSplitBy);
+			numOfX = Integer.parseInt(n[0]);
+			numOfY = Integer.parseInt(n[1]);
+			
+			varRow = new int[numOfX+numOfY];
+			varCol = new int[numOfX+numOfY];
+			
+			// height = number of y + "Zielfunktion" + header row
+			// width = number of x + constants + header column
+			simplexTable = new int[numOfY+2][numOfX+2];
 
+			varNotNegative = new boolean[numOfX];
+			
+			// initialise x1 ... xq
+			for (int i = 0; i <= numOfX; i++) {
+				simplexTable[0][1+i] = i;
+				varRow[i] = 0;
+				varCol[i] = 1+i;
+			}
+			
+			// initialise target function (z = b1 + b2 ... + bq)
+			String[] line1 = lines.get(1).split(csvSplitBy);
+			max = line1[0].equals("max");
+			for (int i = 1; i < numOfX+1; i++) {
+				simplexTable[numOfY+1][i] = Integer.parseInt(line1[i]);
+			}	
+			
+			String[] line2 = lines.get(2).split(csvSplitBy);
+
+			for (int i = 0; i < numOfX; i++) {
+				varNotNegative[i] = line2[i].equals("true");
+			}
+					
+			// read restrictions, Y rows so to say
+			for (int i = 0; i < numOfY; i++) {
+				System.out.println(lines.get(3+i));
+				String [] l = lines.get(3+i).split(csvSplitBy);
+				
+				varCol[numOfX+i] = 0;
+				varRow[numOfX+i] = 1+i;
+				simplexTable[i+1][0] = numOfX+i;
+				for (int j = 0; j <= numOfX; j++) {
+					simplexTable[i+1][j+1] = Integer.parseInt(l[j+1]);
+				}
+			}
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (br != null) {
+				try {
+					br.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 		
-		in.close();
 		return new int[1][1];
 	}
 	
