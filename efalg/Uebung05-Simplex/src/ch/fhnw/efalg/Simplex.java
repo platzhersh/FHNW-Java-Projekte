@@ -41,23 +41,23 @@ public class Simplex {
 	public static int smallerthan = -1;
 	
 	public int[] varRow, varCol;
-	public int[][] simplexTable;
+	public double[][] simplexTable;
 	public boolean[] varNotNegative;
-	public int[] equationType;	// 0 = equals, 1 = greater than or equal, -1 = smaller than or equal
 	public int numOfX, numOfY;
 	public boolean max;
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		Simplex s = new Simplex();
-		s.readCSV("BasicExample.csv");
+		s.readCSV("ScriptExample.csv");
 		
 		s.printTable();
 		
 		s.pivot();
 		
+		s.printTable();
+		
 		//System.out.println(m2[1][0]);
 	}
-	
 		
 	public int[][] readCSV(String filePath) throws FileNotFoundException {
 		
@@ -84,7 +84,7 @@ public class Simplex {
 			
 			// height = number of y + "Zielfunktion" + header row
 			// width = number of x + constants + header column
-			simplexTable = new int[numOfY+2][numOfX+2];
+			simplexTable = new double[numOfY+2][numOfX+2];
 
 			varNotNegative = new boolean[numOfX];
 			
@@ -98,21 +98,26 @@ public class Simplex {
 			// initialise target function (z = b1 + b2 ... + bq)
 			String[] line1 = lines.get(1).split(csvSplitBy);
 			
-			// TODO: min in max umwandeln indem Zielfunktion mit -1 multipliziert wird
+			// min in max umwandeln indem Zielfunktion mit -1 multipliziert wird
 			max = line1[0].equals("max");
 			for (int i = 1; i < numOfX+1; i++) {
-				simplexTable[numOfY+1][i] = Integer.parseInt(line1[i]);
-			}	
+				simplexTable[numOfY+1][i] = Double.parseDouble(line1[i]);
+			}
+			if (!max) {
+				for (int i = 1; i < numOfX+1; i++) {
+					simplexTable[numOfY+1][i] *= -1;
+				}
+			}
 			
 			String[] line2 = lines.get(2).split(csvSplitBy);
 
 			for (int i = 0; i < numOfX; i++) {
-				varNotNegative[i] = line2[i].equals("true");
+				varNotNegative[i] = line2[i].trim().equals("true");
 			}
 					
 			// read restrictions, Y rows so to say
 			for (int i = 0; i < numOfY; i++) {
-				System.out.println(lines.get(3+i));
+				//System.out.println(lines.get(3+i));
 				String [] l = lines.get(3+i).split(csvSplitBy);
 				
 				varCol[numOfX+i] = 0;
@@ -120,9 +125,8 @@ public class Simplex {
 				simplexTable[i+1][0] = numOfX+i;
 				
 				// inequation to equation
-				int[] eq = transformInequationToEquation(l);
+				double[] eq = transformInequationToEquation(l);
 				for (int j = 0; j <= numOfX; j++) {
-					//simplexTable[i+1][j+1] = Integer.parseInt(l[j+1]);
 					simplexTable[i+1][j+1] = eq[j];
 				}
 			}
@@ -150,10 +154,10 @@ public class Simplex {
 	 * @param inequation	form { = | <= | >=, a1, a2, a3 ... an }
 	 * @return
 	 */
-	public int[] transformInequationToEquation(String[] inequation) {
-		int[] equation = new int[inequation.length-1];
+	public double[] transformInequationToEquation(String[] inequation) {
+		double[] equation = new double[inequation.length-1];
 		for (int i = 1; i < inequation.length; i++) {
-			equation[i-1] = Integer.parseInt(inequation[i]);
+			equation[i-1] = Double.parseDouble(inequation[i]);
 		}
 				
 		switch (inequation[0]) {
@@ -174,6 +178,14 @@ public class Simplex {
 		}
 		
 		return equation;
+	}
+	
+	public void printArray(String name, double[] arr) {
+		System.out.print(name+": [");
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i]+", ");
+		}
+		System.out.println("]");
 	}
 	
 	public void printTable() {
@@ -200,14 +212,14 @@ public class Simplex {
 		
 		// get pivot element row (only consider a < 0) where abs(c/a) is the smallest
 		double minVal = Double.MAX_VALUE;
-		int row = 0;
+		int row = 1;
 		double[] q = new double[numOfY];
 		for (int j = 0; j < numOfY; j++) {
 			if (simplexTable[j+1][col] < 0) {
 				q[j] =  Math.abs(simplexTable[j+1][numOfX+1] / simplexTable[j+1][col]);
 				if (q[j]<minVal) {
 					minVal = q[j];
-					row = j;
+					row = j+1;
 				}
 			}
 		}
@@ -216,18 +228,81 @@ public class Simplex {
 		
 		
 		// TODO: pivot
-		// 1. Gleichung nach xn umformen
-		// 2. xn in allen yn einsetzen
+		// 1. Gleichung nach xn umformen 
+		// -> alle a ausser an mit -1 multiplizieren
+		// alle a durch an dividieren
 		
+		// temporary aray
+		// xn Wert aus Array entfernen, yn an seiner Stelle platzieren
+		// yn = x1 + x2 + x3 + c -> yn + x2 + x3 + c
+		double[] xtemp = simplexTable[row].clone();
+		double x = xtemp[col];
+		System.out.println("x = "+x);
+		
+		// DEBUG:
+		printArray("xtemp", xtemp);
+		
+		
+		// TODO: fix this
+		xtemp[col] = 1;
+		double[] xEq = new double[numOfX+1];
+
+		System.out.print("xEq = [");
+		int signX = -1;
+		int signY = 1;
+		if (x < 0) {
+			signX = 1;
+			signY = -1;
+		
+		}			
+		for (int i = 0; i < numOfX+1; i++) {
+			if (i+1 == col) xEq[i] = xtemp[i+1] * signY;
+			else xEq[i] = xtemp[i+1] * signX;
+			xEq[i] /= Math.abs(x);
+			System.out.print(xEq[i]+", ");
+		}
+		System.out.println("]");
+		
+
+		// 2. xn und yn tauschen
+		int xnHead = (int) simplexTable[0][col];
+		int ynHead = (int) simplexTable[row][0];
+		simplexTable[0][col] = ynHead;
+		simplexTable[row][0] = xnHead;
+		varRow[xnHead] = row;
+		varCol[xnHead] = 0;
+		varRow[ynHead] = 0;
+		varCol[ynHead] = col;
+		
+		// 3. xn in allen yn einsetzen
+		for (int i = 1; i < simplexTable.length; i++) {
+			if (i == row) {
+				for (int j = 1; j < simplexTable[0].length; j++) {
+					simplexTable[i][j] = xEq[j-1];
+				}
+			} else {
+			
+				double[] arr1 = multiply(xEq, simplexTable[i][col]);
+				//DEBUG:
+				printArray("arr1 "+i,arr1);
+				for (int j = 1; j < simplexTable[0].length; j++) {
+					if (j == col) simplexTable[i][j] = arr1[j-1];
+					else simplexTable[i][j] += arr1[j-1];
+				}
+				
+			}
+			
+		}
 		
 	}
 	
 	
 	public double[] multiply(double[] arr, double scalar) {
+		double[] res = new double[arr.length];
 		for (int i = 0; i < arr.length; i++) {
-			arr[i] *= scalar;
+			res[i] = arr[i]*scalar;
 		}
-		return arr;
+		return res;
 	}
 	
 	public double[] summate(double[] arr1, double[] arr2) {
