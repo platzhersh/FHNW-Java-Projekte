@@ -48,15 +48,17 @@ public class Simplex {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		Simplex s = new Simplex();
-		s.readCSV("ScriptExample.csv");
+		//s.readCSV("ScriptExample.csv");
+		//s.readCSV("BasicExample.csv");
+		s.readCSV("ZweiSaefte.csv");
 		
-		s.printTable();
+		boolean finito = false;
+		while (!finito) {
+			finito = s.pivot();
+			s.printTable();
+		}
 		
-		s.pivot();
-		
-		s.printTable();
-		
-		//System.out.println(m2[1][0]);
+		s.printArray("results",s.getResults());
 	}
 		
 	public int[][] readCSV(String filePath) throws FileNotFoundException {
@@ -200,14 +202,18 @@ public class Simplex {
 	 * Find pivot element and modify simplexTable accordingly
 	 * 
 	 * @param matrix
-	 * @return
+	 * @return true when solution found
 	 */
-	public void pivot() {
+	public boolean pivot() {
 		
 		// get pivot element col
 		int col = 1;
-		while (simplexTable[numOfY+1][1] < 0) {
+		while (simplexTable[numOfY+1][col] < 0) {
 			col++;
+			if (col == simplexTable[0].length-1) {
+				System.out.println("Finito!");
+				return true;
+			}
 		}
 		
 		// get pivot element row (only consider a < 0) where abs(c/a) is the smallest
@@ -294,6 +300,16 @@ public class Simplex {
 			
 		}
 		
+		return false;
+		
+	}
+	
+	public double[] getResults() {
+		double[] res = new double[numOfX];
+		for (int i = 0; i < numOfX; i++){
+			res[i] = simplexTable[varRow[i]][numOfX+1];
+		}
+		return res;
 	}
 	
 	

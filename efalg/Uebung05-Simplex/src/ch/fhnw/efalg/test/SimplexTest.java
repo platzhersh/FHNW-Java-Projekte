@@ -206,4 +206,8 @@ public class SimplexTest {
 		
 	}
 
+	@Test
+	public void testSolutions() {
+		
+	}
 }
