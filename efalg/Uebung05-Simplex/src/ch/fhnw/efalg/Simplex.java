@@ -239,18 +239,25 @@ public class Simplex {
 	 * and prints the final solutions
 	 */
 	public void run() {
+		
+		double[] originalZ = simplexTable[numOfY+1].clone();
+		
 		zweiPhasenMethode();
 		solved = false;
 		solve();
 		printArray("results",getResults());
 		System.out.println("target function: " +getTargetfunction());
+		
+		for (int i = 0; i < numOfX+1; i++) {
+			
+		}
 	}
 	public void solve() {
 			
 		// Satz von Bland
 		int maxIterations = (int) choose(numOfX+numOfY, numOfY);
 		System.out.println("max iterations: " + maxIterations);
-		
+				
 		int iterations = 0;
 		while (!solved) {
 			solved = pivot();
@@ -263,18 +270,29 @@ public class Simplex {
 		}
 	}
 	
+	private int getCRow() {
+		int cRow = 0;
+		int cmin = Integer.MAX_VALUE;
+		// take the smallest !
+		for (int i = 0; i < numOfY; i++) {
+			if ((simplexTable[i+1][numOfX+1] < 0) && (simplexTable[i+1][numOfX+1] < cmin)){
+				cRow = i+1;
+			}
+		}
+		return cRow;
+	}
+	
 	/***
 	 * 
 	 * @return true if all c > 0
 	 */
 	public boolean zweiPhasenMethode() {
-		int cRow = 0;
-		for (int i = 0; i < numOfY; i++) {
-			if (simplexTable[i+1][numOfX+1] < 0) {
-				cRow = i+1;
-			}
+		int cRow = getCRow();
+		if (cRow == 0) {
+			System.out.println("keine Zweiphasenmethode nötig");
+			return true;
 		}
-		if (cRow == 0) return true;
+			
 		
 		
 		// TODO: simplexTable, varCol, varRow kopieren
@@ -318,25 +336,25 @@ public class Simplex {
 			else simplexTable[numOfY+1][i] = 0;
 		}
 		
+		System.out.println("after insert:");
+		printTable();
+		System.out.println();
 		//printTable();
 		
 
 		// TODO: swap
 		do { 			
 			swap(cRow,1);
+			System.out.println("after swap:");
+			printTable();
+			System.out.println();
 			
-			cRow = 0;
-			for (int i = 0; i < numOfY; i++) {
-				if (simplexTable[i+1][numOfX+1] < 0) {
-					cRow = i+1;
-				}
-			}
+			cRow = getCRow();
+			
 		} while (cRow != 0);
 
 		
-		System.out.println("after swap:");
-		printTable();
-		System.out.println();
+		
 		solve();
 		System.out.println("after solve:");
 		printTable();
@@ -391,9 +409,9 @@ public class Simplex {
 				else simplexTable[row][j] += arr1[j];
 			}
 			
-//			System.out.println("after replacing:");
-//			printTable();
-//			System.out.println();
+			System.out.println("after replacing:");
+			printTable();
+			System.out.println();
 			
 
 			solved = false;
@@ -514,7 +532,7 @@ public class Simplex {
 			
 				double[] arr1 = multiply(xEq, simplexTable[i][col]);
 				//DEBUG:
-				printArray("arr1 "+i,arr1);
+				//printArray("arr1 "+i,arr1);
 				for (int j = 1; j < simplexTable[0].length; j++) {
 					if (j == col) simplexTable[i][j] = arr1[j-1];
 					else simplexTable[i][j] += arr1[j-1];
