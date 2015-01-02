@@ -36,9 +36,9 @@ public class Simplex {
 	
 	// TODO: Spezialfälle:
 	// TODO: all b < 0
-	// TODO: any c < 0
-	// TODO: Degeneration
-	// TODO: Zweiphasenmethode
+	// TODO: any c < 0 -> Zweiphasenmethode
+	// TODO: Degeneration?
+	// TODO: Nichtnegativitätsbedingung als zusätzliche Nebenbedingung falls false
 
 	
 	public static int equals = 0;
@@ -63,7 +63,7 @@ public class Simplex {
 			//s.readCSV("InfiniteSolutions.csv");
 			//s.readCSV("Eisenbahnproblem.csv");
 			//s.readCSV("NegSchlupf.csv");
-			s.readCSV("NichtNegativitaet_1.csv");
+			//s.readCSV("NichtNegativitaet_1.csv");
 			//s.readCSV("NichtNegativitaet_2.csv");
 			s.printTable();
 			System.out.println("-------------------");
@@ -272,11 +272,12 @@ public class Simplex {
 	
 	private int getCRow() {
 		int cRow = 0;
-		int cmin = Integer.MAX_VALUE;
+		double cmin = Double.MAX_VALUE;
 		// take the smallest !
 		for (int i = 0; i < numOfY; i++) {
 			if ((simplexTable[i+1][numOfX+1] < 0) && (simplexTable[i+1][numOfX+1] < cmin)){
 				cRow = i+1;
+				cmin = simplexTable[i+1][numOfX+1];
 			}
 		}
 		return cRow;
@@ -388,6 +389,10 @@ public class Simplex {
 			simplexTable = simplexTableNew;
 //			System.out.println();
 //			printTable();
+			
+			System.out.println("After removing x0");
+			printTable();
+			System.out.println();
 			
 			// TODO: Variablen in ursprüngliche Zielfunktion einsetzen
 			
@@ -501,7 +506,8 @@ public class Simplex {
 			signX = 1;
 			signY = -1;
 		
-		}			
+		}
+		
 		for (int i = 0; i < numOfX+1; i++) {
 			if (i+1 == col) xEq[i] = xtemp[i+1] * signY;
 			else xEq[i] = xtemp[i+1] * signX;
