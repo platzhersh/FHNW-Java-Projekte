@@ -44,7 +44,7 @@ public class EllipseTool extends AbstractRectangularDrawTool {
 
 	@Override
 	public String getName() {
-		return "Circle";
+		return "Ellipse";
 	}
 
 }

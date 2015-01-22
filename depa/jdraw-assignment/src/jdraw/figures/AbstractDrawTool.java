@@ -40,6 +40,7 @@ public abstract class AbstractDrawTool implements DrawTool {
 	 */
 	protected Point anchor = null;
 	
+	
 	@Override
 	public void deactivate() {
 		this.context.showStatusText("");

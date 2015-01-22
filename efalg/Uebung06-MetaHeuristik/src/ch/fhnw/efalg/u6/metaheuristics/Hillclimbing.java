@@ -6,6 +6,7 @@ public class Hillclimbing implements MetaHeuristic {
 
 	
 	double stepSize;
+	int steps;
 	
 	
 	/* Constructor */
@@ -19,12 +20,14 @@ public class Hillclimbing implements MetaHeuristic {
 	 * @return
 	 */
 	@Override
-	public double getMinimum(final Matrix m) {
+	public double[] getMinimum(final Matrix m) {
 		// get random starting point
 		double[] vars = new double[m.n];
 		System.out.print("starting point: ");
 		for (int i = 0; i < m.n; i++) {
-			vars[i] = (int)(Math.random()*1000) % Math.min(Math.abs(m.upperLimit), Math.abs(m.lowerLimit));
+//			vars[i] = (int)(Math.random()*1000) % Math.min(Math.abs(m.upperLimit), Math.abs(m.lowerLimit));
+//			if (Math.random() > 0.4) vars[i]*=(-1);
+			vars[i] = randomWithRange(m.lowerLimit, m.upperLimit);
 			System.out.print(vars[i]+", ");
 		}
 		System.out.println();
@@ -39,14 +42,24 @@ public class Hillclimbing implements MetaHeuristic {
 			lastVars = vars.clone();
 			// get smallest neighbor coordinates and save in vars
 			vars = getSmallestNeighbor(m,vars);
-			
 			System.out.println("min: "+min+" at " + m.arrayToString(lastVars));
 		}
 		
 		System.out.println("-----------------------------");
 		System.out.println("min: "+min);
 		System.out.println("Pos: " + m.arrayToString(lastVars));
-		return min;
+		return new double[]{min, steps};
+	}
+	
+	/***
+	 * returns a random double between min and max
+	 * @param min lower limit
+	 * @param max upper limit 
+	 * @return double between min and max
+	 */
+	double randomWithRange(double min, double max) {
+		double range = Math.abs(max - min);     
+		return (Math.random() * range) + (min <= max ? min : max);
 	}
 
 	/***
@@ -57,6 +70,7 @@ public class Hillclimbing implements MetaHeuristic {
 	 * @return coordinates of smallest neighbor
 	 */
 	double[] getSmallestNeighbor(final Matrix m, double[] vars) {
+		steps++;
 		double[] minPos = new double[vars.length];
 		double min = Double.MAX_VALUE;
 		

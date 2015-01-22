@@ -433,6 +433,5 @@ public abstract class AbstractContext extends JFrame implements DrawContext {
 	 */
 	protected final List<DrawToolFactory> getToolFactories() {
 		return toolFactories;
-	}
-
+	}	
 }

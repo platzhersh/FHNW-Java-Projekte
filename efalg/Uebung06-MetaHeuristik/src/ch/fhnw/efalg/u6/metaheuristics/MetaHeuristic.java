@@ -4,6 +4,6 @@ import ch.fhnw.efalg.u6.Matrix;
 
 public interface MetaHeuristic {
 
-	public double getMinimum(Matrix m);
+	public double[] getMinimum(Matrix m);
 	
 }

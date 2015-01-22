@@ -9,15 +9,20 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
+import javax.swing.AbstractButton;
 import javax.swing.JFileChooser;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.KeyStroke;
 import javax.swing.filechooser.FileFilter;
 
+import jdraw.figures.AbstractDrawTool;
 import jdraw.figures.CircleTool;
 import jdraw.figures.EllipseTool;
+import jdraw.figures.JokerTool;
 import jdraw.figures.RectTool;
 import jdraw.framework.DrawModel;
 import jdraw.framework.DrawTool;
@@ -198,6 +203,7 @@ public class StdContext extends AbstractContext {
 
 	@Override
 	protected void doRegisterDrawTools() {
+		
 		// TODO Add new figure tools here
 		DrawTool rectangleTool = new RectTool(this);
 		addTool(rectangleTool);
@@ -205,6 +211,8 @@ public class StdContext extends AbstractContext {
 		addTool(circleTool);
 		DrawTool ellipseTool = new EllipseTool(this);
 		addTool(ellipseTool);
+		DrawTool jokerTool = new JokerTool(this);
+		addTool(jokerTool);
 	}
 
 	/**
@@ -309,5 +317,5 @@ public class StdContext extends AbstractContext {
 			System.out.println("save current graphic to file " + file.getName());
 		}
 	}
-
+	
 }

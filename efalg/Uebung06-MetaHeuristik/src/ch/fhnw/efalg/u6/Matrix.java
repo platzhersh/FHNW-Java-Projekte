@@ -2,7 +2,7 @@ package ch.fhnw.efalg.u6;
 
 import ch.fhnw.efalg.u6.functions.Function;
 import ch.fhnw.efalg.u6.functions.Rosenbrock;
-import ch.fhnw.efalg.u6.metaheuristics.Hillclimbing;
+import ch.fhnw.efalg.u6.metaheuristics.Hillclimbing2;
 import ch.fhnw.efalg.u6.metaheuristics.MetaHeuristic;
 
 public class Matrix {
@@ -10,8 +10,8 @@ public class Matrix {
 	int zeroPos;
 	public int upperLimit, lowerLimit, n;
 	
-	MetaHeuristic mh;
-	Function f;
+	public MetaHeuristic mh;
+	public Function f;
 	
 	/* Constructors */
 	
@@ -29,9 +29,9 @@ public class Matrix {
 		upperLimit = upper;
 		n = dimensions;
 		
-		// default Function: Rosenbrock, default MetaHeuristic: Hillclimbing
+		// default Function: Rosenbrock, default MetaHeuristic: Hillclimbing2
 		setFunction(new Rosenbrock());		
-		setMetaHeuristic(new Hillclimbing(1.0));
+		setMetaHeuristic(new Hillclimbing2(this));
 	}
 	
 	/* Getter & Setter */
@@ -45,8 +45,8 @@ public class Matrix {
 	
 	/* other functions */
 	
-	public void run() {
-		mh.getMinimum(this);
+	public double[] run() {
+		return mh.getMinimum(this);
 		//mh.getMaximum(this);
 	}
 	

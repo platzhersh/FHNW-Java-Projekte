@@ -4,4 +4,7 @@ public interface Function {
 
 	public double Obj_f(final double[] x);
 	
+	public double expectedMinima();
+	
+	public double[] expectedMinimaPos();
 }
