@@ -7,59 +7,57 @@ import java.net.URL;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
+import ch.fhnw.depa.states.AbstractImageLoadedState;
+import ch.fhnw.depa.states.ImageLoadedState;
+import ch.fhnw.depa.states.ImageNotLoadedState;
+
 public class ImageProxy implements Icon {
 
 	volatile ImageIcon imageIcon;
 	final URL imageURL;
-	Thread retrievalThread;
-	boolean retrieving = false;
+	
+	// states
+	AbstractImageLoadedState state;
+	public final ImageLoadedState imageLoadedState = new ImageLoadedState(this);
+	public final ImageNotLoadedState imageNotLoadedState = new ImageNotLoadedState(this);
+	
+	// constructor 
 	
 	public ImageProxy(URL url) {
 		imageURL = url;
+		state = imageNotLoadedState;
+	}
+	
+	// getter & setter methods
+	
+	public URL getImageUrl() {
+		return imageURL;
 	}
 
 	public int getIconWidth() {
-		if (imageIcon != null) {
-			return imageIcon.getIconWidth();
-		} else {
-			return 800;
-		}
+		return state.getIconWidth();
 	}
 	
 	public int getIconHeight() {
-		if (imageIcon != null) {
-			return imageIcon.getIconHeight();
-		} else {
-			return 800;
-		}
+		return state.getIconHeight();
 	}
 	
-	synchronized void setImageIcon(ImageIcon imageIcon) {
+	public synchronized void setImageIcon(ImageIcon imageIcon) {
 		this.imageIcon = imageIcon;
 	}
 	
+	public synchronized ImageIcon getImageIcon() {
+		return imageIcon;
+	}
+	
+	public void setState(AbstractImageLoadedState s) {
+		state = s;
+	}
+	
+	// other methods
 	
 	public void paintIcon(final Component c, Graphics g, int x, int y) {
-		if (imageIcon != null) {
-			imageIcon.paintIcon(c, g, x, y);
-		} else {
-			g.drawString("Loading CD cover, please wait...", x+300, y+190);
-			if (!retrieving) {
-				retrieving = true;
-				
-				retrievalThread = new Thread(new Runnable() {
-					public void run() {
-						try {
-							setImageIcon(new ImageIcon(imageURL, "CD Cover"));
-							c.repaint();
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					}
-				});
-				retrievalThread.start();
-			}
-		}
+		state.paintIcon(c, g, x, y);
 	}
 	
 	

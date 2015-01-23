@@ -26,7 +26,7 @@ public class ImageProxyTestDrive {
 		cds.put("Rodriguez - Searching for Sugar Man", "http://sugarman.org/images/Searching%20For%20Sugar%20Man%20%28Orange%29.jpg");
 		
 		
-		URL initialUrl = new URL(cds.get("Platzh1rsch"));
+		URL initialUrl = new URL(cds.get("Rodriguez - Searching for Sugar Man"));
 		menuBar = new JMenuBar();
 		menu = new JMenu("Favorite CDs");
 		menuBar.add(menu);
