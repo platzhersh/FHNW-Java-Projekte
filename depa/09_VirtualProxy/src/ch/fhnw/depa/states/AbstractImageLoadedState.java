@@ -7,7 +7,7 @@ import ch.fhnw.depa.ImageProxy;
 
 public abstract class AbstractImageLoadedState {
 	
-	ImageProxy context;
+	static ImageProxy context;
 	
 	// constructor
 	

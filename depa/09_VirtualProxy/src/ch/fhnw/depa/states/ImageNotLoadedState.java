@@ -36,7 +36,6 @@ public class ImageNotLoadedState extends AbstractImageLoadedState {
 				public void run() {
 					try {
 						context.setImageIcon(new ImageIcon(context.getImageUrl(), "CD Cover"));
-						context.setState(context.imageLoadedState);
 						c.repaint();
 					} catch (Exception e) {
 						e.printStackTrace();

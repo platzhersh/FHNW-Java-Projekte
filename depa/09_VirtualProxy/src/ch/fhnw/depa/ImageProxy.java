@@ -58,6 +58,7 @@ public class ImageProxy implements Icon {
 	
 	public void paintIcon(final Component c, Graphics g, int x, int y) {
 		state.paintIcon(c, g, x, y);
+		if (state == imageNotLoadedState) state = imageLoadedState;
 	}
 	
 	
