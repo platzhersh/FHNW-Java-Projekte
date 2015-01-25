@@ -1,0 +1,19 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+   <bean id="calcFactory" class="patterns.factory.gui.CalculatorFactoryImpl">
+      <property name="componentFactory">
+         <ref local="componentFactory"/>
+      </property>
+   </bean>
+   
+   <bean id="componentFactory" class="patterns.factory.gui.FactoryFX"/>
+
+<!--
+   <bean id="componentFactory" class="patterns.factory.gui.FactoryAWT"/>
+   <bean id="componentFactory" class="patterns.factory.gui.FactorySwing"/>
+   <bean id="componentFactory" class="patterns.factory.gui.FactorySWT"/>
+   <bean id="componentFactory" class="patterns.factory.gui.FactoryFX"/>
+-->
+
+</beans>

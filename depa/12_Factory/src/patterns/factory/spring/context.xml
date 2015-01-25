@@ -1,0 +1,19 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean id="beanA" class="patterns.factory.spring.A">
+		<property name="value">
+			<value>Test Hello World</value>
+		</property>
+		<property name="b">
+			<ref bean="beanB" />
+		</property>
+	</bean>
+	
+	<bean id="beanB" class="patterns.factory.spring.B">
+		<property name="a">
+			<ref bean="beanA" />
+		</property>
+	</bean>
+</beans>

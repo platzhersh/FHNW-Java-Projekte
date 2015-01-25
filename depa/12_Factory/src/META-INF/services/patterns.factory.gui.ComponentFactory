@@ -1,0 +1,3 @@
+#patterns.factory.gui.FactoryAWT
+#patterns.factory.gui.FactorySwing
+patterns.factory.gui.FactoryFX
