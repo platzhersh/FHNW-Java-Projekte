@@ -1,7 +1,6 @@
 package ch.fhnw.depa.ducks;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import ch.fhnw.depa.AbstractQuackable;
@@ -41,12 +40,6 @@ public class Flock extends AbstractQuackable {
 	}
 	
 	@Override
-	public void registerObserver(Observer observer) {
-		Iterator<AbstractQuackable> iterator = quackers.iterator();
-		while (iterator.hasNext()) {
-			AbstractQuackable quacker = iterator.next();
-			quacker.registerObserver(observer);
-		}
-	}
+	public void registerObserver(Observer observer) {	}
 
 }

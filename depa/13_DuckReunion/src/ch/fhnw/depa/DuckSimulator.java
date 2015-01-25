@@ -1,9 +1,12 @@
 package ch.fhnw.depa;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import ch.fhnw.depa.decorators.QuackableCount;
 import ch.fhnw.depa.ducks.Flock;
 import ch.fhnw.depa.factory.AbstractDuckFactory;
-import ch.fhnw.depa.factory.NotifyCountingDuckFactory;
+import ch.fhnw.depa.factory.ObserveCountingDuckFactory;
 import ch.fhnw.depa.observe.Observer;
 import ch.fhnw.depa.observe.Quackologist;
 
@@ -15,7 +18,7 @@ import ch.fhnw.depa.observe.Quackologist;
  * - Decorator
  * - Factory 
  * - Composite
- * - Observer (not completely implemented)
+ * - Observer
  * @author chregi
  *
  */
@@ -23,7 +26,9 @@ public class DuckSimulator {
 	
 	public static void main(String[] args) {
 		DuckSimulator simulator = new DuckSimulator();
-		AbstractDuckFactory f = new NotifyCountingDuckFactory();
+		List<Observer> obs = new ArrayList<>();
+		obs.add(new Quackologist());
+		AbstractDuckFactory f = new ObserveCountingDuckFactory(obs);
 		simulator.simulate(f);	
 	}
 	
@@ -35,7 +40,6 @@ public class DuckSimulator {
 		System.out.println("\nDuck Simulator\n");
 		
 		
-		Observer q1 = new Quackologist();
 		Flock flockOfDucks = new Flock();
 		
 		flockOfDucks.add(mallardDuck);
@@ -43,7 +47,7 @@ public class DuckSimulator {
 		flockOfDucks.add(duckCall);
 		
 		
-		flockOfDucks.registerObserver(q1);
+		
 		simulate(flockOfDucks);
 		
 		
