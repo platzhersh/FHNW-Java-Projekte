@@ -1,6 +1,6 @@
 package ch.fhnw.depa.ducks;
 
-import ch.fhnw.depa.Quackable;
+import ch.fhnw.depa.AbstractQuackable;
 
 /***
  * 
@@ -8,11 +8,17 @@ import ch.fhnw.depa.Quackable;
  * @author chregi
  *
  */
-public class RubberDuck implements Quackable {
+public class RubberDuck extends AbstractQuackable {
+
+	@Override
+	public String getType() {
+		return "RubberDuck";
+	}
 
 	@Override
 	public void quack() {
-		System.out.println("Squeek!");
+		System.out.println("Squeak!");
 	}
+
 
 }

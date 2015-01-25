@@ -1,11 +1,11 @@
 package ch.fhnw.depa.factory;
 
-import ch.fhnw.depa.Quackable;
+import ch.fhnw.depa.AbstractQuackable;
 
 public abstract class AbstractDuckFactory {
 	
-	public abstract Quackable createMallardDuck();
-	public abstract Quackable createRubberDuck();
-	public abstract Quackable createDuckCall();
+	public abstract AbstractQuackable createMallardDuck();
+	public abstract AbstractQuackable createRubberDuck();
+	public abstract AbstractQuackable createDuckCall();
 
 }

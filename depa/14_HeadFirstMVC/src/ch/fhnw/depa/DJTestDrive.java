@@ -9,7 +9,7 @@ public class DJTestDrive {
 
 	public static void main(String[] args) {
 		BeatModelInterface model = new BeatModel();
-		ControllerInterface controller1 = new BeatController(model);
+		ControllerInterface controller = new BeatController(model);
 		//ControllerInterface controller2 = new BPMController(model);
 	}
 

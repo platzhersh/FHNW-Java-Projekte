@@ -2,8 +2,10 @@ package ch.fhnw.depa.ducks;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
-import ch.fhnw.depa.Quackable;
+import ch.fhnw.depa.AbstractQuackable;
+import ch.fhnw.depa.observe.Observer;
 
 
 /***
@@ -13,20 +15,37 @@ import ch.fhnw.depa.Quackable;
  * @author chregi
  *
  */
-public class Flock implements Quackable {
+public class Flock extends AbstractQuackable {
 
-	ArrayList<Quackable> quackers = new ArrayList<Quackable>();
+	List<AbstractQuackable> quackers = new ArrayList<>();
 	
-	public void add(Quackable quacker) {
+	public void add(AbstractQuackable quacker) {
 		quackers.add(quacker);
 	}
 	
+	
 	@Override
 	public void quack() {
-		Iterator<Quackable> iterator = quackers.iterator();
+		for (AbstractQuackable a : quackers) {
+			a.quack();
+		}
+	}
+
+	@Override
+	public String getType() {
+		StringBuilder sb = new StringBuilder();
+		for (AbstractQuackable a : quackers) {
+			sb.append(a.getType()  + ", ");
+		}
+		return sb.toString();
+	}
+	
+	@Override
+	public void registerObserver(Observer observer) {
+		Iterator<AbstractQuackable> iterator = quackers.iterator();
 		while (iterator.hasNext()) {
-			Quackable quacker = iterator.next();
-			quacker.quack();
+			AbstractQuackable quacker = iterator.next();
+			quacker.registerObserver(observer);
 		}
 	}
 

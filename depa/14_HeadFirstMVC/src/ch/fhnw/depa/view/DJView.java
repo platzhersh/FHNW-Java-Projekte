@@ -8,8 +8,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
-import org.eclipse.swt.SWT;
-
 import ch.fhnw.depa.controller.ControllerInterface;
 import ch.fhnw.depa.model.BeatModelInterface;
 
@@ -56,7 +54,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
 	
 	// setup controls
 	public void createControls() {
-		JFrame.setDefaultLookAndFeelDecorated(true);
+	
 		controlFrame = new JFrame("Control");
 		controlFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		controlFrame.setSize(new Dimension(100, 80));
@@ -72,7 +70,7 @@ public class DJView implements ActionListener, BeatObserver, BPMObserver {
 				controller.start();
 			}
 		});
-		startMenuItem = new JMenuItem("Stop");
+		stopMenuItem = new JMenuItem("Stop");
 		menu.add(stopMenuItem);
 		stopMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

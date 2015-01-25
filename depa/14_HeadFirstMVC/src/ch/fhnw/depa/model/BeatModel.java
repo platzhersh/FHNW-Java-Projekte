@@ -109,8 +109,8 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 	}
 	
 	void notifyBeatObservers() {
-		ArrayList<BeatObserver> observers = (ArrayList<BeatObserver>) beatObservers.clone();
-		Iterator<BeatObserver> it = observers.iterator();
+		//ArrayList<BeatObserver> observers = (ArrayList<BeatObserver>) beatObservers.clone();
+		Iterator<BeatObserver> it = beatObservers.iterator();
 		
 		while (it.hasNext()) {
 			it.next().updateBeat();
@@ -118,8 +118,8 @@ public class BeatModel implements BeatModelInterface, MetaEventListener {
 	}
 
 	void notifyBPMObservers() {
-		ArrayList<BPMObserver> observers = (ArrayList<BPMObserver>) bpmObservers.clone();
-		Iterator<BPMObserver> it = observers.iterator();
+		//ArrayList<BPMObserver> observers = (ArrayList<BPMObserver>) bpmObservers.clone();
+		Iterator<BPMObserver> it = bpmObservers.iterator();
 		
 		while (it.hasNext()) {
 			it.next().updateBPM();

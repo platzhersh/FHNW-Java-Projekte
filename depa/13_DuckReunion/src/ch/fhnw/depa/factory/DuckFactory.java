@@ -1,23 +1,22 @@
 package ch.fhnw.depa.factory;
 
-import ch.fhnw.depa.Quackable;
-import ch.fhnw.depa.decorators.*;
+import ch.fhnw.depa.AbstractQuackable;
 import ch.fhnw.depa.ducks.*;
 
 public class DuckFactory extends AbstractDuckFactory {
 
 	@Override
-	public Quackable createMallardDuck() {
+	public AbstractQuackable createMallardDuck() {
 		return new MallardDuck();
 	}
 
 	@Override
-	public Quackable createRubberDuck() {
+	public AbstractQuackable createRubberDuck() {
 		return new RubberDuck();
 	}
 
 	@Override
-	public Quackable createDuckCall() {
+	public AbstractQuackable createDuckCall() {
 		return new DuckCall();
 	}
 
