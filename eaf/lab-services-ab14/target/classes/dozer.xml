@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<configuration>
+		<custom-converters> <!-- these are always bi-directional -->
+			<converter type="ch.fhnw.edu.rental.facade.RentalConverter">
+				<class-a>ch.fhnw.edu.rental.model.Rental</class-a>
+				<class-b>java.lang.Long</class-b>
+			</converter>
+			<converter type="ch.fhnw.edu.rental.facade.MovieConverter">
+				<class-a>ch.fhnw.edu.rental.model.Movie</class-a>
+				<class-b>java.lang.Long</class-b>
+			</converter>
+			<converter type="ch.fhnw.edu.rental.facade.UserConverter">
+				<class-a>ch.fhnw.edu.rental.model.User</class-a>
+				<class-b>java.lang.Long</class-b>
+			</converter>
+			<converter type="ch.fhnw.edu.rental.facade.PriceCategoryConverter">
+				<class-a>ch.fhnw.edu.rental.model.PriceCategory</class-a>
+				<class-b>java.lang.String</class-b>
+			</converter>
+		</custom-converters>
+	</configuration>
+
+	<mapping wildcard="true">
+		<class-a>ch.fhnw.edu.rental.model.User</class-a>
+		<class-b>ch.fhnw.edu.rental.dto.UserDTO</class-b>
+		<field>
+			<a>rentals</a>
+			<b>rentalIds</b>
+		</field>
+	</mapping>
+	
+	<mapping wildcard="true">
+		<class-a>ch.fhnw.edu.rental.model.Movie</class-a>
+		<class-b>ch.fhnw.edu.rental.dto.MovieDTO</class-b>
+		<!-- 
+			id
+			title
+			rented
+			priceCagtegory (PriceCategory <-> String)
+			releaseDate
+		 -->
+		 <field>
+		 	<a is-accessible="true">title</a>
+		 	<b>title</b>
+		 </field>
+		 <field>
+		 	<a is-accessible="true">releaseDate</a>
+		 	<b>releaseDate</b>
+		 </field>
+	</mapping>
+	
+	<mapping wildcard="true">
+		<class-a>ch.fhnw.edu.rental.model.Rental</class-a>
+		<class-b>ch.fhnw.edu.rental.dto.RentalDTO</class-b>
+		<field>
+			<a>movie.id</a>
+			<b>movieId</b>
+		</field>
+		<field>
+			<a>user.id</a>
+			<b>userId</b>
+		</field>
+		<field> <!--  only from a to b -->
+			<a>rentalFee</a>
+			<b>rentalFee</b>
+		</field>
+	</mapping>
+	
+</mappings>

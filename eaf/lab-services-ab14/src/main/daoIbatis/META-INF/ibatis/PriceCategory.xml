@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+
+<sqlMap namespace="PriceCategory">
+
+	<resultMap id="PriceCategory" class="ch.fhnw.edu.services.movieservice.model.PriceCategory">
+		<result property="id" 			column="PRICECATEGORY_ID"/>
+		<discriminator column="PRICECATEGORY_TYPE" javaType="string">
+			<subMap value="RegularPriceCategory" 	resultMap="RegularPriceCategory"/>
+			<subMap value="ChildrenPriceCategory"	resultMap="ChildrenPriceCategory"/>
+			<subMap value="NewReleasePriceCategory"	resultMap="NewReleasePriceCategory"/>
+		</discriminator>
+	</resultMap>
+	
+	<resultMap id="RegularPriceCategory"
+		class="ch.fhnw.edu.services.movieservice.model.RegularPriceCategory"
+		extends="PriceCategory">
+	</resultMap>
+	
+	<resultMap id="ChildrenPriceCategory"
+		class="ch.fhnw.edu.services.movieservice.model.ChildrenPriceCategory"
+		extends="PriceCategory">
+	</resultMap>
+	
+	<resultMap id="NewReleasePriceCategory"
+		class="ch.fhnw.edu.services.movieservice.model.NewReleasePriceCategory"
+		extends="PriceCategory">
+	</resultMap>
+	
+	
+	
+	<select id="getAll" resultMap="PriceCategory">
+		select * from PRICECATEGORIES
+	</select>
+	
+	<select id="getById" resultMap="PriceCategory">
+		select * from PRICECATEGORIES where PRICECATEGORY_ID = #value#
+	</select>
+	
+	<insert id="insert">
+		insert into PRICECATEGORIES (PRICECATEGORY_TYPE) values (#id#, #type#)
+		<selectKey
+			keyProperty="id"
+			resultClass="long">
+			CALL IDENTITY()
+		</selectKey>
+		
+	</insert>
+	
+	<update id="update">
+		update PRICECATEGORIES set 
+			PRICECATEGORY_TYPE=#type#
+		where PRICECATEGORY_ID=#id#
+	</update>
+	
+	<delete id="delete">
+		delete from PRICECATEGORIES where PRICECATEGORY_ID = #id#
+	</delete>
+	
+</sqlMap>
+
+
+<!--
+CREATE TABLE PRICECATEGORIES (
+	PRICECATEGORY_ID BIGINT NOT NULL PRIMARY KEY,
+	PRICECATEGORY_TYPE VARCHAR
+)
+-->

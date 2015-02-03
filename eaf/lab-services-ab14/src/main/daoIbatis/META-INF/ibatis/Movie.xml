@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+
+<sqlMap namespace="Movie">
+
+	<resultMap id="result" class="ch.fhnw.edu.services.movieservice.model.Movie">
+		<result property="id" 			column="MOVIE_ID"/>
+		<result property="releaseDate" 	column="MOVIE_RELEASEDATE"/>
+		<result property="title" 		column="MOVIE_TITLE"/>
+		<result property="rented" 		column="MOVIE_RENTED"/>
+		
+		<result property="priceCategory"	
+			select="PriceCategory.getById"
+			column="PRICECATEGORY_FK"
+		/>
+	</resultMap>
+	
+	
+	<select id="getByTitle" resultMap="result">
+		select * from MOVIES where MOVIE_TITLE = #value#
+	</select>
+	
+	<select id="getAll" resultMap="result">
+		select * from MOVIES
+	</select>
+	
+	<select id="getById" resultMap="result">
+		select * from MOVIES where MOVIE_ID = #value#
+	</select>
+	
+	<insert id="insert">
+		insert into MOVIES (
+			MOVIE_TITLE, MOVIE_RELEASEDATE, MOVIE_RENTED, PRICECATEGORY_FK
+		) values (
+			#title#, #releaseDate#, #rented#, #priceCategory.id#
+		)
+		<selectKey
+			keyProperty="id"
+			resultClass="long">
+			CALL IDENTITY()
+		</selectKey>
+	</insert>
+	
+	<update id="update">
+		update MOVIES set 
+			MOVIE_TITLE=#title#, 
+			MOVIE_RELEASEDATE=#releaseDate#, 
+			MOVIE_RENTED=#rented#, 
+			PRICECATEGORY_FK=#priceCategory.id#
+		where MOVIE_ID=#id#
+	</update>
+	
+	<delete id="delete">
+		delete from MOVIES where MOVIE_ID = #id#
+	</delete>
+</sqlMap>
+
+
+<!--
+CREATE TABLE MOVIES (
+	MOVIE_ID BIGINT NOT NULL PRIMARY KEY,
+	MOVIE_RELEASEDATE TIMESTAMP,
+	MOVIE_TITLE VARCHAR,
+	MOVIE_RENTED BOOLEAN,
+	PRICECATEGORY_FK BIGINT
+)
+-->

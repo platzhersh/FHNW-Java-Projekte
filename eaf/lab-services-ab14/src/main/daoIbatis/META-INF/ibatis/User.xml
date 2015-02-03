@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+
+<sqlMap namespace="User">
+
+	<resultMap id="result" class="ch.fhnw.edu.services.userservice.model.User">
+		<result property="id" 			column="USER_ID"/>
+		<result property="name" 		column="USER_NAME"/>
+		<result property="firstName" 	column="USER_FIRSTNAME"/>
+
+		<result property="rentals"	
+			select="Rental.getByUserId"
+			column="USER_ID"/>
+	</resultMap>
+	
+	
+	<select id="getByName" resultMap="result">
+		select * from USERS where USER_NAME = #value#
+	</select>
+	
+	<select id="getAll" resultMap="result">
+		select * from USERS
+	</select>
+	
+	<select id="getById" resultMap="result">
+		select * from USERS where USER_ID = #value#
+	</select>
+	
+	<insert id="insert">
+		insert into USERS (
+			USER_FIRSTNAME, USER_NAME
+		) values (#firstName#, #name#)
+		<selectKey
+			keyProperty="id"
+			resultClass="long">
+			CALL IDENTITY()
+		</selectKey>
+	</insert>
+	
+	<update id="update">
+		update USERS set 
+			USER_FIRSTNAME=#firstName#, 
+			USER_NAME=#name#
+		where USER_ID=#id#
+	</update>
+	
+	<delete id="delete">
+		delete from USERS where USER_ID = #id#
+	</delete>
+</sqlMap>
+
+
+<!--
+CREATE TABLE USERS (
+	USER_ID BIGINT NOT NULL PRIMARY KEY,
+	USER_FIRSTNAME VARCHAR,
+	USER_NAME VARCHAR
+)
+-->

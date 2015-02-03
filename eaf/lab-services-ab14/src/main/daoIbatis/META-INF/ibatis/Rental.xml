@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+
+<sqlMap namespace="Rental">
+
+	<resultMap id="result" class="ch.fhnw.edu.services.rentalservice.model.Rental">
+		<result property="id" 			column="RENTAL_ID"/>
+		<result property="rentalDate" 	column="RENTAL_RENTALDATE"/>
+		<result property="rentalDays" 	column="RENTAL_RENTALDAYS"/>
+
+		<result property="user"	
+			select="User.getById"
+			column="USER_ID"/>
+			
+		<result property="movie"	
+			select="Movie.getById"
+			column="MOVIE_ID"/>
+						
+	</resultMap>
+	
+	
+	<select id="getById" resultMap="result">
+		select * from RENTALS where RENTAL_ID = #value#
+	</select>
+	
+	<select id="getAll" resultMap="result">
+		select * from RENTALS
+	</select>
+	
+	<select id="getByUserId" resultMap="result">
+		select * from RENTALS where USER_ID = #value#
+	</select>
+
+<!-- bei insert/update fehlt das Abspeichern der Assoziationen -->	
+	<insert id="insert">
+		insert into RENTALS (
+			RENTAL_RENTALDATE, RENTAL_RENTALDAYS, USER_ID, MOVIE_ID
+		)
+		values (
+			#rentalDate#, #rentalDays#, #user.id#, #movie.id#
+		)
+		<selectKey
+			keyProperty="id"
+			resultClass="long">
+			CALL IDENTITY()
+		</selectKey>
+	</insert>
+	
+	<update id="update">
+		update RENTALS set 
+			RENTAL_RENTALDATE=#rentalDate#, 
+			RENTAL_RENTALDAYS=#rentalDays#
+		where RENTAL_ID=#id#
+	</update>
+	
+	<delete id="delete">
+		delete from RENTALS where RENTAL_ID = #id#
+	</delete>
+	
+</sqlMap>
+
+
+<!--
+CREATE TABLE RENTALS (
+	RENTAL_ID BIGINT NOT NULL PRIMARY KEY,
+	RENTAL_RENTALDATE TIMESTAMP,
+	RENTAL_RENTALDAYS INTEGER,
+	USER_ID BIGINT,
+	MOVIE_ID BIGINT
+)
+
+-->

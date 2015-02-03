@@ -1,0 +1,7 @@
+Liebe/r ${user.firstName} ${user.lastName},
+
+der von Ihnen ausgeliehene Film '${movie.title}' wird anderweitig gebraucht. Da 
+Ihre Ausleihfrist abgelaufen ist, bitten wir Sie den Film in den nächsten Tagen zurückzubringen. 
+
+Mit freundlichen Grüssen,
+Ihr Filmverleih
