@@ -1,0 +1,891 @@
+>>> ConTest: log file created
+>>> ConTest: ConTest for Java, version 3.5.6.17
+>>> ConTest:    build: 27 March 2011 16:19:33
+>>> ConTest: (c) Copyright IBM Corporation (1999, 2011), ALL RIGHTS RESERVED.
+>>> ConTest: Initializing state: TEST_CLASS_LOAD_INSTRUMENTATION
+>>> ConTest: properties file not specified as JVM property, looking at current working directory
+>>> ConTest: properties file not found in current working directory, looking in the classpath
+>>> ConTest: Found properties file: D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\conpr\02_LE_Locks\contest\KingProperties
+>>> ConTest: Not doing replay, not recording.
+>>> ConTest: setting heuristic properties randomly
+>>> ConTest: unlimited date
+>>> ConTest: trial version, activating ConTest on at most 10 classes
+>>> ConTest: using seed: 5311589229442170576
+>>> ConTest: No begin-at, active from the start
+>>> ConTest: no keyboard callback thread
+>>> ConTest: no port callback thread
+>>> ConTest: using minimal buffer for coverage
+>>> ConTest: basicBlocks coverage is off
+>>> ConTest: methods coverage is off
+>>> ConTest: lock history tracing is off
+>>> ConTest: lock discipline tracing is off
+>>> ConTest: synchronization coverage is off
+>>> ConTest: locks info is not collected
+>>> ConTest: locationPairs coverage is off
+>>> ConTest: thread locator is disabled
+>>> ConTest: orange-box is off
+>>> ConTest: noise frequency (promil) is set to 80
+>>> ConTest: noise type is yields
+>>> ConTest: noise unit strength is 87
+>>> ConTest: halt-one-thread heuristic is off
+>>> ConTest: sharedVars coverage is off
+>>> ConTest: shared-variables heuristic is off
+>>> ConTest: datagram socket fault injection is initialized. Mode is: conservativeRandom, direction is: both, frequency (permil) is: 100, datagram length bound is: 10000
+>>> ConTest: not tampering with timeouts
+>>> ConTest: listeners directory not found
+>>> ConTest: Sent usage report
+>>> ConTest: Using existing ConTest output directory: [D:\Users\chregi\Documents\GitHub\FHNW-Java-Projekte\conpr\02_LE_Locks\com_ibm_contest]
+>>> ConTest: id for this run is: [1424698662951]
+>>> ConTest: Not writing methods coverage tasks
+>>> ConTest: Not writing basicBlocks coverage tasks
+>>> ConTest: Not writing synchronization coverage tasks
+>>> ConTest: targeting classes beginning with: worksheet.
+>>> ConTest: targeting all locations in specified classes
+>>> ConTest: Targeting all variables, except for final ones in java core classes
+>>> ConTest: done initializing
+==========================================
+instrumentor created
+==========================================
+class java/lang/invoke/MethodHandleImpl not targeted
+==========================================
+class java/lang/invoke/MemberName$Factory not targeted
+==========================================
+class java/lang/invoke/LambdaForm$NamedFunction not targeted
+==========================================
+class java/lang/invoke/MethodType$ConcurrentWeakInternSet not targeted
+==========================================
+class java/lang/invoke/MethodHandleStatics not targeted
+==========================================
+class java/lang/invoke/MethodHandleStatics$1 not targeted
+==========================================
+class java/lang/invoke/MethodTypeForm not targeted
+==========================================
+class java/lang/invoke/Invokers not targeted
+==========================================
+class java/lang/invoke/MethodType$ConcurrentWeakInternSet$WeakEntry not targeted
+==========================================
+class java/lang/Void not targeted
+==========================================
+class sun/misc/PostVMInitHook not targeted
+==========================================
+class sun/launcher/LauncherHelper not targeted
+==========================================
+class sun/misc/URLClassPath$FileLoader$1 not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/RemoteTestRunner not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/MessageSender not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/IVisitsTestTrees not targeted
+==========================================
+class sun/launcher/LauncherHelper$FXHelper not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/IListensToTestExecutions not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/IClassifiesThrowables not targeted
+==========================================
+class java/io/StringWriter not targeted
+==========================================
+class java/io/UnsupportedEncodingException not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/FirstRunExecutionListener not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/RemoteTestRunner$RerunRequest not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/RerunExecutionListener not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/ITestLoader not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/TestExecution not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/ITestIdentifier not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/TestIdMap not targeted
+==========================================
+class org/eclipse/jdt/internal/junit4/runner/JUnit4TestLoader not targeted
+==========================================
+class java/lang/SecurityException not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/ITestReference not targeted
+==========================================
+class java/net/Socket not targeted
+==========================================
+class java/net/InetSocketAddress not targeted
+==========================================
+class java/net/InetSocketAddress$InetSocketAddressHolder not targeted
+==========================================
+class sun/security/action/GetBooleanAction not targeted
+==========================================
+class java/net/InetAddress$1 not targeted
+==========================================
+class java/net/InetAddress$InetAddressHolder not targeted
+==========================================
+class java/net/InetAddress$Cache not targeted
+==========================================
+class java/net/InetAddress$Cache$Type not targeted
+==========================================
+class java/net/InetAddressImplFactory not targeted
+==========================================
+class java/net/Inet6AddressImpl not targeted
+==========================================
+class java/net/InetAddressImpl not targeted
+==========================================
+class java/net/InetAddress$2 not targeted
+==========================================
+class sun/net/spi/nameservice/NameService not targeted
+==========================================
+class java/net/Inet4AddressImpl not targeted
+==========================================
+class java/net/Inet4Address not targeted
+==========================================
+class java/net/SocksSocketImpl not targeted
+==========================================
+class java/net/SocksConsts not targeted
+==========================================
+class java/net/PlainSocketImpl not targeted
+==========================================
+class java/net/AbstractPlainSocketImpl not targeted
+==========================================
+class java/net/SocketImpl not targeted
+==========================================
+class java/net/SocketOptions not targeted
+==========================================
+class java/net/AbstractPlainSocketImpl$1 not targeted
+==========================================
+class java/net/PlainSocketImpl$1 not targeted
+==========================================
+class java/net/DualStackPlainSocketImpl not targeted
+==========================================
+class java/net/SocksSocketImpl$3 not targeted
+==========================================
+class java/net/ProxySelector not targeted
+==========================================
+class sun/net/spi/DefaultProxySelector not targeted
+==========================================
+class sun/net/spi/DefaultProxySelector$1 not targeted
+==========================================
+class sun/net/NetProperties not targeted
+==========================================
+class sun/net/NetProperties$1 not targeted
+==========================================
+class java/net/Inet6Address not targeted
+==========================================
+class java/net/URI not targeted
+==========================================
+class java/net/URI$Parser not targeted
+==========================================
+class sun/net/spi/DefaultProxySelector$NonProxyInfo not targeted
+==========================================
+class sun/net/spi/DefaultProxySelector$3 not targeted
+==========================================
+class java/net/Proxy not targeted
+==========================================
+class java/net/Proxy$Type not targeted
+==========================================
+class sun/net/NetHooks not targeted
+==========================================
+class java/net/Inet6Address$Inet6AddressHolder not targeted
+==========================================
+class java/net/Socket$3 not targeted
+==========================================
+class java/net/SocketOutputStream not targeted
+==========================================
+class java/net/Socket$2 not targeted
+==========================================
+class java/net/SocketInputStream not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/RemoteTestRunner$ReaderThread not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/DefaultClassifier not targeted
+==========================================
+instrumenting stream for class worksheet/AccountTest from loader sun.misc.Launcher$AppClassLoader@58644d46
+==========================================
+successfully instrumented stream for class worksheet/AccountTest from loader sun.misc.Launcher$AppClassLoader@58644d46
+==========================================
+class worksheet/AccountTest instrumented, new size: 1591 bytes
+==========================================
+class org/eclipse/jdt/internal/junit4/runner/JUnit4TestClassReference not targeted
+==========================================
+class org/eclipse/jdt/internal/junit4/runner/JUnit4TestReference not targeted
+==========================================
+class org/junit/runner/notification/StoppedByUserException not targeted
+==========================================
+class org/junit/runner/notification/RunListener not targeted
+==========================================
+class org/eclipse/jdt/internal/junit4/runner/JUnit4TestListener not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/IStopListener not targeted
+==========================================
+class org/junit/runner/Request not targeted
+==========================================
+class org/junit/internal/requests/FilterRequest not targeted
+==========================================
+class org/junit/runner/Request$1 not targeted
+==========================================
+class org/junit/runner/Runner not targeted
+==========================================
+class org/junit/runner/Describable not targeted
+==========================================
+class org/junit/internal/runners/ErrorReportingRunner not targeted
+==========================================
+class org/junit/internal/requests/SortingRequest not targeted
+==========================================
+class org/junit/internal/requests/ClassRequest not targeted
+==========================================
+class org/junit/runners/model/InitializationError not targeted
+==========================================
+class org/junit/runners/model/RunnerBuilder not targeted
+==========================================
+class org/junit/internal/builders/AllDefaultPossibilitiesBuilder not targeted
+==========================================
+class org/junit/internal/builders/SuiteMethodBuilder not targeted
+==========================================
+class org/junit/internal/builders/NullBuilder not targeted
+==========================================
+class org/junit/internal/builders/IgnoredBuilder not targeted
+==========================================
+class org/junit/internal/builders/IgnoredClassRunner not targeted
+==========================================
+class org/junit/internal/builders/AnnotatedBuilder not targeted
+==========================================
+class org/junit/internal/runners/SuiteMethod not targeted
+==========================================
+class org/junit/internal/runners/JUnit38ClassRunner not targeted
+==========================================
+class org/junit/runner/manipulation/Filterable not targeted
+==========================================
+class org/junit/runner/manipulation/Sortable not targeted
+==========================================
+class org/junit/internal/builders/JUnit3Builder not targeted
+==========================================
+class org/junit/internal/builders/JUnit4Builder not targeted
+==========================================
+class org/junit/runners/BlockJUnit4ClassRunner not targeted
+==========================================
+class org/junit/runners/ParentRunner not targeted
+==========================================
+class org/junit/Ignore not targeted
+==========================================
+class sun/reflect/annotation/AnnotationParser not targeted
+==========================================
+class org/junit/runner/RunWith not targeted
+==========================================
+instrumenting stream for class worksheet/AccountTest$1 from loader sun.misc.Launcher$AppClassLoader@58644d46
+==========================================
+successfully instrumented stream for class worksheet/AccountTest$1 from loader sun.misc.Launcher$AppClassLoader@58644d46
+==========================================
+class worksheet/AccountTest$1 instrumented, new size: 1620 bytes
+==========================================
+instrumenting stream for class worksheet/AccountTest$2 from loader sun.misc.Launcher$AppClassLoader@58644d46
+==========================================
+successfully instrumented stream for class worksheet/AccountTest$2 from loader sun.misc.Launcher$AppClassLoader@58644d46
+==========================================
+class worksheet/AccountTest$2 instrumented, new size: 1621 bytes
+==========================================
+class junit/framework/TestCase not targeted
+==========================================
+class junit/framework/Test not targeted
+==========================================
+class junit/framework/Assert not targeted
+==========================================
+class org/junit/internal/AssumptionViolatedException not targeted
+==========================================
+class sun/security/util/ManifestDigester not targeted
+==========================================
+class sun/security/util/ManifestDigester$Position not targeted
+==========================================
+class sun/security/util/ManifestDigester$Entry not targeted
+==========================================
+class sun/security/jca/Providers not targeted
+==========================================
+class java/lang/InheritableThreadLocal not targeted
+==========================================
+class sun/security/jca/ProviderList not targeted
+==========================================
+class sun/security/jca/ProviderConfig not targeted
+==========================================
+class java/security/Provider not targeted
+==========================================
+class sun/security/jca/ProviderList$3 not targeted
+==========================================
+class sun/security/jca/ProviderList$1 not targeted
+==========================================
+class java/security/Provider$ServiceKey not targeted
+==========================================
+class java/security/Provider$EngineDescription not targeted
+==========================================
+class sun/misc/FDBigInteger not targeted
+==========================================
+class sun/security/jca/ProviderList$2 not targeted
+==========================================
+class java/security/Security not targeted
+==========================================
+class java/security/Security$1 not targeted
+==========================================
+class sun/security/pkcs/PKCS7 not targeted
+==========================================
+class sun/security/util/DerInputStream not targeted
+==========================================
+class sun/security/util/DerIndefLenConverter not targeted
+==========================================
+class sun/security/util/DerInputBuffer not targeted
+==========================================
+class sun/security/pkcs/ContentInfo not targeted
+==========================================
+class sun/security/util/ObjectIdentifier not targeted
+==========================================
+class sun/security/util/DerValue not targeted
+==========================================
+class sun/security/util/DerOutputStream not targeted
+==========================================
+class sun/security/util/DerEncoder not targeted
+==========================================
+class sun/security/util/ByteArrayLexOrder not targeted
+==========================================
+class sun/security/util/ByteArrayTagOrder not targeted
+==========================================
+class java/math/BigInteger not targeted
+==========================================
+class sun/security/x509/AlgorithmId not targeted
+==========================================
+class java/security/cert/CertificateFactory not targeted
+==========================================
+class java/security/cert/CertificateFactorySpi not targeted
+==========================================
+class sun/security/jca/GetInstance not targeted
+==========================================
+class sun/security/jca/ProviderConfig$2 not targeted
+==========================================
+class sun/security/provider/Sun not targeted
+==========================================
+class sun/security/provider/SunEntries not targeted
+==========================================
+class sun/security/provider/SunEntries$1 not targeted
+==========================================
+class sun/security/provider/NativePRNG not targeted
+==========================================
+class sun/security/provider/NativePRNG$Blocking not targeted
+==========================================
+class sun/security/provider/NativePRNG$NonBlocking not targeted
+==========================================
+class java/security/Provider$Service not targeted
+==========================================
+class java/security/Provider$UString not targeted
+==========================================
+class sun/security/provider/X509Factory not targeted
+==========================================
+class sun/security/util/Cache not targeted
+==========================================
+class sun/security/util/MemoryCache not targeted
+==========================================
+class sun/security/jca/GetInstance$Instance not targeted
+==========================================
+class java/security/cert/X509Certificate not targeted
+==========================================
+class java/security/cert/X509Extension not targeted
+==========================================
+class sun/security/util/Cache$EqualByteArray not targeted
+==========================================
+class sun/security/x509/X509CertImpl not targeted
+==========================================
+class sun/security/x509/X509CertInfo not targeted
+==========================================
+class sun/security/x509/CertAttrSet not targeted
+==========================================
+class sun/security/x509/CertificateVersion not targeted
+==========================================
+class sun/security/x509/CertificateSerialNumber not targeted
+==========================================
+class sun/security/x509/SerialNumber not targeted
+==========================================
+class sun/security/x509/CertificateAlgorithmId not targeted
+==========================================
+class sun/security/x509/X500Name not targeted
+==========================================
+class sun/security/x509/GeneralNameInterface not targeted
+==========================================
+class sun/security/x509/X500Name$1 not targeted
+==========================================
+class javax/security/auth/x500/X500Principal not targeted
+==========================================
+class sun/security/x509/RDN not targeted
+==========================================
+class sun/security/x509/AVA not targeted
+==========================================
+class sun/security/x509/CertificateValidity not targeted
+==========================================
+class sun/security/x509/CertificateX509Key not targeted
+==========================================
+class sun/security/x509/X509Key not targeted
+==========================================
+class java/security/PublicKey not targeted
+==========================================
+class java/security/Key not targeted
+==========================================
+class sun/security/util/BitArray not targeted
+==========================================
+class java/security/spec/X509EncodedKeySpec not targeted
+==========================================
+class java/security/spec/EncodedKeySpec not targeted
+==========================================
+class java/security/spec/KeySpec not targeted
+==========================================
+class java/security/KeyFactory not targeted
+==========================================
+class sun/security/jca/ProviderList$ServiceList not targeted
+==========================================
+class sun/security/jca/ProviderList$ServiceList$1 not targeted
+==========================================
+class sun/security/rsa/SunRsaSign not targeted
+==========================================
+class sun/security/rsa/SunRsaSignEntries not targeted
+==========================================
+class sun/security/rsa/RSAKeyFactory not targeted
+==========================================
+class java/security/KeyFactorySpi not targeted
+==========================================
+class java/security/spec/RSAPublicKeySpec not targeted
+==========================================
+class java/security/spec/RSAPrivateKeySpec not targeted
+==========================================
+class java/security/spec/RSAPrivateCrtKeySpec not targeted
+==========================================
+class java/security/spec/PKCS8EncodedKeySpec not targeted
+==========================================
+class sun/security/rsa/RSAPublicKeyImpl not targeted
+==========================================
+class java/security/interfaces/RSAPublicKey not targeted
+==========================================
+class java/security/interfaces/RSAKey not targeted
+==========================================
+class sun/security/rsa/RSAPrivateCrtKeyImpl not targeted
+==========================================
+class java/security/interfaces/RSAPrivateCrtKey not targeted
+==========================================
+class java/security/interfaces/RSAPrivateKey not targeted
+==========================================
+class java/security/PrivateKey not targeted
+==========================================
+class javax/security/auth/Destroyable not targeted
+==========================================
+class sun/security/pkcs/PKCS8Key not targeted
+==========================================
+class sun/security/x509/X509AttributeName not targeted
+==========================================
+class sun/security/util/MemoryCache$SoftCacheEntry not targeted
+==========================================
+class sun/security/util/MemoryCache$CacheEntry not targeted
+==========================================
+class sun/security/x509/CertificateExtensions not targeted
+==========================================
+class java/util/Collections$SynchronizedMap not targeted
+==========================================
+class sun/security/x509/Extension not targeted
+==========================================
+class java/security/cert/Extension not targeted
+==========================================
+class sun/security/x509/OIDMap not targeted
+==========================================
+class sun/security/x509/PKIXExtensions not targeted
+==========================================
+class sun/security/x509/OIDMap$OIDInfo not targeted
+==========================================
+class sun/security/x509/BasicConstraintsExtension not targeted
+==========================================
+class sun/security/x509/CertificatePoliciesExtension not targeted
+==========================================
+class sun/security/x509/PolicyInformation not targeted
+==========================================
+class sun/security/x509/CertificatePolicyId not targeted
+==========================================
+class java/util/LinkedHashSet not targeted
+==========================================
+class java/security/cert/PolicyQualifierInfo not targeted
+==========================================
+class sun/security/x509/KeyUsageExtension not targeted
+==========================================
+class sun/security/x509/AuthorityKeyIdentifierExtension not targeted
+==========================================
+class sun/security/x509/KeyIdentifier not targeted
+==========================================
+class sun/security/x509/GeneralNames not targeted
+==========================================
+class sun/security/x509/GeneralName not targeted
+==========================================
+class sun/security/x509/CRLDistributionPointsExtension not targeted
+==========================================
+class sun/security/x509/DistributionPoint not targeted
+==========================================
+class sun/security/x509/URIName not targeted
+==========================================
+class sun/nio/cs/US_ASCII$Decoder not targeted
+==========================================
+class sun/security/x509/DNSName not targeted
+==========================================
+class sun/security/x509/SubjectKeyIdentifierExtension not targeted
+==========================================
+class sun/security/x509/ExtendedKeyUsageExtension not targeted
+==========================================
+class sun/security/x509/AuthorityInfoAccessExtension not targeted
+==========================================
+class sun/security/x509/AccessDescription not targeted
+==========================================
+class sun/security/pkcs/SignerInfo not targeted
+==========================================
+class sun/security/pkcs/PKCS9Attributes not targeted
+==========================================
+class sun/security/pkcs/PKCS9Attribute not targeted
+==========================================
+class java/security/Signature not targeted
+==========================================
+class java/security/SignatureSpi not targeted
+==========================================
+class sun/security/jca/ServiceId not targeted
+==========================================
+class java/security/Signature$Delegate not targeted
+==========================================
+class sun/security/x509/AVAKeyword not targeted
+==========================================
+class java/text/Normalizer$Form not targeted
+==========================================
+class java/text/Normalizer not targeted
+==========================================
+class sun/text/normalizer/NormalizerBase not targeted
+==========================================
+class sun/text/normalizer/NormalizerBase$Mode not targeted
+==========================================
+class sun/text/normalizer/NormalizerBase$NFDMode not targeted
+==========================================
+class sun/text/normalizer/NormalizerBase$NFKDMode not targeted
+==========================================
+class sun/text/normalizer/NormalizerBase$NFCMode not targeted
+==========================================
+class sun/text/normalizer/NormalizerBase$NFKCMode not targeted
+==========================================
+class sun/text/normalizer/NormalizerBase$QuickCheckResult not targeted
+==========================================
+class sun/text/normalizer/NormalizerBase$1 not targeted
+==========================================
+class sun/security/rsa/RSASignature$SHA1withRSA not targeted
+==========================================
+class sun/security/rsa/RSASignature not targeted
+==========================================
+class java/security/MessageDigest not targeted
+==========================================
+class java/security/MessageDigestSpi not targeted
+==========================================
+class sun/security/provider/SHA not targeted
+==========================================
+class sun/security/provider/DigestBase not targeted
+==========================================
+class java/security/MessageDigest$Delegate not targeted
+==========================================
+class sun/security/rsa/RSAPrivateKeyImpl not targeted
+==========================================
+class sun/security/rsa/RSACore not targeted
+==========================================
+class sun/security/rsa/RSAPadding not targeted
+==========================================
+class sun/security/provider/ByteArrayAccess not targeted
+==========================================
+class java/math/MutableBigInteger not targeted
+==========================================
+class javax/crypto/BadPaddingException not targeted
+==========================================
+class java/security/GeneralSecurityException not targeted
+==========================================
+class sun/security/provider/certpath/X509CertPath not targeted
+==========================================
+class java/security/cert/CertPath not targeted
+==========================================
+class sun/security/pkcs/SigningCertificateInfo not targeted
+==========================================
+class sun/security/pkcs/ESSCertId not targeted
+==========================================
+class sun/security/timestamp/TimestampToken not targeted
+==========================================
+class java/security/Timestamp not targeted
+==========================================
+class java/util/Base64 not targeted
+==========================================
+class java/util/Base64$Decoder not targeted
+==========================================
+class java/util/Base64$Encoder not targeted
+==========================================
+class sun/nio/cs/ISO_8859_1$Encoder not targeted
+==========================================
+class sun/nio/cs/Surrogate$Parser not targeted
+==========================================
+class sun/nio/cs/Surrogate not targeted
+==========================================
+class java/util/jar/JarVerifier$VerifierStream not targeted
+==========================================
+class sun/security/util/ManifestEntryVerifier$SunProviderHolder not targeted
+==========================================
+class org/hamcrest/SelfDescribing not targeted
+==========================================
+class org/junit/runners/model/Statement not targeted
+==========================================
+class org/junit/internal/runners/statements/RunBefores not targeted
+==========================================
+class org/junit/runners/ParentRunner$2 not targeted
+==========================================
+class org/junit/rules/RunRules not targeted
+==========================================
+class org/junit/internal/runners/statements/RunAfters not targeted
+==========================================
+class org/junit/runner/manipulation/NoTestsRemainException not targeted
+==========================================
+class org/junit/runners/model/RunnerScheduler not targeted
+==========================================
+class org/junit/internal/runners/statements/FailOnTimeout not targeted
+==========================================
+class org/junit/internal/runners/statements/ExpectException not targeted
+==========================================
+class org/junit/internal/runners/statements/Fail not targeted
+==========================================
+class org/junit/internal/runners/statements/InvokeMethod not targeted
+==========================================
+class org/junit/runner/manipulation/Sorter not targeted
+==========================================
+class org/junit/runner/manipulation/Sorter$1 not targeted
+==========================================
+class org/junit/runners/ParentRunner$1 not targeted
+==========================================
+class org/junit/runners/model/TestClass not targeted
+==========================================
+class org/junit/runners/model/FrameworkMember not targeted
+==========================================
+class org/junit/runners/model/FrameworkMethod not targeted
+==========================================
+class org/junit/runners/model/FrameworkField not targeted
+==========================================
+class org/junit/internal/MethodSorter not targeted
+==========================================
+class org/junit/internal/MethodSorter$1 not targeted
+==========================================
+class org/junit/internal/MethodSorter$2 not targeted
+==========================================
+class org/junit/FixMethodOrder not targeted
+==========================================
+class java/util/Arrays$LegacyMergeSort not targeted
+==========================================
+class java/util/TimSort not targeted
+==========================================
+class sun/reflect/generics/parser/SignatureParser not targeted
+==========================================
+class sun/reflect/generics/tree/TypeArgument not targeted
+==========================================
+class sun/reflect/generics/tree/TypeTree not targeted
+==========================================
+class sun/reflect/generics/tree/Tree not targeted
+==========================================
+class sun/reflect/generics/tree/SimpleClassTypeSignature not targeted
+==========================================
+class sun/reflect/generics/tree/FieldTypeSignature not targeted
+==========================================
+class sun/reflect/generics/tree/BaseType not targeted
+==========================================
+class sun/reflect/generics/tree/TypeSignature not targeted
+==========================================
+class sun/reflect/generics/tree/ReturnType not targeted
+==========================================
+class sun/reflect/generics/tree/ClassTypeSignature not targeted
+==========================================
+class sun/reflect/generics/scope/ClassScope not targeted
+==========================================
+class sun/reflect/generics/scope/Scope not targeted
+==========================================
+class sun/reflect/generics/scope/AbstractScope not targeted
+==========================================
+class sun/reflect/generics/factory/CoreReflectionFactory not targeted
+==========================================
+class sun/reflect/generics/factory/GenericsFactory not targeted
+==========================================
+class sun/reflect/generics/visitor/Reifier not targeted
+==========================================
+class sun/reflect/generics/visitor/TypeTreeVisitor not targeted
+==========================================
+class org/junit/Test not targeted
+==========================================
+class java/lang/reflect/GenericArrayType not targeted
+==========================================
+class sun/reflect/annotation/AnnotationType$1 not targeted
+==========================================
+class java/lang/Long$LongCache not targeted
+==========================================
+class sun/reflect/annotation/ExceptionProxy not targeted
+==========================================
+class org/junit/Test$None not targeted
+==========================================
+class java/lang/annotation/Retention not targeted
+==========================================
+class java/lang/annotation/Inherited not targeted
+==========================================
+class java/lang/annotation/RetentionPolicy not targeted
+==========================================
+class sun/reflect/annotation/AnnotationTypeMismatchExceptionProxy not targeted
+==========================================
+class sun/reflect/annotation/AnnotationParser$1 not targeted
+==========================================
+class sun/reflect/annotation/AnnotationInvocationHandler not targeted
+==========================================
+class java/lang/reflect/InvocationHandler not targeted
+==========================================
+class java/lang/reflect/Proxy not targeted
+==========================================
+class java/lang/reflect/WeakCache not targeted
+==========================================
+class java/lang/reflect/Proxy$KeyFactory not targeted
+==========================================
+class java/util/function/BiFunction not targeted
+==========================================
+class java/lang/reflect/Proxy$ProxyClassFactory not targeted
+==========================================
+class java/lang/reflect/WeakCache$CacheKey not targeted
+==========================================
+class java/lang/reflect/Proxy$Key1 not targeted
+==========================================
+class java/lang/reflect/WeakCache$Factory not targeted
+==========================================
+class java/util/function/Supplier not targeted
+==========================================
+class sun/misc/ProxyGenerator not targeted
+==========================================
+class sun/misc/ProxyGenerator$ConstantPool not targeted
+==========================================
+class sun/misc/ProxyGenerator$ProxyMethod not targeted
+==========================================
+class sun/misc/ProxyGenerator$MethodInfo not targeted
+==========================================
+class sun/misc/ProxyGenerator$ConstantPool$ValueEntry not targeted
+==========================================
+class sun/misc/ProxyGenerator$ConstantPool$Entry not targeted
+==========================================
+class sun/misc/ProxyGenerator$ConstantPool$IndirectEntry not targeted
+==========================================
+class sun/misc/ProxyGenerator$FieldInfo not targeted
+==========================================
+class sun/misc/ProxyGenerator$PrimitiveTypeInfo not targeted
+==========================================
+class sun/misc/ProxyGenerator$ExceptionTableEntry not targeted
+==========================================
+class com/sun/proxy/$Proxy0 not targeted
+==========================================
+class java/lang/reflect/WeakCache$CacheValue not targeted
+==========================================
+class java/lang/reflect/WeakCache$Value not targeted
+==========================================
+class java/lang/annotation/Target not targeted
+==========================================
+class com/sun/proxy/$Proxy1 not targeted
+==========================================
+class java/lang/reflect/UndeclaredThrowableException not targeted
+==========================================
+class org/junit/Before not targeted
+==========================================
+class org/junit/BeforeClass not targeted
+==========================================
+class java/lang/CloneNotSupportedException not targeted
+==========================================
+class org/junit/AfterClass not targeted
+==========================================
+class org/junit/internal/runners/rules/RuleFieldValidator not targeted
+==========================================
+class org/junit/ClassRule not targeted
+==========================================
+class org/junit/Rule not targeted
+==========================================
+class org/junit/Assert not targeted
+==========================================
+class org/junit/ComparisonFailure not targeted
+==========================================
+class org/junit/After not targeted
+==========================================
+class org/junit/runner/Description not targeted
+==========================================
+class java/util/regex/Pattern$Dot not targeted
+==========================================
+class org/eclipse/jdt/internal/junit4/runner/JUnit4Identifier not targeted
+==========================================
+class org/junit/runner/notification/RunNotifier not targeted
+==========================================
+class java/util/Collections$SynchronizedRandomAccessList not targeted
+==========================================
+class java/util/Collections$SynchronizedList not targeted
+==========================================
+class org/eclipse/jdt/internal/junit4/runner/JUnit4TestReference$1 not targeted
+==========================================
+class org/junit/runner/Result not targeted
+==========================================
+class org/junit/runner/Result$Listener not targeted
+==========================================
+class org/junit/runner/notification/RunNotifier$1 not targeted
+==========================================
+class org/junit/runner/notification/RunNotifier$SafeNotifier not targeted
+==========================================
+class org/junit/internal/runners/model/EachTestNotifier not targeted
+==========================================
+class org/junit/rules/TestRule not targeted
+==========================================
+class org/junit/runners/ParentRunner$3 not targeted
+==========================================
+class org/junit/runners/BlockJUnit4ClassRunner$1 not targeted
+==========================================
+class org/junit/internal/runners/model/ReflectiveCallable not targeted
+==========================================
+class org/junit/rules/MethodRule not targeted
+==========================================
+class org/junit/runner/notification/RunNotifier$3 not targeted
+==========================================
+class org/junit/runners/model/FrameworkMethod$1 not targeted
+==========================================
+instrumenting stream for class worksheet/BankAccount from loader sun.misc.Launcher$AppClassLoader@58644d46
+==========================================
+successfully instrumented stream for class worksheet/BankAccount from loader sun.misc.Launcher$AppClassLoader@58644d46
+==========================================
+class worksheet/BankAccount instrumented, new size: 6439 bytes
+==========================================
+class com/ibm/contest/utils/WeakIdentityHashMap$WeakEntriesIterator not targeted
+==========================================
+class java/util/NoSuchElementException not targeted
+==========================================
+class com/ibm/contest/utils/Noise not targeted
+==========================================
+class com/ibm/contest/utils/DisabledOperationException not targeted
+==========================================
+class com/ibm/contest/runtimecore/InterruptReactiveNoiseEnabler$NoiseType not targeted
+==========================================
+class com/ibm/contest/utils/Noise$SleepNoise not targeted
+==========================================
+class com/ibm/contest/utils/Noise$WaitNoise not targeted
+==========================================
+class com/ibm/contest/utils/Noise$1 not targeted
+==========================================
+class org/junit/runners/model/MultipleFailureException not targeted
+==========================================
+class org/junit/runner/notification/Failure not targeted
+==========================================
+class org/junit/runner/notification/RunNotifier$4 not targeted
+==========================================
+class junit/framework/ComparisonFailure not targeted
+==========================================
+class junit/framework/AssertionFailedError not targeted
+==========================================
+class org/eclipse/jdt/internal/junit/runner/TestReferenceFailure not targeted
+==========================================
+class java/lang/Throwable$WrappedPrintWriter not targeted
+==========================================
+class java/lang/Throwable$PrintStreamOrWriter not targeted
+==========================================
+class java/util/IdentityHashMap$KeySet not targeted
+==========================================
+class org/junit/runner/notification/RunNotifier$7 not targeted
+==========================================
+class org/junit/runner/notification/RunNotifier$2 not targeted
+==========================================
+class sun/net/ConnectionResetException not targeted
+==========================================
+class java/util/IdentityHashMap$KeyIterator not targeted
+==========================================
+class java/util/IdentityHashMap$IdentityHashMapIterator not targeted

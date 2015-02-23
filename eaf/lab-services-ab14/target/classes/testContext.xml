@@ -30,5 +30,6 @@
 		</property>
 	</bean>
 	
-	<lang:groovy id="groovyMailModelHelper" script-source="classpath:ch/fhnw/edu/rental/services/impl/util/MailModelHelperGroovy.groovy"/>
+	<lang:groovy id="groovyMailModelHelper" script-source="classpath:ch/fhnw/edu/rental/services/impl/util/MailModelHelperGroovy.groovy" refresh-check-delay="10"/>      
+
 </beans>
