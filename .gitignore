@@ -6,3 +6,7 @@
 *.ear
 *.zip
 *.rar
+
+# igs big data files
+mails.txt
+igs/**/*.txt
