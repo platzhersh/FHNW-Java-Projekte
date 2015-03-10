@@ -31,6 +31,12 @@ public class Mandelbrot {
 	}
 
 	public static void computeSequential(PixelPainter painter, Plane plane, CancelSupport cancel) {
+		
+		Runnable r = new ParallelMandelPainter(0, 1, plane, cancel, painter);
+		Thread t = new Thread(r);
+		t.start();
+		
+		/*
 		double half = plane.length / 2;
 		double reMin = plane.center.r - half;
 		double imMax = plane.center.i + half;
@@ -44,7 +50,7 @@ public class Mandelbrot {
 				int iterations = mandel(re, im);
 				painter.paint(x, y, getColor(iterations));
 			}
-		}
+		}*/
 	}
 
 	
@@ -58,7 +64,7 @@ public class Mandelbrot {
 			Runnable r = new ParallelMandelPainter(i, cores, plane, cancel, painter);
 			Thread t = new Thread(r);
 			threads.add(t);
-			t.start();			
+			t.start();
 		}		
 
 	}

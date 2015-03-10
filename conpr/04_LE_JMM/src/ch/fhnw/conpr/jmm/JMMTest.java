@@ -60,3 +60,9 @@ public class JMMTest {
  * Visibilityproblem: (0,0)
  * 
  */
+
+//Thu Mar 05 21:48:39 CET 2015:  (1,1)
+//Thu Mar 05 21:48:39 CET 2015:  (1,0)
+//Thu Mar 05 21:48:39 CET 2015:  (0,1)
+//Thu Mar 05 21:51:31 CET 2015:  (0,0)
+

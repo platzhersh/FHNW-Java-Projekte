@@ -1,0 +1,285 @@
+#######################################################
+# (c) IBM corporation (1999, 2008), ALL RIGHTS RESERVED
+#######################################################
+
+#Following is a sample ConTest property file. The format of the file must
+#conform to the rules described in API of
+#java.util.Proprties.load(InputStream).
+
+#TARGET SPECIFICATION PROPERTIES
+#================================
+
+#Put here which classes you want ConTest to work on. Put a prefix of the fully-
+#qualified class name, e.g.:
+#   targetClasses = com.ibm.myproject
+#You can also put a list of such prefixes separated by commas:
+#   targetClasses = com.ibm.myproject.foo.,com.ibm.myproject.bar
+#For command-line instrumentation you can leave the asterisk, and then the
+#target classes will be all those you specify in the instrumentation commmand,
+#unless they are excluded by the excludedClasses preference.
+#See "Guidelines on how to select target classes" help page if you are not sure
+#which classes to target.
+targetClasses = bank.local.Driver$Bank,bank.local.Driver$Account
+
+#Put here classes you want to exclude from targeting, in a
+#similar format to the one used for targetClasses.
+#A class is targeted if it matches any of the targetClasses prefixes,
+#and doesn't match any of the excludedClasses prefixes.
+excludedClasses = *
+
+#A directory, or a list of directories separated by semicolons, under which
+#source files are searched (recursively). By default, current working directory
+#is searched. Leave empty if you can't give ConTest access to the source (e.g.
+#you have only classes available).
+#Takes effect during instrumentation.
+sourceDirs = .
+
+#Specify files which list locations. These locations will not be targeted
+#even if they are in target classes. If you have more than one file, separate
+#the file names with semicolons.
+excludeTasks =
+
+#Don't target locations that appear in current coverage trace files. (in
+#addition to the files specified in 'excludeTasks', if any).
+excludeCoveredTasks = false
+
+#Specify files which lists locations. Only these locations (provided they are
+#within target classes) will be targeted. If you have more than one file,
+#separate the file names with semicolons. It's illegal to give a value here and
+#in either of the two exclude options.
+includeTasks =
+
+#Specify the name of a file which lists variable names. Only these variables
+#will be targeted by features and extensions that target varaibles. Each line 
+#in the file must be one variable, in the format 
+#"com.ibm.myproject.MyClass.myVar". Note that MyClass is not necessarily a
+#target class; the targeted accesses will be accesses to this variable from
+#code in the target classes. 
+#The file must be directly in ConTest output directory. If empty, all members 
+#in target classes are targeted.
+onlyVariablesIn =
+
+#GENERAL PROPERTIES
+#===================
+
+#By default all output files are written to the current working directory.
+#Otherwise, the output property can specify the output directory location and
+#all output files will be written to that directory. In Windows, double the
+#backslash (\\) to separate directories. Takes effect during both
+#instrumentation and test runtime - if you do them from different working
+#directories, specify an absolute directory here.
+output = .
+
+#A path to license file. If left unspecified, "contestLicense.dat" is looked for
+#in the same directory of this properties file.
+licensePath = 
+
+#See "Heuristics" help page for more details. If non-empty, noise and other
+#activity will begin only when a method is encountered whose source is in
+#a directory containing the given string. (This is useful to limit the
+#package). The three beginAt.. preferences can be used indpendently each, or in
+#conjunction. All three must not contain spaces.
+beginAtDir =
+
+#See beginAtDir - this preference specifies a source file. Here, too, for a
+#file to match, its name needs to contain the given substring - so you can give
+#the class name.
+beginAtFile =
+
+#See beginAtDir.
+beginAtMethod =
+
+
+#INSTRUMENTATION RELATED PROPERTIES
+#===================================
+#See "Instrumentation" help page for more details.
+
+#Set to false to prevent the command-line instrumentation from doing backup
+keepBackup = true
+
+#Make instrumentation output to a file all locations.
+writeAllTasks = false
+
+
+#HEURISTIC AND NOISE RELATED PROPERTIES
+#=======================================
+#See "Heuristics" help page for more details.
+
+#With this parameter (and with the 'strength') you can control the amount of
+#noise ConTest does. The number gives probability to do noise at each concurrent
+#event, out of 1000. 0 means never to do noise. 1000 means to do noise at all
+#concurrent events. 500 - around half of the concurrent events.
+#If set to 0 then noiseType, strength and haltOneThread are ignored.
+noiseFrequency = 70
+
+#If true, the various bug-finding heuristics are chosen randomly.
+#The following properties are ignored in this file: noiseType, haltOneThread,
+#timeoutTampering, sharedVarNoise, shared, collectShared, nonVarNoise.
+#Set to false to cause this properties to be taken from this file.
+#If this property is missing, it is taken to be true! Therefore, to enable
+#setting heuristics manually, set it explicitly to "false".
+#If replay points to a URL (next run should be a replay of a previous run),
+#this property is ignored.
+random = true
+
+#Determines the type of noise primitive ConTest uses. Possible values
+#are: "yields", "sleeps", "waits", "synchYields", "busyWait" and "mixed".
+#Ignored (and randomly chosen) if random = true
+noiseType = yields
+
+#When noise is done (see 'noiseFrequency'), this property controls HOW MUCH is
+#done - the strength of one "noise unit". The exact meaning of the number
+#depends on the mode (see property "noiseType"). Should be 0 and above, or -1 to
+#tell ConTest to choose the default value for the chosen noiseType.
+#Note: if you want no noise, specify noiseFrequency zero. A positive frequency
+#and zero strength has more runtime effect.
+strength = -1
+
+#This is a heuristic that occasionally stops one thread for as long as possible.
+#Set to true to activate it.
+#Ignored (and randomly chosen) if random = true. Ignored (and disabled) if
+#frequency is 0. Can work with strength 0.
+haltOneThread = false
+
+#If this property is true, ConTest randomly reduces the timeout parameter given
+#to the methods Thread.sleep, Thread.join and Object.wait. See "heuristic" help
+#page for explanation why this is good. To cancel this behavior, set to false.
+#Ignored (and randomly chosen) if random = true
+timeoutTampering = true
+
+#If true, noise is concentrated on accesses to shared variables. Dependant
+#properties: shared, collectShared, nonVarNoise.
+#Ignored (and randomly chosen) if random = true
+sharedVarNoise = true
+
+   #This property is relevant if and only if sharedVarNoise is true and random
+   #is false. Possible values: "all", "one". If "all", the noise will be made on
+   #all detected shared variables. If "one", only one variable will be selected.
+   #It will be randomly selected from the initial contents of the shared vars
+   #file. If the file is initially empty or does not exist, noise will be made
+   #on all detected shared vars (as if it was "all").
+   shared = all
+
+   #This property is relevant if and only if sharedVarNoise is true and random
+   #is false. If true, new shared vars are identified and added to the set. If
+   #false, only those originally in the file are taken. However, if the file
+   #initially does not exist or is empty, it is taken to be true regardless of
+   #the value written here.
+   collectShared = true
+
+   #This property is relevant if and only if sharedVarNoise is true and random
+   #is false. It involves concurrent events that are not read/write to variables
+   #(e.g., synchronization primitives). If it is true, noise will be done on
+   #such events (in addition to shared variables).
+   nonVarNoise = true
+
+
+#DEBUGGING AID PROPERTIES
+#=========================
+#See "Debugging Aids" help page for more details.
+
+#Set to true to enable lock status report.
+lockStatus = false
+
+#Set to true to enable thread-last-location report.
+threadLocation = false
+
+#Set to true to enable "orange-box" reports.
+orange_box = false
+
+   #Set the number of desired values per variable in "orange-box" report.
+   last_values_size = 2
+
+   #Set to false to make the orange box keep info for objects which may already
+   #be reclaimed by the garabage collector, and prevent their reclaiming.
+   forgetting_orange_box = true
+
+#Controls the Partial Replay feature - see "Debugging Aids" help page. Possible
+#values: false (no replay), true (record next run), or the ID of the run to be
+#replayed.
+replay = false
+
+#Set to true to enable the lock actions trace.
+lockHistory = false
+
+
+#FAULT DETECTION PROPERTIES
+#===========================
+#See "Lock Discipline" help page for more details.
+
+#Set to true to enable lock discipline trace.
+lockDiscipline = false
+
+
+#COVERAGE PROPERTIES
+#====================
+#See "Coverage" help page for more details.
+
+#Coverage of program locations of method entry. It effectively gives coverage
+#of methods. To use it, set it to true, and make sure the appropriate flag was
+#set in instrumentation.
+methodCoverage = false
+
+#Coverage of bytecode basic blocks. Effectively gives coverage of statements.
+#To use it, set it to true, and make sure the appropriate flag was set in
+#instrumentation.
+basicBlockCoverage = false
+
+#Concurrent coverage, which checks that each synchronization block indeed
+#blocked at least once waiting for the lock.
+synchronizationCoverage = false
+
+#Coverage of the shared variables detected in this run.
+sharedVarCoverage = false
+
+#Lists pairs of concurrent event program locations that appeared consecutively
+#in a run, and whether or not they were performed by the same thread (i.e
+#whether there was context switch).
+concurrentEventPairsCoverage = false
+
+#Buffer size of the coverage output streams. Applies to method, basic block
+#and pairs coverage. Value smaller than 256 is ignored; the buffer is flushed
+#after each task.
+buffer_size = 0
+
+
+#CALLBACK PROPERTIES
+#====================
+#See "Callback thread" help page for more details.
+
+#If true, starts a callback thread that gets input from standard input
+#(keyboard). See "Callback Thread" help page.
+enable_keyboard_callback = false
+
+#If true, starts a callback thread that gets input from network port. Related
+#property: callback_port_number. See "Callback Thread" help page.
+enable_port_callback = false
+
+   #if enable_port_callback is true, this property determines the port number on
+   #which the server (contest) will listen for connection requests. If it is
+   #left 0, the operating system will choose an available port. It will be
+   #announced as a contest verbose print (so you'll probably want to have
+   #verbose on in this case).
+   callback_port_number = 0
+
+
+#DATAGRAM FAULT INJECTION PROPERTIES
+#====================================
+#See "Datagram Fault Injection" help page for more details.
+
+#Possible values are: "disabled", "noNoise", "delay", "block",
+#"conservativeRandom" and "radicalRandom". See "fault injection: datagram"
+#help page.
+datagramFaultInjectionMode = conservativeRandom
+
+#Possible values are: "incoming", "outgoing", "both" (default). See "fault
+#injection: datagram" help page.
+datagramFaultInjectionDirection = both
+
+#A number between 0 and 1000: Probability (out of 1000) to interfere with each
+#package. See "fault injection: datagram" help page.
+datagramFaultInjectionFrequency = 100
+
+#An upper bound on the buffer length of packets that may take part in reordering
+#of datagram fault injection. See "fault injection: datagram" help page.
+datagramLengthBound = 10000

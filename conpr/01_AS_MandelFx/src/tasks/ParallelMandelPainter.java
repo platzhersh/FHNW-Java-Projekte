@@ -17,7 +17,6 @@ public class ParallelMandelPainter implements Runnable {
 	public ParallelMandelPainter(int i, int cores, Plane p, CancelSupport c, PixelPainter painter) {
 		this.i = i;
 		this.nofCores = cores;
-		this.nofCores = 10;
 		this.plane = p;
 		this.cancel = c;
 		this.painter = painter;
