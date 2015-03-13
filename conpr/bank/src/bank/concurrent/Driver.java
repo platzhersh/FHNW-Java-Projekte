@@ -19,11 +19,8 @@ import bank.InactiveException;
 import bank.OverdrawException;
 
 /*
-* This class implements a dummy driver which can be used to start and test
-* the GUI application. With this implementation no new accounts can be created
-* nor can accounts be removed. The implementation provides one account which
-* supports the deposit and withdraw operations.
-*
+* This class implements a concurrent driver which can be used to start and run concurrently
+* 
 * @see BankDriver
 */
 
@@ -50,7 +47,7 @@ public class Driver implements BankDriver {
 
 	static class ConcurrentBank implements Bank  {
 		private final ConcurrentMap<String, Account> accounts = new ConcurrentHashMap<String, Account>();
-		private Object createLock = new Object();
+		private final Object createLock = new Object();
 		
 		@Override
 		public String createAccount(String owner) {
@@ -106,10 +103,14 @@ public class Driver implements BankDriver {
 		@Override
 		public void transfer(Account from, Account to, double amount) throws IllegalArgumentException, IOException, OverdrawException, InactiveException {
 			
+			if (amount < 0) throw new IllegalArgumentException();
+			
 			// always take the account with the smaller number as outer lock to avoid deadlocks
 			Account firstLock = from;
 			Account secondLock = to;
 			
+			// TODO: lexographic compareTo instead if int parsing
+			// from.getNumber().compareTo(to.getNumber()) < 0
 			int fint = Integer.parseInt(from.getNumber());
 			int tint = Integer.parseInt(to.getNumber());			
 		
@@ -121,10 +122,8 @@ public class Driver implements BankDriver {
 			synchronized(firstLock) {
 				synchronized(secondLock) {
 
-					if (amount > from.getBalance()) throw new OverdrawException();
-					else if (amount < 0) throw new IllegalArgumentException();
-					else if (!from.isActive() || !to.isActive()) throw new InactiveException();
-					else if (from == null || to == null) throw new IllegalArgumentException();
+					if (!from.isActive() || !to.isActive()) throw new InactiveException();
+					else if (null == from || null == to) throw new IllegalArgumentException();
 					else {		
 						from.withdraw(amount);
 						to.deposit(amount);
@@ -139,8 +138,9 @@ public class Driver implements BankDriver {
 	static class ConcurrentAccount implements Account {
 		private String owner = "Dagobert Duck";
 		private String number = "DD-33-4499";
-		private double balance;
-		private boolean active;
+		// make volatile so the balance & active state always have the correct value
+		private volatile double balance;
+		private volatile boolean active;
 
 		public ConcurrentAccount(String owner, String number) {
 			this.owner = owner;

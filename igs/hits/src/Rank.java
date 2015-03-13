@@ -57,21 +57,27 @@ public class Rank {
 	static List<Message> messages = new LinkedList<Message>();
 	static Set<String> recipients = new TreeSet<String>();
 	static Set<String> senders = new TreeSet<String>();
+	static double error = 0.0000001;
+
 	
 	// HITS
-	// TODO: number of people needed!
+	// msgs = Root set
 	private static Collection<Person> doHITS(Collection<Message> msgs) {
 		
 		// node = Person
 		// edge = Message
 		
-		// 1. Sampling -> create Root set of people and directly enhance to Base Set
+		// 1. Sampling -> build graph
 		// get all recipients and senders and put them into Collection
 		// question: Ist das bereits automatisch das Base Set? (erweitertes Root Set)
+		// -> alle "from" Personen -> Root Set
+		// -> hinzufügen aller "to" Personen -> Erweiterung zum Base Set 
+		//		(in dieser Aufgabe nur in eine Richtung, normalerweise in beide)
 		
 		// HashMap<Email, Person>
 		HashMap<String, Person> root = new HashMap();
 		
+		// Aufbau des Graphen mit allen Verbindungen
 		for (Message m : msgs) {
 			
 			String from_email = m.from;
@@ -87,127 +93,136 @@ public class Rank {
 				
 				// add recipient to root set as new Person if not already in there
 				root.putIfAbsent(recipient_email, new Person(recipient_email));
+				Person recipient = root.get(recipient_email);
 				
 				// add recipients to writesTo of sender
-				sender.writesTo.add(root.get(recipient_email));
+				sender.writesTo.add(recipient);
+				recipient.receivesFrom.add(sender);
 				
 			}
 			
 		}
 		
-		// 2. Enhance Root Set
-		// add all direct neighbors of root set to root set
-		// already did that in 1.?
-			
-		
-		// 3. Iteration
+		// 2. Iteration
 		// iterate as long as error is not small enough
-		
-		double error = 0.0001;
-		double hbefore = 1, abefore = 1;
-		double hnow, anow;
-		double hdiff = 1, adiff = 1;
-		int k = 1;
-		
-		
-		
-		while ((hdiff > error) || (adiff > error)) {		
+	
+		int k = 0;
+		boolean go_on = true;
+					
+		//while (k < 4) {
+		do {
 			
-			hbefore = hdist(root.values());
-			abefore = adist(root.values());
-			
+			System.out.println(k);
 			
 			// do magic (calculate hub score and authority score)
 			
+			// sums over all the authority and hub scores of all the people (used to normalize later on)
+			double iter_hsum = 0;
+			double iter_asum = 0;
 			
+						
+			// calculate auth scores
 			for (Person p : root.values()) {
+				
+				p.authority_prev = p.authority;
+				
+				// calculate authority score
+				double asum = 0;
+				for (Person from : p.receivesFrom) {
+					asum += from.hub;
+				}				
+				// normalise?
+				//p.authority = Math.sqrt(asum * asum);
+				p.authority = asum;
+				iter_asum += p.authority;
+				if (k > 1) {
+					double err = rootMeanSquare(p.authority_prev, p.authority);
+					//double err = simpleDiff(p.authority_prev, p.authority);
+					if (err < error) {
+						go_on = false;
+					}
+				}
+				
+			}
+			
+			// calculate hub scores
+			for (Person p : root.values()) {
+
+				p.hub_prev = p.hub; 
 				
 				// calculate hub score
 				double hsum = 0;
 				for (Person to : p.writesTo) {
 					hsum += to.authority;
 				}
+				// normalise?
+				// p.hub = Math.sqrt(hsum * hsum);
 				p.hub = hsum;
+				iter_hsum += p.hub;
 				
-				// calculate authority score
-				double asum = 0;
-				for (Person from : p.writesTo) {
-					asum += from.hub;
+				if (k > 1) {
+					double err = rootMeanSquare(p.hub_prev, p.hub);
+					//double err = simpleDiff(p.hub_prev, p.hub);
+					if (err < error) {
+						go_on = false;
+					}
 				}
-				p.authority = asum;
-				
 			}
 			
-			// TODO: normieren
+			// normieren (theoretisch nicht unbedingt nötig, aber Zahlen werden extrem gross sonst)		
+			for (Person p : root.values()) {
+				p.hub /= iter_hsum;
+				p.authority /= iter_asum;
+			}
 			
-			
-			System.out.println("magic");
-//			System.out.println("Error: " + error);
-//			System.out.println("hdiff: " + hdiff);
-//			System.out.println("adiff: " + adiff);
-			
-			hnow = hdist(root.values());
-			anow = adist(root.values());
-
-			// TODO: this is WROOONG! substract first, then calculate vector distance
-			hdiff = Math.abs(hnow - hbefore);
-			adiff = Math.abs(anow - abefore);
-			
-//			System.out.println("Error: " + error);
-//			System.out.println("hdiff: " + hdiff);
-//			System.out.println("adiff: " + adiff);
-			
+			// increment iteration counter
 			k++;
-		}
+		} while (go_on);
 		
-		return people;
+		System.out.println(k + " Iterations");
+		return root.values();
 		
 	}
-	
 
-	public static double hnorm(Person[] current, Person[] before) {
+	// used to calculate the difference between two values
+	public static double rootMeanSquare(double now, double before) {
+		return Math.sqrt(Math.pow((now - before), 2));
+	}
+	
+	public static double simpleDiff(double now, double before) {
+		return Math.abs(now - before);
+	}
+
+	public static double hnorm(Collection<Person> before, Collection<Person> current) {
+		
+		Object[] curr_array = current.toArray();
+		Object[] bef_array = before.toArray();
 		
 		// TODO: check same size
 		double hsum = 0;
 		
-		for (int i = 0; i < current.length; i++) {
-			hsum += Math.pow((current[i].hub - before[i].hub), 2);
+		for (int i = 0; i < curr_array.length; i++) {
+			hsum += Math.pow((((Person)curr_array[i]).hub - ((Person)bef_array[i]).hub), 2);
 		}
 		return Math.sqrt(hsum);
 	}
 	
-	public static double anorm(Person[] current, Person[] before) {
+	public static double anorm(Collection<Person> before, Collection<Person> current) {
+		
+		Object[] curr_array = current.toArray();
+		Object[] bef_array = before.toArray();
 		
 		// TODO: check same size
 		double asum = 0;
 		
-		for (int i = 0; i < current.length; i++) {
-			asum += Math.pow((current[i].authority - before[i].authority), 2);
+		for (int i = 0; i < curr_array.length; i++) {
+			asum += Math.pow((((Person)curr_array[i]).hub - ((Person)bef_array[i]).hub), 2);
 		}
 		return Math.sqrt(asum);
 	}
 	
-	@Deprecated
-	public static double hdist(Collection<Person> pers) {
-		double hsum = 0;
-		for (Person p : pers) {
-			hsum += p.hub * p.hub;
-		}
-		return Math.sqrt(hsum);
-	}
-	
-	@Deprecated
-	public static double adist(Collection<Person> pers) {
-		double asum = 0;
-		for (Person p : pers) {
-			asum += p.authority * p.authority;
-		}
-		return Math.sqrt(asum);
-	}
 	
 	public static void main(String[] _args) throws Exception {
-		
-		
 		
 		BufferedReader br = new BufferedReader(new FileReader("mails.txt"),65536);
 		for (;;) {
