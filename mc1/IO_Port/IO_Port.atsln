@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "IO_Port", "IO_Port\IO_Port.cproj", "{C4A19DCB-5443-4308-BD00-B84BE62BF504}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C4A19DCB-5443-4308-BD00-B84BE62BF504}.Debug|AVR.ActiveCfg = Debug|AVR
+		{C4A19DCB-5443-4308-BD00-B84BE62BF504}.Debug|AVR.Build.0 = Debug|AVR
+		{C4A19DCB-5443-4308-BD00-B84BE62BF504}.Release|AVR.ActiveCfg = Release|AVR
+		{C4A19DCB-5443-4308-BD00-B84BE62BF504}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
