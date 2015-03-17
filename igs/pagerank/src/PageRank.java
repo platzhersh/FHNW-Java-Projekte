@@ -26,7 +26,6 @@ public class PageRank {
 	// TODO: pageRank
 	protected static Collection<Person> doPageRank(Collection<Message> msgs) {
 		
-		
 		// TODO: Pagerank im authority Feld speichern
 		// TODO: Abbruchkriterium implementieren
 		// TODO: keywords Liste jeder Person mit allen Wörtern aus den verfassten Mails
