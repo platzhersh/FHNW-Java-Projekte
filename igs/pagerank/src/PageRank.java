@@ -22,11 +22,16 @@ import java.util.TreeSet;
  */
 
 public class PageRank {
+	
+	// Dämpfungsfaktor aka damping factor
+	public static double d = 0.85;
+	// Schwellwert als Abbruchbedingung
+	public static double e = 0.0000001;
 
 	// TODO: pageRank
 	protected static Collection<Person> doPageRank(Collection<Message> msgs) {
 		
-		// TODO: Pagerank im authority Feld speichern
+		// TODO: Pagerank speichern (intial: 1/N mit N = Anzahl Personen)
 		// TODO: Abbruchkriterium implementieren
 		// TODO: keywords Liste jeder Person mit allen Wörtern aus den verfassten Mails
 		// ACHTUNG: Zeit & Speicherintensiv
@@ -34,8 +39,10 @@ public class PageRank {
 		// TODO: Zyklen auflösen mit Dämpfungsfaktor
 		// TODO: Rank sink verhindern (Dangling Node)
 		
-		// Laufzeitkomplexität
+
 		
+		// Laufzeitkomplexität
+
 		HashMap<String, Person> root = new HashMap();
 		
 		// Aufbau des Graphen mit allen Verbindungen
@@ -48,7 +55,6 @@ public class PageRank {
 			
 			// get Person from root set
 			Person sender = root.get(from_email);
-			
 			
 			// add keywords to writer of Email
 			// remove all special characters apart from space, also remove numbers because there seem to be some ASCII problems
@@ -78,8 +84,45 @@ public class PageRank {
 			
 		}
 		
-		Person p = root.get("justin.rostant@enron.com");
+		
+		// initialen Pagerank setzen
+		int n = root.size();
+		for (Person p : root.values()) {
+			p.pagerank = 1 / n;
+		}
+		
+		double err = 0;
+		boolean go_on = true;
+		int i = 0;
+		
+		do {
+			i++;
+			
+			// System.out.println("iteration " + i);
+			
+			err = 0;
+			
+			// calculate pagerank 
+			for (Person p : root.values()) {
+				p.pagerank_prev = p.pagerank;
+				double rsum = 0;
+				for (Person s : p.receivesFrom) {
+					rsum += s.pagerank / s.writesTo.size();
+				}
+				p.pagerank = ((1.0-d) / (double) n) + d * rsum;
 				
+				// RMS (Root Mean Square) part 1
+				err += Math.pow(p.pagerank - p.pagerank_prev, 2);
+			}
+			// RMS (Root Mean Square) part 2
+			err = Math.sqrt(err/n);
+			
+			System.out.println("Error: " + err);
+			if (err < e) go_on = false;
+		} while (go_on);
+		
+		System.out.println("Converged after "+ i + " iterations.");
+		
 		return root.values();
 
 	}
@@ -102,7 +145,7 @@ public class PageRank {
 		System.out.println("-=-=-=-=-=-=-=-=-");
 		System.out.println();
 		for (int i = 0; i < 10; ++i) {
-			System.out.printf("%10f\t%s\n",people[i].authority,people[i].email);
+			System.out.printf("%10f\t%s\n",people[i].pagerank,people[i].email);
 		}
 		
 		Scanner scanner = new Scanner(System.in);
@@ -126,14 +169,13 @@ public class PageRank {
 			System.out.println("-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-");
 			System.out.println();
 			for (int i = 0; i < Math.min(10,filteredPeople.length); ++i) {
-				System.out.printf("%10f\t%s\n",filteredPeople[i].authority,filteredPeople[i].email);
+				System.out.printf("%10f\t%s\n",filteredPeople[i].pagerank,filteredPeople[i].email);
 			}		
 		}
 	}
 
 	private static void readMessages(List<Message> messages, Set<String> recipients, Set<String> senders) throws Exception {
-		BufferedReader br = new BufferedReader(new FileReader("mails.txt"),
-				65536);
+		BufferedReader br = new BufferedReader(new FileReader("mails.txt"), 65536);
 		for (;;) {
 			Message msg = new Message();
 			// read from
@@ -173,8 +215,4 @@ public class PageRank {
 		}
 		br.close();
 	}
-
-	
-	
-	
 }

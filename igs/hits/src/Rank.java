@@ -57,7 +57,8 @@ public class Rank {
 	static List<Message> messages = new LinkedList<Message>();
 	static Set<String> recipients = new TreeSet<String>();
 	static Set<String> senders = new TreeSet<String>();
-	static double error = 0.0000001;
+	// Schwellwert
+	static double e = 0.0000001;
 
 	
 	// HITS
@@ -108,11 +109,16 @@ public class Rank {
 	
 		int k = 0;
 		boolean go_on = true;
-					
+		double err = 0;
+		
 		//while (k < 4) {
 		do {
+			// increase iteration count
+			k++;
+			//System.out.println("Iteration " + k);
 			
-			System.out.println(k);
+			// reset error for this iteration
+			err = 0;
 			
 			// do magic (calculate hub score and authority score)
 			
@@ -135,14 +141,7 @@ public class Rank {
 				//p.authority = Math.sqrt(asum * asum);
 				p.authority = asum;
 				iter_asum += p.authority;
-				if (k > 1) {
-					double err = rootMeanSquare(p.authority_prev, p.authority);
-					//double err = simpleDiff(p.authority_prev, p.authority);
-					if (err < error) {
-						go_on = false;
-					}
-				}
-				
+								
 			}
 			
 			// calculate hub scores
@@ -160,23 +159,24 @@ public class Rank {
 				p.hub = hsum;
 				iter_hsum += p.hub;
 				
-				if (k > 1) {
-					double err = rootMeanSquare(p.hub_prev, p.hub);
-					//double err = simpleDiff(p.hub_prev, p.hub);
-					if (err < error) {
-						go_on = false;
-					}
-				}
 			}
 			
 			// normieren (theoretisch nicht unbedingt nötig, aber Zahlen werden extrem gross sonst)		
 			for (Person p : root.values()) {
 				p.hub /= iter_hsum;
 				p.authority /= iter_asum;
+				if (k > 1) {
+					err += Math.pow(p.hub_prev - p.hub, 2);
+					err += Math.pow(p.authority_prev - p.authority, 2);
+				}
 			}
 			
-			// increment iteration counter
-			k++;
+			//err /= root.size();
+			err = Math.sqrt(err/(2*root.size()));
+			if (k > 1 && err < e) {
+				go_on = false;
+			}
+			
 		} while (go_on);
 		
 		System.out.println(k + " Iterations");
