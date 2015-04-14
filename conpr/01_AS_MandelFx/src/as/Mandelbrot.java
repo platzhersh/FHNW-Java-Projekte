@@ -57,7 +57,7 @@ public class Mandelbrot {
 	public static void computeParallel(PixelPainter painter, Plane plane, CancelSupport cancel) {
 		
 		
-		List<Runnable> threads = new LinkedList<Runnable>();
+		List<Thread> threads = new LinkedList<Thread>();
 		
 		// Create threads and start them (actually creating threads once would be enough?)
 		for (int i = 0; i < cores; i++) {
@@ -65,7 +65,17 @@ public class Mandelbrot {
 			Thread t = new Thread(r);
 			threads.add(t);
 			t.start();
-		}		
+		}
+		
+		// wait for threads to complete
+		for (Thread t : threads) {
+			try {
+				t.join();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 
 	}
 

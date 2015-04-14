@@ -169,21 +169,18 @@ public class JavaFXMandelbrot extends Application {
 				//Mandelbrot.computeSequential(painter, plane, cancelSupport);
 				
 				Mandelbrot.computeParallel(painter, plane, cancelSupport);
+				
+				double start = System.currentTimeMillis();
+			    Mandelbrot.computeParallel(painter, plane, cancelSupport);
+			    double end = System.currentTimeMillis();
+			    Platform.runLater(() -> millis.set((end - start) + "ms"));
 					
 			}				
 		};
 		
-		double start = System.currentTimeMillis();
-		t.start();
-		try {
-			t.join();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		
-		double end = System.currentTimeMillis();
-		Platform.runLater(() -> millis.set((end - start) + "ms"));
+		t.start();
+		
 		
 		return image;
 	}
