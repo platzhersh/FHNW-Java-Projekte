@@ -1,6 +1,7 @@
 package semaphore;
 
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicReference;
 
@@ -13,6 +14,7 @@ public class SemaphoreTest {
         twoAtTheSameTime();
         badNotifier();
         badInterruptor();
+        doubleAcquire();
         fairness();
     }
     
@@ -154,7 +156,36 @@ public class SemaphoreTest {
         success("badInterruptor");
     }
     
-    static void fairness() throws InterruptedException {
+    static void doubleAcquire() throws InterruptedException {
+        final Semaphore s = newSemaphore(0);
+        final CountDownLatch l1 = new CountDownLatch(2);
+        
+        Thread t1 = run("T1", new Runnable() {
+            public void run() {
+                s.acquire();
+                l1.countDown();
+            }
+        });
+        
+        Thread t2 = run("T2", new Runnable() {
+            public void run() {
+                s.acquire();
+                l1.countDown();
+            }
+        });
+        
+        sleep(200);
+        s.release();
+        s.release();
+        boolean res = l1.await(200, TimeUnit.MILLISECONDS);
+        if(!res) fail("release does not release a waiting thread");
+
+        t1.join(100);
+        t2.join(100);
+        success("doubleAcquire");
+    }
+    
+   static void fairness() throws InterruptedException {
         final Semaphore s = newSemaphore(0);
         final AtomicReference<String> owner = new AtomicReference<String>("");
         final CountDownLatch l1 = new CountDownLatch(1);
@@ -215,7 +246,7 @@ public class SemaphoreTest {
         t.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
             @Override
             public void uncaughtException(Thread t, Throwable e) {
-                System.err.println(t.getName() + " failed: " + e.getMessage());
+                System.err.println(t.getName() + " failed: " + e);
             }
         });
         t.start();
