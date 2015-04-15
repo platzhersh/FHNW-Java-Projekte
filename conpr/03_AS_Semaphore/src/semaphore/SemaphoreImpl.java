@@ -22,6 +22,12 @@ public final class SemaphoreImpl implements Semaphore {
 			@Override
 			public void run() {
 				sema.acquire();
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 				System.out.println("blubb");
 				sema.release();
 			}
@@ -34,12 +40,25 @@ public final class SemaphoreImpl implements Semaphore {
 			@Override
 			public void run() {
 				sema.acquire();
-				System.out.println("blubb");
+				
+				System.out.println("blubb 2");
 				sema.release();
 			}
 			
 		}, "muruk 2");
 		t2.start();
+		
+		Thread t3 = new SemaphoreThread(new Runnable() {
+			
+			@Override
+			public void run() {
+				sema.acquire();
+				System.out.println("blubb 3");
+				sema.release();
+			}
+			
+		}, "muruk 3");
+		t3.start();
 	}
 
 	public SemaphoreImpl(int initial) {
@@ -63,15 +82,20 @@ public final class SemaphoreImpl implements Semaphore {
 	public void acquire() {
 		lock.lock();
 		try {
+			System.out.println(Thread.currentThread().getName() + " acquire");
 			Condition curr = lock.newCondition();
 			waitQueue.add(curr);
 			System.out.println(Thread.currentThread().getName() + " added to queue");
 			while (available() <= 0 || waitQueue.getFirst() != curr) {
+				// The await() releases the lock to let other threads enter the method
+				// tries to get lock back on signal()
 				try { curr.await(); } catch (InterruptedException e) { }
 			}
 			value--;
 			waitQueue.removeFirst();
-			System.out.println(Thread.currentThread().getName() + " executed");
+			
+			if (!waitQueue.isEmpty()) waitQueue.getFirst().signal();
+			System.out.println(Thread.currentThread().getName() + " acquired");
 		} finally {
 			lock.unlock();
 		}
@@ -84,9 +108,9 @@ public final class SemaphoreImpl implements Semaphore {
 			value++;
 			if (!waitQueue.isEmpty()) {
 				waitQueue.getFirst().signal();
-				System.out.println(Thread.currentThread().getName() + " resumed");
 			}
 		} finally {
+			System.out.println(Thread.currentThread().getName() + " release");
 			lock.unlock();
 		}
 	}
