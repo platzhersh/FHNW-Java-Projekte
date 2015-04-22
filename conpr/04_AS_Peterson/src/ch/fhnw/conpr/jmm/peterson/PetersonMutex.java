@@ -20,7 +20,7 @@ public class PetersonMutex implements Mutex {
 	private final boolean[] enter = { false, false };
 	
 	/** Defines which thread proceeds if both threads acquire the lock. */
-	private int turn = 0;
+	private volatile int turn = 0;
 
 	/** Register the two threads for simplicity. */
 	public PetersonMutex(Thread t0, Thread t1) {
@@ -38,9 +38,11 @@ public class PetersonMutex implements Mutex {
 
 		@SuppressWarnings("unused")
 		long t = 0;
-
+		
 		enter[index] = true;
+		
 		turn = otherIndex;
+		
 		while ( enter[otherIndex] && turn != index) {
 //			if(System.currentTimeMillis()-t > 100) {
 //				System.out.println(turn);
@@ -49,7 +51,8 @@ public class PetersonMutex implements Mutex {
 		}
 	}
 
-	public void unlock() {
+	public synchronized void unlock() {
 		enter[getIndex()] = false;
+		turn = turn;
 	}
 }

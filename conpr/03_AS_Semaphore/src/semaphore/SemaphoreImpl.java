@@ -59,6 +59,9 @@ public final class SemaphoreImpl implements Semaphore {
 			
 		}, "muruk 3");
 		t3.start();
+		
+		Thread t4 = new Thread(() -> System.out.println("blubbalicious"));
+		t4.start();
 	}
 
 	public SemaphoreImpl(int initial) {
