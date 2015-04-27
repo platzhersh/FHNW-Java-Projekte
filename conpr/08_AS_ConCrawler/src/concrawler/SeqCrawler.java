@@ -18,7 +18,7 @@ import org.jsoup.select.Elements;
  */
 public class SeqCrawler implements Crawler {
     /** Maximal number of visited urls per request. */
-    private static final int MAX_VISITS = 100;
+    private static final int MAX_VISITS = 20;
 
     /**
      * Crawls the web, starting at startURL and returning a list of visited
@@ -29,6 +29,7 @@ public class SeqCrawler implements Crawler {
         Set<String> urlsVisited = new HashSet<String>();
         /* Contains the urls to be visited. */
         Queue<String> urlsToVisit = new LinkedList<String>();
+        
         urlsToVisit.add(startURL);
 
         while ((!urlsToVisit.isEmpty()) && urlsVisited.size() < MAX_VISITS) {

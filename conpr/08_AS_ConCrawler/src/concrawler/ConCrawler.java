@@ -12,6 +12,7 @@ import java.net.URLDecoder;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
@@ -45,9 +46,17 @@ public class ConCrawler {
             "  </body>\n" +
             "</html>\n";
     
-    /** The webcrawler instance. */
-    private static Crawler crawler = new SeqCrawler();
-
+    /** The sequential webcrawler instance. */
+    private static Crawler crawler_seq = new SeqCrawler();
+    
+    /** The parallel webcrawler instance. */
+    private static Crawler crawler_par = new ParallelCrawler();
+    
+    // ExecutorService exec = Executors.newFixedThreadPool(4);
+    // new ThreadPool à 5 Threads, maximum 100 Threads, keepalive 0
+	ExecutorService exec = new ThreadPoolExecutor(5, 100, 0L, TimeUnit.MINUTES, new ArrayBlockingQueue<>(500));
+	ThreadFactory f = new MyThreadFactory();
+    
     /** Starts the webserver. */
     public static void main(String[] args) throws IOException {
         ConCrawler webServer = new ConCrawler();
@@ -58,9 +67,6 @@ public class ConCrawler {
     /** Starts the request handler loop. */
     public void start() throws IOException {
         System.out.println("ConCrawler started: http://localhost:" + PORT );
-        
-    	//ExecutorService exec = Executors.newFixedThreadPool(4);
-    	ExecutorService exec = new ThreadPoolExecutor(5, 100, 0L, TimeUnit.MINUTES, new ArrayBlockingQueue<>(500));
     	
     	// durch try(..) { } wird Socket geschlossen nach Ausführung
         try (ServerSocket serverSocket = new ServerSocket(PORT)){
@@ -69,13 +75,14 @@ public class ConCrawler {
                 final Socket connection = serverSocket.accept();
                 
                 /* do magic here */
-                exec.execute(new Runnable() { public void run() { try {
+                Runnable r = new Runnable() { public void run() { try {
 					handleRequest(connection);
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				} }});
-            } 
+				} }};
+                exec.execute(f.newThread(r));
+        	}
         } 
     }
     
@@ -96,7 +103,12 @@ public class ConCrawler {
             } else if(isQuery(request)) {
                 String query = extractQuery(request);
                 long startTime = System.currentTimeMillis();
+                
+                //List<String> urls = crawler_seq.crawl(query);
+                // create new Crawler everytime, to avoid Session conflicts (each session has their own ThreadPool)
+                Crawler crawler = new ParallelCrawler();
                 List<String> urls = crawler.crawl(query);
+                
                 long duration = System.currentTimeMillis() - startTime;
                 response = formatResult(query, urls, duration);
             } else {
