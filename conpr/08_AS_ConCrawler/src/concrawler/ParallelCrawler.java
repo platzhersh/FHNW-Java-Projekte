@@ -33,7 +33,7 @@ public class ParallelCrawler implements Crawler {
     public List<String> crawl(String startURL) {
         /* Contains the already visited urls. */
         
-    	// why Boolean?
+    	// why Boolean? -> braucht am wenigsten Speicher
         final Set<String> urlsVisited = Collections.newSetFromMap(new ConcurrentHashMap<String, Boolean>());
         
         /* Contains the urls to be visited. */

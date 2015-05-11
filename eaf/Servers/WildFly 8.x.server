@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<server auto-publish-time="1" hostname="localhost" id="WildFly 8.x1430219687261" name="WildFly 8.x" org.jboss.ide.eclipse.as.core.server.EXPOSE_MANAGEMENT_SERVICE="true" org.jboss.ide.eclipse.as.core.server.IGNORE_LAUNCH_COMMANDS="false" org.jboss.ide.eclipse.as.core.server.attributes.shutdownPollerKey="org.jboss.ide.eclipse.as.core.runtime.server.WebPoller" org.jboss.ide.eclipse.as.core.server.attributes.startupPollerKey="org.jboss.ide.eclipse.as.core.runtime.server.WebPoller" org.jboss.ide.eclipse.as.core.server.deployDirectoryType="server" org.jboss.ide.eclipse.as.core.server.serverMode="local" server-type="org.jboss.ide.eclipse.as.wildfly.80" server-type-id="org.jboss.ide.eclipse.as.wildfly.80" start-timeout="450" stop-timeout="450" timestamp="4">
+  <list key="modules" value0="RUGSTORE::org.eclipse.jst.jee.server:RUGSTORE::jst.web::3.1"/>
+</server>

@@ -46,16 +46,12 @@ public class ConCrawler {
             "  </body>\n" +
             "</html>\n";
     
-    /** The sequential webcrawler instance. */
-    private static Crawler crawler_seq = new SeqCrawler();
-    
-    /** The parallel webcrawler instance. */
-    private static Crawler crawler_par = new ParallelCrawler();
-    
     // ExecutorService exec = Executors.newFixedThreadPool(4);
     // new ThreadPool à 5 Threads, maximum 100 Threads, keepalive 0
-	ExecutorService exec = new ThreadPoolExecutor(5, 100, 0L, TimeUnit.MINUTES, new ArrayBlockingQueue<>(500));
-	ThreadFactory f = new MyThreadFactory();
+    // übergebene ThreadFactory wird vom Executr verwendet um neue Threads zu erstellen 
+    ThreadFactory f = new MyThreadFactory();
+    ExecutorService exec = new ThreadPoolExecutor(5, 100, 0L, TimeUnit.MINUTES, new ArrayBlockingQueue<>(500), f);
+	
     
     /** Starts the webserver. */
     public static void main(String[] args) throws IOException {
@@ -81,7 +77,7 @@ public class ConCrawler {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				} }};
-                exec.execute(f.newThread(r));
+                exec.execute(r);
         	}
         } 
     }
