@@ -105,6 +105,28 @@ class ClusteringVis extends JFrame
 	     *   with the calculated clusters at the end.
 	     */
 	  
+	  // TODO: create initial means
+	  
+	  centers = new Point2D[K];
+	  
+	  for (int i = 0; i < K; i++) {
+		  double x = (Math.random() * 1000) % maxX;
+		  double y = (Math.random() * 1000) % maxY;
+		  centers[i] = new Point2D.Double(x, y);
+	  }
+	  
+	  double c_diff_curr = 0.0, c_diff_prev = 42.0;  
+	  
+	  do {
+		  
+	  } while((c_diff_prev - c_diff_curr) != 0.0);
+	  
+	  /* while(mdiff_current - mdiff_prev > 0) {
+	   * 
+	   * 
+	   * 
+	  } */
+	  
 	  	updateClusters(_points);
 	  
 	    //throw new RuntimeException("This method to be implemented.");

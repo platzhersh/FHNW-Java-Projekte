@@ -1,5 +1,7 @@
 *.class
 */.metadata/*
+*.metadata*
+
 
 # Package Files #
 *.war
