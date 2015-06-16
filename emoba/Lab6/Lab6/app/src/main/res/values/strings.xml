@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Lab6</string>
+    <string name="start_button">Start Coloring</string>
+    <string name="stop_button">Stop Coloring</string>
+
+</resources>

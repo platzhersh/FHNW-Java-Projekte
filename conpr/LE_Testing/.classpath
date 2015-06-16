@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/jsr305-3.0.0.jar"/>
+	<classpathentry kind="lib" path="jcstress/jcstress-core-1.0-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="jcstress/jopt-simple-4.6.jar"/>
+	<classpathentry kind="src" path=".apt_generated">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

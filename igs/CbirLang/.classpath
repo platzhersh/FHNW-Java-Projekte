@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/encog-core-3.1.0.jar"/>
+	<classpathentry kind="lib" path="lib/functionaljava-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/imagescience.jar"/>
+	<classpathentry kind="lib" path="lib/Jama-1.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/Java_SIFT.jar"/>
+	<classpathentry kind="lib" path="lib/reflections-0.9.9-RC1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
