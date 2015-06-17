@@ -31,6 +31,8 @@ class ClusteringVis extends JFrame
   private double maxX;
   private double minY;
   private double maxY;
+  
+  private double max_diff = 0.01;	// indicates the stopping criteria, maximum position difference between iterations
  
   private Semaphore runAlgorithm;
   
@@ -62,9 +64,7 @@ class ClusteringVis extends JFrame
 	     * Returns:
 	     *   a distance between p1 and p2 (euklid,manhatten ...)
 	     */
-	
-	System.out.println(distance);
-	
+		
 	
 	switch (distance) {
 		case EUCLIDIAN:
@@ -104,30 +104,56 @@ class ClusteringVis extends JFrame
 	     *   This method shouldn't return anything. Instead call updateClusters(Point2D[])
 	     *   with the calculated clusters at the end.
 	     */
-	  
-	  // TODO: create initial means
-	  
+	  	  
 	  centers = new Point2D[K];
-	  
+	  Point2D[] centers_prev = new Point2D[K];
+	  int[] centers_cnt = new int[K];
+	  double[] centers_x = new double[K];
+	  double[] centers_y = new double[K];
+	  int[] cluster = new int[_points.length];
+
+	  // create random initial centers
 	  for (int i = 0; i < K; i++) {
 		  double x = (Math.random() * 1000) % maxX;
 		  double y = (Math.random() * 1000) % maxY;
 		  centers[i] = new Point2D.Double(x, y);
 	  }
-	  
+
+	  // variables to check how much the centers changed since the last iteration
 	  double c_diff_curr = 0.0, c_diff_prev = 42.0;  
 	  
+	  int blubb = 0;
 	  do {
+		  updateClusters(centers);
+		  centers_prev = centers.clone();
 		  
-	  } while((c_diff_prev - c_diff_curr) != 0.0);
-	  
-	  /* while(mdiff_current - mdiff_prev > 0) {
-	   * 
-	   * 
-	   * 
-	  } */
-	  
-	  	updateClusters(_points);
+		  for (int i = 0; i < points.length; i++) {
+			  Point2D p = points[i];
+			  double min_dist = Double.MAX_VALUE;
+			  for (int j = 0; j < K; j++) {
+				  double dist = calculateDistance(p, centers[j]);
+				  if (dist < min_dist) {
+					  min_dist = dist;
+					  cluster[i] = j;
+				  }
+			  }
+			  centers_x[cluster[i]] += p.getX();
+			  centers_y[cluster[i]] += p.getY();
+			  centers_cnt[cluster[i]]++;
+		  }
+		  
+		  // set the new centers
+		  for (int i = 0; i < K; i++) {
+			  double x_new = centers_x[i] / centers_cnt[i];
+			  double y_new = centers_y[i] / centers_cnt[i];
+			  
+			  centers[i].setLocation(x_new, y_new);
+		  }
+		  
+		  blubb++;
+	  } while(blubb < 2000);
+	  	System.out.println("update clusters");
+	  	updateClusters(centers);
 	  
 	    //throw new RuntimeException("This method to be implemented.");
   }
@@ -153,6 +179,7 @@ class ClusteringVis extends JFrame
     
     LinkedList<Point2D> points_list=new LinkedList<Point2D>();
     BufferedReader r=new BufferedReader(new FileReader("res/ADR4.csv"));
+    //BufferedReader r=new BufferedReader(new FileReader("res/lilien.csv"));
     String l=r.readLine(); //read over header
     while((l=r.readLine())!=null)
     {
