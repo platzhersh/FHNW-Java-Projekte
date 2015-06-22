@@ -16,7 +16,7 @@ import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 /**********************************************************************
- * ï¿½bung 5
+ * Übung 5
  * 
  * Implementieren Sie die Methode doClustering(...).
  * sowie die funktion calculateDistance(...)
@@ -32,11 +32,11 @@ class ClusteringVis extends JFrame
   private double minY;
   private double maxY;
   
-  private double max_diff = 0.01;	// indicates the stopping criteria, maximum position difference between iterations
+  private double max_diff = 0.0000001;	// indicates the stopping criteria, maximum position difference between iterations
  
   private Semaphore runAlgorithm;
   
-  public Type distance = Type.EUCLIDIAN;
+  public Type distance = Type.CHEBYSHEV;
 	
 	public enum Type {
 		EUCLIDIAN,
@@ -71,12 +71,17 @@ class ClusteringVis extends JFrame
 			return Math.sqrt(Math.pow(p1.getX()-p2.getX(), 2) + Math.pow(p1.getY() - p2.getY(), 2));
 			
 		case MANHATTEN:
+			return (Math.abs(p1.getX()-p2.getX()) + Math.abs(p1.getY()-p2.getY()));
 			
 		case WEIGHTED_EUCLIDIAN:
+			double weightX = 5, weightY = 1;
+			return Math.sqrt(Math.pow(p1.getX()-p2.getX(), 2)*weightX + Math.pow(p1.getY() - p2.getY(), 2)*weightY);
 			
 		case CHEBYSHEV:
+			return Math.max(Math.abs(p1.getX() - p2.getX()), Math.abs(p1.getY() - p2.getY()));
 			
 		case MIN:
+			return Math.min(Math.abs(p1.getX() - p2.getX()), Math.abs(p1.getY() - p2.getY()));
 			
 		case IRIS:
 			
@@ -105,12 +110,15 @@ class ClusteringVis extends JFrame
 	     *   with the calculated clusters at the end.
 	     */
 	  	  
+	  System.out.println("Distanzberechnung: " + distance);
+	  System.out.println("max_diff: " + max_diff);
 	  centers = new Point2D[K];
 	  Point2D[] centers_prev = new Point2D[K];
 	  int[] centers_cnt = new int[K];
 	  double[] centers_x = new double[K];
 	  double[] centers_y = new double[K];
 	  int[] cluster = new int[_points.length];
+	  double difference = Double.MAX_VALUE;
 
 	  // create random initial centers
 	  for (int i = 0; i < K; i++) {
@@ -137,25 +145,61 @@ class ClusteringVis extends JFrame
 					  cluster[i] = j;
 				  }
 			  }
+			  // count the points per cluster
 			  centers_x[cluster[i]] += p.getX();
 			  centers_y[cluster[i]] += p.getY();
 			  centers_cnt[cluster[i]]++;
 		  }
 		  
+		  
 		  // set the new centers
 		  for (int i = 0; i < K; i++) {
-			  double x_new = centers_x[i] / centers_cnt[i];
-			  double y_new = centers_y[i] / centers_cnt[i];
+
+			  // If one cluster has no points, reset randomly on the system
+			  if (centers_cnt[i] == 0) {
+				  System.out.println("randomly reset center");
+				  double x = (Math.random() * 1000) % maxX;
+				  double y = (Math.random() * 1000) % maxY;
+				  centers[i] = new Point2D.Double(x, y);
+			  } else {
+				  double x_new = centers_x[i] / centers_cnt[i];
+				  double y_new = centers_y[i] / centers_cnt[i];
+				  
+				  centers[i].setLocation(x_new, y_new);
+			  }
 			  
-			  centers[i].setLocation(x_new, y_new);
+			  // TODO: calculate Distortion
+			  
+			  difference += calculateDistance(centers[i], centers_prev[i]);
 		  }
 		  
+		  difference = difference / K;
+		  //System.out.println("Difference: " + difference);
 		  blubb++;
-	  } while(blubb < 2000);
-	  	System.out.println("update clusters");
-	  	updateClusters(centers);
-	  
-	    //throw new RuntimeException("This method to be implemented.");
+	  } while(difference  > max_diff);
+	  updateClusters(centers);	
+	  System.out.println("Finished");
+	  System.out.println("Moving Difference: " + difference);
+	  System.out.println("Number of iterations: " + blubb);
+
+	  // cumulate distances of points to their center per cluster
+	  double[] dist = new double[K];
+	  int[] dist_cnt = new int[K];
+	  for (int i = 0; i < points.length; i++) {		  
+		  // use euclidian distance for distortion to make it comparable
+		  dist[cluster[i]] += points[i].distance(centers[cluster[i]]); 
+		  dist_cnt[cluster[i]]++;
+	  }
+	  // calculate Distortion
+	  double distortion = 0.0;
+	  for (int i = 0; i < K; i++) {
+		  //System.out.println("dist i " + dist[i]);
+		  //System.out.println("dist_cnt i " + dist_cnt[i]);
+		  distortion += dist[i] / (double)dist_cnt[i];
+		  //System.out.println("Distortion: " + distortion);
+	  }
+	  distortion /= (double)K;
+	  System.out.println("Average Distortion per cluster: " + distortion);
   }
   
   public static void main(String[] _args) throws Exception
@@ -178,8 +222,8 @@ class ClusteringVis extends JFrame
     maxY=Double.NEGATIVE_INFINITY;
     
     LinkedList<Point2D> points_list=new LinkedList<Point2D>();
-    BufferedReader r=new BufferedReader(new FileReader("res/ADR4.csv"));
-    //BufferedReader r=new BufferedReader(new FileReader("res/lilien.csv"));
+    //BufferedReader r=new BufferedReader(new FileReader("res/ADR4.csv"));
+    BufferedReader r=new BufferedReader(new FileReader("res/lilien.csv"));
     String l=r.readLine(); //read over header
     while((l=r.readLine())!=null)
     {
@@ -211,7 +255,7 @@ class ClusteringVis extends JFrame
           try
           {
             for(;;runAlgorithm.acquire())
-              doClustering(points,7);
+              doClustering(points,3);
           }
           catch(Exception _e)
           {
